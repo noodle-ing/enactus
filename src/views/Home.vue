@@ -85,11 +85,13 @@
     <ProjectShowcase />
     <NewsCarousel />
     <EnactusMap />
+    <EnactusWorld />
   </div>
 </template>
 
 <script setup>
 import EnactusMap from '@/components/Home/EnactusMap.vue';
+import EnactusWorld from '@/components/Home/EnactusWorld.vue';
 import NewsCarousel from '@/components/Home/NewsCarousel.vue'
 import ProjectShowcase from '@/components/Home/ProjectShowcase.vue'
 </script>
