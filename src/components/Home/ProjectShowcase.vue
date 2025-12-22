@@ -35,10 +35,10 @@
 import { ref } from 'vue'
 
 const projects = [
-  { id: 1, name: 'Astana Medical University', description: 'ZhanCare — медицинская экосистема нового поколения.', image: '/images/project1.png' },
-  { id: 2, name: 'КазНУ им. Аль-Фараби', description: 'Инновационный проект в области экологии и IT.', image: '/images/project1.png' },
-  { id: 3, name: 'Narxoz University', description: 'Социальное предпринимательство и поддержка молодежи.', image: '/images/project1.png' },
-  { id: 4, name: 'Колледж иностранных языков', description: 'Образовательная платформа для изучения языков.', image: '/images/project1.png' },
+  { id: 1, name: 'Astana Medical University', description: 'ZhanCare — медицинская экосистема нового поколения.', image: '/images/astanameduni.png' },
+  { id: 2, name: 'КазНУ им. Аль-Фараби', description: 'Инновационный проект в области экологии и IT.', image: '/images/kaznu.png' },
+  { id: 3, name: 'Narxoz University', description: 'Социальное предпринимательство и поддержка молодежи.', image: '/images/narxoz.png' },
+  { id: 4, name: 'Колледж иностранных языков', description: 'Образовательная платформа для изучения языков.', image: '/images/languagecoleg.png' },
 ]
 
 const activeTab = ref(projects[0])
