@@ -86,13 +86,17 @@
     <NewsCarousel />
     <EnactusMap />
     <EnactusWorld />
+    <PartnersAndForm />
+    <Footer />    
   </div>
 </template>
 
 <script setup>
+import Footer from '@/components/Footer.vue';
 import EnactusMap from '@/components/Home/EnactusMap.vue';
 import EnactusWorld from '@/components/Home/EnactusWorld.vue';
 import NewsCarousel from '@/components/Home/NewsCarousel.vue'
+import PartnersAndForm from '@/components/Home/PartnersAndForm.vue';
 import ProjectShowcase from '@/components/Home/ProjectShowcase.vue'
 </script>
 
