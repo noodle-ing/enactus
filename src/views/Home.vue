@@ -83,10 +83,12 @@
       </div>
     </section>
     <ProjectShowcase />
+    <NewsCarousel />
   </div>
 </template>
 
 <script setup>
+import NewsCarousel from '@/components/Home/NewsCarousel.vue'
 import ProjectShowcase from '@/components/Home/ProjectShowcase.vue'
 </script>
 
