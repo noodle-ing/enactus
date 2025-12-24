@@ -6,6 +6,11 @@ import Participants from '../views/Participants.vue'
 import Competitions from '../views/Competitions.vue'
 import News from '../views/News.vue'
 
+// Импорт новых страниц из выпадающего списка "О нас"
+import Headquarters from '../views/about/Headquarters.vue'
+import BoardOfDirectors from '../views/about/BoardOfDirectors.vue'
+import AcademicCouncil from '../views/about/AcademicCouncil.vue'
+
 const router = createRouter({
   history: createWebHistory(),
   routes: [
@@ -19,6 +24,23 @@ const router = createRouter({
       name: 'about',
       component: About
     },
+    // НОВЫЕ ПУТИ ДЛЯ ВЫПАДАЮЩЕГО МЕНЮ
+    {
+      path: '/about/headquarters',
+      name: 'headquarters',
+      component: Headquarters
+    },
+    {
+      path: '/about/board',
+      name: 'board',
+      component: BoardOfDirectors
+    },
+    {
+      path: '/about/council',
+      name: 'council',
+      component: AcademicCouncil
+    },
+    // КОНЕЦ НОВЫХ ПУТЕЙ
     {
       path: '/business',
       name: 'business',
