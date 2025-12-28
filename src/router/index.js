@@ -2,7 +2,6 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import Business from '../views/Business.vue'
-import Participants from '../views/Participants.vue'
 import Competitions from '../views/Competitions.vue'
 import News from '../views/News.vue'
 
@@ -12,6 +11,7 @@ import BoardOfDirectors from '../views/about/BoardOfDirectors.vue'
 import AcademicCouncil from '../views/about/AcademicCouncil.vue'
 import Partnership from '../views/Partnership.vue'
 import TeamsPage from '../views/TeamsPage.vue'
+import CreateTeam from '../views/CreateTeam.vue'
 
 
 
@@ -35,6 +35,11 @@ const router = createRouter({
       component: Headquarters
     },
     {
+      path: '/createteam',
+      name: 'createteam',
+      component: CreateTeam
+    },
+    {
       path: '/about/board',
       name: 'board',
       component: BoardOfDirectors
@@ -49,11 +54,6 @@ const router = createRouter({
       path: '/business',
       name: 'business',
       component: Business
-    },
-    {
-      path: '/participants',
-      name: 'participants',
-      component: Participants
     },
     {
       path: '/competitions',

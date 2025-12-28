@@ -12,7 +12,9 @@
 
         <div class="header-flex">
           <h1 class="page-title">Команды</h1>
-          <button class="create-team-btn">Как создать команду?</button>
+          <router-link to="/createteam" class="create-team-btn">
+            Как создать команду?
+          </router-link>
         </div>
 
         <div class="teams-layout">
@@ -133,6 +135,16 @@ const toggleAccordion = (cityName) => {
   font-weight: 700;
   cursor: pointer;
   font-size: 14px;
+  /* Добавляем эти свойства для корректного отображения ссылки как кнопки */
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.create-team-btn:hover {
+  background-color: #333; /* Небольшой эффект при наведении */
 }
 
 /* Сетка страницы */
