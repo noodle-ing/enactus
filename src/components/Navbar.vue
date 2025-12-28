@@ -28,8 +28,22 @@
           </transition>
         </div>
 
-        <router-link to="/business" class="nav-link" @click="closeMenu">Бизнес</router-link>
-        
+        <div 
+        class="dropdown-wrapper" 
+        @mouseenter="isBusinessOpen = true" 
+        @mouseleave="isBusinessOpen = false"
+        >
+        <router-link to="/business" class="nav-link" @click="closeMenu">
+          Бизнес <span class="arrow-mini">▼</span>
+        </router-link>
+
+        <transition name="fade">
+          <div v-if="isBusinessOpen" class="dropdown-box">
+            <router-link to="/business" class="dropdown-item" @click="closeMenu">Спонсоры</router-link>
+            <router-link to="/partnership" class="dropdown-item" @click="closeMenu">Партнерство</router-link>
+          </div>
+        </transition>
+        </div>        
         <router-link to="/participants" class="nav-link" @click="closeMenu">Участникам</router-link>
         <router-link to="/competitions" class="nav-link" @click="closeMenu">Соревнования</router-link>
         <router-link to="/news" class="nav-link" @click="closeMenu">Новости</router-link>
@@ -62,8 +76,8 @@ import { ref } from 'vue'
 
 const isMenuOpen = ref(false)
 const isLangOpen = ref(false)
-const isAboutOpen = ref(false) // Состояние для "О нас"
-
+const isAboutOpen = ref(false) 
+const isBusinessOpen = ref(false)
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value
 }
@@ -71,7 +85,10 @@ const toggleMenu = () => {
 const closeMenu = () => {
   isMenuOpen.value = false
   isAboutOpen.value = false
+  isBusinessOpen.value = false
 }
+
+
 </script>
 
 <style scoped>

@@ -96,13 +96,17 @@ import Footer from '@/components/Footer.vue';
   margin-bottom: 20px;
 }
 
+.breadcrumbs a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .page-title {
   font-size: 32px;
   font-weight: 800;
   margin-bottom: 50px;
 }
 
-/* Стили секций спонсоров */
 .sponsor-tier {
   margin-bottom: 80px;
 }
@@ -133,45 +137,40 @@ import Footer from '@/components/Footer.vue';
   background: linear-gradient(90deg, #232323 0%, #232323 40%, #FFCC00 100%);
   color: #FFCC00;
 }
-
-.platinum-bg {
-  background-color: #232323;
-  color: #FFCC00;
-}
-
-.gold-bg {
-  background-color: #FFC107;
-  color: #232323;
-}
-
-.silver-bg {
-  background-color: #F2F2F2;
-  color: #232323;
-}
+.platinum-bg { background-color: #232323; color: #FFCC00; }
+.gold-bg { background-color: #FFC107; color: #232323; }
+.silver-bg { background-color: #F2F2F2; color: #232323; }
 
 /* Сетки логотипов */
 .logos-grid {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
-  gap: 20px;
-  padding: 40px 0;
+  gap: 30px;
+  padding: 20px 0;
   width: 100%;
 }
 
+/* General — СЛЕВА */
 .central {
   justify-content: flex-start;
 }
 
-.logos-grid.platinum-grid {
+/* Platinum — ПО ЦЕНТРУ */
+.platinum-grid {
+  justify-content: center;
+}
+
+/* Остальные — СЛЕВА */
+.logos-grid:not(.platinum-grid) {
   justify-content: flex-start;
 }
 
+/* Размеры картинок (Silver увеличены) */
 .logo-large { height: 220px; object-fit: contain; max-width: 350px; }
-.logo-md { height: 160px; object-fit: contain; max-width: 320px; }
-.logo-sm { height: 120px; object-fit: contain; }
-.logo-xs { height: 90px; object-fit: contain; }
+.logo-md    { height: 160px; object-fit: contain; max-width: 320px; }
+.logo-sm    { height: 130px; object-fit: contain; }
+.logo-xs    { height: 120px; object-fit: contain; max-width: 200px; }
 
 .logo-group {
   display: flex;
@@ -180,16 +179,16 @@ import Footer from '@/components/Footer.vue';
 }
 
 .silver-grid {
-  justify-content: flex-start;
-  gap: 15px;
+  gap: 40px;
 }
 
 @media (max-width: 768px) {
-  .tier-header {
-    height: 70px;
-    padding: 0 20px;
-  }
+  .tier-header { height: 70px; padding: 0 20px; }
   .tier-header h2 { font-size: 18px; }
-  .logos-grid { gap: 30px; }
+  .logos-grid { gap: 20px; justify-content: center; }
+  .logo-large { height: 150px; }
+  .logo-md    { height: 100px; }
+  .logo-sm    { height: 80px; }
+  .logo-xs    { height: 70px; }
 }
 </style>

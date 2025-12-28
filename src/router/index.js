@@ -10,6 +10,8 @@ import News from '../views/News.vue'
 import Headquarters from '../views/about/Headquarters.vue'
 import BoardOfDirectors from '../views/about/BoardOfDirectors.vue'
 import AcademicCouncil from '../views/about/AcademicCouncil.vue'
+import Partnership from '../views/Partnership.vue'
+
 
 const router = createRouter({
   history: createWebHistory(),
@@ -60,6 +62,11 @@ const router = createRouter({
       path: '/news',
       name: 'news',
       component: News
+    },
+    {
+      path: '/partnership',
+      name: 'partnership',
+      component: Partnership
     }
   ]
 })
