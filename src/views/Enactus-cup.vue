@@ -23,7 +23,7 @@
 
         <section class="info-section">
           <div class="info-header">
-            <span class="info-icon">i</span>
+            <img src="/images/icons/info-icon.png" alt="Info" class="info-icon">
             <h2>Что такое ENACTUS KAZAKHSTAN BUSINESS CAMPS?</h2>
           </div>
           <div class="info-body">
@@ -97,7 +97,13 @@
   </div>
 </template>
 
+<script setup>
+// 2. ДОБАВЛЕН ИМПОРТ КОМПОНЕНТА
+import Footer from '@/components/Footer.vue';
+</script>
+
 <style scoped>
+/* Ваши стили остаются без изменений */
 .page-wrapper { background-color: #fff; }
 .camp-page { padding: 40px 0 100px; }
 
@@ -107,7 +113,6 @@
   padding: 0 20px;
 }
 
-/* Навигация */
 .breadcrumbs { font-size: 14px; color: #999; margin-bottom: 20px; display: flex; align-items: center; }
 .breadcrumbs a { text-decoration: none; color: #999; }
 .breadcrumbs .sep { margin: 0 8px; }
@@ -115,22 +120,22 @@
 
 .page-title { font-size: 28px; font-weight: 800; margin-bottom: 40px; }
 
-/* Фотографии */
 .photo-grid-top { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 50px; }
 .content-img { width: 100%; border-radius: 15px; display: block; height: 350px; object-fit: cover; }
 
-/* Секция описания */
 .info-section { margin-bottom: 50px; }
 .info-header { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; }
-.info-icon { background: #FFCC00; width: 25px; height: 25px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; }
-.info-header h2 { font-size: 18px; font-weight: 800; }
-
+.info-icon { 
+  width: 24px; 
+  height: 24px; 
+  object-fit: contain; 
+  flex-shrink: 0;
+}
 .info-body p { font-size: 14px; line-height: 1.6; color: #333; margin-bottom: 20px; }
 .program-list ul { list-style: none; padding: 0; }
 .program-list li { font-size: 14px; line-height: 1.5; padding-left: 20px; position: relative; margin-bottom: 5px; }
 .program-list li::before { content: "—"; position: absolute; left: 0; }
 
-/* Карточки преимуществ */
 .features-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 50px; }
 .feature-card.dark { background: #232323; color: #fff; padding: 30px; border-radius: 15px; }
 .card-header { display: flex; align-items: center; gap: 12px; margin-bottom: 15px; }
@@ -138,12 +143,10 @@
 .card-header h3 { color: #FFCC00; font-size: 18px; font-weight: 800; }
 .feature-card p { font-size: 13px; line-height: 1.5; opacity: 0.9; }
 
-/* Медиа внизу */
 .media-grid-bottom { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 40px; }
 .video-item { background: #D9D9D9; aspect-ratio: 16/10; border-radius: 4px; display: flex; align-items: center; justify-content: center; cursor: pointer; }
 .play-btn { font-size: 40px; color: rgba(0,0,0,0.2); }
 
-/* Кнопка */
 .report-btn { 
   display: inline-flex; 
   align-items: center; 

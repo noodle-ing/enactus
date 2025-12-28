@@ -13,6 +13,8 @@ import Partnership from '../views/Partnership.vue'
 import TeamsPage from '../views/TeamsPage.vue'
 import CreateTeam from '../views/CreateTeam.vue'
 import EnactusCamp from '../views/Enactus-cup.vue'
+import RoadShow from '../views/Road-show.vue'
+
 
 
 
@@ -35,6 +37,11 @@ const router = createRouter({
       path: '/about/headquarters',
       name: 'headquarters',
       component: Headquarters
+    },
+    {
+      path: '/road-show',
+      name: 'road-show',
+      component: RoadShow
     },
     {
       path: '/enactus-cup',

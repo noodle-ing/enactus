@@ -57,6 +57,7 @@
               <div v-if="isParticipantsOpen" class="dropdown-box">
                 <router-link to="/teampage" class="dropdown-item" @click="closeMenu">Команды</router-link>
                 <router-link to="/enactus-cup" class="dropdown-item" @click="closeMenu">Enactus Camp</router-link>
+                <router-link to="/road-show" class="dropdown-item" @click="closeMenu">Road Show</router-link>
               </div>
             </transition>
           </div>        
