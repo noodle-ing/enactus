@@ -12,6 +12,8 @@ import AcademicCouncil from '../views/about/AcademicCouncil.vue'
 import Partnership from '../views/Partnership.vue'
 import TeamsPage from '../views/TeamsPage.vue'
 import CreateTeam from '../views/CreateTeam.vue'
+import EnactusCamp from '../views/Enactus-cup.vue'
+
 
 
 
@@ -33,6 +35,11 @@ const router = createRouter({
       path: '/about/headquarters',
       name: 'headquarters',
       component: Headquarters
+    },
+    {
+      path: '/enactus-cup',
+      name: 'enactus-cup',
+      component: EnactusCamp
     },
     {
       path: '/createteam',

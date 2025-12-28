@@ -5,7 +5,7 @@
         <nav class="breadcrumbs">
           <router-link to="/">Главная</router-link> 
           <span class="sep">›</span>
-          <span>Участникам</span> 
+          <span class="no-link">Участникам</span> 
           <span class="sep">›</span>
           <span class="current">Команды</span>
         </nav>
@@ -116,7 +116,36 @@ const toggleAccordion = (cityName) => {
   padding: 0 20px;
 }
 
-.breadcrumbs { font-size: 14px; color: #999; margin-bottom: 20px; }
+.breadcrumbs { 
+  font-size: 14px; 
+  color: #999; 
+  margin-bottom: 20px; 
+}
+
+.breadcrumbs a {
+  text-decoration: none;
+  color: inherit; /* Ссылка берет серый цвет родителя */
+  transition: color 0.2s;
+}
+
+.breadcrumbs a:hover {
+  color: #333; /* При наведении на главную она чуть темнеет */
+}
+
+.breadcrumbs .sep { 
+  margin: 0 8px; 
+}
+
+/* Стили для некликабельных сегментов */
+.no-link {
+  cursor: default;
+}
+
+.current { 
+  color: #333; /* Текущая страница выделена темным цветом */
+  font-weight: 500;
+}
+
 .header-flex {
   display: flex;
   justify-content: space-between;

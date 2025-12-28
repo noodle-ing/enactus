@@ -5,9 +5,9 @@
         <nav class="breadcrumbs">
           <router-link to="/">Главная</router-link> 
           <span class="sep">›</span>
-          <router-link to="/participants">Участникам</router-link> 
+          <router-link to="/teampage">Участникам</router-link> 
           <span class="sep">›</span>
-          <router-link to="/teams">Команды</router-link> 
+          <span class="no-link">Команды</span> 
           <span class="sep">›</span>
           <span class="current">Как создать команду?</span>
         </nav>

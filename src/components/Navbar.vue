@@ -44,7 +44,22 @@
           </div>
         </transition>
         </div>        
-        <router-link to="/teampage" class="nav-link" @click="closeMenu">Участникам</router-link>
+          <div 
+            class="dropdown-wrapper" 
+            @mouseenter="isParticipantsOpen = true" 
+            @mouseleave="isParticipantsOpen = false"
+          >
+            <router-link to="/teampage" class="nav-link" @click="closeMenu">
+              Участникам <span class="arrow-mini">▼</span>
+            </router-link>
+
+            <transition name="fade">
+              <div v-if="isParticipantsOpen" class="dropdown-box">
+                <router-link to="/teampage" class="dropdown-item" @click="closeMenu">Команды</router-link>
+                <router-link to="/enactus-cup" class="dropdown-item" @click="closeMenu">Enactus Camp</router-link>
+              </div>
+            </transition>
+          </div>        
         <router-link to="/competitions" class="nav-link" @click="closeMenu">Соревнования</router-link>
         <router-link to="/news" class="nav-link" @click="closeMenu">Новости</router-link>
         <button class="contact-btn">Связаться</button>
@@ -81,11 +96,13 @@ const isBusinessOpen = ref(false)
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value
 }
+const isParticipantsOpen = ref(false)
 
 const closeMenu = () => {
   isMenuOpen.value = false
   isAboutOpen.value = false
   isBusinessOpen.value = false
+  isParticipantsOpen.value = false
 }
 
 
