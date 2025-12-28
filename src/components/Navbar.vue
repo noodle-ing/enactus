@@ -44,7 +44,7 @@
           </div>
         </transition>
         </div>        
-        <router-link to="/participants" class="nav-link" @click="closeMenu">Участникам</router-link>
+        <router-link to="/teampage" class="nav-link" @click="closeMenu">Участникам</router-link>
         <router-link to="/competitions" class="nav-link" @click="closeMenu">Соревнования</router-link>
         <router-link to="/news" class="nav-link" @click="closeMenu">Новости</router-link>
         <button class="contact-btn">Связаться</button>

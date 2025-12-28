@@ -11,6 +11,8 @@ import Headquarters from '../views/about/Headquarters.vue'
 import BoardOfDirectors from '../views/about/BoardOfDirectors.vue'
 import AcademicCouncil from '../views/about/AcademicCouncil.vue'
 import Partnership from '../views/Partnership.vue'
+import TeamsPage from '../views/TeamsPage.vue'
+
 
 
 const router = createRouter({
@@ -67,6 +69,11 @@ const router = createRouter({
       path: '/partnership',
       name: 'partnership',
       component: Partnership
+    },
+    {
+      path: '/teampage',
+      name: 'teampage',
+      component: TeamsPage
     }
   ]
 })
