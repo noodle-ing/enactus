@@ -15,7 +15,7 @@
         <section class="ceo-section">
           <div class="ceo-card">
             <div class="image-wrapper">
-              <img src="/images/ceo.jpg" alt="Альбина Ержанова" class="member-photo" />
+              <img src="/images/erzhanova.jpg" alt="Альбина Ержанова" class="member-photo" />
               <div class="badge ceo-badge">
                 <div class="badge-text">
                   <h3 class="badge-name">Альбина Ержанова</h3>
@@ -37,13 +37,13 @@
         </section>
 
         <section class="team-grid">
-          <div v-for="n in 9" :key="n" class="team-item">
+          <div v-for="(member, index) in teamMembers" :key="index" class="team-item">
             <div class="image-wrapper">
-              <img src="/images/ceo.jpg" alt="Член команды" class="member-photo" />
+              <img :src="member.photo" :alt="member.name" class="member-photo" />
               <div class="badge member-badge">
                 <div class="badge-text">
-                  <h3 class="badge-name">Имя Фамилия</h3>
-                  <p class="badge-role">{{ getRole(n) }}</p>
+                  <h3 class="badge-name">{{ member.name }}</h3>
+                  <p class="badge-role">{{ member.role }}</p>
                 </div>
               </div>
             </div>
@@ -59,18 +59,42 @@
 <script setup>
 import Footer from '@/components/Footer.vue';
 
-const getRole = (index) => {
-  const roles = [
-    'Член академического совета ENACTUS Kazakhstan, программный директор, волонтер',
-    'Советник по стратегическому развитию',
-    'Главный бухгалтер'
-  ];
-  return roles[index % roles.length];
-};
+/**
+ * МАССИВ ДАННЫХ КОМАНДЫ
+ * Чтобы добавить человека: 
+ * 1. Положите фото в public/images/team/
+ * 2. Добавьте новый объект в список ниже
+ */
+const teamMembers = [
+  {
+    name: 'Randall Bruins',
+    role: 'Эдвайзер по стратегическому развитию ENACTUS KAZAKHSTAN',
+    photo: '/images/randall bruins.jpg'
+  },
+  {
+    name: 'Аубакирова Айжан',
+    role: 'Главный бухгалтер ENACTUS KAZAKHSTAN',
+    photo: '/images/Ayzhan Aubakirova.JPG'
+  },
+  {
+    name: 'Каримова Аружан',
+    role: 'Программный менеджер ENACTUS KAZAKHSTAN',
+    photo: '/images/karimova aruzan.jpg'
+  },
+  {
+    name: 'Альбина Айсамутдинова',
+    role: 'Региональный координатор ENACTUS KAZAKHSTAN, г. Астана',
+    photo: '/images/Albina Aysamutdinova.jpg'
+  },
+  {
+    name: 'Жасулан Бауржанулы',
+    role: 'Региональный координатор ENACTUS KAZAKHSTAN, Восточно-Казахстанская область',
+    photo: '/images/Zhasulan.JPG'
+  }
+];
 </script>
 
 <style scoped>
-/* Стили без изменений, удалены только упоминания .pin */
 .page-wrapper {
   display: flex;
   flex-direction: column;
@@ -89,6 +113,7 @@ const getRole = (index) => {
   padding: 0 20px;
 }
 
+/* Навигация */
 .breadcrumbs {
   display: flex;
   align-items: center;
@@ -97,24 +122,29 @@ const getRole = (index) => {
   margin-bottom: 30px;
   color: #999;
 }
-.breadcrumbs a { text-decoration: none; color: #999; }
+.breadcrumbs a { text-decoration: none; color: #999; transition: 0.2s; }
+.breadcrumbs a:hover { color: #333; }
 .breadcrumbs .current { color: #333; font-weight: 500; }
 
 .page-title {
   font-size: 32px;
   font-weight: 800;
   margin-bottom: 50px;
+  color: #1a1a1a;
 }
 
+/* Карточка CEO */
 .ceo-card {
   display: flex;
   gap: 60px;
   margin-bottom: 100px;
+  align-items: flex-start;
 }
 
 .image-wrapper {
   position: relative;
-  width: 340px;
+  width: 100%;
+  max-width: 340px;
   flex-shrink: 0;
 }
 
@@ -124,8 +154,10 @@ const getRole = (index) => {
   object-fit: cover;
   border-radius: 20px;
   display: block;
+  background-color: #f5f5f5; /* Цвет пока грузится фото */
 }
 
+/* Бейджи с именами поверх фото */
 .badge {
   position: absolute;
   bottom: 20px;
@@ -133,30 +165,56 @@ const getRole = (index) => {
   right: 15px;
   padding: 15px;
   border-radius: 12px;
+  backdrop-filter: blur(4px); /* Эффект стекла */
 }
 
-.ceo-badge { background-color: #ffc107; color: #000; }
-.member-badge { background-color: #1a1a1a; color: #fff; }
+.ceo-badge { 
+  background-color: rgba(255, 193, 7, 0.95); /* Желтый Enactus */
+  color: #000; 
+}
+.member-badge { 
+  background-color: rgba(26, 26, 26, 0.9); /* Темный */
+  color: #fff; 
+}
 
 .badge-name { font-size: 15px; font-weight: 800; margin: 0 0 4px 0; }
 .badge-role { font-size: 11px; line-height: 1.3; margin: 0; opacity: 0.9; }
 
-.ceo-message h2 { font-size: 24px; font-weight: 800; margin-bottom: 25px; }
+/* Текст приветствия */
+.ceo-message h2 { font-size: 24px; font-weight: 800; margin-bottom: 25px; color: #1a1a1a; }
 .message-content p { font-size: 16px; line-height: 1.6; margin-bottom: 20px; color: #444; }
-.signature { font-weight: 800; margin-top: 40px; color: #000; }
+.signature { font-weight: 800; margin-top: 40px; color: #000; border-top: 1px solid #eee; padding-top: 20px; }
 
+/* Сетка команды */
 .team-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px 30px;
 }
 
+.team-item {
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.team-item:hover {
+  transform: translateY(-5px);
+}
+
+.team-item .image-wrapper {
+  width: 100%;
+  max-width: 100%; /* В сетке берем всю ширину колонки */
+}
+
+/* Адаптивность */
 @media (max-width: 1024px) {
-  .ceo-card { flex-direction: column; align-items: center; }
+  .ceo-card { flex-direction: column; align-items: center; text-align: center; gap: 40px; }
   .team-grid { grid-template-columns: repeat(2, 1fr); }
+  .signature { margin-top: 20px; }
 }
 
 @media (max-width: 600px) {
   .team-grid { grid-template-columns: 1fr; }
+  .page-title { font-size: 28px; }
 }
 </style>
