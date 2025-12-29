@@ -15,7 +15,7 @@
           @mouseenter="isAboutOpen = true" 
           @mouseleave="isAboutOpen = false"
         >
-          <router-link to="/about" class="nav-link" @click="closeMenu">
+          <router-link to="/about/headquarters" class="nav-link" @click="closeMenu">
             О нас <span class="arrow-mini">▼</span>
           </router-link>
           

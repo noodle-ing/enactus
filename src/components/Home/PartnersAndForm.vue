@@ -27,8 +27,9 @@
             <div class="form-inputs">
               <div class="input-group">
                 <label>Имя</label>
-                <input type="text" placeholder="Text" required />
+                <input type="text" placeholder="Text" required class="custom-input" />
               </div>
+
               <div class="input-group">
                 <label>Номер телефона</label>
                 <div class="phone-input-wrapper">
@@ -47,7 +48,6 @@
 </template>
 
 <script setup>
-// Замените пути на реальные файлы ваших логотипов
 const allLogos = [
   '/images/logo-grand.png',
   '/images/logo-turan.png',
@@ -62,167 +62,79 @@ const handleSubmit = () => {
 </script>
 
 <style scoped>
-/* Основной контейнер секции */
-.partners-form-section {
-  padding: 80px 0 120px;
-  background-color: #ffffff;
-  overflow: hidden;
-}
+/* Стили карусели оставляем без изменений */
+.partners-form-section { padding: 80px 0 120px; background-color: #ffffff; overflow: hidden; }
+.container { max-width: 1240px; margin: 0 auto; padding: 0 20px; }
+.section-title { font-size: 32px; font-weight: 900; margin-bottom: 50px; text-transform: uppercase; color: #1a1a1a; }
+.marquee-viewport { width: 100%; overflow: hidden; display: flex; background: white; padding: 20px 0 80px; }
+.marquee-content { display: flex; width: max-content; animation: continuous-scroll 40s linear infinite; }
+.logo-group { display: flex; align-items: center; gap: 130px; padding-right: 130px; }
+.partner-logo { height: 120px; width: auto; object-fit: contain; transition: transform 0.3s ease; }
+@keyframes continuous-scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-25%); } }
 
-.container {
-  max-width: 1240px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+/* --- КАРТОЧКА И ФОРМА --- */
+.contact-card { background: #1a1a1a; border-radius: 40px; padding: 60px 80px; color: white; }
+.card-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 80px; align-items: center; }
+.card-title { color: #ffc107; font-size: 42px; font-weight: 900; margin-bottom: 20px; }
+.card-text { font-size: 18px; line-height: 1.5; color: #ffffff; }
 
-.section-title {
-  font-size: 32px;
-  font-weight: 900;
-  margin-bottom: 50px;
-  text-transform: uppercase;
-  color: #1a1a1a;
-}
+.form-inputs { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 40px; }
+.input-group label { display: block; font-size: 14px; margin-bottom: 12px; color: #ffffff; }
 
-/* --- Бесконечная карусель логотипов --- */
-.marquee-viewport {
-  width: 100%;
-  overflow: hidden;
-  display: flex;
-  background: white;
-  padding: 20px 0 80px;
-}
+/* --- ГЛАВНЫЕ ИСПРАВЛЕНИЯ ТУТ --- */
 
-.marquee-content {
-  display: flex;
-  width: max-content;
-  /* Анимация: 40 секунд для плавного движения */
-  animation: continuous-scroll 40s linear infinite;
-}
-
-.logo-group {
-  display: flex;
-  align-items: center;
-  gap: 130px; /* Большой отступ между картинками */
-  padding-right: 130px;
-}
-
-.partner-logo {
-  height: 120px; /* Крупный размер логотипов */
-  width: auto;
-  object-fit: contain;
-  filter: none; /* Гарантируем цветное отображение */
-  transition: transform 0.3s ease;
-}
-
-.partner-logo:hover {
-  transform: scale(1.1);
-}
-
-@keyframes continuous-scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-25%); } /* Сдвиг на одну из 4-х групп */
-}
-
-/* --- Карточка с формой --- */
-.contact-card {
-  background: #1a1a1a;
-  border-radius: 40px;
-  padding: 60px 80px;
-  color: white;
-}
-
-.card-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.3fr;
-  gap: 80px;
-  align-items: center;
-}
-
-.card-title {
-  color: #ffc107;
-  font-size: 42px;
-  font-weight: 900;
-  margin-bottom: 20px;
-}
-
-.card-text {
-  font-size: 18px;
-  line-height: 1.5;
-  color: #ffffff;
-}
-
-.form-inputs {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-  margin-bottom: 40px;
-}
-
-.input-group label {
-  display: block;
-  font-size: 14px;
-  margin-bottom: 12px;
-  color: #ffffff;
-}
-
-.input-group input, .phone-input-wrapper {
+/* Общие стили для инпутов и обертки телефона */
+.custom-input, .phone-input-wrapper {
   background: #f0f0f0;
   border-radius: 12px;
-  border: none;
+  border: 2px solid transparent; /* Заранее выделяем место под рамку */
   width: 100%;
   height: 60px;
+  transition: all 0.2s ease;
+  outline: none !important; /* Убираем стандартный синий контур браузера */
 }
 
-.input-group input {
+/* Специфические стили для текстового инпута */
+.custom-input {
   padding: 0 20px;
   font-size: 16px;
   color: #333;
 }
 
+/* Специфические стили для обертки телефона */
 .phone-input-wrapper {
   display: flex;
   align-items: center;
   padding: 0 15px;
+  cursor: text;
 }
 
 .phone-input-wrapper input {
   background: transparent;
-  padding: 0 10px;
-}
-
-.flag {
-  font-size: 24px;
-}
-
-.submit-btn {
-  background: #ffc107;
-  color: #1a1a1a;
   border: none;
-  padding: 22px 50px;
-  border-radius: 50px;
-  font-weight: 800;
+  outline: none !important; /* Убираем синюю рамку у самого инпута */
+  padding: 0 10px;
+  flex: 1;
+  height: 100%;
   font-size: 16px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  color: #333;
 }
 
-.submit-btn:hover {
-  background: #e6af06;
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(255, 193, 7, 0.3);
+/* ЭФФЕКТ ФОКУСА (Заменяем синий на желтый и подсвечиваем все поле) */
+.custom-input:focus, 
+.phone-input-wrapper:focus-within {
+  background: #ffffff;
+  border-color: #ffc107; /* Желтая рамка Enactus */
+  box-shadow: 0 0 0 1px #ffc107; /* Делаем рамку четче без размытия */
 }
 
-/* --- Адаптивность --- */
-@media (max-width: 1024px) {
-  .card-grid { grid-template-columns: 1fr; gap: 40px; }
-  .card-title { font-size: 32px; }
-  .partner-logo { height: 90px; }
-  .logo-group { gap: 80px; padding-right: 80px; }
-}
+.flag { font-size: 24px; pointer-events: none; }
 
-@media (max-width: 768px) {
-  .contact-card { padding: 40px 20px; border-radius: 20px; }
-  .form-inputs { grid-template-columns: 1fr; }
-  .partner-logo { height: 70px; }
-}
+/* Кнопка */
+.submit-btn { background: #ffc107; color: #1a1a1a; border: none; padding: 22px 50px; border-radius: 50px; font-weight: 800; font-size: 16px; cursor: pointer; transition: all 0.3s ease; }
+.submit-btn:hover { background: #e6af06; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(255, 193, 7, 0.3); }
+
+/* Адаптивность */
+@media (max-width: 1024px) { .card-grid { grid-template-columns: 1fr; gap: 40px; } .card-title { font-size: 32px; } }
+@media (max-width: 768px) { .contact-card { padding: 40px 20px; border-radius: 20px; } .form-inputs { grid-template-columns: 1fr; } }
 </style>
