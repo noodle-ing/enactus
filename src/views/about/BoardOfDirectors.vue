@@ -17,19 +17,31 @@
         
         <div class="carousel-track-wrapper">
           <div class="carousel-track t-left t-slow">
-            <DirectorItem v-for="n in 12" :key="'r1-'+n" :type="n % 2 === 0 ? 'batalov' : 'erzhanova'" />
+            <DirectorItem 
+              v-for="(member, idx) in doubleMembers" 
+              :key="'row1-' + idx" 
+              :type="member.type" 
+            />
           </div>
         </div>
 
         <div class="carousel-track-wrapper">
-          <div class="carousel-track t-right t-fast">
-            <DirectorItem v-for="n in 12" :key="'r2-'+n" :type="n % 2 === 0 ? 'erzhanova' : 'batalov'" />
+          <div class="carousel-track t-left t-slow" style="animation-delay: -40s; margin-left: -500px;">
+            <DirectorItem 
+              v-for="(member, idx) in doubleMembers" 
+              :key="'row2-' + idx" 
+              :type="member.type" 
+            />
           </div>
         </div>
 
         <div class="carousel-track-wrapper">
-          <div class="carousel-track t-left t-medium">
-            <DirectorItem v-for="n in 12" :key="'r3-'+n" :type="n % 2 === 0 ? 'batalov' : 'erzhanova'" />
+          <div class="carousel-track t-left t-slow" style="animation-delay: -80s; margin-left: -1000px;">
+            <DirectorItem 
+              v-for="(member, idx) in shuffledMembers" 
+              :key="'row3-' + idx" 
+              :type="member.type" 
+            />
           </div>
         </div>
 
@@ -41,8 +53,55 @@
 </template>
 
 <script setup>
+import { computed } from 'vue';
 import Footer from '@/components/Footer.vue';
 import DirectorItem from '@/components/DirectorItem.vue';
+
+// Список всех участников
+const boardMembers = [
+  { type: 'batalov' },
+  { type: 'erzhanova' },
+  { type: 'abdykulova' },
+  { type: 'akbalayeva' },
+  { type: 'nurkatov' },
+  { type: 'kiyassova' },
+  { type: 'khojanazarov' },
+  { type: 'nabiyev' },
+  { type: 'sagdiev' },
+  { type: 'myngbay' },
+  { type: 'zhukov' },
+  { type: 'khamzi' },
+  { type: 'aitmaganbet' },
+  { type: 'telemtayev' },
+  { type: 'kaygorotseva' },
+  { type: 'bekmaganbetov' },
+  { type: 'ilyassov' },
+  { type: 'zhussupekov' },
+  { type: 'mukashev' },
+  { type: 'umiryaev' },
+  { type: 'zhussupov' },
+  { type: 'mukhamadiyeva' },
+  { type: 'bitemirov' },
+  { type: 'lineitsev' },
+  { type: 'toleuov' },
+  { type: 'naisbecov' },
+  { type: 'balgozhina' },
+  { type: 'gussein' },
+  { type: 'ilyas' },
+  { type: 'mukhametov' },
+  { type: 'pershin' },
+  { type: 'idrissov' },
+  { type: 'badina' },
+  { type: 'mukushev' }
+];
+
+// Дублирование для бесшовного скролла
+const doubleMembers = computed(() => [...boardMembers, ...boardMembers]);
+
+// Разворот массива для визуального отличия третьего ряда
+const shuffledMembers = computed(() => {
+  return [...boardMembers, ...boardMembers].reverse();
+});
 </script>
 
 <style scoped>
@@ -57,7 +116,6 @@ import DirectorItem from '@/components/DirectorItem.vue';
   flex: 1;
   padding: 40px 0 80px;
   background-color: #ffffff;
-  /* Скрываем выходящие за край карусели на уровне страницы */
   overflow-x: hidden; 
 }
 
@@ -67,7 +125,6 @@ import DirectorItem from '@/components/DirectorItem.vue';
   padding: 0 20px;
 }
 
-/* Хлебные крошки */
 .breadcrumbs {
   font-size: 14px;
   color: #999;
@@ -88,7 +145,6 @@ import DirectorItem from '@/components/DirectorItem.vue';
   color: #333;
 }
 
-/* Карусель на весь экран */
 .carousel-section.full-width {
   width: 100vw;
   display: flex;
@@ -106,33 +162,29 @@ import DirectorItem from '@/components/DirectorItem.vue';
   display: flex;
   width: max-content;
   gap: 40px;
+  position: relative;
+  will-change: transform;
 }
 
-/* Анимации бесконечного скролла */
+/* Анимация движения только в одну сторону для синхронности */
 @keyframes scrollLeft {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); } 
 }
 
-@keyframes scrollRight {
-  0% { transform: translateX(-50%); }
-  100% { transform: translateX(0); }
+.t-left { 
+  animation: scrollLeft linear infinite; 
 }
 
-.t-left { animation: scrollLeft linear infinite; }
-.t-right { animation: scrollRight linear infinite; }
+/* Единая скорость для всех рядов */
+.t-slow { 
+  animation-duration: 120s; 
+}
 
-/* Скорости анимации */
-.t-slow { animation-duration: 60s; }
-.t-medium { animation-duration: 50s; }
-.t-fast { animation-duration: 40s; }
-
-/* Остановка при наведении */
 .carousel-track-wrapper:hover .carousel-track {
   animation-play-state: paused;
 }
 
-/* Убираем лишние отступы у Footer, если они есть */
 :deep(footer) {
   margin-top: 0;
 }

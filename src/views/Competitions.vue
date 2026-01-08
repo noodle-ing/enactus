@@ -38,12 +38,18 @@
               <transition name="fade">
                 <div class="accordion-body" v-if="openYear === year.id">
                   <div class="media-grid">
-                    <div class="video-placeholder">
-                      <div class="play-icon">▶</div>
-                    </div>
-                    <div class="video-placeholder">
-                      <div class="play-icon">▶</div>
-                    </div>
+                    <a 
+                      v-for="(video, vIdx) in year.videos" 
+                      :key="vIdx"
+                      :href="video.link" 
+                      target="_blank" 
+                      class="video-card"
+                    >
+                      <img :src="getThumbnail(video.id)" :alt="year.title" class="video-thumb">
+                      <div class="play-overlay">
+                        <div class="play-icon">▶</div>
+                      </div>
+                    </a>
                   </div>
 
                   <div class="announcement">
@@ -72,7 +78,7 @@ import { ref } from 'vue';
 import Footer from '@/components/Footer.vue';
 
 const activeType = ref('world-cup');
-const openYear = ref('2024');
+const openYear = ref('2025');
 
 const competitionTypes = [
   { id: 'world-cup', label: 'WORLD CUP' },
@@ -81,23 +87,36 @@ const competitionTypes = [
 ];
 
 const yearsData = [
-  { id: '2025', title: 'WORLD CUP 2025', announcementTitle: '', description: '' },
+  { 
+    id: '2025', 
+    title: 'WORLD CUP 2025', 
+    announcementTitle: 'ENACTUS WORLD CUP 2025 AFTER MOVIE', 
+    description: '<p>Смотрите лучшие моменты мирового кубка 2025 года.</p>',
+    videos: [{ id: '2QLHepslVVE', link: 'https://youtu.be/2QLHepslVVE' }]
+  },
   { 
     id: '2024', 
     title: 'WORLD CUP 2024', 
     announcementTitle: 'ENACTUS WORLD CUP 2024 ANNOUNCEMENT',
     description: `
-      <p>Впервые в Казахстане состоится мировой кубок студенческого предпринимательства ENACTUS...</p>
+      <p>Впервые в Казахстане состоялся мировой кубок студенческого предпринимательства ENACTUS...</p>
       <p>Все бизнес-проекты студентов ENACTUS направлены на достижение 17 Целей устойчивого развития ООН...</p>
-      <p>ENACTUS World Cup — это мероприятие, которое проводится ежегодно с 2001 года...</p>
-    `
+    `,
+    videos: [{ id: 'j8K9KNDcjYM', link: 'https://youtu.be/j8K9KNDcjYM' }]
   },
-  { id: '2023', title: 'WORLD CUP 2023', announcementTitle: '', description: '' },
-  { id: '2022', title: 'WORLD CUP 2022', announcementTitle: '', description: '' },
-  { id: '2021', title: 'WORLD CUP 2021', announcementTitle: '', description: '' },
-  { id: '2020', title: 'WORLD CUP 2020', announcementTitle: '', description: '' },
-  { id: '2019', title: 'WORLD CUP 2019', announcementTitle: '', description: '' },
+  { 
+    id: '2023', 
+    title: 'WORLD CUP 2023', 
+    announcementTitle: 'ENACTUS WORLD CUP 2023 AFTERMOVIE', 
+    description: '<p>Итоги мирового кубка в Нидерландах.</p>',
+    videos: [{ id: 'KH4X_hWQqNA', link: 'https://youtu.be/KH4X_hWQqNA' }]
+  },
 ];
+
+// Функция для получения обложки YouTube
+const getThumbnail = (videoId) => {
+  return `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+};
 
 const toggleYear = (id) => {
   openYear.value = openYear.value === id ? null : id;
@@ -114,14 +133,12 @@ const toggleYear = (id) => {
   padding: 0 20px;
 }
 
-/* Хлебные крошки */
 .breadcrumbs { font-size: 14px; color: #999; margin-bottom: 20px; }
 .breadcrumbs a { text-decoration: none; color: inherit; }
 .current { color: #333; pointer-events: none; }
 
 .page-title { font-size: 32px; font-weight: 800; margin-bottom: 40px; }
 
-/* Сетка контента */
 .competitions-layout {
   display: grid;
   grid-template-columns: 300px 1fr;
@@ -129,7 +146,6 @@ const toggleYear = (id) => {
   align-items: start;
 }
 
-/* Боковое меню */
 .sidebar { display: flex; flex-direction: column; gap: 15px; }
 
 .sidebar-btn {
@@ -156,7 +172,6 @@ const toggleYear = (id) => {
 
 .arrow { font-size: 12px; }
 
-/* Аккордеон */
 .content { display: flex; flex-direction: column; gap: 10px; }
 
 .accordion-item {
@@ -180,7 +195,7 @@ const toggleYear = (id) => {
   padding: 10px 25px 30px;
 }
 
-/* Сетка медиа (плейсхолдеры видео) */
+/* Сетка видео */
 .media-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -188,22 +203,54 @@ const toggleYear = (id) => {
   margin-bottom: 25px;
 }
 
-.video-placeholder {
-  background-color: #C4C4C4;
+.video-card {
+  position: relative;
   aspect-ratio: 16 / 9;
-  border-radius: 4px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #000;
+  display: block;
+}
+
+.video-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.video-card:hover .video-thumb {
+  transform: scale(1.05);
+}
+
+.play-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
+  background: rgba(0,0,0,0.2);
+  transition: background 0.3s;
+}
+
+.video-card:hover .play-overlay {
+  background: rgba(0,0,0,0.4);
 }
 
 .play-icon {
-  font-size: 40px;
-  color: rgba(0,0,0,0.3);
+  width: 60px;
+  height: 60px;
+  background-color: #FFCC00;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-size: 20px;
+  padding-left: 5px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
-/* Текст внутри аккордеона */
 .announcement h3 {
   font-size: 16px;
   font-weight: 800;
@@ -215,8 +262,6 @@ const toggleYear = (id) => {
   line-height: 1.5;
   color: #333;
 }
-
-.text-content p { margin-bottom: 15px; }
 
 .links {
   margin-top: 20px;
@@ -232,11 +277,9 @@ const toggleYear = (id) => {
   font-size: 14px;
 }
 
-/* Анимация появления */
 .fade-enter-active, .fade-leave-active { transition: opacity 0.3s; }
 .fade-enter-from, .fade-leave-to { opacity: 0; }
 
-/* Мобильная адаптация */
 @media (max-width: 850px) {
   .competitions-layout { grid-template-columns: 1fr; }
   .sidebar { flex-direction: row; overflow-x: auto; padding-bottom: 10px; }
