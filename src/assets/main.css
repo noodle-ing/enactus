@@ -1,23 +1,31 @@
+/* 1. Импортируем все веса от 100 до 900 */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 @import './base.css';
 
-/* Убеждаемся, что база не ограничивает нас */
+/* 2. Назначаем шрифт всему приложению */
+:root {
+  font-family: 'Montserrat', sans-serif;
+}
+
 html, body, #app {
+  font-family: 'Montserrat', sans-serif; /* Добавляем сюда */
   margin: 0;
   padding: 0;
   min-height: 100vh;
   width: 100%;
 }
 
+/* 3. Гарантируем, что жирный шрифт будет использовать правильный вес */
+b, strong {
+  font-weight: 700;
+}
+
+/* Остальной твой код... */
 a,
 .green {
   text-decoration: none;
   color: hsla(160, 100%, 37%, 1);
   transition: 0.4s;
   padding: 3px;
-}
-
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
 }
