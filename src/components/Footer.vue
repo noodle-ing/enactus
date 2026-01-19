@@ -94,7 +94,7 @@
 
 <style scoped>
 .footer {
-  background-color: #f2f2f2; /* Светло-серый фон как на макете */
+  background: #F0F0F0;
   padding: 60px 0 30px;
   width: 100%;
 }
