@@ -3,49 +3,49 @@
     <main class="teams-page">
       <div class="container">
         <nav class="breadcrumbs">
-          <router-link to="/">Главная</router-link> 
-          <span class="sep">›</span>
-          <span class="no-link">Участникам</span> 
-          <span class="sep">›</span>
-          <span class="current">Команды</span>
+          <router-link to="/">{{ $t('breadcrumbs.home') }}</router-link>
+          <span class="sep">&nbsp;›&nbsp;</span>
+          <span class="no-link">{{ $t('breadcrumbs.participants') }}</span>
+          <span class="sep">&nbsp;›&nbsp;</span>
+          <span class="current">{{ $t('teams.title') }}</span>
         </nav>
 
         <div class="header-flex">
-          <h1 class="page-title">Команды</h1>
+          <h1 class="page-title">{{ $t('teams.title') }}</h1>
           <router-link to="/createteam" class="create-team-btn">
-            Как создать команду?
+            {{ $t('teams.howToCreate') }}
           </router-link>
         </div>
 
         <div class="teams-layout">
           <aside class="teams-sidebar">
-            <button 
-              v-for="tab in tabs" 
-              :key="tab.id"
-              :class="['tab-button', { active: activeTab === tab.id }]"
-              @click="activeTab = tab.id"
+            <button
+                v-for="tab in tabs"
+                :key="tab.id"
+                :class="['tab-button', { active: activeTab === tab.id }]"
+                @click="activeTab = tab.id"
             >
-              {{ tab.label }}
+              {{ $t(`teams.tabs.${tab.id}`) }}
               <span class="arrow">▶</span>
             </button>
           </aside>
 
           <section class="teams-content">
-            <div 
-              v-for="(city, index) in citiesData" 
-              :key="index"
-              class="accordion-item"
-              :class="{ open: openCity === city.name }"
+            <div
+                v-for="(city, index) in citiesData"
+                :key="index"
+                class="accordion-item"
+                :class="{ open: openCity === city.key }"
             >
-              <div class="accordion-header" @click="toggleAccordion(city.name)">
-                <span>{{ city.name }}</span>
-                <span class="chevron">{{ openCity === city.name ? '▲' : '▼' }}</span>
+              <div class="accordion-header" @click="toggleAccordion(city.key)">
+                <span>{{ $t(`teams.cities.${city.key}.name`) }}</span>
+                <span class="chevron">{{ openCity === city.key ? '▲' : '▼' }}</span>
               </div>
-              
-              <div class="accordion-body" v-if="openCity === city.name">
+
+              <div class="accordion-body" v-if="openCity === city.key">
                 <ol class="university-list">
-                  <li v-for="(uni, uIdx) in city.universities" :key="uIdx">
-                    {{ uni }}
+                  <li v-for="(uni, uIdx) in $tm(`teams.cities.${city.key}.universities`)" :key="uIdx">
+                    {{ rt(uni) }}
                   </li>
                 </ol>
               </div>
@@ -61,48 +61,34 @@
 
 <script setup>
 import { ref } from 'vue';
+import { useI18n } from 'vue-i18n';
 import Footer from '@/components/Footer.vue';
 
+const { t, tm, rt } = useI18n();
+
 const activeTab = ref('vuz');
-const openCity = ref('Алматы'); // По умолчанию открыт Алматы как на макете
+const openCity = ref('almaty'); // Используем ключ 'almaty' вместо строки 'Алматы'
 
 const tabs = [
-  { id: 'vuz', label: 'Активные ВУЗы' },
-  { id: 'colleges', label: 'Активные колледжи' },
-  { id: 'schools', label: 'Активные школы' },
+  { id: 'vuz' },
+  { id: 'colleges' },
+  { id: 'schools' },
 ];
 
+// Список ключей городов. Сами данные (названия и вузы) выносим в i18n.js
 const citiesData = [
-  { name: 'Астана', universities: ['Университет Астана', 'ЕНУ им. Гумилева'] },
-  { 
-    name: 'Алматы', 
-    universities: [
-      'Университет Нархоз',
-      'Университет Туран',
-      'Satbayev University',
-      'Университет Международного Бизнеса имени Кенжегали Сагадиева (UIB)',
-      'Казахский Национальный Женский Педагогический Университет',
-      'Международный университет информационных технологий',
-      'Казахстанско-Британский Технический университет',
-      'Казахский Национальный университет им. Аль-Фараби',
-      'Almaty Management University',
-      'Алматинский университет энергетики и связи им. Г. Даукеева',
-      'SDU',
-      'Казахская Национальная академия искусств им. Т. Жургенова',
-      'Казахский Национальный Медицинский университет',
-      'Caspian University'
-    ] 
-  },
-  { name: 'Шымкент', universities: ['ЮКУ им. Ауэзова'] },
-  { name: 'Абайская область', universities: ['университет им. Шакарима'] },
-  { name: 'Акмолинская область', universities: ['КРУ им. Валиханова'] },
-  { name: 'Актюбинская область', universities: ['Жубанов университет'] },
-  { name: 'Алматинская область', universities: ['Жетысуский университет'] },
-  { name: 'Атырауская область', universities: ['Атырауский университет нефти и газа'] },
+  { key: 'astana' },
+  { key: 'almaty' },
+  { key: 'shymkent' },
+  { key: 'abay' },
+  { key: 'akmola' },
+  { key: 'aktobe' },
+  { key: 'almatyRegion' },
+  { key: 'atyrau' },
 ];
 
-const toggleAccordion = (cityName) => {
-  openCity.value = openCity.value === cityName ? null : cityName;
+const toggleAccordion = (cityKey) => {
+  openCity.value = openCity.value === cityKey ? null : cityKey;
 };
 </script>
 

@@ -109,6 +109,71 @@ const messages = {
                 aruzhan: { name: 'Aruzhan Karimova', role: 'Program Manager, ENACTUS KAZAKHSTAN' },
                 albina: { name: 'Albina Aysamutdinova', role: 'Regional Coordinator, ENACTUS KAZAKHSTAN, Astana' },
                 zhasulan: { name: 'Zhasulan Baurzhanuly', role: 'Regional Coordinator, ENACTUS KAZAKHSTAN, East Kazakhstan Region' }
+            },
+        },
+        camp: {
+            title: 'ENACTUS CAMP / Acceleration Business Camp',
+            whatIs: {
+                header: 'What is ENACTUS KAZAKHSTAN BUSINESS CAMPS?',
+                desc: 'This is an intensive training and workshop program, the birthplace of the most interesting and successful business projects. The goal of the youth business camp is to develop student entrepreneurship in Kazakhstan based on the international experience of ENACTUS.'
+            },
+            program: {
+                label: 'In the program:',
+                items: [
+                    'intensive acceleration of startup projects;',
+                    'business consultations from mentors;',
+                    'experts from Kazakhstani and international business;',
+                    'systematization of knowledge;',
+                    'business-networking;',
+                    'contacts for a successful career;',
+                    'interactives for professional and personal development;',
+                    'master classes from Enactus Kazakhstan partners;',
+                    'gaining practical skills and competencies;',
+                    'personal success stories of program alumni.'
+                ]
+            },
+            features: {
+                edu: { title: 'Education', desc: 'The program includes workshops from ENACTUS partners, consultations with business experts, and personal development interactives.' },
+                net: { title: 'Networking', desc: 'Meeting participants from other teams; Connecting with culture and business leaders; Business-networking for your career.' },
+                rest: { title: 'Rest & Wellness', desc: 'Natural healing factors: pine forest, fresh air, and a lake with mineral water.' },
+                mem: { title: 'Memories', desc: 'Everything in ENACTUS is heartfelt. Themed evenings brighten the educational process, and connections last long after the camp.' }
+            },
+            reportBtn: 'Winter Camp Report 2025'
+        },
+        teams: {
+            title: 'Teams',
+            howToCreate: 'How to create a team?',
+            tabs: {
+                vuz: 'Active Universities',
+                colleges: 'Active Colleges',
+                schools: 'Active Schools'
+            },
+            cities: {
+                astana: {
+                    name: 'Astana',
+                    universities: ['Astana University', 'L.N. Gumilyov Eurasian National University']
+                },
+                almaty: {
+                    name: 'Almaty',
+                    universities: [
+                        'Narxoz University', 'Turan University', 'Satbayev University',
+                        'Kenzhegali Sagadiyev University of International Business (UIB)',
+                        'Kazakh National Women\'s Teacher Training University',
+                        'International IT University (IITU)',
+                        'Kazakh-British Technical University (KBTU)',
+                        'Al-Farabi Kazakh National University',
+                        'Almaty Management University (AlmaU)',
+                        'Almaty University of Power Engineering and Telecommunications',
+                        'SDU University', 'T.K. Zhurgenov Kazakh National Academy of Arts',
+                        'Asfendiyarov Kazakh National Medical University', 'Caspian University'
+                    ]
+                },
+                shymkent: { name: 'Shymkent', universities: ['M. Auezov South Kazakhstan University'] },
+                abay: { name: 'Abai Region', universities: ['Shakarim University'] },
+                akmola: { name: 'Akmola Region', universities: ['Sh. Ualikhanov Kokshetau University'] },
+                aktobe: { name: 'Aktobe Region', universities: ['K. Zhubanov Aktobe Regional University'] },
+                almatyRegion: { name: 'Almaty Region', universities: ['Zhetysu University'] },
+                atyrau: { name: 'Atyrau Region', universities: ['Atyrau Oil and Gas University'] }
             }
         },
         board: {
@@ -366,10 +431,73 @@ const messages = {
                 mukushev: { name: 'BULAT MUKUSHEV', role: 'Президент TSSP Group' }
             }
         },
+        camp: {
+            title: 'ENACTUS CAMP / Акселерационный бизнес-лагерь',
+            whatIs: {
+                header: 'Что такое ENACTUS KAZAKHSTAN BUSINESS CAMPS?',
+                desc: 'Это интенсивное обучение и тренинги, место рождения самых интересных и успешных бизнес-проектов. Цель молодежного бизнес-лагеря: развитие студенческого предпринимательства в Казахстане на основе международного опыта ENACTUS с активным участием зарубежных студентов и вовлечением менторов из сферы бизнеса, обмен опытом в сфере социального предпринимательства.'
+            },
+            program: {
+                label: 'В программе:',
+                items: [
+                    'интенсивная акселерация стартап-проектов;',
+                    'бизнес-консультации от менторов;',
+                    'экспертов казахстанского и международного бизнеса;',
+                    'систематизация знаний;',
+                    'business-networking;',
+                    'контакты для успешной карьеры;',
+                    'интерактивы для профессионального и личностного развития;',
+                    'мастер-классы от партнеров Enactus Kazakhstan;',
+                    'получение практических навыков и компетенций;',
+                    'личные истории успеха выпускников программы.'
+                ]
+            },
+            features: {
+                edu: { title: 'Образование', desc: 'В программе бизнес-лагеря вас ждут тренинги и мастер-классы от партнеров программы ENACTUS, консультации от менторов-экспертов бизнеса и интерактивы.' },
+                net: { title: 'Нетворкинг', desc: 'Знакомство с участниками из других команд; Общение с известными деятелями культуры и бизнеса; Business-networking — контакты для карьеры.' },
+                rest: { title: 'Отдых и оздоровление', desc: 'Природные лечебно-оздоровительные факторы: сосновый лес, свежий воздух и озеро с минеральной водой.' },
+                mem: { title: 'Воспоминания', desc: 'В ENACTUS все очень душевно. Тематические вечера скрасят образовательный процесс, а общение продолжится и после лагеря.' }
+            },
+            reportBtn: 'Отчет с зимнего лагеря 2025'
+        },
         breadcrumbs: {
             home: 'Главная',
             about: 'О нас',
-            business: 'Бизнесу'
+            business: 'Бизнесу',
+            participants: 'Участникам'
+        },
+        teams: {
+            title: 'Команды',
+            howToCreate: 'Как создать команду?',
+            tabs: {
+                vuz: 'Активные ВУЗы',
+                colleges: 'Активные колледжи',
+                schools: 'Активные школы'
+            },
+            cities: {
+                astana: { name: 'Астана', universities: ['Университет Астана', 'ЕНУ им. Гумилева'] },
+                almaty: {
+                    name: 'Алматы',
+                    universities: [
+                        'Университет Нархоз', 'Университет Туран', 'Satbayev University',
+                        'Университет Международного Бизнеса имени Кенжегали Сагадиева (UIB)',
+                        'Казахский Национальный Женский Педагогический Университет',
+                        'Международный университет информационных технологий',
+                        'Казахстанско-Британский Технический университет',
+                        'Казахский Национальный университет им. Аль-Фараби',
+                        'Almaty Management University',
+                        'Алматинский университет энергетики и связи им. Г. Даукеева',
+                        'SDU', 'Казахская Национальная академия искусств им. Т. Жургенова',
+                        'Казахский Национальный Медицинский университет', 'Caspian University'
+                    ]
+                },
+                shymkent: { name: 'Шымкент', universities: ['ЮКУ им. Ауэзова'] },
+                abay: { name: 'Абайская область', universities: ['университет им. Шакарима'] },
+                akmola: { name: 'Акмолинская область', universities: ['КРУ им. Валиханова'] },
+                aktobe: { name: 'Актюбинская область', universities: ['Жубанов университет'] },
+                almatyRegion: { name: 'Алматинская область', universities: ['Жетысуский университет'] },
+                atyrau: { name: 'Атырауская область', universities: ['Атырауский университет нефти и газа'] }
+            }
         },
         partnership: {
             title: 'Партнёрство',
@@ -402,7 +530,8 @@ const messages = {
                 placeholder: 'Текст',
                 submit: 'Отправить заявку'
             }
-        }
+        },
+
     },
     kz: {
         nav: {
@@ -557,10 +686,73 @@ const messages = {
                 mukushev: { name: 'BULAT MUKUSHEV', role: 'TSSP Group президенті' }
             }
         },
+        camp: {
+            title: 'ENACTUS CAMP / Акселерациялық бизнес-лагерь',
+            whatIs: {
+                header: 'ENACTUS KAZAKHSTAN BUSINESS CAMPS дегеніміз не?',
+                desc: 'Бұл қарқынды оқыту мен тренингтер, ең қызықты және табысты бизнес-жобалардың туған жері. Жастар бизнес-лагерінің мақсаты: шетелдік студенттердің белсенді қатысуымен және бизнес саласындағы менторларды тарта отырып, ENACTUS халықаралық тәжірибесі негізінде Қазақстанда студенттік кәсіпкерлікті дамыту.'
+            },
+            program: {
+                label: 'Бағдарламада:',
+                items: [
+                    'стартап-жобаларды қарқынды акселерациялау;',
+                    'менторлардан бизнес-консультациялар;',
+                    'қазақстандық және халықаралық бизнес сарапшылары;',
+                    'білімді жүйелеу;',
+                    'business-networking;',
+                    'табысты мансап үшін байланыстар;',
+                    'кәсіби және тұлғалық дамуға арналған интерактивтер;',
+                    'Enactus Kazakhstan серіктестерінен мастер-кластар;',
+                    'практикалық дағдылар мен құзыреттерді алу;',
+                    'бағдарлама түлектерінің табыс тарихы.'
+                ]
+            },
+            features: {
+                edu: { title: 'Білім', desc: 'Бизнес-лагерь бағдарламасында сізді ENACTUS серіктестерінен тренингтер мен мастер-кластар, сарапшылардан кеңестер күтеді.' },
+                net: { title: 'Нетворкинг', desc: 'Басқа командалардың қатысушыларымен танысу; Мәдениет және бизнес қайраткерлерімен араласу; Мансап үшін байланыстар.' },
+                rest: { title: 'Демалыс және сауықтыру', desc: 'Табиғи емдік-сауықтыру факторлары: қарағайлы орман, таза ауа және минералды суы бар көл.' },
+                mem: { title: 'Естеліктер', desc: 'ENACTUS-та бәрі өте жылы әрі шынайы. Тақырыптық кештер оқу процесін қызықты етеді, ал қарым-қатынас лагерьден кейін де жалғасады.' }
+            },
+            reportBtn: 'Қысқы лагерь есебі 2025'
+        },
         breadcrumbs: {
             home: 'Басты бет',
             about: 'Біз туралы',
-            business: 'Бизнеске'
+            business: 'Бизнеске',
+            participants: 'Қатысушыларға'
+        },
+        teams: {
+            title: 'Командалар',
+            howToCreate: 'Команданы қалай құруға болады?',
+            tabs: {
+                vuz: 'Белсенді ЖОО',
+                colleges: 'Белсенді колледждер',
+                schools: 'Белсенді мектептер'
+            },
+            cities: {
+                astana: { name: 'Астана', universities: ['Астана университеті', 'Л.Н. Гумилев атындағы ЕҰУ'] },
+                almaty: {
+                    name: 'Алматы',
+                    universities: [
+                        'Нархоз университеті', 'Тұран университеті', 'Satbayev University',
+                        'Кенжеғали Сағадиев атындағы Халықаралық Бизнес Университеті (UIB)',
+                        'Қазақ ұлттық қыздар педагогикалық университеті',
+                        'Халықаралық ақпараттық технологиялар университеті',
+                        'Қазақстан-Британ техникалық университеті',
+                        'Әл-Фараби атындағы Қазақ ұлттық университеті',
+                        'Almaty Management University',
+                        'Ғ. Дәукеев атындағы Алматы энергетика және байланыс университеті',
+                        'SDU', 'Т. Жүргенов атындағы Қазақ ұлттық өнер академиясы',
+                        'Қазақ ұлттық медицина университеті', 'Caspian University'
+                    ]
+                },
+                shymkent: { name: 'Шымкент', universities: ['М. Әуезов атындағы ОҚУ'] },
+                abay: { name: 'Абай облысы', universities: ['Шәкәрім атындағы университет'] },
+                akmola: { name: 'Ақмола облысы', universities: ['Ш. Уәлиханов атындағы КРУ'] },
+                aktobe: { name: 'Ақтөбе облысы', universities: ['Жұбанов университеті'] },
+                almatyRegion: { name: 'Алматы облысы', universities: ['Жетісу университеті'] },
+                atyrau: { name: 'Атырау облысы', universities: ['Атырау мұнай және газ университеті'] }
+            }
         },
         partnership: {
             title: 'Серіктестік',

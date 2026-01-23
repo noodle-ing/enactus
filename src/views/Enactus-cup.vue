@@ -3,14 +3,14 @@
     <main class="camp-page">
       <div class="container">
         <nav class="breadcrumbs">
-          <router-link to="/">Главная</router-link>
-          <span class="sep">›</span>
-          <span class="no-link">Участникам</span>
-          <span class="sep">›</span>
+          <router-link to="/">{{ $t('breadcrumbs.home') }}</router-link>
+          <span class="sep">&nbsp;›&nbsp;</span>
+          <span class="no-link">{{ $t('breadcrumbs.participants') }}</span>
+          <span class="sep">&nbsp;›&nbsp;</span>
           <span class="current">ENACTUS CAMP</span>
         </nav>
 
-        <h1 class="page-title">ENACTUS CAMP / Акселерационный бизнес-лагерь</h1>
+        <h1 class="page-title">{{ $t('camp.title') }}</h1>
 
         <div class="photo-grid-top">
           <div class="photo-main">
@@ -24,71 +24,40 @@
         <section class="info-section">
           <div class="info-header">
             <img src="/images/icons/info-icon.png" alt="Info" class="info-icon">
-            <h2>Что такое ENACTUS KAZAKHSTAN BUSINESS CAMPS?</h2>
+            <h2>{{ $t('camp.whatIs.header') }}</h2>
           </div>
           <div class="info-body">
-            <p>Это интенсивное обучение и тренинги, место рождения самых интересных и успешных бизнес-проектов. Цель молодежного бизнес-лагеря: развитие студенческого предпринимательства в Казахстане на основе международного опыта ENACTUS с активным участием зарубежных студентов и вовлечением менторов из сферы бизнеса, обмен опытом в сфере социального предпринимательства.</p>
-            
+            <p>{{ $t('camp.whatIs.desc') }}</p>
+
             <div class="program-list">
-              <p>В программе:</p>
+              <p>{{ $t('camp.program.label') }}</p>
               <ul>
-                <li>интенсивная акселерация стартап-проектов;</li>
-                <li>бизнес-консультации от менторов;</li>
-                <li>экспертов казахстанского и международного бизнеса;</li>
-                <li>систематизация знаний;</li>
-                <li>business-networking;</li>
-                <li>контакты для успешной карьеры;</li>
-                <li>интерактивы для профессионального и личностного развития;</li>
-                <li>мастер-классы от партнеров Enactus Kazakhstan;</li>
-                <li>получение практических навыков и компетенций;</li>
-                <li>личные истории успеха выпускников программы.</li>
+                <li v-for="(item, index) in $tm('camp.program.items')" :key="index">
+                  {{ rt(item) }}
+                </li>
               </ul>
             </div>
           </div>
         </section>
 
         <div class="features-grid">
-          <div class="feature-card dark">
+          <div class="feature-card dark" v-for="(feature, key) in $tm('camp.features')" :key="key">
             <div class="card-header">
               <span class="check-icon">✓</span>
-              <h3>Образование</h3>
+              <h3>{{ rt(feature.title) }}</h3>
             </div>
-            <p>В программе бизнес-лагеря вас ждут тренинги и мастер-классы от партнеров программы ENACTUS, консультации от менторов-экспертов казахстанского и международного бизнеса, различные интерактивы для профессионального и личностного развития.</p>
-          </div>
-
-          <div class="feature-card dark">
-            <div class="card-header">
-              <span class="check-icon">✓</span>
-              <h3>Нетворкинг</h3>
-            </div>
-            <p>Знакомство с участниками программы из других команд; Общение с известными деятелями культуры, бизнеса и государства; Business-networking — контакты для успешной карьеры.</p>
-          </div>
-
-          <div class="feature-card dark">
-            <div class="card-header">
-              <span class="check-icon">✓</span>
-              <h3>Отдых и оздоровление</h3>
-            </div>
-            <p>Это успешно достигается благодаря природным лечебно-оздоровительным факторам: соблюдение режима дня, сосновый лес возле санатория, воздух, насыщенный лечебными фитонцидами, озеро с минеральной водой.</p>
-          </div>
-
-          <div class="feature-card dark">
-            <div class="card-header">
-              <span class="check-icon">✓</span>
-              <h3>Воспоминания</h3>
-            </div>
-            <p>В ENACTUS все очень душевно и искренне. Каждый вечер проводятся тематические вечера, что скрасит образовательный процесс. Участники также продолжают тесное общение и после лагеря.</p>
+            <p>{{ rt(feature.desc) }}</p>
           </div>
         </div>
 
         <div class="media-grid-bottom">
-          <a 
-            v-for="(video, index) in videos" 
-            :key="index" 
-            :href="video.url" 
-            target="_blank" 
-            class="video-item"
-            :style="{ backgroundImage: `url(${getYouTubeThumbnail(video.url)})` }"
+          <a
+              v-for="(video, index) in videos"
+              :key="index"
+              :href="video.url"
+              target="_blank"
+              class="video-item"
+              :style="{ backgroundImage: `url(${getYouTubeThumbnail(video.url)})` }"
           >
             <div class="play-overlay">
               <div class="play-btn">▶</div>
@@ -96,12 +65,12 @@
           </a>
         </div>
 
-        <a 
-          href="https://drive.google.com/file/d/1yEvqCa2UABHaJJivfVZ3pmNxuHtLc9hS/view?usp=sharing" 
-          target="_blank" 
-          class="report-btn">
-        <span class="link-icon">🔗</span> Отчет с зимнего лагеря 2025
-      </a>
+        <a
+            href="https://drive.google.com/file/d/1yEvqCa2UABHaJJivfVZ3pmNxuHtLc9hS/view?usp=sharing"
+            target="_blank"
+            class="report-btn">
+          <span class="link-icon">🔗</span> {{ $t('camp.reportBtn') }}
+        </a>
       </div>
     </main>
 
@@ -110,16 +79,17 @@
 </template>
 
 <script setup>
+import { useI18n } from 'vue-i18n';
 import Footer from '@/components/Footer.vue';
 
-// Ваши ссылки на YouTube
+const { tm, rt } = useI18n();
+
 const videos = [
   { url: 'https://youtu.be/n4O18XL8_ek?si=cq0_omapyxB6r8w0' },
   { url: 'https://youtu.be/YcyElfVU3AI?si=QT0aegyojZmo7bMf' },
   { url: 'https://youtu.be/xcs5otNAaTE?si=-z76Lm68QkHKUv1t' },
 ];
 
-// Автоматическое получение превью видео
 const getYouTubeThumbnail = (url) => {
   const regExp = /^.*(youtu\.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
   const match = url.match(regExp);
