@@ -8,7 +8,9 @@
       </div>
 
       <div class="nav-menu" :class="{ active: isMenuOpen }">
-        <router-link to="/" class="nav-link" @click="closeMenu">Главная</router-link>
+        <router-link to="/" class="nav-link" @click="closeMenu">
+          {{ $t('nav.home') }}
+        </router-link>
 
         <div
             class="dropdown-wrapper"
@@ -16,14 +18,14 @@
             @mouseleave="isAboutOpen = false"
         >
           <router-link to="/about/headquarters" class="nav-link" @click="closeMenu">
-            О нас <span class="arrow-mini">▼</span>
+            {{ $t('nav.about') }} <span class="arrow-mini">▼</span>
           </router-link>
 
           <transition name="fade">
             <div v-if="isAboutOpen" class="dropdown-box">
-              <router-link to="/about/headquarters" class="dropdown-item" @click="closeMenu">Штаб квартира</router-link>
-              <router-link to="/about/board" class="dropdown-item" @click="closeMenu">Совет директоров</router-link>
-              <router-link to="/about/council" class="dropdown-item" @click="closeMenu">Академический совет</router-link>
+              <router-link to="/about/headquarters" class="dropdown-item" @click="closeMenu">{{ $t('nav.headquarters') }}</router-link>
+              <router-link to="/about/board" class="dropdown-item" @click="closeMenu">{{ $t('nav.board') }}</router-link>
+              <router-link to="/about/council" class="dropdown-item" @click="closeMenu">{{ $t('nav.council') }}</router-link>
             </div>
           </transition>
         </div>
@@ -34,13 +36,13 @@
             @mouseleave="isBusinessOpen = false"
         >
           <router-link to="/business" class="nav-link" @click="closeMenu">
-            Бизнес <span class="arrow-mini">▼</span>
+            {{ $t('nav.business') }} <span class="arrow-mini">▼</span>
           </router-link>
 
           <transition name="fade">
             <div v-if="isBusinessOpen" class="dropdown-box">
-              <router-link to="/business" class="dropdown-item" @click="closeMenu">Спонсоры</router-link>
-              <router-link to="/partnership" class="dropdown-item" @click="closeMenu">Партнерство</router-link>
+              <router-link to="/business" class="dropdown-item" @click="closeMenu">{{ $t('nav.sponsors') }}</router-link>
+              <router-link to="/partnership" class="dropdown-item" @click="closeMenu">{{ $t('nav.partnership') }}</router-link>
             </div>
           </transition>
         </div>
@@ -51,34 +53,37 @@
             @mouseleave="isParticipantsOpen = false"
         >
           <router-link to="/teampage" class="nav-link" @click="closeMenu">
-            Участникам <span class="arrow-mini">▼</span>
+            {{ $t('nav.participants') }} <span class="arrow-mini">▼</span>
           </router-link>
 
           <transition name="fade">
             <div v-if="isParticipantsOpen" class="dropdown-box">
-              <router-link to="/teampage" class="dropdown-item" @click="closeMenu">Команды</router-link>
-              <router-link to="/enactus-cup" class="dropdown-item" @click="closeMenu">Enactus Camp</router-link>
-              <router-link to="/road-show" class="dropdown-item" @click="closeMenu">Road Show</router-link>
+              <router-link to="/teampage" class="dropdown-item" @click="closeMenu">{{ $t('nav.teams') }}</router-link>
+              <router-link to="/enactus-cup" class="dropdown-item" @click="closeMenu">{{ $t('nav.camp') }}</router-link>
+              <router-link to="/road-show" class="dropdown-item" @click="closeMenu">{{ $t('nav.roadshow') }}</router-link>
             </div>
           </transition>
         </div>
 
-        <router-link to="/competitions" class="nav-link" @click="closeMenu">Соревнования</router-link>
-        <router-link to="/news" class="nav-link" @click="closeMenu">Новости</router-link>
+        <router-link to="/competitions" class="nav-link" @click="closeMenu">{{ $t('nav.competitions') }}</router-link>
+        <router-link to="/news" class="nav-link" @click="closeMenu">{{ $t('nav.news') }}</router-link>
 
         <button class="contact-btn">
           <img src="/images/phone-icon.png" alt="" class="btn-icon">
-          Связаться
+          {{ $t('nav.contact') }}
         </button>
       </div>
 
       <div class="nav-actions">
         <div class="language-dropdown" @mouseenter="isLangOpen = true" @mouseleave="isLangOpen = false">
-          <span class="lang-current">RU <span class="arrow">▼</span></span>
+          <span class="lang-current">
+            {{ locale.toUpperCase() }} <span class="arrow">▼</span>
+          </span>
           <transition name="fade">
             <div v-if="isLangOpen" class="dropdown-content">
-              <a href="#" class="lang-item">KZ</a>
-              <a href="#" class="lang-item">ENG</a>
+              <a href="#" class="lang-item" @click.prevent="changeLanguage('ru')">RU</a>
+              <a href="#" class="lang-item" @click.prevent="changeLanguage('kz')">KZ</a>
+              <a href="#" class="lang-item" @click.prevent="changeLanguage('en')">ENG</a>
             </div>
           </transition>
         </div>
@@ -95,6 +100,10 @@
 
 <script setup>
 import { ref } from 'vue'
+import { useI18n } from 'vue-i18n'
+
+// Подключаем i18n
+const { locale } = useI18n()
 
 const isMenuOpen = ref(false)
 const isLangOpen = ref(false)
@@ -112,15 +121,23 @@ const closeMenu = () => {
   isBusinessOpen.value = false
   isParticipantsOpen.value = false
 }
+
+// Функция смены языка
+const changeLanguage = (lang) => {
+  locale.value = lang
+  isLangOpen.value = false
+  // Сохраняем в браузер, чтобы при перезагрузке язык не сбрасывался
+  localStorage.setItem('lang', lang)
+}
 </script>
 
 <style scoped>
-/* Подключаем шрифт Montserrat (если он не подключен глобально) */
+/* Ваши стили остаются без изменений, так как структура классов сохранена */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
 .navbar {
   font-family: 'Montserrat', sans-serif;
-  background: #F0F0F0; /* Серый фон навбара */
+  background: #F0F0F0;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   position: sticky;
   top: 0;
@@ -134,7 +151,7 @@ const closeMenu = () => {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80px; /* Немного увеличили высоту для визуального баланса */
+  height: 80px;
 }
 
 .nav-logo { height: 40px; }
@@ -166,12 +183,11 @@ const closeMenu = () => {
   margin-left: 4px;
 }
 
-/* Стили кнопки «Связаться» по макету */
 .contact-btn {
   background: #FFC007;
   border: none;
   padding: 10px 24px;
-  border-radius: 50px; /* Полностью круглая форма */
+  border-radius: 50px;
   font-weight: 600;
   font-family: 'Montserrat', sans-serif;
   color: #000;
@@ -194,7 +210,6 @@ const closeMenu = () => {
   object-fit: contain;
 }
 
-/* Выпадающие списки */
 .dropdown-wrapper {
   position: relative;
   padding: 10px 0;
@@ -253,11 +268,9 @@ const closeMenu = () => {
 
 .lang-item:hover { background: #f5f5f5; }
 
-/* Анимации */
 .fade-enter-active, .fade-leave-active { transition: opacity 0.2s, transform 0.2s; }
 .fade-enter-from, .fade-leave-to { opacity: 0; transform: translateY(10px); }
 
-/* Мобильная версия */
 @media (max-width: 1024px) {
   .nav-menu { gap: 1rem; }
   .nav-link { font-size: 0.9rem; }
@@ -285,6 +298,5 @@ const closeMenu = () => {
   }
 }
 
-/* Сброс стилей router-link */
 .router-link-active { background: none !important; }
 </style>
