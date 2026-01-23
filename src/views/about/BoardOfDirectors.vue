@@ -3,48 +3,46 @@
     <main class="board-page">
       <div class="container">
         <nav class="breadcrumbs">
-          <router-link to="/">Главная</router-link> 
+          <router-link to="/">{{ $t('breadcrumbs.home') }}</router-link>
           <span class="sep">›</span>
-          <router-link to="/about">О нас</router-link> 
+          <router-link to="/about">{{ $t('breadcrumbs.about') }}</router-link>
           <span class="sep">›</span>
-          <span class="current">Совет директоров</span>
+          <span class="current">{{ $t('board.title') }}</span>
         </nav>
 
-        <h1 class="page-title">Совет директоров</h1>
+        <h1 class="page-title">{{ $t('board.title') }}</h1>
       </div>
 
       <div class="carousel-section full-width">
-        
         <div class="carousel-track-wrapper">
           <div class="carousel-track t-left t-slow">
-            <DirectorItem 
-              v-for="(member, idx) in doubleMembers" 
-              :key="'row1-' + idx" 
-              :type="member.type" 
+            <DirectorItem
+                v-for="(member, idx) in doubleMembers"
+                :key="'row1-' + idx"
+                :type="member.type"
             />
           </div>
         </div>
 
         <div class="carousel-track-wrapper">
           <div class="carousel-track t-left t-slow" style="animation-delay: -40s; margin-left: -500px;">
-            <DirectorItem 
-              v-for="(member, idx) in doubleMembers" 
-              :key="'row2-' + idx" 
-              :type="member.type" 
+            <DirectorItem
+                v-for="(member, idx) in doubleMembers"
+                :key="'row2-' + idx"
+                :type="member.type"
             />
           </div>
         </div>
 
         <div class="carousel-track-wrapper">
           <div class="carousel-track t-left t-slow" style="animation-delay: -80s; margin-left: -1000px;">
-            <DirectorItem 
-              v-for="(member, idx) in shuffledMembers" 
-              :key="'row3-' + idx" 
-              :type="member.type" 
+            <DirectorItem
+                v-for="(member, idx) in shuffledMembers"
+                :key="'row3-' + idx"
+                :type="member.type"
             />
           </div>
         </div>
-
       </div>
     </main>
 
@@ -53,55 +51,28 @@
 </template>
 
 <script setup>
+// Здесь ничего не меняем по вашему запросу
 import { computed } from 'vue';
 import Footer from '@/components/Footer.vue';
 import DirectorItem from '@/components/DirectorItem.vue';
 
-// Список всех участников
 const boardMembers = [
-  { type: 'batalov' },
-  { type: 'erzhanova' },
-  { type: 'abdykulova' },
-  { type: 'akbalayeva' },
-  { type: 'nurkatov' },
-  { type: 'kiyassova' },
-  { type: 'khojanazarov' },
-  { type: 'nabiyev' },
-  { type: 'sagdiev' },
-  { type: 'myngbay' },
-  { type: 'zhukov' },
-  { type: 'khamzi' },
-  { type: 'aitmaganbet' },
-  { type: 'telemtayev' },
-  { type: 'kaygorotseva' },
-  { type: 'bekmaganbetov' },
-  { type: 'ilyassov' },
-  { type: 'zhussupekov' },
-  { type: 'mukashev' },
-  { type: 'umiryaev' },
-  { type: 'zhussupov' },
-  { type: 'mukhamadiyeva' },
-  { type: 'bitemirov' },
-  { type: 'lineitsev' },
-  { type: 'toleuov' },
-  { type: 'naisbecov' },
-  { type: 'balgozhina' },
-  { type: 'gussein' },
-  { type: 'ilyas' },
-  { type: 'mukhametov' },
-  { type: 'pershin' },
-  { type: 'idrissov' },
-  { type: 'badina' },
+  { type: 'batalov' }, { type: 'erzhanova' }, { type: 'abdykulova' },
+  { type: 'akbalayeva' }, { type: 'nurkatov' }, { type: 'kiyassova' },
+  { type: 'khojanazarov' }, { type: 'nabiyev' }, { type: 'sagdiev' },
+  { type: 'myngbay' }, { type: 'zhukov' }, { type: 'khamzi' },
+  { type: 'aitmaganbet' }, { type: 'telemtayev' }, { type: 'kaygorotseva' },
+  { type: 'bekmaganbetov' }, { type: 'ilyassov' }, { type: 'zhussupekov' },
+  { type: 'mukashev' }, { type: 'umiryaev' }, { type: 'zhussupov' },
+  { type: 'mukhamadiyeva' }, { type: 'bitemirov' }, { type: 'lineitsev' },
+  { type: 'toleuov' }, { type: 'naisbecov' }, { type: 'balgozhina' },
+  { type: 'gussein' }, { type: 'ilyas' }, { type: 'mukhametov' },
+  { type: 'pershin' }, { type: 'idrissov' }, { type: 'badina' },
   { type: 'mukushev' }
 ];
 
-// Дублирование для бесшовного скролла
 const doubleMembers = computed(() => [...boardMembers, ...boardMembers]);
-
-// Разворот массива для визуального отличия третьего ряда
-const shuffledMembers = computed(() => {
-  return [...boardMembers, ...boardMembers].reverse();
-});
+const shuffledMembers = computed(() => [...boardMembers, ...boardMembers].reverse());
 </script>
 
 <style scoped>
@@ -116,7 +87,7 @@ const shuffledMembers = computed(() => {
   flex: 1;
   padding: 40px 0 80px;
   background-color: #ffffff;
-  overflow-x: hidden; 
+  overflow-x: hidden;
 }
 
 .container {
@@ -130,9 +101,9 @@ const shuffledMembers = computed(() => {
   color: #999;
   margin-bottom: 20px;
 }
-.breadcrumbs a { 
-  text-decoration: none; 
-  color: #999; 
+.breadcrumbs a {
+  text-decoration: none;
+  color: #999;
   transition: color 0.3s;
 }
 .breadcrumbs a:hover { color: #ffc107; }
@@ -169,16 +140,16 @@ const shuffledMembers = computed(() => {
 /* Анимация движения только в одну сторону для синхронности */
 @keyframes scrollLeft {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); } 
+  100% { transform: translateX(-50%); }
 }
 
-.t-left { 
-  animation: scrollLeft linear infinite; 
+.t-left {
+  animation: scrollLeft linear infinite;
 }
 
 /* Единая скорость для всех рядов */
-.t-slow { 
-  animation-duration: 120s; 
+.t-slow {
+  animation-duration: 120s;
 }
 
 .carousel-track-wrapper:hover .carousel-track {

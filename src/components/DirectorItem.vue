@@ -1,14 +1,14 @@
 <template>
   <div class="director-card">
     <div class="image-box">
-      <img :src="currentDirector.image" :alt="currentDirector.name">
+      <img :src="currentDirectorData.image" :alt="currentDirectorData.name">
     </div>
     <div class="text-box">
       <h3 class="name">
-        {{ currentDirector.name }}
+        {{ currentDirectorData.name }}
       </h3>
       <p class="role">
-        {{ currentDirector.role }}
+        {{ currentDirectorData.role }}
       </p>
     </div>
   </div>
@@ -16,229 +16,74 @@
 
 <script setup>
 import { computed } from 'vue';
+import { useI18n } from 'vue-i18n';
 
 const props = defineProps(['type']);
+const { t } = useI18n();
 
-// 1. Создаем справочник всех участников
-const directorsData = {
-  batalov: {
-    name: 'Раимбек Баталов',
-    role: 'Chairman of the Board of Directors, ENACTUS Kazakhstan; Chairman of the Board of Directors, RAIMBEK BOTTLERS GROUP',
-    image: '/images/batalov.png'
-  },
-  erzhanova: {
-    name: 'Альбина Ержанова',
-    role: 'Президент и CEO Enactus Kazakhstan',
-    image: '/images/erzhanova.jpg'
-  },
-  // ДОБАВЛЯЙТЕ НОВЫХ ЛЮДЕЙ НИЖЕ:
-  abdykulova: {
-    name: 'AIMAN ABDYKULOVA',
-    role: 'Deputy Director for Development - Financial Director, MODERN ELECTRO PLUS',
-    image: '/images/AIMAN ABDYKULOVA.jpeg'
-  },
-  akbalayeva: {
-    name: 'GULBANU AKBALAYEVA',
-    role: 'Deputy Chairman of the Board of Directors, ENACTUS Kazakhstan',
-    image: '/images/GULBANU AKBALAYEVA.jpg'
-  },
-  
-  nurkatov: {
-    name: 'ARNUR NURKATOV',
-    role: 'Member of Board of directors ENACTUS Kazakhstan',
-    image: 'public/images/ARNUR NURKATOV.jpg'
-  },
-
-  kiyassova: {
-    name: 'AIZHAN KIYASSOVA',
-    role: 'Deputy Chairman of the Regional Commission for Women and Family and Demographic Policy',
-    image: 'images/AIZHAN KIYASSOVA.jpg'
-  },
-
-  khojanazarov: {
-    name: 'AIDARBEK KHOJANAZAROV',
-    role: 'Chairman of the Supervisory Board, A.B.S. Stroy',
-    image: '/images/BARZONI NABIYEV.jpg'
-  },
-
-   nabiyev: {
-    name: 'BARZONI NABIYEV',
-    role: 'Deputy of the Majilis of the Parliament of the Republic of Kazakhstan Chairman of the Respublica',
-    image: '/images/AIDARBEK KHOJANAZAROV.jpg'
-  },
-
-
-   sagdiev: {
-    name: 'ASKHAT SAGDIYEV',
-    role: 'Председатель совета директоров Most Holding',
-    image: '/images/ASKHAT SAGDIYEV.jpeg'
-  },
-
-   myngbay: {
-    name: 'DARKHAN MYNGBAY',
-    role: 'Member of the Board of Directors ENACTUS Kazakhstan, Kazakh statesman',
-    image: '/images/DARKHAN MYNGBAY.jpg'
-  },
-
-   zhukov: {
-    name: 'DMITRY ZHUKOV',
-    role: 'Executive Director, QazSpirits Association',
-    image: '/images/DMITRY ZHUKOV.jpg'
-  },
-
-   khamzi: {
-    name: 'GANI KHAMZIN',
-    role: 'Deputy of the Mazhilis of the Parliament of the Republic of Kazakhstan',
-    image: '/images/GANI KHAMZIN.jpg'
-  },
-
-   aitmaganbet: {
-    name: 'MAKSUTBEK AITMAGANBET',
-    role: 'Председатель республиканского общественного объединения "Союз отцов"',
-    image: '/images/MAKSUTBEK AITMAGANBET.jpeg'
-  },
-
-   telemtayev: {
-    name: 'MAXIM TELEMTAYEV',
-    role: 'MANAGING PARTNER, WHITE&CASE Kazakhstan',
-    image: '/images/MAXIM TELEMTAYEV.jpg'
-  },
-
-  kaygorotseva: {
-    name: 'MAYYA KAYGORODTSEVA',
-    role: 'General Director, engineering company “Leader”',
-    image: '/images/MAYYA KAYGORODTSEVA.jpg'
-  },
-
-  bekmaganbetov: {
-    name: 'MAKSUT BEKMAGANBETOV',
-    role: 'Member of the Board of Directors ENACTUS Kazakhstan',
-    image: '/images/MAKSUT BEKMAGANBETOV.jpg'
-  },
-
-  ilyassov: {
-    name: 'MURAT ILYASSOV',
-    role: 'Deputy Director for Development, KT Cloud Lab',
-    image: '/images/MURAT ILYASSOV.jpg'
-  },
-
-  zhussupekov: {
-    name: 'MURATBEK ZHUSSUPEKOV',
-    role: 'Financial Director, KT CLOUD LAB',
-    image: '/images/MURATBEK ZHUSSUPEKOV.jpg'
-  },
-
-  mukashev: {
-    name: 'BALTABEK MUKASHEV',
-    role: 'Member of the Board of Directors ENACTUS Kazakhstan',
-    image: '/images/BALTABEK.jpg'
-  },
-
-  umiryaev: {
-    name: 'MUSLIM UMIRYAEV',
-    role: 'General Director, Global BEVERAGES',
-    image: '/images/MUSLIM UMIRYAEV.jpg'
-  },
-
-  zhussupov: {
-    name: 'SHALKAR ZHUSSUPOV',
-    role: 'Chairman of the Board, "KMF" Bank',
-    image: '/images/SHALKAR ZHUSSUPOV.jpg'
-  },
-
-  mukhamadiyeva: {
-    name: 'AIGUL MUKHAMADIYEVA',
-    role: 'Managing Director - Head of the Directorate for Natural Resources and Agriculture. Member of the Board of the Eurasian Development Bank',
-    image: '/images/AIGUL MUKHAMADIYEVA.jpg'
-  },
-
-  bitemirov: {
-    name: 'BAKYTZHAN BITEMIROV',
-    role: 'MSc, CSE - Chief Executive Officer - KBSTECH',
-    image: '/images/BAKYTZHAN BITEMIROV.jpg'
-  },
-
-  lineitsev: {
-    name: 'ROMAN LINEITSEV',
-    role: 'CEO Grand Mobile',
-    image: '/images/ROMAN LINEITSEV.jpg'
-  },
-
-  toleuov: {
-    name: 'YERGALY TOLEUOV',
-    role: 'Директор Nova Capital LLP',
-    image: '/images/YERGALY TOLEUOV.jpg'
-  },
-
-  naisbecov: {
-    name: 'YERNAR NAKISBEKOV',
-    role: 'GENERAL DIRECTOR, ZOR TECHNOLOGIES',
-    image: '/images/YERNAR NAKISBEKOV.jpg'
-  },
-
-  balgozhina: {
-    name: 'MEIRAMGUL BALGOZHINA',
-    role: '”CEO “EMPIRE TRAVEL QAZAQSTAN”',
-    image: '/images/MEIRAMGUL BALGOZHINA.jpg'
-  },
-
-  gussein: {
-    name: 'GUSSEIN NABIYEV',
-    role: 'Commercial Director of ATK-2005',
-    image: '/images/GUSSEIN NABIYEV.jpg'
-  },
-
-  ilyas: {
-    name: 'ILYAS NABIYEV',
-    role: 'Директор по развитию бизнеса ТОО “ABS строй”',
-    image: '/images/ILYAS NABIYEV.jpg'
-  },
-
-  mukhametov: {
-    name: 'ALMAS MUKHAMETOV',
-    role: 'Founder of the "Pharmaland" company',
-    image: '/images/ALMAS MUKHAMETOV.jpg'
-  },
-
-  pershin: {
-    name: 'VLADISLAV PERSHIN',
-    role: 'General Director of the 99.99 Agency',
-    image: '/images/VLADISLAV PERSHIN.jpg'
-  },
-
-  idrissov: {
-    name: 'RUSLAN IDRISSOV',
-    role: 'GENERAL DIRECTOR, GLOBAL FOODS',
-    image: '/images/RUSLAN IDRISSOV.jpg'
-  },
-  badina: {
-    name: 'ASSEL BADINA',
-    role: 'Head of the Personnel Assessment and Development Department (Head of T&D) "Kazakhmys Corporation" LLP',
-    image: '/images/ASSEL BADINA.jpg'
-  },
-
-  mukushev: {
-    name: 'BULAT MUKUSHEV',
-    role: 'President, TSSP Group',
-    image: '/images/HB POSTERS.png'
-  }
+// 1. Справочник только для путей к изображениям и имен (статичные данные)
+const staticData = {
+  batalov: { name: 'RAIMBEK BATALOV', image: '/images/batalov.png' },
+  erzhanova: { name: 'ALBINA YERZHANOVA', image: '/images/erzhanova.jpg' },
+  abdykulova: { name: 'AIMAN ABDYKULOVA', image: '/images/AIMAN ABDYKULOVA.jpeg' },
+  akbalayeva: { name: 'GULBANU AKBALAYEVA', image: '/images/GULBANU AKBALAYEVA.jpg' },
+  nurkatov: { name: 'ARNUR NURKATOV', image: '/images/ARNUR NURKATOV.jpg' },
+  kiyassova: { name: 'AIZHAN KIYASSOVA', image: '/images/AIZHAN KIYASSOVA.jpg' },
+  khojanazarov: { name: 'BARZONI NABIYEV', image: '/images/BARZONI NABIYEV.jpg' },
+  nabiyev: { name: 'AIDARBEK KHOJANAZAROV', image: '/images/AIDARBEK KHOJANAZAROV.jpg' },
+  sagdiev: { name: 'ASKHAT SAGDIYEV', image: '/images/ASKHAT SAGDIYEV.jpeg' },
+  myngbay: { name: 'DARKHAN MYNGBAY', image: '/images/DARKHAN MYNGBAY.jpg' },
+  zhukov: { name: 'DMITRY ZHUKOV', image: '/images/DMITRY ZHUKOV.jpg' },
+  khamzi: { name: 'GANI KHAMZIN', image: '/images/GANI KHAMZIN.jpg' },
+  aitmaganbet: { name: 'MAKSUTBEK AITMAGANBET', image: '/images/MAKSUTBEK AITMAGANBET.jpeg' },
+  telemtayev: { name: 'MAXIM TELEMTAYEV', image: '/images/MAXIM TELEMTAYEV.jpg' },
+  kaygorotseva: { name: 'MAYA KAYGORODTSEVA', image: '/images/MAYYA KAYGORODTSEVA.jpg' },
+  bekmaganbetov: { name: 'MAKSUT BEKMAGANBETOV', image: '/images/MAKSUT BEKMAGANBETOV.jpg' },
+  ilyassov: { name: 'MURAT ILYASSOV', image: '/images/MURAT ILYASSOV.jpg' },
+  zhussupekov: { name: 'MURATBEK ZHUSSUPEKOV', image: '/images/MURATBEK ZHUSSUPEKOV.jpg' },
+  mukashev: { name: 'BALTABEK MUKASHEV', image: '/images/BALTABEK.jpg' },
+  umiryaev: { name: 'MUSLIM UMIRYAEV', image: '/images/MUSLIM UMIRYAEV.jpg' },
+  zhussupov: { name: 'SHALKAR ZHUSSUPOV', image: '/images/SHALKAR ZHUSSUPOV.jpg' },
+  mukhamadiyeva: { name: 'AIGUL MUKHAMADIYEVA', image: '/images/AIGUL MUKHAMADIYEVA.jpg' },
+  bitemirov: { name: 'BAKYTZHAN BITEMIROV', image: '/images/BAKYTZHAN BITEMIROV.jpg' },
+  lineitsev: { name: 'ROMAN LINEITSEV', image: '/images/ROMAN LINEITSEV.jpg' },
+  toleuov: { name: 'YERGALY TOLEUOV', image: '/images/YERGALY TOLEUOV.jpg' },
+  naisbecov: { name: 'YERNAR NAKISBEKOV', image: '/images/YERNAR NAKISBEKOV.jpg' },
+  balgozhina: { name: 'MEIRAMGUL BALGOZHINA', image: '/images/MEIRAMGUL BALGOZHINA.jpg' },
+  gussein: { name: 'GUSSEIN NABIYEV', image: '/images/GUSSEIN NABIYEV.jpg' },
+  ilyas: { name: 'ILYAS NABIYEV', image: '/images/ILYAS NABIYEV.jpg' },
+  mukhametov: { name: 'ALMAS MUKHAMETOV', image: '/images/ALMAS MUKHAMETOV.jpg' },
+  pershin: { name: 'VLADISLAV PERSHIN', image: '/images/VLADISLAV PERSHIN.jpg' },
+  idrissov: { name: 'RUSLAN IDRISSOV', image: '/images/RUSLAN IDRISSOV.jpg' },
+  badina: { name: 'ASSEL BADINA', image: '/images/ASSEL BADINA.jpg' },
+  mukushev: { name: 'BULAT MUKUSHEV', image: '/images/HB POSTERS.png' }
 };
 
-// 2. Вычисляем, какого именно директора показать
-const currentDirector = computed(() => {
-  // Если тип не найден в списке, покажем Баталова по умолчанию
-  return directorsData[props.type] || directorsData['batalov'];
+// 2. Полностью динамическое вычисление данных текущего директора
+const currentDirectorData = computed(() => {
+  const type = props.type || 'batalov';
+  const person = staticData[type] || staticData.batalov;
+
+  return {
+    name: person.name,
+    image: person.image,
+    // Вызов t() внутри computed гарантирует реактивность при смене locale
+    role: t(`board.members.${type}.role`)
+  };
 });
 </script>
 
 <style scoped>
-/* Стили остаются без изменений, они у вас отличные */
 .director-card {
   display: flex;
   align-items: center;
   gap: 20px;
   min-width: 450px;
   background: white;
+  padding: 10px;
+  border-radius: 20px;
+  /* Устанавливаем высоту, чтобы карточки были одинаковыми */
+  min-height: 160px;
 }
 
 .image-box img {
@@ -247,6 +92,7 @@ const currentDirector = computed(() => {
   border-radius: 20px;
   object-fit: cover;
   display: block;
+  flex-shrink: 0;
 }
 
 .text-box {
@@ -262,8 +108,8 @@ const currentDirector = computed(() => {
 }
 
 .role {
-  font-size: 12px;
-  line-height: 1.4;
+  font-size: 11px;
+  line-height: 1.3;
   color: #555;
   margin: 0;
 }

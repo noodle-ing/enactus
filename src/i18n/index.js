@@ -101,6 +101,76 @@ const messages = {
                 albina: { name: 'Albina Aysamutdinova', role: 'Regional Coordinator, ENACTUS KAZAKHSTAN, Astana' },
                 zhasulan: { name: 'Zhasulan Baurzhanuly', role: 'Regional Coordinator, ENACTUS KAZAKHSTAN, East Kazakhstan Region' }
             }
+        },
+        board: {
+            title: 'Board of Directors',
+            members: {
+                batalov: {
+                    name: 'RAIMBEK BATALOV',
+                    role: 'Chairman of the Board of Directors, ENACTUS Kazakhstan; Chairman of the Board of Directors, RAIMBEK BOTTLERS GROUP'
+                },
+                erzhanova: {name: 'ALBINA YERZHANOVA', role: 'President and CEO, Enactus Kazakhstan'},
+                abdykulova: {
+                    name: 'AIMAN ABDYKULOVA',
+                    role: 'Deputy Director for Development - Financial Director, MODERN ELECTRO PLUS'
+                },
+                akbalayeva: {
+                    name: 'GULBANU AKBALAYEVA',
+                    role: 'Deputy Chairman of the Board of Directors, ENACTUS Kazakhstan'
+                },
+                nurkatov: {name: 'ARNUR NURKATOV', role: 'Member of the Board of Directors, ENACTUS Kazakhstan'},
+                kiyassova: {
+                    name: 'AIZHAN KIYASSOVA',
+                    role: 'Deputy Chairman of the Regional Commission for Women and Family Policy'
+                },
+                khojanazarov: {name: 'AIDARBEK KHOJANAZAROV', role: 'Chairman of the Supervisory Board, A.B.S. Stroy'},
+                nabiyev: {
+                    name: 'BARZONI NABIYEV',
+                    role: 'Deputy of the Majilis of the Parliament of the RK, Chairman of Respublica'
+                },
+                sagdiev: {name: 'ASKHAT SAGDIYEV', role: 'Chairman of the Board of Directors, Most Holding'},
+                myngbay: {
+                    name: 'DARKHAN MYNGBAY',
+                    role: 'Member of the Board of Directors ENACTUS Kazakhstan, Kazakh statesman'
+                },
+                zhukov: {name: 'DMITRY ZHUKOV', role: 'Executive Director, QazSpirits Association'},
+                khamzi: {
+                    name: 'GANI KHAMZIN',
+                    role: 'Deputy of the Mazhilis of the Parliament of the Republic of Kazakhstan'
+                },
+                aitmaganbet: {
+                    name: 'MAKSUTBEK AITMAGANBET',
+                    role: 'Chairman of the Republican Public Association "Union of Fathers"'
+                },
+                telemtayev: {name: 'MAXIM TELEMTAYEV', role: 'Managing Partner, WHITE&CASE Kazakhstan'},
+                kaygorotseva: {name: 'MAYYA KAYGORODTSEVA', role: 'General Director, engineering company “Leader”'},
+                bekmaganbetov: {
+                    name: 'MAKSUT BEKMAGANBETOV',
+                    role: 'Member of the Board of Directors, ENACTUS Kazakhstan'
+                },
+                ilyassov: {name: 'MURAT ILYASSOV', role: 'Deputy Director for Development, KT Cloud Lab'},
+                zhussupekov: {name: 'MURATBEK ZHUSSUPEKOV', role: 'Financial Director, KT CLOUD LAB'},
+                mukashev: {name: 'BALTABEK MUKASHEV', role: 'Member of the Board of Directors, ENACTUS Kazakhstan'},
+                umiryaev: {name: 'MUSLIM UMIRYAEV', role: 'General Director, Global BEVERAGES'},
+                zhussupov: {name: 'SHALKAR ZHUSSUPOV', role: 'Chairman of the Board, "KMF" Bank'},
+                mukhamadiyeva: {name: 'AIGUL MUKHAMADIYEVA', role: 'Managing Director, Eurasian Development Bank'},
+                bitemirov: {name: 'BAKYTZHAN BITEMIROV', role: 'Chief Executive Officer, KBSTECH'},
+                lineitsev: {name: 'ROMAN LINEITSEV', role: 'CEO, Grand Mobile'},
+                toleuov: {name: 'YERGALY TOLEUOV', role: 'Director, Nova Capital LLP'},
+                naisbecov: {name: 'YERNAR NAKISBEKOV', role: 'General Director, ZOR TECHNOLOGIES'},
+                balgozhina: {name: 'MEIRAMGUL BALGOZHINA', role: 'CEO, EMPIRE TRAVEL QAZAQSTAN'},
+                gussein: {name: 'GUSSEIN NABIYEV', role: 'Commercial Director, ATK-2005'},
+                ilyas: {name: 'ILYAS NABIYEV', role: 'Business Development Director, ABS Stroy'},
+                mukhametov: {name: 'ALMAS MUKHAMETOV', role: 'Founder of the "Pharmaland" company'},
+                pershin: {name: 'VLADISLAV PERSHIN', role: 'General Director of the 99.99 Agency'},
+                idrissov: {name: 'RUSLAN IDRISSOV', role: 'General Director, GLOBAL FOODS'},
+                badina: {name: 'ASSEL BADINA', role: 'Head of T&D, "Kazakhmys Corporation" LLP'},
+                mukushev: {name: 'BULAT MUKUSHEV', role: 'President, TSSP Group'}
+            }
+        },
+        breadcrumbs: {
+            home: 'Home',
+            about: 'About Us'
         }
 
     },
@@ -205,7 +275,50 @@ const messages = {
                 albina: { name: 'Альбина Айсамутдинова', role: 'Региональный координатор ENACTUS KAZAKHSTAN, г. Астана' },
                 zhasulan: { name: 'Жасулан Бауржанулы', role: 'Региональный координатор ENACTUS KAZAKHSTAN, Восточно-Казахстанская область' }
             }
-        }
+        },
+        board: {
+            title: 'Совет директоров',
+            members: {
+                batalov: { name: 'RAIMBEK BATALOV', role: 'Председатель Совета директоров ENACTUS Kazakhstan; Председатель СД RAIMBEK BOTTLERS GROUP' },
+                erzhanova: { name: 'ALBINA YERZHANOVA', role: 'Президент и CEO Enactus Kazakhstan' },
+                abdykulova: { name: 'AIMAN ABDYKULOVA', role: 'Заместитель директора по развитию — финансовый директор MODERN ELECTRO PLUS' },
+                akbalayeva: { name: 'GULBANU AKBALAYEVA', role: 'Заместитель председателя Совета директоров ENACTUS Kazakhstan' },
+                nurkatov: { name: 'ARNUR NURKATOV', role: 'Член Совета директоров ENACTUS Kazakhstan' },
+                kiyassova: { name: 'AIZHAN KIYASSOVA', role: 'Заместитель председателя региональной комиссии по делам женщин и семейно-демографической политике' },
+                khojanazarov: { name: 'AIDARBEK KHOJANAZAROV', role: 'Председатель наблюдательного совета ТОО «ABS строй»' },
+                nabiyev: { name: 'BARZONI NABIYEV', role: 'Депутат Мажилиса Парламента РК, Председатель партии Respublica' },
+                sagdiev: { name: 'ASKHAT SAGDIYEV', role: 'Председатель совета директоров Most Holding' },
+                myngbay: { name: 'DARKHAN MYNGBAY', role: 'Член Совета директоров ENACTUS Kazakhstan, государственный деятель РК' },
+                zhukov: { name: 'DMITRY ZHUKOV', role: 'Исполнительный директор ассоциации QazSpirits' },
+                khamzi: { name: 'GANI KHAMZIN', role: 'Депутат Мажилиса Парламента Республики Казахстан' },
+                aitmaganbet: { name: 'MAKSUTBEK AITMAGANBET', role: 'Председатель республиканского общественного объединения "Союз отцов"' },
+                telemtayev: { name: 'MAXIM TELEMTAYEV', role: 'Управляющий партнер WHITE&CASE Kazakhstan' },
+                kaygorotseva: { name: 'MAYYA KAYGORODTSEVA', role: 'Генеральный директор инжиниринговой компании «Leader»' },
+                bekmaganbetov: { name: 'MAKSUT BEKMAGANBETOV', role: 'Член Совета директоров ENACTUS Kazakhstan' },
+                ilyassov: { name: 'MURAT ILYASSOV', role: 'Заместитель директора по развитию KT Cloud Lab' },
+                zhussupekov: { name: 'MURATBEK ZHUSSUPEKOV', role: 'Финансовый директор KT CLOUD LAB' },
+                mukashev: { name: 'BALTABEK MUKASHEV', role: 'Член Совета директоров ENACTUS Kazakhstan' },
+                umiryaev: { name: 'MUSLIM UMIRYAEV', role: 'Генеральный директор Global BEVERAGES' },
+                zhussupov: { name: 'SHALKAR ZHUSSUPOV', role: 'Председатель правления банка "KMF"' },
+                mukhamadiyeva: { name: 'AIGUL MUKHAMADIYEVA', role: 'Управляющий директор Евразийского банка развития' },
+                bitemirov: { name: 'BAKYTZHAN BITEMIROV', role: 'Генеральный директор KBSTECH' },
+                lineitsev: { name: 'ROMAN LINEITSEV', role: 'CEO Grand Mobile' },
+                toleuov: { name: 'YERGALY TOLEUOV', role: 'Директор Nova Capital LLP' },
+                naisbecov: { name: 'YERNAR NAKISBEKOV', role: 'Генеральный директор ZOR TECHNOLOGIES' },
+                balgozhina: { name: 'MEIRAMGUL BALGOZHINA', role: 'Генеральный директор EMPIRE TRAVEL QAZAQSTAN' },
+                gussein: { name: 'GUSSEIN NABIYEV', role: 'Коммерческий директор АТК-2005' },
+                ilyas: { name: 'ILYAS NABIYEV', role: 'Директор по развитию бизнеса ТОО «ABS строй»' },
+                mukhametov: { name: 'ALMAS MUKHAMETOV', role: 'Основатель компании "Pharmaland"' },
+                pershin: { name: 'VLADISLAV PERSHIN', role: 'Генеральный директор агентства 99.99' },
+                idrissov: { name: 'RUSLAN IDRISSOV', role: 'Генеральный директор GLOBAL FOODS' },
+                badina: { name: 'ASSEL BADINA', role: 'Руководитель департамента обучения и развития персонала (T&D) ТОО «Корпорация Казахмыс»' },
+                mukushev: { name: 'BULAT MUKUSHEV', role: 'Президент TSSP Group' }
+            }
+        },
+        breadcrumbs: {
+            home: 'Главная',
+            about: 'О нас'
+        },
     },
     kz: {
         nav: {
@@ -311,7 +424,50 @@ const messages = {
                     role: 'ENACTUS KAZAKHSTAN өңірлік үйлестірушісі, Шығыс Қазақстан облысы'
                 }
             }
-        }
+        },
+        board: {
+            title: 'Директорлар кеңесі',
+            members: {
+                batalov: { name: 'RAIMBEK BATALOV', role: 'ENACTUS Kazakhstan Директорлар кеңесінің төрағасы; RAIMBEK BOTTLERS GROUP Директорлар кеңесінің төрағасы' },
+                erzhanova: { name: 'ALBINA YERZHANOVA', role: 'Enactus Kazakhstan Президенті және CEO' },
+                abdykulova: { name: 'AIMAN ABDYKULOVA', role: 'Даму жөніндегі директордың орынбасары — MODERN ELECTRO PLUS қаржы директоры' },
+                akbalayeva: { name: 'GULBANU AKBALAYEVA', role: 'ENACTUS Kazakhstan Директорлар кеңесі төрағасының орынбасары' },
+                nurkatov: { name: 'ARNUR NURKATOV', role: 'ENACTUS Kazakhstan Директорлар кеңесінің мүшесі' },
+                kiyassova: { name: 'AIZHAN KIYASSOVA', role: 'Әйелдер істері және отбасылық-демографиялық саясат жөніндегі өңірлік комиссия төрағасының орынбасары' },
+                khojanazarov: { name: 'AIDARBEK KHOJANAZAROV', role: '«ABS строй» ЖШС Байқау кеңесінің төрағасы' },
+                nabiyev: { name: 'BARZONI NABIYEV', role: 'ҚР Парламенті Мәжілісінің депутаты, Respublica партиясының төрағасы' },
+                sagdiev: { name: 'ASKHAT SAGDIYEV', role: 'Most Holding Директорлар кеңесінің төрағасы' },
+                myngbay: { name: 'DARKHAN MYNGBAY', role: 'ENACTUS Kazakhstan Директорлар кеңесінің мүшесі, ҚР мемлекеттік қайраткері' },
+                zhukov: { name: 'DMITRY ZHUKOV', role: 'QazSpirits қауымдастығының атқарушы директоры' },
+                khamzi: { name: 'GANI KHAMZIN', role: 'Қазақстан Республикасы Парламенті Мәжілісінің депутаты' },
+                aitmaganbet: { name: 'MAKSUTBEK AITMAGANBET', role: '«Әкелер одағы» республикалық қоғамдық бірлестігінің төрағасы' },
+                telemtayev: { name: 'MAXIM TELEMTAYEV', role: 'WHITE&CASE Kazakhstan басқарушы серіктесі' },
+                kaygorotseva: { name: 'MAYYA KAYGORODTSEVA', role: '«Leader» инжинирингтік компаниясының бас директоры' },
+                bekmaganbetov: { name: 'MAKSUT BEKMAGANBETOV', role: 'ENACTUS Kazakhstan Директорлар кеңесінің мүшесі' },
+                ilyassov: { name: 'MURAT ILYASSOV', role: 'KT Cloud Lab даму жөніндегі директордың орынбасары' },
+                zhussupekov: { name: 'MURATBEK ZHUSSUPEKOV', role: 'KT CLOUD LAB қаржы директоры' },
+                mukashev: { name: 'BALTABEK MUKASHEV', role: 'ENACTUS Kazakhstan Директорлар кеңесінің мүшесі' },
+                umiryaev: { name: 'MUSLIM UMIRYAEV', role: 'Global BEVERAGES бас директоры' },
+                zhussupov: { name: 'SHALKAR ZHUSSUPOV', role: '«KMF» банкінің басқарма төрағасы' },
+                mukhamadiyeva: { name: 'AIGUL MUKHAMADIYEVA', role: 'Еуразиялық даму банкінің басқарушы директоры' },
+                bitemirov: { name: 'BAKYTZHAN BITEMIROV', role: 'KBSTECH бас директоры' },
+                lineitsev: { name: 'ROMAN LINEITSEV', role: 'Grand Mobile CEO' },
+                toleuov: { name: 'YERGALY TOLEUOV', role: 'Nova Capital LLP директоры' },
+                naisbecov: { name: 'YERNAR NAKISBEKOV', role: 'ZOR TECHNOLOGIES бас директоры' },
+                balgozhina: { name: 'MEIRAMGUL BALGOZHINA', role: 'EMPIRE TRAVEL QAZAQSTAN бас директоры' },
+                gussein: { name: 'GUSSEIN NABIYEV', role: 'АТК-2005 коммерциялық директоры' },
+                ilyas: { name: 'ILYAS NABIYEV', role: '«ABS строй» ЖШС бизнесті дамыту жөніндегі директоры' },
+                mukhametov: { name: 'ALMAS MUKHAMETOV', role: '«Pharmaland» компаниясының негізін қалаушы' },
+                pershin: { name: 'VLADISLAV PERSHIN', role: '99.99 агенттігінің бас директоры' },
+                idrissov: { name: 'RUSLAN IDRISSOV', role: 'GLOBAL FOODS бас директоры' },
+                badina: { name: 'ASSEL BADINA', role: '«Қазақмыс корпорациясы» ЖШС персоналды оқыту және дамыту (T&D) департаментінің басшысы' },
+                mukushev: { name: 'BULAT MUKUSHEV', role: 'TSSP Group президенті' }
+            }
+        },
+        breadcrumbs: {
+            home: 'Басты бет',
+            about: 'Біз туралы'
+        },
     }
 }
 
