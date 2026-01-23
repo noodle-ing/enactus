@@ -3,28 +3,28 @@
     <main class="partnership-page">
       <div class="container">
         <nav class="breadcrumbs">
-          <router-link to="/">Главная</router-link> 
-          <span class="sep">›</span>
-          <router-link to="/business">Бизнесу</router-link> 
-          <span class="sep">›</span>
-          <span class="current">Партнёрство</span>
+          <router-link to="/">{{ $t('breadcrumbs.home') }}</router-link>
+          <span class="sep">&nbsp;›&nbsp;</span>
+          <router-link to="/business">{{ $t('breadcrumbs.business') }}</router-link>
+          <span class="sep">&nbsp;›&nbsp;</span>
+          <span class="current">{{ $t('partnership.title') }}</span>
         </nav>
 
-        <h1 class="page-title">Партнёрство</h1>
+        <h1 class="page-title">{{ $t('partnership.title') }}</h1>
 
         <section class="partners-hero">
           <div class="tier-header partners-bg">
-            <h2>ОФИЦИАЛЬНЫЕ ПАРТНЁРЫ</h2>
+            <h2>{{ $t('partnership.officialPartners') }}</h2>
           </div>
           <div class="partners-grid">
-            <img src="/images/logo-atameken.png" alt="Атамекен" class="partner-logo" />
+            <img src="/images/logo-atameken.png" alt="Atameken" class="partner-logo" />
             <div class="partner-item">
-              <img src="/images/logo-almaty.png" alt="Акимат Алматы" class="partner-logo" />
-              <p>АКИМАТ ГОРОДА АЛМАТЫ</p>
+              <img src="/images/logo-almaty.png" alt="Almaty Akimat" class="partner-logo" />
+              <p>{{ $t('partnership.list.akimat') }}</p>
             </div>
             <div class="partner-item">
-              <img src="/images/logo-min.png" alt="Министерство" class="partner-logo" />
-              <p>МИНИСТЕРСТВО НАУКИ И ВЫСШЕГО ОБРАЗОВАНИЯ РЕСПУБЛИКИ КАЗАХСТАН</p>
+              <img src="/images/logo-min.png" alt="Ministry" class="partner-logo" />
+              <p>{{ $t('partnership.list.ministry') }}</p>
             </div>
           </div>
         </section>
@@ -33,49 +33,49 @@
           <div class="info-item">
             <div class="info-title">
               <img src="/images/icons/case.png" alt="" class="info-icon" />
-              <h3>Партнёрство с ENACTUS</h3>
+              <h3>{{ $t('partnership.blocks.partnership.title') }}</h3>
             </div>
-            <p>Как спонсор и партнер ENACTUS, Вы будете играть важную роль в продвижении нашей работы по повышению качества жизни в стране, совершенствованию общества, воспитанию будущих деловых лидеров.</p>
+            <p>{{ $t('partnership.blocks.partnership.desc') }}</p>
           </div>
 
           <div class="info-item">
             <div class="info-title">
               <img src="/images/icons/hands.png" alt="" class="info-icon" />
-              <h3>Преимущества партнёрства с ENACTUS</h3>
+              <h3>{{ $t('partnership.blocks.benefits.title') }}</h3>
             </div>
-            <p>Партнерство с ENACTUS станет ценным дополнением к портфелю социально ответственной компании. В рамках реализации проектов вы сможете контактировать со студентами и решать вместе интересующие вас задачи.</p>
+            <p>{{ $t('partnership.blocks.benefits.desc') }}</p>
           </div>
 
           <div class="info-item">
             <div class="info-title">
               <img src="/images/icons/coins.png" alt="" class="info-icon" />
-              <h3>Роль инвестиций в ENACTUS</h3>
+              <h3>{{ $t('partnership.blocks.investments.title') }}</h3>
             </div>
-            <p>Инвестиции в ENACTUS играют важную роль в развитии предпринимательской деятельности и инноваций, которые влияют на жизнь людей и создают лучшее будущее.</p>
+            <p>{{ $t('partnership.blocks.investments.desc') }}</p>
           </div>
         </section>
 
         <section class="callback-section">
           <div class="callback-card">
             <div class="callback-content">
-              <h2>ПРИГЛАШАЕМ К ПАРТНЁРСТВУ!</h2>
-              <p>Присоединяйтесь к более чем 550 партнерам по всему миру, которые активно вкладывают средства в предпринимательскую деятельность для устойчивых изменений и развития общества.</p>
-              
+              <h2>{{ $t('partnership.callback.title') }}</h2>
+              <p>{{ $t('partnership.callback.desc') }}</p>
+
               <form @submit.prevent="handleSubmit" class="callback-form">
                 <div class="form-row">
                   <div class="form-group">
-                    <label>Имя</label>
-                    <input type="text" placeholder="Text" v-model="form.name" />
+                    <label>{{ $t('partnership.form.name') }}</label>
+                    <input type="text" :placeholder="$t('partnership.form.placeholder')" v-model="form.name" />
                   </div>
                   <div class="form-group">
-                    <label>Номер телефона</label>
+                    <label>{{ $t('partnership.form.phone') }}</label>
                     <div class="phone-input">
                       <span class="flag">🇰🇿</span>
-                      <input type="tel" placeholder="Text" v-model="form.phone" />
+                      <input type="tel" :placeholder="$t('partnership.form.placeholder')" v-model="form.phone" />
                     </div>
                   </div>
                 </div>
-                <button type="submit" class="submit-btn">Отправить заявку</button>
+                <button type="submit" class="submit-btn">{{ $t('partnership.form.submit') }}</button>
               </form>
             </div>
             <div class="callback-image">
@@ -85,7 +85,6 @@
         </section>
       </div>
     </main>
-
     <Footer />
   </div>
 </template>

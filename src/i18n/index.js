@@ -181,6 +181,38 @@ const messages = {
             home: 'Home',
             about: 'About Us',
             business: 'Business'
+        },
+        partnership: {
+            title: 'Partnership',
+            officialPartners: 'OFFICIAL PARTNERS',
+            list: {
+                akimat: 'AKIMAT OF ALMATY CITY',
+                ministry: 'MINISTRY OF SCIENCE AND HIGHER EDUCATION OF THE REPUBLIC OF KAZAKHSTAN'
+            },
+            blocks: {
+                partnership: {
+                    title: 'Partnership with ENACTUS',
+                    desc: 'As an ENACTUS sponsor and partner, you will play a vital role in advancing our work to improve the quality of life in the country, enhance society, and develop future business leaders.'
+                },
+                benefits: {
+                    title: 'Benefits of Partnership with ENACTUS',
+                    desc: 'Partnering with ENACTUS will be a valuable addition to the portfolio of a socially responsible company. Within the framework of projects, you will be able to connect with students and solve tasks of interest together.'
+                },
+                investments: {
+                    title: 'The Role of Investment in ENACTUS',
+                    desc: 'Investments in ENACTUS play an important role in the development of entrepreneurship and innovation, which impact people\'s lives and create a better future.'
+                }
+            },
+            callback: {
+                title: 'JOIN OUR PARTNERSHIP!',
+                desc: 'Join more than 550 partners worldwide who actively invest in entrepreneurship for sustainable change and societal development.'
+            },
+            form: {
+                name: 'Name',
+                phone: 'Phone Number',
+                placeholder: 'Text',
+                submit: 'Submit Application'
+            }
         }
 
     },
@@ -339,6 +371,38 @@ const messages = {
             about: 'О нас',
             business: 'Бизнесу'
         },
+        partnership: {
+            title: 'Партнёрство',
+            officialPartners: 'ОФИЦИАЛЬНЫЕ ПАРТНЁРЫ',
+            list: {
+                akimat: 'АКИМАТ ГОРОДА АЛМАТЫ',
+                ministry: 'МИНИСТЕРСТВО НАУКИ И ВЫСШЕГО ОБРАЗОВАНИЯ РЕСПУБЛИКИ КАЗАХСТАН'
+            },
+            blocks: {
+                partnership: {
+                    title: 'Партнёрство с ENACTUS',
+                    desc: 'Как спонсор и партнер ENACTUS, Вы будете играть важную роль в продвижении нашей работы по повышению качества жизни в стране, совершенствованию общества, воспитанию будущих деловых лидеров.'
+                },
+                benefits: {
+                    title: 'Преимущества партнёрства с ENACTUS',
+                    desc: 'Партнерство с ENACTUS станет ценным дополнением к портфелю социально ответственной компании. В рамках реализации проектов вы сможете контактировать со студентами и решать вместе интересующие вас задачи.'
+                },
+                investments: {
+                    title: 'Роль инвестиций в ENACTUS',
+                    desc: 'Инвестиции в ENACTUS играют важную роль в развитии предпринимательской деятельности и инноваций, которые влияют на жизнь людей и создают лучшее будущее.'
+                }
+            },
+            callback: {
+                title: 'ПРИГЛАШАЕМ К ПАРТНЁРСТВУ!',
+                desc: 'Присоединяйтесь к более чем 550 партнерам по всему миру, которые активно вкладывают средства в предпринимательскую деятельность для устойчивых изменений и развития общества.'
+            },
+            form: {
+                name: 'Имя',
+                phone: 'Номер телефона',
+                placeholder: 'Текст',
+                submit: 'Отправить заявку'
+            }
+        }
     },
     kz: {
         nav: {
@@ -498,6 +562,38 @@ const messages = {
             about: 'Біз туралы',
             business: 'Бизнеске'
         },
+        partnership: {
+            title: 'Серіктестік',
+            officialPartners: 'РЕСМИ СЕРІКТЕСТЕР',
+            list: {
+                akimat: 'АЛМАТЫ ҚАЛАСЫНЫҢ ӘКІМДІГІ',
+                ministry: 'ҚАЗАҚСТАН РЕСПУБЛИКАСЫНЫҢ ҒЫЛЫМ ЖӘНЕ ЖОҒАРҒЫ БІЛІМ МИНИСТРЛІГІ'
+            },
+            blocks: {
+                partnership: {
+                    title: 'ENACTUS-пен серіктестік',
+                    desc: 'ENACTUS демеушісі және серіктесі ретінде Сіз елдегі өмір сүру сапасын арттыру, қоғамды жетілдіру, болашақ іскер көшбасшыларды тәрбиелеу жолындағы жұмысымызды ілгерілетуде маңызды рөл атқарасыз.'
+                },
+                benefits: {
+                    title: 'ENACTUS-пен серіктестіктің артықшылықтары',
+                    desc: 'ENACTUS-пен серіктестік әлеуметтік жауапты компанияның қоржынына құнды қосымша болады. Жобаларды іске асыру аясында сіз студенттермен байланыс орнатып, сізді қызықтыратын міндеттерді бірге шеше аласыз.'
+                },
+                investments: {
+                    title: 'ENACTUS-қа инвестиция салудың рөлі',
+                    desc: 'ENACTUS-қа салынған инвестициялар адамдардың өміріне әсер ететін және жақсы болашақ құратын кәсіпкерлік қызмет пен инновацияларды дамытуда маңызды рөл атқарады.'
+                }
+            },
+            callback: {
+                title: 'СЕРІКТЕСТІККЕ ШАҚЫРАМЫЗ!',
+                desc: 'Тұрақты өзгерістер мен қоғамның дамуы үшін кәсіпкерлік қызметке белсенді түрде қаражат салатын дүние жүзіндегі 550-ден астам серіктеске қосылыңыз.'
+            },
+            form: {
+                name: 'Есімі',
+                phone: 'Телефон нөмірі',
+                placeholder: 'Мәтін',
+                submit: 'Өтінім жіберу'
+            }
+        }
     }
 }
 
