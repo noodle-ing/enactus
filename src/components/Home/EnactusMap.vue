@@ -3,17 +3,19 @@
     <div class="container">
       <div class="map-grid">
         <div class="map-content">
-          <h2 class="map-title">ENACTUS В КАЗАХСТАНЕ</h2>
+          <h2 class="map-title">{{ $t('map.title') }}</h2>
           <p class="map-description">
-            Мы объединяем университеты и студентов со всей страны, создавая проекты, 
-            которые улучшают жизнь в городах и регионах. Каждый участник становится 
-            частью единой команды, меняющей будущее страны.
+            {{ $t('map.description') }}
           </p>
         </div>
 
         <div class="map-visual">
           <div class="map-wrapper">
-            <img src="/images/kz-map-brands.png" alt="Карта Enactus в Казахстане" class="map-img" />
+            <img
+                src="/images/kz-map-brands.png"
+                :alt="$t('map.title')"
+                class="map-img"
+            />
           </div>
         </div>
       </div>
@@ -22,14 +24,14 @@
 </template>
 
 <script setup>
-// Скрипты здесь не требуются, если карта статична. 
-// Если захотите сделать точки кликабельными, можно добавить массив координат.
+// Логика не требуется
 </script>
 
 <style scoped>
+/* Ваши стили остаются без изменений */
 .map-section {
   padding: 100px 0;
-  background-color: #f0f0f0; /* Светло-серый фон как на макете */
+  background-color: #f0f0f0;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -43,7 +45,7 @@
 
 .map-grid {
   display: grid;
-  grid-template-columns: 1fr 1.5fr; /* Текст уже, карта шире */
+  grid-template-columns: 1fr 1.5fr;
   gap: 60px;
   align-items: center;
 }
@@ -73,12 +75,12 @@
 
 .map-wrapper {
   width: 100%;
-  max-width: 700px; /* Ограничиваем размер карты */
+  max-width: 700px;
   transition: transform 0.5s ease;
 }
 
 .map-wrapper:hover {
-  transform: scale(1.02); /* Легкий эффект при наведении */
+  transform: scale(1.02);
 }
 
 .map-img {
@@ -87,24 +89,14 @@
   filter: drop-shadow(0 10px 20px rgba(0,0,0,0.05));
 }
 
-/* Адаптивность для планшетов и мобилок */
 @media (max-width: 992px) {
   .map-grid {
-    grid-template-columns: 1fr; /* В одну колонку */
+    grid-template-columns: 1fr;
     text-align: center;
     gap: 40px;
   }
-  
-  .map-title {
-    font-size: 28px;
-  }
-
-  .map-content {
-    order: 1; /* Текст сверху */
-  }
-
-  .map-visual {
-    order: 2; /* Карта снизу */
-  }
+  .map-title { font-size: 28px; }
+  .map-content { order: 1; }
+  .map-visual { order: 2; }
 }
 </style>

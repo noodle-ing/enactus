@@ -2,26 +2,26 @@
   <section class="news-section">
     <div class="content-limit">
       <div class="news-header">
-        <h2 class="news-title">НОВОСТИ</h2>
-        <a href="#" class="all-news-btn">Посмотреть все новости</a>
+        <h2 class="news-title">{{ $t('news.title') }}</h2>
+        <a href="#" class="all-news-btn">{{ $t('news.viewAll') }}</a>
       </div>
 
       <div class="carousel-container">
         <button class="nav-btn prev-btn" @click="goPrev">◀</button>
-        
+
         <swiper
-          :modules="modules"
-          :slides-per-view="1"
-          :space-between="20"
-          :loop="true"
-          @swiper="onSwiper"
-          :breakpoints="{
+            :modules="modules"
+            :slides-per-view="1"
+            :space-between="20"
+            :loop="true"
+            @swiper="onSwiper"
+            :breakpoints="{
             '768': { slidesPerView: 2 },
             '1024': { slidesPerView: 3 }
           }"
-          class="news-swiper"
+            class="news-swiper"
         >
-          <swiper-slide v-for="item in newsItems" :key="item.id" class="custom-slide">
+          <swiper-slide v-for="item in localizedNewsItems" :key="item.id" class="custom-slide">
             <div class="news-card">
               <div class="news-img-box">
                 <img :src="item.image" :alt="item.title" />
@@ -41,20 +41,21 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Navigation } from 'swiper/modules';
+import { useI18n } from 'vue-i18n'; // Импортируем i18n
 import 'swiper/css';
+
+const { t } = useI18n(); // Инициализируем функцию перевода
 
 const modules = [Navigation];
 const swiperInstance = ref(null);
 
-// Сохраняем экземпляр swiper при инициализации
 const onSwiper = (swiper) => {
   swiperInstance.value = swiper;
 };
 
-// Исправленные функции навигации
 const goPrev = () => {
   if (swiperInstance.value) swiperInstance.value.slidePrev();
 };
@@ -63,42 +64,43 @@ const goNext = () => {
   if (swiperInstance.value) swiperInstance.value.slideNext();
 };
 
-const newsItems = [
+// Вычисляемый массив новостей, который реагирует на смену языка
+const localizedNewsItems = computed(() => [
   {
     id: 1,
-    title: 'ENACTUS Kazakhstan National Expo',
-    description: 'Во Дворце Независимости в Астане состоялся 30-й юбилейный Кубок молодежного предпринимательства.',
+    title: t('news.items.expo.title'),
+    description: t('news.items.expo.desc'),
     image: '/images/nationalexpo.jpg'
   },
   {
     id: 2,
-    title: 'Казахстан на мировом кубке «ENACTUS World Cup 2025»',
-    description: 'По результатам двухдневного достойного выступления команда университета заняла почетное место.',
+    title: t('news.items.world25.title'),
+    description: t('news.items.world25.desc'),
     image: '/images/enactusworldcup2025.png'
   },
   {
     id: 3,
-    title: 'Впервые в Казахстане проходит ENACTUS World Cup 2024',
-    description: '2 октября в Астане состоялась церемония открытия Чемпионата мира.',
+    title: t('news.items.world24.title'),
+    description: t('news.items.world24.desc'),
     image: '/images/enactusworldcup2024.png'
   },
-   {
+  {
     id: 4,
-    title: 'Впервые в Казахстане проходит ENACTUS World Cup 2024',
-    description: '2 октября в Астане состоялась церемония открытия Чемпионата мира.',
+    title: t('news.items.world24.title'), // Пример повтора или другой новости
+    description: t('news.items.world24.desc'),
     image: '/images/enactusworldcup2024.png'
   }
-];
+]);
 </script>
 
 <style scoped>
+/* Стили остаются без изменений */
 .news-section {
   background-color: #ffc107;
   padding: 80px 0;
   width: 100%;
   margin: 0;
-  /* Скругление только сверху */
-  border-radius: 30px 30px 0 0; 
+  border-radius: 30px 30px 0 0;
   position: relative;
 }
 

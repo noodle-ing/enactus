@@ -7,28 +7,21 @@
       </div>
 
       <div class="hero-content">
-        <h1 class="hero-title">WE ALL WIN</h1>
-        <p class="hero-subtitle">
-          Стань частью движения студентов, которые меняют<br>
-          будущее Казахстана через предпринимательство.
-        </p>
-        <button class="hero-button">Присоединиться</button>
+        <h1 class="hero-title">{{ $t('home.heroTitle') }}</h1>
+        <p class="hero-subtitle" v-html="$t('home.heroSubtitle')"></p>
+        <button class="hero-button">{{ $t('home.joinBtn') }}</button>
       </div>
     </section>
 
     <section class="about-section">
       <div class="about-container">
         <div class="about-content">
-          <h2 class="about-title">ЧТО ТАКОЕ <span class="yellow-text">ENACTUS?</span></h2>
+          <h2 class="about-title">
+            {{ $t('home.aboutTitlePart1') }}<span class="yellow-text">{{ $t('home.aboutTitlePart2') }}</span>
+          </h2>
           <div class="about-description">
-            <p>
-              ENACTUS — это международная некоммерческая организация, которая объединяет студентов, 
-              преподавателей и бизнес-лидеров для развития молодежного предпринимательства.
-            </p>
-            <p>
-              Наша цель — вдохновлять студентов на создание социальных бизнес-проектов, которые решают 
-              важные социально-экономические, экологические и гуманитарные проблемы.
-            </p>
+            <p>{{ $t('home.aboutP1') }}</p>
+            <p>{{ $t('home.aboutP2') }}</p>
           </div>
         </div>
 
@@ -46,9 +39,7 @@
     <section class="stats-section">
       <div class="quote-banner">
         <div class="stats-container">
-          <p class="quote-text">
-            Мы верим, что, инвестируя в студентов, использующих предпринимательские подходы для других, мы создаём лучший мир для всех нас.
-          </p>
+          <p class="quote-text">{{ $t('home.quote') }}</p>
         </div>
       </div>
 
@@ -58,35 +49,36 @@
             <div class="stats-image-box">
               <img src="/images/students-flags.jpg" alt="Students in Kazakhstan" class="stats-img">
             </div>
-            
+
             <div class="stats-cards-grid">
               <div class="stat-card">
                 <span class="stat-num">20</span>
-                <span class="stat-desc">регионов Казахстана</span>
+                <span class="stat-desc">{{ $t('home.stats.regions') }}</span>
               </div>
               <div class="stat-card">
                 <span class="stat-num">150+</span>
-                <span class="stat-desc">учебных заведений</span>
+                <span class="stat-desc">{{ $t('home.stats.institutions') }}</span>
               </div>
               <div class="stat-card">
                 <span class="stat-num">12 000+</span>
-                <span class="stat-desc">студентов ежегодно</span>
+                <span class="stat-desc">{{ $t('home.stats.students') }}</span>
               </div>
               <div class="stat-card">
                 <span class="stat-num">120+</span>
-                <span class="stat-desc">компаний</span>
+                <span class="stat-desc">{{ $t('home.stats.companies') }}</span>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+
     <ProjectShowcase />
     <NewsCarousel />
     <EnactusMap />
     <EnactusWorld />
     <PartnersAndForm />
-    <Footer />    
+    <Footer />
   </div>
 </template>
 
@@ -319,24 +311,24 @@ import ProjectShowcase from '@/components/Home/ProjectShowcase.vue'
     text-align: center;
     gap: 40px;
   }
-  
+
   .about-visual { order: 2; }
   .quote-text { font-size: 1.2rem; }
-  
+
   .stat-card { align-items: center; text-align: center; }
 }
 
 /* Мобильные (горизонтальные и большие телефоны) */
 @media (max-width: 768px) {
   .about-section { padding: 60px 0; }
-  
+
   .stats-cards-grid { grid-template-columns: 1fr; }
-  
+
   .quote-banner {
     border-radius: 20px 20px 0 0;
     padding: 40px 1rem;
   }
-  
+
   .hero-content {
     text-align: center;
     display: flex;

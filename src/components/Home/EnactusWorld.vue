@@ -2,20 +2,17 @@
   <section class="world-section">
     <div class="container">
       <div class="world-info">
-        <h2 class="world-title">ENACTUS В МИРЕ</h2>
+        <h2 class="world-title">{{ $t('world.title') }}</h2>
         <p class="world-text">
-          На сегодня ENACTUS объединяет команды более чем 30 стран по всему миру. 
-          Студенты, преподаватели и бизнес-партнёры из разных уголков планеты 
-          реализуют социально-предпринимательские проекты, направленные на 
-          устойчивое развитие, поддержку сообществ и экологические инициативы.
+          {{ $t('world.text') }}
         </p>
       </div>
 
       <div class="world-map-container">
-        <img 
-          src="/images/world-map-poly.png" 
-          alt="Карта мира Enactus" 
-          class="world-map-img"
+        <img
+            src="/images/world-map-poly.png"
+            :alt="$t('world.title')"
+            class="world-map-img"
         />
       </div>
     </div>
@@ -23,12 +20,13 @@
 </template>
 
 <script setup>
-// Компонент презентационный, логика не требуется
+// Логика не требуется, так как i18n плагин доступен глобально в шаблоне
 </script>
 
 <style scoped>
+/* Стили остаются без изменений */
 .world-section {
-  background-color: #1a1a1a; /* Глубокий темный фон */
+  background-color: #1a1a1a;
   padding: 100px 0;
   color: #ffffff;
   width: 100%;
@@ -40,18 +38,18 @@
   padding: 0 20px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Выравнивание контента по левому краю */
+  align-items: flex-start;
 }
 
 .world-info {
-  max-width: 800px; /* Ограничиваем ширину текста для читаемости */
+  max-width: 800px;
   margin-bottom: 60px;
 }
 
 .world-title {
   font-size: 32px;
   font-weight: 900;
-  color: #ffc107; /* Желтый акцент для заголовка */
+  color: #ffc107;
   margin-bottom: 25px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -75,7 +73,6 @@
   width: 100%;
   height: auto;
   max-width: 1000px;
-  /* Добавляем легкое свечение карте, если нужно */
   filter: drop-shadow(0 0 15px rgba(255, 193, 7, 0.1));
   transition: transform 0.4s ease;
 }
@@ -84,16 +81,13 @@
   transform: scale(1.02);
 }
 
-/* Адаптивность */
 @media (max-width: 768px) {
   .world-section {
     padding: 60px 0;
   }
-  
   .world-title {
     font-size: 26px;
   }
-  
   .world-text {
     font-size: 14px;
   }

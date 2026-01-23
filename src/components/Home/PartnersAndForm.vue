@@ -1,9 +1,9 @@
 <template>
   <section class="partners-form-section">
     <div class="container">
-      
+
       <div class="partners-wrapper">
-        <h2 class="section-title">НАС ПОДДЕРЖИВАЮТ</h2>
+        <h2 class="section-title">{{ $t('contact.support') }}</h2>
         <div class="marquee-viewport">
           <div class="marquee-content">
             <div class="logo-group" v-for="i in 4" :key="i">
@@ -16,41 +16,39 @@
       <div class="contact-card">
         <div class="card-grid">
           <div class="card-info">
-            <h2 class="card-title">МЫ НУЖНЫ МИРУ!</h2>
-            <p class="card-text">
-              Стань частью команды, которая действует ради реальных изменений и помогает миру двигаться вперёд.
-            </p>
+            <h2 class="card-title">{{ $t('contact.cardTitle') }}</h2>
+            <p class="card-text">{{ $t('contact.cardText') }}</p>
           </div>
-          
+
           <form @submit.prevent="handleSubmit" class="card-form">
             <div class="form-inputs">
               <div class="input-group">
-                <label>Имя</label>
-                <input 
-                  v-model="form.name"
-                  type="text" 
-                  placeholder="Введите имя" 
-                  required 
-                  class="custom-input" 
+                <label>{{ $t('contact.labelName') }}</label>
+                <input
+                    v-model="form.name"
+                    type="text"
+                    :placeholder="$t('contact.placeholderName')"
+                    required
+                    class="custom-input"
                 />
               </div>
 
               <div class="input-group">
-                <label>Номер телефона</label>
+                <label>{{ $t('contact.labelPhone') }}</label>
                 <div class="phone-input-wrapper">
                   <span class="flag">🇰🇿</span>
-                  <input 
-                    v-model="form.phone"
-                    type="tel" 
-                    placeholder="+7 (___) ___-__-__" 
-                    required 
+                  <input
+                      v-model="form.phone"
+                      type="tel"
+                      placeholder="+7 (___) ___-__-__"
+                      required
                   />
                 </div>
               </div>
             </div>
-            
+
             <button type="submit" class="submit-btn" :disabled="isSending">
-              {{ isSending ? 'Отправка...' : 'Хочу участвовать' }}
+              {{ isSending ? $t('contact.btnSending') : $t('contact.btnSubmit') }}
             </button>
           </form>
         </div>
@@ -62,9 +60,11 @@
 
 <script setup>
 import { reactive, ref } from 'vue';
+import { useI18n } from 'vue-i18n'; // Подключаем i18n
 import emailjs from '@emailjs/browser';
 
-// Логотипы партнеров
+const { t } = useI18n();
+
 const allLogos = [
   '/images/logo-grand.png',
   '/images/logo-turan.png',
@@ -73,7 +73,6 @@ const allLogos = [
   '/images/logo-ktcloud.png',
 ];
 
-// Данные формы
 const form = reactive({
   name: '',
   phone: ''
@@ -81,35 +80,34 @@ const form = reactive({
 
 const isSending = ref(false);
 
-// --- НАСТРОЙКИ EMAILJS ---
-const SERVICE_ID = 'service_xxxxxxx'; // Вставь свой Service ID
-const TEMPLATE_ID = 'template_xxxxxxx'; // Вставь свой Template ID
-const PUBLIC_KEY = 'your_public_key'; // Вставь свой Public Key
+const SERVICE_ID = 'service_xxxxxxx';
+const TEMPLATE_ID = 'template_xxxxxxx';
+const PUBLIC_KEY = 'your_public_key';
 
 const handleSubmit = () => {
   isSending.value = true;
 
-  // Эти ключи (user_name, user_phone) должны быть в твоем шаблоне EmailJS
   const templateParams = {
     user_name: form.name,
     user_phone: form.phone,
-    to_email: 'wondefful204@gmail.com' 
+    to_email: 'wondefful204@gmail.com'
   };
 
   emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY)
-    .then(() => {
-      alert('Заявка успешно отправлена на wondefful204@gmail.com!');
-      // Очистка полей после успеха
-      form.name = '';
-      form.phone = '';
-    })
-    .catch((err) => {
-      console.error('Ошибка EmailJS:', err);
-      alert('Произошла ошибка при отправке заявки.');
-    })
-    .finally(() => {
-      isSending.value = false;
-    });
+      .then(() => {
+        // Переведенное сообщение об успехе
+        alert(t('contact.success'));
+        form.name = '';
+        form.phone = '';
+      })
+      .catch((err) => {
+        console.error('Ошибка EmailJS:', err);
+        // Переведенное сообщение об ошибке
+        alert(t('contact.error'));
+      })
+      .finally(() => {
+        isSending.value = false;
+      });
 };
 </script>
 
@@ -247,7 +245,7 @@ const handleSubmit = () => {
 }
 
 /* Фокус: подсвечиваем всё поле целиком желтым */
-.custom-input:focus, 
+.custom-input:focus,
 .phone-input-wrapper:focus-within {
   background: #ffffff;
   border-color: #ffc107;
