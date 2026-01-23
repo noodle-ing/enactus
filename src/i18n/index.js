@@ -247,6 +247,18 @@ const messages = {
             about: 'About Us',
             business: 'Business'
         },
+        roadshow: {
+            whatIs: {
+                header: 'What is ROAD SHOW?',
+                desc: 'Road Show - field training sessions from the ENACTUS Kazakhstan National Office, program alumni, and partners'
+            },
+            stats: {
+                institutions: 'educational institutions',
+                regions: 'regions',
+                participants: 'participants'
+            },
+            photoReport: 'Photo Report'
+        },
         partnership: {
             title: 'Partnership',
             officialPartners: 'OFFICIAL PARTNERS',
@@ -499,6 +511,18 @@ const messages = {
                 atyrau: { name: 'Атырауская область', universities: ['Атырауский университет нефти и газа'] }
             }
         },
+        roadshow: {
+            whatIs: {
+                header: 'Что такое ROAD SHOW?',
+                desc: 'Road Show - выездные тренинги от Национального офиса ENACTUS Kazakhstan, выпускников программы и партнеров'
+            },
+            stats: {
+                institutions: 'учебных заведения',
+                regions: 'регионов',
+                participants: 'участников'
+            },
+            photoReport: 'Фото-отчёт'
+        },
         partnership: {
             title: 'Партнёрство',
             officialPartners: 'ОФИЦИАЛЬНЫЕ ПАРТНЁРЫ',
@@ -588,6 +612,18 @@ const messages = {
                 narxoz: { name: 'Нархоз Университеті', desc: 'Әлеуметтік кәсіпкерлік және жастарды қолдау.' },
                 coll: { name: 'Шет тілдер колледжі', desc: 'Тілдерді үйренуге арналған білім беру платформасы.' }
             }
+        },
+        roadshow: {
+            whatIs: {
+                header: 'ROAD SHOW дегеніміз не?',
+                desc: 'Road Show - ENACTUS Kazakhstan ұлттық кеңсесінен, бағдарлама түлектері мен серіктестерінен көшпелі тренингтер'
+            },
+            stats: {
+                institutions: 'оқу орны',
+                regions: 'аймақ',
+                participants: 'қатысушы'
+            },
+            photoReport: 'Фото-есеп'
         },
         news: {
             title: 'ЖАҢАЛЫҚТАР',

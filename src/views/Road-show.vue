@@ -3,10 +3,10 @@
     <main class="roadshow-page">
       <div class="container">
         <nav class="breadcrumbs">
-          <router-link to="/">Главная</router-link>
-          <span class="sep">›</span>
-          <span class="no-link">Участникам</span>
-          <span class="sep">›</span>
+          <router-link to="/">{{ $t('breadcrumbs.home') }}</router-link>
+          <span class="sep">&nbsp;›&nbsp;</span>
+          <span class="no-link">{{ $t('breadcrumbs.participants') }}</span>
+          <span class="sep">&nbsp;›&nbsp;</span>
           <span class="current">ROAD SHOW</span>
         </nav>
 
@@ -15,45 +15,45 @@
         <section class="info-intro">
           <div class="info-header">
             <img src="/images/icons/info-icon.png" alt="Info" class="info-icon">
-            <h2>Что такое ROAD SHOW?</h2>
+            <h2>{{ $t('roadshow.whatIs.header') }}</h2>
           </div>
           <p class="info-text">
-            Road Show - выездные тренинги от Национального офиса ENACTUS Kazakhstan, выпускников программы и партнеров
+            {{ $t('roadshow.whatIs.desc') }}
           </p>
         </section>
 
         <div class="stats-grid">
           <div class="stat-card">
             <span class="stat-value">52</span>
-            <span class="stat-label">учебных заведения</span>
+            <span class="stat-label">{{ $t('roadshow.stats.institutions') }}</span>
           </div>
           <div class="stat-card">
             <span class="stat-value">12</span>
-            <span class="stat-label">регионов</span>
+            <span class="stat-label">{{ $t('roadshow.stats.regions') }}</span>
           </div>
           <div class="stat-card">
             <span class="stat-value">300+</span>
-            <span class="stat-label">участников</span>
+            <span class="stat-label">{{ $t('roadshow.stats.participants') }}</span>
           </div>
         </div>
 
         <a href="#" class="photo-report-btn">
-          <span class="link-icon">🔗</span> Фото-отчёт
+          <span class="link-icon">🔗</span> {{ $t('roadshow.photoReport') }}
         </a>
 
         <div class="photo-gallery">
-          <a 
-            v-for="(item, index) in galleryItems" 
-            :key="index" 
-            :href="item.reelsUrl" 
-            target="_blank" 
-            class="gallery-item"
+          <a
+              v-for="(item, index) in galleryItems"
+              :key="index"
+              :href="item.reelsUrl"
+              target="_blank"
+              class="gallery-item"
           >
-            <img 
-              :src="item.imgSrc" 
-              :alt="item.title" 
-              class="gallery-img"
-              @error="(e) => e.target.style.display = 'none'"
+            <img
+                :src="item.imgSrc"
+                :alt="item.title"
+                class="gallery-img"
+                @error="(e) => e.target.style.display = 'none'"
             >
             <div class="img-overlay">
               <span class="play-icon">▶</span>
@@ -71,7 +71,7 @@
 <script setup>
 import Footer from '@/components/Footer.vue';
 
-// Массив объектов: картинка + ссылка на Reels + Название города
+// Массив объектов остается прежним, так как названия городов (Almaty, Taraz) интернациональны
 const galleryItems = [
   {
     title: 'Almaty 2025',
@@ -105,7 +105,6 @@ const galleryItems = [
   }
 ];
 </script>
-
 <style scoped>
 .page-wrapper { background-color: #fff; min-height: 100vh; }
 .roadshow-page { padding: 40px 0 100px; }
