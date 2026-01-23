@@ -3,41 +3,41 @@
     <main class="headquarters-page">
       <div class="container">
         <nav class="breadcrumbs">
-          <router-link to="/">Главная</router-link> 
+          <router-link to="/">{{ $t('nav.footerHome') }}</router-link>
           <span class="sep">›</span>
-          <router-link to="/about">О нас</router-link> 
+          <router-link to="/about">{{ $t('nav.about') }}</router-link>
           <span class="sep">›</span>
-          <span class="current">Штаб квартира</span>
+          <span class="current">{{ $t('headquarters.title') }}</span>
         </nav>
 
-        <h1 class="page-title">Штаб квартира</h1>
+        <h1 class="page-title">{{ $t('headquarters.title') }}</h1>
 
         <section class="ceo-section">
           <div class="ceo-card">
             <div class="image-wrapper">
-              <img src="/images/erzhanova.jpg" alt="Альбина Ержанова" class="member-photo" />
+              <img src="/images/erzhanova.jpg" :alt="$t('headquarters.ceoName')" class="member-photo" />
               <div class="badge ceo-badge">
                 <div class="badge-text">
-                  <h3 class="badge-name">Альбина Ержанова</h3>
-                  <p class="badge-role">CEO & Президент ENACTUS KAZAKHSTAN, доктор философских наук</p>
+                  <h3 class="badge-name">{{ $t('headquarters.ceoName') }}</h3>
+                  <p class="badge-role">{{ $t('headquarters.ceoRole') }}</p>
                 </div>
               </div>
             </div>
-            
+
             <div class="ceo-message">
-              <h2>Дорогие друзья!</h2>
+              <h2>{{ $t('headquarters.ceoGreeting') }}</h2>
               <div class="message-content">
-                <p>Позвольте от имени национального офиса Enactus Kazakhstan приветствовать Вас и поблагодарить за проявленный интерес к нашей деятельности.</p>
-                <p>ENACTUS — это некоммерческая организация, целью которой является повышение уровня жизни населения через бизнес.</p>
-                <p>Основная наша деятельность направлена на работу с будущим поколением лидеров. Для нас важно развивать в молодых казахстанцах сознательность, социальную ответственность, талант и умение действовать во имя будущего прогресса нашей страны.</p>
-                <p class="signature">С уважением, Альбина Меирбековна Ержанова</p>
+                <p>{{ $t('headquarters.ceoText1') }}</p>
+                <p>{{ $t('headquarters.ceoText2') }}</p>
+                <p>{{ $t('headquarters.ceoText3') }}</p>
+                <p class="signature">{{ $t('headquarters.signature') }}</p>
               </div>
             </div>
           </div>
         </section>
 
         <section class="team-grid">
-          <div v-for="(member, index) in teamMembers" :key="index" class="team-item">
+          <div v-for="(member, index) in localizedTeam" :key="index" class="team-item">
             <div class="image-wrapper">
               <img :src="member.photo" :alt="member.name" class="member-photo" />
               <div class="badge member-badge">
@@ -57,41 +57,40 @@
 </template>
 
 <script setup>
+import { computed } from 'vue';
+import { useI18n } from 'vue-i18n';
 import Footer from '@/components/Footer.vue';
 
-/**
- * МАССИВ ДАННЫХ КОМАНДЫ
- * Чтобы добавить человека: 
- * 1. Положите фото в public/images/team/
- * 2. Добавьте новый объект в список ниже
- */
-const teamMembers = [
+const { t } = useI18n();
+
+// Вычисляемый список команды, реагирующий на смену языка
+const localizedTeam = computed(() => [
   {
-    name: 'Randall Bruins',
-    role: 'Эдвайзер по стратегическому развитию ENACTUS KAZAKHSTAN',
+    name: t('headquarters.members.randall.name'),
+    role: t('headquarters.members.randall.role'),
     photo: '/images/randall bruins.jpg'
   },
   {
-    name: 'Аубакирова Айжан',
-    role: 'Главный бухгалтер ENACTUS KAZAKHSTAN',
+    name: t('headquarters.members.aizhan.name'),
+    role: t('headquarters.members.aizhan.role'),
     photo: '/images/Ayzhan Aubakirova.JPG'
   },
   {
-    name: 'Каримова Аружан',
-    role: 'Программный менеджер ENACTUS KAZAKHSTAN',
+    name: t('headquarters.members.aruzhan.name'),
+    role: t('headquarters.members.aruzhan.role'),
     photo: '/images/karimova aruzan.jpg'
   },
   {
-    name: 'Альбина Айсамутдинова',
-    role: 'Региональный координатор ENACTUS KAZAKHSTAN, г. Астана',
+    name: t('headquarters.members.albina.name'),
+    role: t('headquarters.members.albina.role'),
     photo: '/images/Albina Aysamutdinova.jpg'
   },
   {
-    name: 'Жасулан Бауржанулы',
-    role: 'Региональный координатор ENACTUS KAZAKHSTAN, Восточно-Казахстанская область',
+    name: t('headquarters.members.zhasulan.name'),
+    role: t('headquarters.members.zhasulan.role'),
     photo: '/images/Zhasulan.JPG'
   }
-];
+]);
 </script>
 
 <style scoped>
@@ -165,21 +164,46 @@ const teamMembers = [
   right: 15px;
   padding: 15px;
   border-radius: 12px;
-  backdrop-filter: blur(4px); /* Эффект стекла */
+  backdrop-filter: blur(4px);
+
+  /* НОВЫЕ СВОЙСТВА */
+  height: 90px;           /* Фиксированная высота для всех окошек */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Центрируем текст по вертикали */
+  overflow: hidden;        /* Если текст очень длинный, он не выйдет за границы */
 }
 
-.ceo-badge { 
+.ceo-badge {
   background-color: rgba(255, 193, 7, 0.95); /* Желтый Enactus */
-  color: #000; 
+  color: #000;
 }
-.member-badge { 
+.member-badge {
   background-color: rgba(26, 26, 26, 0.9); /* Темный */
-  color: #fff; 
+  color: #fff;
 }
 
-.badge-name { font-size: 15px; font-weight: 800; margin: 0 0 4px 0; }
-.badge-role { font-size: 11px; line-height: 1.3; margin: 0; opacity: 0.9; }
+.badge-name {
+  font-size: 15px;
+  font-weight: 800;
+  margin: 0 0 4px 0;
+  /* Ограничиваем имя одной строкой, если нужно */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
+.badge-role {
+  font-size: 11px;
+  line-height: 1.3;
+  margin: 0;
+  opacity: 0.9;
+  /* Позволяем роли занимать максимум 3 строки */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
 /* Текст приветствия */
 .ceo-message h2 { font-size: 24px; font-weight: 800; margin-bottom: 25px; color: #1a1a1a; }
 .message-content p { font-size: 16px; line-height: 1.6; margin-bottom: 20px; color: #444; }

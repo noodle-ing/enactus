@@ -85,6 +85,23 @@ const messages = {
             success: 'Application successfully sent to wondefful204@gmail.com!',
             error: 'An error occurred while sending the application.'
         },
+        headquarters: {
+            title: 'Headquarters',
+            ceoName: 'Albina Yerzhanova',
+            ceoRole: 'CEO & President of ENACTUS KAZAKHSTAN, PhD',
+            ceoGreeting: 'Dear friends!',
+            ceoText1: 'On behalf of the Enactus Kazakhstan national office, let me welcome you and thank you for your interest in our activities.',
+            ceoText2: 'ENACTUS is a non-profit organization whose goal is to improve the standard of living of the population through business.',
+            ceoText3: 'Our main activity is focused on working with the future generation of leaders. It is important for us to develop consciousness, social responsibility, talent, and the ability to act in the name of the future progress of our country in young Kazakhstanis.',
+            signature: 'Sincerely, Albina Meirbekovna Yerzhanova',
+            members: {
+                randall: { name: 'Randall Bruins', role: 'Strategic Development Advisor, ENACTUS KAZAKHSTAN' },
+                aizhan: { name: 'Aizhan Aubakirova', role: 'Chief Accountant, ENACTUS KAZAKHSTAN' },
+                aruzhan: { name: 'Aruzhan Karimova', role: 'Program Manager, ENACTUS KAZAKHSTAN' },
+                albina: { name: 'Albina Aysamutdinova', role: 'Regional Coordinator, ENACTUS KAZAKHSTAN, Astana' },
+                zhasulan: { name: 'Zhasulan Baurzhanuly', role: 'Regional Coordinator, ENACTUS KAZAKHSTAN, East Kazakhstan Region' }
+            }
+        }
 
     },
     ru: {
@@ -171,6 +188,23 @@ const messages = {
             btnSending: 'Отправка...',
             success: 'Заявка успешно отправлена на wondefful204@gmail.com!',
             error: 'Произошла ошибка при отправке заявки.'
+        },
+        headquarters: {
+            title: 'Штаб квартира',
+            ceoName: 'Альбина Ержанова',
+            ceoRole: 'CEO & Президент ENACTUS KAZAKHSTAN, доктор философских наук',
+            ceoGreeting: 'Дорогие друзья!',
+            ceoText1: 'Позвольте от имени национального офиса Enactus Kazakhstan приветствовать Вас и поблагодарить за проявленный интерес к нашей деятельности.',
+            ceoText2: 'ENACTUS — это некоммерческая организация, целью которой является повышение уровня жизни населения через бизнес.',
+            ceoText3: 'Основная наша деятельность направлена на работу с будущим поколением лидеров. Для нас важно развивать в молодых казахстанцах сознательность, социальную ответственность, талант и умение действовать во имя будущего прогресса нашей страны.',
+            signature: 'С уважением, Альбина Меирбековна Ержанова',
+            members: {
+                randall: { name: 'Randall Bruins', role: 'Эдвайзер по стратегическому развитию ENACTUS KAZAKHSTAN' },
+                aizhan: { name: 'Аубакирова Айжан', role: 'Главный бухгалтер ENACTUS KAZAKHSTAN' },
+                aruzhan: { name: 'Каримова Аружан', role: 'Программный менеджер ENACTUS KAZAKHSTAN' },
+                albina: { name: 'Альбина Айсамутдинова', role: 'Региональный координатор ENACTUS KAZAKHSTAN, г. Астана' },
+                zhasulan: { name: 'Жасулан Бауржанулы', role: 'Региональный координатор ENACTUS KAZAKHSTAN, Восточно-Казахстанская область' }
+            }
         }
     },
     kz: {
@@ -257,6 +291,26 @@ const messages = {
             btnSending: 'Жіберу...',
             success: 'Өтінім wondefful204@gmail.com мекенжайына сәтті жіберілді!',
             error: 'Өтінімді жіберу кезінде қате кетті.'
+        },
+        headquarters: {
+            title: 'Штаб-пәтер',
+            ceoName: 'Альбина Ержанова',
+            ceoRole: 'ENACTUS KAZAKHSTAN CEO және Президенті, философия ғылымдарының докторы',
+            ceoGreeting: 'Құрметті достар!',
+            ceoText1: 'Enactus Kazakhstan ұлттық кеңсесінің атынан Сіздерге қошемет білдіруге және біздің қызметімізге қызығушылық танытқандарыңыз үшін алғыс айтуға рұқсат етіңіздер.',
+            ceoText2: 'ENACTUS — бұл бизнес арқылы халықтың өмір сүру деңгейін көтеруді мақсат ететін коммерциялық емес ұйым.',
+            ceoText3: 'Біздің негізгі қызметіміз болашақ көшбасшылармен жұмыс істеуге бағытталған. Біз үшін жас қазақстандықтардың бойында саналылықты, әлеуметтік жауапкершілікті, талант пен еліміздің болашақ прогресі жолында әрекет ету қабілетін дамыту маңызды.',
+            signature: 'Құрметпен, Альбина Мейірбекқызы Ержанова',
+            members: {
+                randall: {name: 'Randall Bruins', role: 'ENACTUS KAZAKHSTAN стратегиялық даму жөніндегі кеңесшісі'},
+                aizhan: {name: 'Әубәкірова Айжан', role: 'ENACTUS KAZAKHSTAN бас есепшісі'},
+                aruzhan: {name: 'Кәрімова Аружан', role: 'ENACTUS KAZAKHSTAN бағдарламалық менеджері'},
+                albina: {name: 'Альбина Айсамутдинова', role: 'ENACTUS KAZAKHSTAN өңірлік үйлестірушісі, Астана қ.'},
+                zhasulan: {
+                    name: 'Жасұлан Бауыржанұлы',
+                    role: 'ENACTUS KAZAKHSTAN өңірлік үйлестірушісі, Шығыс Қазақстан облысы'
+                }
+            }
         }
     }
 }

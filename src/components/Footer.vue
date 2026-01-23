@@ -66,8 +66,23 @@
         </p>
 
         <div class="social-icons">
-          <a href="https://instagram.com/enactus_kazakhstan" target="_blank" class="social-link">
+          <a href="https://www.instagram.com/enactus_kazakhstan/" target="_blank" class="social-link">
             <img src="/images/icons/instagram.png" alt="Instagram" />
+          </a>
+          <a href="https://www.facebook.com/enactus.kazakhstan/" target="_blank" class="social-link">
+            <img src="/images/icons/facebook.png" alt="Facebook" />
+          </a>
+          <a href="https://t.me/enactuskaz" target="_blank" class="social-link">
+            <img src="/images/icons/telegram.png" alt="Telegram" />
+          </a>
+          <a href="https://www.youtube.com/@enactuskazakhstan6553" target="_blank" class="social-link">
+            <img src="/images/icons/youtube.png" alt="YouTube" />
+          </a>
+          <a href="https://www.linkedin.com/company/enactus-kazakhstan/" target="_blank" class="social-link">
+            <img src="/images/icons/linkedin.png" alt="LinkedIn" />
+          </a>
+          <a href="https://www.tiktok.com/@enactuskazakhstan" target="_blank" class="social-link">
+            <img src="/images/icons/tiktok.png" alt="TikTok" />
           </a>
         </div>
       </div>
@@ -76,13 +91,9 @@
 </template>
 
 <script setup>
-// Здесь можно добавить логику, если пункты меню будут динамическими
 </script>
 
 <style scoped>
-
-
-
 .footer {
   background: #F0F0F0;
   padding: 60px 0 30px;
@@ -106,50 +117,9 @@
   height: auto;
 }
 
-.social-icons {
-  display: flex;
-  gap: 12px;
-}
-
-.social-link {
-  width: 35px;
-  height: 35px;
-  /* Цвет фона квадратика как на макете */
-  background-color: #5a5a5a; 
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-  overflow: hidden; /* Чтобы картинка не вылезала за края */
-}
-
-.social-link img {
-  /* Размер картинки внутри квадрата */
-  width: 18px; 
-  height: 18px;
-  object-fit: contain;
-  /* Если ваши картинки цветные, а нужны белые (как иконки), 
-     можно добавить этот фильтр: */
-  filter: brightness(0) invert(1); 
-}
-
-.social-link:hover {
-  background-color: #1a1a1a;
-  transform: translateY(-3px);
-}
-
-/* На мобилках делаем чуть больше расстояние для удобства нажатия пальцем */
-@media (max-width: 768px) {
-  .social-icons {
-    gap: 15px;
-    justify-content: center;
-  }
-}
-
 .footer-nav {
   display: grid;
-  grid-template-columns: repeat(6, 1fr); /* 6 равных колонок */
+  grid-template-columns: repeat(6, 1fr);
   gap: 20px;
   flex: 1;
 }
@@ -160,6 +130,11 @@
   color: #333;
   margin-bottom: 15px;
   white-space: nowrap;
+}
+
+.nav-title a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .nav-list {
@@ -180,7 +155,7 @@
   transition: color 0.2s;
 }
 
-.nav-list a:hover {
+.nav-list a:hover, .nav-title a:hover {
   color: #ffc107;
 }
 
@@ -209,42 +184,37 @@
 .social-link {
   width: 32px;
   height: 32px;
-  background-color: #5a5a5a; /* Темный фон иконок как на картинке */
-  color: white;
+  background-color: #5a5a5a;
   border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-decoration: none;
-  font-size: 16px;
-  transition: transform 0.2s, background-color 0.2s;
+  transition: all 0.3s ease;
+}
+
+.social-link img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
 }
 
 .social-link:hover {
   background-color: #1a1a1a;
-  transform: translateY(-2px);
+  transform: translateY(-3px);
 }
 
-/* Адаптивность для мобильных */
 @media (max-width: 1024px) {
-  .footer-grid {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .footer-nav {
-    grid-template-columns: repeat(3, 1fr);
-    width: 100%;
-  }
+  .footer-grid { flex-direction: column; align-items: center; text-align: center; }
+  .footer-nav { grid-template-columns: repeat(3, 1fr); width: 100%; }
+}
+
+@media (max-width: 768px) {
+  .footer-bottom { flex-direction: column; gap: 20px; text-align: center; }
+  .social-icons { gap: 15px; }
 }
 
 @media (max-width: 600px) {
-  .footer-nav {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .footer-bottom {
-    flex-direction: column;
-    gap: 20px;
-  }
+  .footer-nav { grid-template-columns: repeat(2, 1fr); }
 }
 </style>
