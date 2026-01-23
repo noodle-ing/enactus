@@ -3,21 +3,21 @@
     <main class="sponsors-page">
       <div class="container">
         <nav class="breadcrumbs">
-          <router-link to="/">Главная</router-link> 
+          <router-link to="/">{{ $t('breadcrumbs.home') }}</router-link>
           <span class="sep">›</span>
-          <router-link to="/business">Бизнесу</router-link> 
+          <router-link to="/business">{{ $t('breadcrumbs.business') }}</router-link>
           <span class="sep">›</span>
-          <span class="current">Спонсоры</span>
+          <span class="current">{{ $t('sponsors.title') }}</span>
         </nav>
 
-        <h1 class="page-title">Спонсоры</h1>
+        <h1 class="page-title">{{ $t('sponsors.title') }}</h1>
 
         <div class="sponsors-container">
-          
+
           <section class="sponsor-tier">
             <div class="tier-header general-bg">
-              <img src="/images/icons/diamond.png" alt="" class="tier-icon" /> 
-              <h2>GENERAL SPONSOR</h2>
+              <img src="/images/icons/diamond.png" alt="" class="tier-icon" />
+              <h2>{{ $t('sponsors.tiers.general') }}</h2>
             </div>
             <div class="logos-grid central">
               <img src="/images/logo-grand.png" alt="Grand Mobile" class="logo-large" />
@@ -26,7 +26,7 @@
 
           <section class="sponsor-tier">
             <div class="tier-header platinum-bg">
-              <h2>PLATINUM SPONSORS</h2>
+              <h2>{{ $t('sponsors.tiers.platinum') }}</h2>
             </div>
             <div class="logos-grid platinum-grid">
               <img src="/images/logo-turan.png" alt="Turan" class="logo-md" />
@@ -39,7 +39,7 @@
 
           <section class="sponsor-tier">
             <div class="tier-header gold-bg">
-              <h2>GOLD SPONSORS</h2>
+              <h2>{{ $t('sponsors.tiers.gold') }}</h2>
             </div>
             <div class="logos-grid">
               <img src="/images/logo-ktcloud.png" alt="KT Cloud Lab" class="logo-md" />
@@ -50,7 +50,7 @@
 
           <section class="sponsor-tier">
             <div class="tier-header silver-bg">
-              <h2>SILVER SPONSORS</h2>
+              <h2>{{ $t('sponsors.tiers.silver') }}</h2>
             </div>
             <div class="logos-grid silver-grid">
               <img src="/images/tssp.png" alt="TSSP" class="logo-xs" />
@@ -91,9 +91,12 @@ import Footer from '@/components/Footer.vue';
 }
 
 .breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-size: 14px;
+  margin-bottom: 30px;
   color: #999;
-  margin-bottom: 20px;
 }
 
 .breadcrumbs a {

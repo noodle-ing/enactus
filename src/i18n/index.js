@@ -23,6 +23,15 @@ const messages = {
             allRights: 'All rights reserved.',
             footerHome: 'Home' // Для заголовка колонки
         },
+        sponsors: {
+            title: 'Sponsors',
+            tiers: {
+                general: 'GENERAL SPONSOR',
+                platinum: 'PLATINUM SPONSORS',
+                gold: 'GOLD SPONSORS',
+                silver: 'SILVER SPONSORS'
+            }
+        },
         home: {
             heroTitle: 'WE ALL WIN',
             heroSubtitle: 'Become part of a student movement changing the future of Kazakhstan through entrepreneurship.',
@@ -170,7 +179,8 @@ const messages = {
         },
         breadcrumbs: {
             home: 'Home',
-            about: 'About Us'
+            about: 'About Us',
+            business: 'Business'
         }
 
     },
@@ -195,6 +205,15 @@ const messages = {
             schoolCup: 'Республиканский чемпионат школьного предпринимательства',
             allRights: 'Все права защищены.',
             footerHome: 'Главная'
+        },
+        sponsors: {
+            title: 'Спонсоры',
+            tiers: {
+                general: 'ГЕНЕРАЛЬНЫЙ СПОНСОР',
+                platinum: 'ПЛАТИНОВЫЕ СПОНСОРЫ',
+                gold: 'ЗОЛОТЫЕ СПОНСОРЫ',
+                silver: 'СЕРЕБРЯНЫЕ СПОНСОРЫ'
+            }
         },
         home: {
             heroTitle: 'WE ALL WIN',
@@ -317,7 +336,8 @@ const messages = {
         },
         breadcrumbs: {
             home: 'Главная',
-            about: 'О нас'
+            about: 'О нас',
+            business: 'Бизнесу'
         },
     },
     kz: {
@@ -341,6 +361,15 @@ const messages = {
             schoolCup: 'Республикалық мектеп кәсіпкерлігі чемпионаты',
             allRights: 'Барлық құқықтар қорғалған.',
             footerHome: 'Басты бет'
+        },
+        sponsors: {
+            title: 'Sponsors',
+            tiers: {
+                general: 'GENERAL SPONSOR',
+                platinum: 'PLATINUM SPONSORS',
+                gold: 'GOLD SPONSORS',
+                silver: 'SILVER SPONSORS'
+            }
         },
         home: {
             heroTitle: 'WE ALL WIN',
@@ -466,7 +495,8 @@ const messages = {
         },
         breadcrumbs: {
             home: 'Басты бет',
-            about: 'Біз туралы'
+            about: 'Біз туралы',
+            business: 'Бизнеске'
         },
     }
 }
