@@ -1,26 +1,42 @@
 <template>
   <div class="council-card">
     <div class="image-box">
-      <img :src="isSaule ? '/images/saule.png' : '/images/askar.png'" alt="Member">
+      <img :src="images[props.type] || images.saule" :alt="memberText.name">
     </div>
     <div class="text-box">
-      <h3 class="name">
-        {{ isSaule ? 'Сауле Зейнолла' : 'Аскар Нурша' }}
-      </h3>
-      <p class="role">
-        {{ isSaule 
-          ? 'Председатель Академического совета ENACTUS Kazakhstan, Доктор PhD, независимый эксперт ЮНЕСКО' 
-          : 'Советник директора Казахстанского института стратегических исследований' 
-        }}
-      </p>
+      <h3 class="name">{{ memberText.name }}</h3>
+      <p class="role">{{ memberText.role }}</p>
     </div>
   </div>
 </template>
 
 <script setup>
 import { computed } from 'vue';
+import { useI18n } from 'vue-i18n';
+
+const { tm, rt } = useI18n();
 const props = defineProps(['type']);
-const isSaule = computed(() => props.type === 'saule');
+
+// Храним только пути к картинкам
+const images = {
+  saule: '/images/saule.JPG',
+  askar: '/images/askar.png',
+  bakirova: '/images/bakirova.JPG',
+  galia: '/images/galia.JPG',
+  enlik: '/images/enlik.JPG'
+};
+
+// Получаем переведенные данные из i18n
+const memberText = computed(() => {
+  // tm('council.members') возвращает весь объект переводов
+  const allMembers = tm('council.members');
+  const data = allMembers[props.type] || allMembers.saule;
+
+  return {
+    name: rt(data.name),
+    role: rt(data.role)
+  };
+});
 </script>
 
 <style scoped>
@@ -28,8 +44,9 @@ const isSaule = computed(() => props.type === 'saule');
   display: flex;
   align-items: center;
   gap: 20px;
-  min-width: 480px; /* Немного шире, так как текст должностей длинный */
+  min-width: 500px;
   background: white;
+  padding: 10px; /* Добавил немного отступа */
 }
 
 .image-box img {
@@ -38,24 +55,20 @@ const isSaule = computed(() => props.type === 'saule');
   border-radius: 20px;
   object-fit: cover;
   display: block;
+  background-color: #f5f5f5;
 }
 
 .text-box {
-  max-width: 320px;
+  max-width: 340px;
   text-align: left;
 }
 
 .name {
   font-size: 16px;
   font-weight: 800;
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
   margin: 0 0 8px 0;
   color: #333;
 }
-
-.pin-icon { color: #ffc107; flex-shrink: 0; font-size: 14px; }
 
 .role {
   font-size: 12px;

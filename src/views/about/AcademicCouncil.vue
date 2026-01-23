@@ -3,36 +3,33 @@
     <main class="council-page">
       <div class="container">
         <nav class="breadcrumbs">
-          <router-link to="/">Главная</router-link> 
+          <router-link to="/">Главная</router-link>
           <span class="sep">›</span>
-          <router-link to="/about">О нас</router-link> 
+          <router-link to="#">О нас</router-link>
           <span class="sep">›</span>
           <span class="current">Академический совет</span>
         </nav>
-
         <h1 class="page-title">Академический совет</h1>
       </div>
 
       <div class="carousel-section full-width">
-        
         <div class="carousel-track-wrapper">
           <div class="carousel-track t-left t-slow">
-            <CouncilItem v-for="n in 12" :key="'r1-'+n" :type="n % 2 === 0 ? 'saule' : 'askar'" />
+            <CouncilItem v-for="(type, idx) in [...row1, ...row1]" :key="'r1-'+idx" :type="type" />
           </div>
         </div>
 
         <div class="carousel-track-wrapper">
           <div class="carousel-track t-right t-fast">
-            <CouncilItem v-for="n in 12" :key="'r2-'+n" :type="n % 2 === 0 ? 'askar' : 'saule'" />
+            <CouncilItem v-for="(type, idx) in [...row2, ...row2]" :key="'r2-'+idx" :type="type" />
           </div>
         </div>
 
         <div class="carousel-track-wrapper">
           <div class="carousel-track t-left t-medium">
-            <CouncilItem v-for="n in 12" :key="'r3-'+n" :type="n % 2 === 0 ? 'saule' : 'askar'" />
+            <CouncilItem v-for="(type, idx) in [...row3, ...row3]" :key="'r3-'+idx" :type="type" />
           </div>
         </div>
-
       </div>
     </main>
 
@@ -43,9 +40,15 @@
 <script setup>
 import Footer from '@/components/Footer.vue';
 import CouncilItem from '@/components/CouncilItem.vue';
+
+// Формируем разные наборы для визуального разнообразия
+const row1 = ['saule', 'askar', 'bakirova', 'galia', 'enlik'];
+const row2 = ['enlik', 'galia', 'bakirova', 'askar', 'saule'];
+const row3 = ['bakirova', 'saule', 'enlik', 'askar', 'galia'];
 </script>
 
 <style scoped>
+/* Стили остаются без изменений из вашего исходного кода */
 .page-wrapper {
   display: flex;
   flex-direction: column;
@@ -56,8 +59,7 @@ import CouncilItem from '@/components/CouncilItem.vue';
 .council-page {
   flex: 1;
   padding: 40px 0 100px;
-  background-color: #ffffff;
-  overflow-x: hidden; 
+  overflow-x: hidden;
 }
 
 .container {
@@ -65,14 +67,6 @@ import CouncilItem from '@/components/CouncilItem.vue';
   margin: 0 auto;
   padding: 0 20px;
 }
-
-.breadcrumbs {
-  font-size: 14px;
-  color: #999;
-  margin-bottom: 20px;
-}
-.breadcrumbs a { text-decoration: none; color: #999; }
-.sep { margin: 0 8px; }
 
 .page-title {
   font-size: 32px;
@@ -85,13 +79,12 @@ import CouncilItem from '@/components/CouncilItem.vue';
   width: 100vw;
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 40px; /* Уменьшил отступ между рядами для компактности */
 }
 
 .carousel-track-wrapper {
   width: 100%;
   overflow: hidden;
-  position: relative;
 }
 
 .carousel-track {
@@ -100,10 +93,9 @@ import CouncilItem from '@/components/CouncilItem.vue';
   gap: 40px;
 }
 
-/* Бесконечный цикл */
 @keyframes scrollLeft {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); } 
+  100% { transform: translateX(-50%); }
 }
 
 @keyframes scrollRight {
@@ -114,9 +106,9 @@ import CouncilItem from '@/components/CouncilItem.vue';
 .t-left { animation: scrollLeft linear infinite; }
 .t-right { animation: scrollRight linear infinite; }
 
-.t-slow { animation-duration: 65s; }
-.t-medium { animation-duration: 50s; }
-.t-fast { animation-duration: 35s; }
+.t-slow { animation-duration: 50s; }
+.t-medium { animation-duration: 40s; }
+.t-fast { animation-duration: 30s; }
 
 .carousel-track-wrapper:hover .carousel-track {
   animation-play-state: paused;

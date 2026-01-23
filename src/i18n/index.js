@@ -242,6 +242,7 @@ const messages = {
                 mukushev: {name: 'BULAT MUKUSHEV', role: 'President, TSSP Group'}
             }
         },
+
         breadcrumbs: {
             home: 'Home',
             about: 'About Us',
@@ -290,7 +291,53 @@ const messages = {
                 placeholder: 'Text',
                 submit: 'Submit Application'
             }
-        }
+        },
+        council: {
+            members: {
+                saule: {
+                    name: 'Saule Zeinolla',
+                    role: 'Chairperson of the Academic Council of ENACTUS Kazakhstan, PhD, Independent UNESCO Expert'
+                },
+                askar: {
+                    name: 'Askar Nursha',
+                    role: 'Political Scientist, Advisor to the Director of the Kazakhstan Institute for Strategic Studies'
+                },
+                bakirova: {
+                    name: 'Kulzhakhan Bakirova',
+                    role: 'Professor at Abai KazNPU, Doctor of Pedagogical Sciences, Candidate of Biological Sciences. Academician of RAE, Corresponding Member of APN RK and International Academy FIDJIP - EUROTALENT (France)'
+                },
+                galia: {
+                    name: 'Galia Nurmukhanbetova',
+                    role: 'Associate Professor of the International Information Technology University (IITU)'
+                },
+                enlik: {
+                    name: 'Enlik Baisheva',
+                    role: 'Candidate of Economic Sciences, Associate Professor of the Department of Finance and Accounting at UIB named after K. Sagadiyev'
+                }
+            }
+        },
+        createTeam: {
+            title: 'How to create a team?',
+            step1: {
+                title: 'Registration of participants and the team',
+                desc: 'To register, the team sends completed Registration Forms via email to the President of ENACTUS Kazakhstan. Forms are available upon request to the national office (enactuskaz@gmail.com).'
+            },
+            step2: {
+                title: 'Development and implementation of ENACTUS projects',
+                desc: 'The team independently chooses the content and scope of its projects, determines the number of projects and the duration of each.'
+            },
+            step3: {
+                title: 'Mandatory reports for ENACTUS teams',
+                desc: 'The list of reports can be found in the files attached below.'
+            },
+            step4: {
+                title: 'Participation in ENACTUS competitions',
+                desc: 'Teams that have completed registration, training, implemented projects, and submitted reports on time are eligible to participate in the national competition.'
+            },
+            formsTitle: 'Application forms for team creation',
+            forStudents: 'For students',
+            forSchools: 'For schoolchildren'
+        },
 
     },
     ru: {
@@ -554,6 +601,52 @@ const messages = {
                 placeholder: 'Текст',
                 submit: 'Отправить заявку'
             }
+        },
+        council: {
+            members: {
+                saule: {
+                    name: 'Сауле Зейнолла',
+                    role: 'Председатель Академического совета ENACTUS Kazakhstan, Доктор PhD, независимый эксперт ЮНЕСКО'
+                },
+                askar: {
+                    name: 'Аскар Нурша',
+                    role: 'Политолог, советник директора Казахстанского института стратегических исследований'
+                },
+                bakirova: {
+                    name: 'Кульжахан Бакирова',
+                    role: 'Профессор КазНПУ им. Абая, д.п.н., к.б.н. Академик РАЕ, член-корр. АПН РК и МА ФИДЖИП - ЕВРОТАЛАНТ (Франция)'
+                },
+                galia: {
+                    name: 'Галия Нурмуханбетова',
+                    role: 'Ассоциированный профессор Международного Университета Информационных Технологий (МУИТ)'
+                },
+                enlik: {
+                    name: 'Енлик Баишева',
+                    role: 'Кандидат экономических наук, доцент кафедры "Финансы и учёт" UIB им. К. Сагадиева'
+                }
+            }
+        },
+        createTeam: {
+            title: 'Как создать команду?',
+            step1: {
+                title: 'Регистрация участников и команды',
+                desc: 'Для регистрации команда направляет по электронной почте заполненные Регистрационные формы на имя Президента ENACTUS Казахстан. Бланки Регистрационных форм команда получает по запросу (enactuskaz@gmail.com).'
+            },
+            step2: {
+                title: 'Разработка и реализация проектов ENACTUS',
+                desc: 'Команда самостоятельно выбирает содержание и объем своих проектов, определяет количество проектов, продолжительность каждого из них.'
+            },
+            step3: {
+                title: 'Обязательные отчеты команд ENACTUS',
+                desc: 'Список отчетов вы можете найти в файлах, прикрепленных ниже.'
+            },
+            step4: {
+                title: 'Участие в конкурсах ENACTUS',
+                desc: 'Команды, прошедшие регистрацию и тренинги, реализовавшие проекты и предоставившие отчеты, имеют право принять участие в национальном конкурсе.'
+            },
+            formsTitle: 'Формы заявки на создание команды',
+            forStudents: 'Для студентов',
+            forSchools: 'Для школьников'
         },
 
     },
@@ -821,6 +914,52 @@ const messages = {
                 placeholder: 'Мәтін',
                 submit: 'Өтінім жіберу'
             }
+        },
+        council: {
+            members: {
+                saule: {
+                    name: 'Сәуле Зейнолла',
+                    role: 'ENACTUS Kazakhstan Академиялық кеңесінің төрайымы, PhD докторы, ЮНЕСКО тәуелсіз сарапшысы'
+                },
+                askar: {
+                    name: 'Асқар Нұрша',
+                    role: 'Саясаттанушы, Қазақстан стратегиялық зерттеулер институты директорының кеңесшісі'
+                },
+                bakirova: {
+                    name: 'Күлжахан Бәкірова',
+                    role: 'Абай атындағы ҚазҰПУ профессоры, п.ғ.д., б.ғ.к. ЖҒА академигі, ҚР ПҒА корреспондент-мүшесі және ФИДЖИП - ЕВРОТАЛАНТ Халықаралық Академиясының корреспондент-мүшесі (Франция)'
+                },
+                galia: {
+                    name: 'Ғалия Нұрмұханбетова',
+                    role: 'Халықаралық ақпараттық технологиялар университетінің (IITU) қауымдастырылған профессоры'
+                },
+                enlik: {
+                    name: 'Еңлік Баишева',
+                    role: 'Экономика ғылымдарының кандидаты, К. Сағадиев атындағы UIB "Қаржы және есеп" кафедрасының доценті'
+                }
+            }
+        },
+        createTeam: {
+            title: 'Команданы қалай құруға болады?',
+            step1: {
+                title: 'Қатысушыларды және команданы тіркеу',
+                desc: 'Тіркелу үшін команда ENACTUS Қазақстан Президентінің атына толтырылған Тіркеу нысандарын электрондық пошта арқылы жібереді. Нысандарды ұлттық кеңсеге (enactuskaz@gmail.com) сұраныс жіберу арқылы алуға болады.'
+            },
+            step2: {
+                title: 'ENACTUS жобаларын әзірлеу және іске асыру',
+                desc: 'Команда өз жобаларының мазмұны мен көлемін өз бетінше таңдайды, жобалар санын және әрқайсысының ұзақтығын анықтайды.'
+            },
+            step3: {
+                title: 'ENACTUS командаларының міндетті есептері',
+                desc: 'Есептер тізімін төменде тіркелген файлдардан таба аласыз.'
+            },
+            step4: {
+                title: 'ENACTUS конкурстарына қатысу',
+                desc: 'Тіркеуден және тренингтерден өткен, жобаларды іске асырған және есептерді уақытында тапсырған командалар ұлттық конкурсқа қатысуға құқылы.'
+            },
+            formsTitle: 'Команда құруға арналған өтінім нысандары',
+            forStudents: 'Студенттер үшін',
+            forSchools: 'Оқушылар үшін'
         }
     }
 }

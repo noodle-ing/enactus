@@ -3,7 +3,7 @@
     <main class="news-page">
       <div class="container">
         <nav class="breadcrumbs">
-          <router-link to="/">Главная</router-link> 
+          <router-link to="/">Главная</router-link>
           <span class="sep">›</span>
           <span class="current">Новости</span>
         </nav>
@@ -39,9 +39,9 @@
 
         <nav class="pagination">
           <button class="pag-arrow">◀</button>
-          <button 
-            v-for="page in [1, 2, 3, 4]" 
-            :key="page" 
+          <button
+            v-for="page in [1, 2, 3, 4]"
+            :key="page"
             :class="['pag-num', { active: currentPage === page }]"
             @click="currentPage = page"
           >

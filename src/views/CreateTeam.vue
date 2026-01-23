@@ -3,79 +3,67 @@
     <main class="create-team-page">
       <div class="container">
         <nav class="breadcrumbs">
-          <router-link to="/">Главная</router-link> 
+          <router-link to="/">{{ $t('breadcrumbs.home') }}</router-link>
           <span class="sep">›</span>
-          <router-link to="/teampage">Участникам</router-link> 
+          <router-link to="/teampage">{{ $t('nav.participants') }}</router-link>
           <span class="sep">›</span>
-          <span class="no-link">Команды</span> 
+          <span class="no-link">{{ $t('nav.teams') }}</span>
           <span class="sep">›</span>
-          <span class="current">Как создать команду?</span>
+          <span class="current">{{ $t('createTeam.title') }}</span>
         </nav>
 
-        <h1 class="page-title">Как создать команду?</h1>
+        <h1 class="page-title">{{ $t('createTeam.title') }}</h1>
 
         <div class="steps-container">
           <section class="step-card">
             <div class="step-header">
               <span class="step-number">1</span>
-              <h2>Регистрация участников и команды</h2>
+              <h2>{{ $t('createTeam.step1.title') }}</h2>
             </div>
             <div class="step-content">
-              <p>
-                Для регистрации команда направляет по электронной почте заполненные Регистрационные формы на имя 
-                Президента ENACTUS Казахстан. Бланки Регистрационных форм команда получает по запросу, 
-                направленному по электронной почте в адрес национального офиса ENACTUS Казахстан 
-                <strong>(enactuskaz@gmail.com)</strong>.
-              </p>
+              <p>{{ $t('createTeam.step1.desc') }}</p>
             </div>
           </section>
 
           <section class="step-card">
             <div class="step-header">
               <span class="step-number">2</span>
-              <h2>Разработка и реализация проектов ENACTUS</h2>
+              <h2>{{ $t('createTeam.step2.title') }}</h2>
             </div>
             <div class="step-content">
-              <p>
-                Команда самостоятельно выбирает содержание и объем своих проектов, определяет количество проектов, 
-                продолжительность каждого из них.
-              </p>
+              <p>{{ $t('createTeam.step2.desc') }}</p>
             </div>
           </section>
 
           <section class="step-card">
             <div class="step-header">
               <span class="step-number">3</span>
-              <h2>Обязательные отчеты команд ENACTUS</h2>
+              <h2>{{ $t('createTeam.step3.title') }}</h2>
             </div>
             <div class="step-content">
-              <p>Список отчетов вы можете найти в файлах, прикрепленных ниже.</p>
+              <p>{{ $t('createTeam.step3.desc') }}</p>
             </div>
           </section>
 
           <section class="step-card">
             <div class="step-header">
               <span class="step-number">4</span>
-              <h2>Участие в конкурсах ENACTUS</h2>
+              <h2>{{ $t('createTeam.step4.title') }}</h2>
             </div>
             <div class="step-content">
-              <p>
-                Команды, прошедшие регистрацию и тренинги, реализовавшие проекты, соответствующие критерию ENACTUS, 
-                и своевременно предоставившие обязательные отчеты, имеют право принять участие в национальном 
-                конкурсе ENACTUS Казахстан.
-              </p>
+              <p>{{ $t('createTeam.step4.desc') }}</p>
             </div>
           </section>
         </div>
 
         <div class="application-forms">
-          <h3 class="forms-subtitle">Формы заявки на создание команды</h3>
+          <h3 class="forms-subtitle">{{ $t('createTeam.formsTitle') }}</h3>
           <div class="button-group">
             <a href="#" class="download-btn student-btn">
-              <i class="icon-file">📄</i> Для студентов
+              <i class="icon-file">📄</i> {{ $t('createTeam.forStudents') }}
             </a>
             <a href="#" class="download-btn school-btn">
-              <i class="icon-file">📄</i> Для школьников
+              <i class="icon-file">📄</i> {{ $t('createTeam.forSchools') }}
             </a>
           </div>
         </div>
