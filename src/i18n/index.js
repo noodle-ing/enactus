@@ -17,7 +17,11 @@ const messages = {
             roadshow: 'Road Show',
             competitions: 'Competitions',
             news: 'News',
-            contact: 'Contact'
+            contact: 'Contact',
+            howToCreate: 'How to create a team?',
+            schoolCup: 'National School Entrepreneurship Championship',
+            allRights: 'All rights reserved.',
+            footerHome: 'Home' // Для заголовка колонки
         },
         home: {
             heroTitle: 'WE ALL WIN',
@@ -80,7 +84,8 @@ const messages = {
             btnSending: 'Sending...',
             success: 'Application successfully sent to wondefful204@gmail.com!',
             error: 'An error occurred while sending the application.'
-        }
+        },
+
     },
     ru: {
         nav: {
@@ -98,7 +103,11 @@ const messages = {
             roadshow: 'Road Show',
             competitions: 'Соревнования',
             news: 'Новости',
-            contact: 'Связаться'
+            contact: 'Связаться',
+            howToCreate: 'Как создать команду?',
+            schoolCup: 'Республиканский чемпионат школьного предпринимательства',
+            allRights: 'Все права защищены.',
+            footerHome: 'Главная'
         },
         home: {
             heroTitle: 'WE ALL WIN',
@@ -180,7 +189,11 @@ const messages = {
             roadshow: 'Road Show',
             competitions: 'Жарыстар',
             news: 'Жаңалықтар',
-            contact: 'Байланысу'
+            contact: 'Байланысу',
+            howToCreate: 'Команданы қалай құруға болады?',
+            schoolCup: 'Республикалық мектеп кәсіпкерлігі чемпионаты',
+            allRights: 'Барлық құқықтар қорғалған.',
+            footerHome: 'Басты бет'
         },
         home: {
             heroTitle: 'WE ALL WIN',

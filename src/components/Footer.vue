@@ -3,52 +3,57 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-logo-block">
-          <img src="/images/enactus-logo.png" alt="Enactus Kazakhstan" class="footer-logo" />
+          <router-link to="/">
+            <img src="/images/enactus-logo.png" alt="Enactus Kazakhstan" class="footer-logo" />
+          </router-link>
         </div>
 
         <div class="footer-nav">
           <div class="nav-col">
-            <h4 class="nav-title">Главная</h4>
+            <h4 class="nav-title">
+              <router-link to="/">{{ $t('nav.footerHome') }}</router-link>
+            </h4>
           </div>
 
           <div class="nav-col">
-            <h4 class="nav-title">О нас</h4>
+            <h4 class="nav-title">{{ $t('nav.about') }}</h4>
             <ul class="nav-list">
-              <li><a href="#">Штаб квартира</a></li>
-              <li><a href="#">Совет директоров</a></li>
-              <li><a href="#">Академический совет</a></li>
+              <li><router-link to="/about/headquarters">{{ $t('nav.headquarters') }}</router-link></li>
+              <li><router-link to="/about/board">{{ $t('nav.board') }}</router-link></li>
+              <li><router-link to="/about/council">{{ $t('nav.council') }}</router-link></li>
             </ul>
           </div>
 
           <div class="nav-col">
-            <h4 class="nav-title">Бизнесу</h4>
+            <h4 class="nav-title">{{ $t('nav.business') }}</h4>
             <ul class="nav-list">
-              <li><a href="#">Спонсоры</a></li>
-              <li><a href="#">Партнёрство</a></li>
+              <li><router-link to="/business">{{ $t('nav.sponsors') }}</router-link></li>
+              <li><router-link to="/partnership">{{ $t('nav.partnership') }}</router-link></li>
             </ul>
           </div>
 
           <div class="nav-col">
-            <h4 class="nav-title">Участникам</h4>
+            <h4 class="nav-title">{{ $t('nav.participants') }}</h4>
             <ul class="nav-list">
-              <li><a href="#">Команды</a></li>
-              <li><a href="#">Как создать команду?</a></li>
-              <li><a href="#">ENACTUS CAMP</a></li>
-              <li><a href="#">ROAD SHOW</a></li>
+              <li><router-link to="/teampage">{{ $t('nav.teams') }}</router-link></li>
+              <li><router-link to="/createteam">{{ $t('nav.howToCreate') }}</router-link></li>
+              <li><router-link to="/enactus-cup">{{ $t('nav.camp') }}</router-link></li>
+              <li><router-link to="/road-show">{{ $t('nav.roadshow') }}</router-link></li>
             </ul>
           </div>
 
           <div class="nav-col">
-            <h4 class="nav-title">Соревнования</h4>
+            <h4 class="nav-title">{{ $t('nav.competitions') }}</h4>
             <ul class="nav-list">
-              <li><a href="#">WORLD CUP</a></li>
-              <li><a href="#">NATIONAL EXPO</a></li>
-              <li><a href="#">Республиканский чемпионат школьного предпринимательства</a></li>
+              <li><router-link to="/competitions">WORLD CUP</router-link></li>
+              <li><router-link to="/competitions">NATIONAL EXPO</router-link></li>
             </ul>
           </div>
 
           <div class="nav-col">
-            <h4 class="nav-title">Новости</h4>
+            <h4 class="nav-title">
+              <router-link to="/news">{{ $t('nav.news') }}</router-link>
+            </h4>
           </div>
         </div>
       </div>
@@ -57,32 +62,14 @@
 
       <div class="footer-bottom">
         <p class="copyright">
-          © 2025 ENACTUS Kazakhstan. Все права защищены.
+          © 2026 ENACTUS Kazakhstan. {{ $t('nav.allRights') }}
         </p>
-        
-<div class="social-icons">
-  <a href="#" class="social-link">
-    <img src="/images/icons/instagram.png" alt="Instagram" />
-  </a>
-  <a href="#" class="social-link">
-    <img src="/images/icons/facebook.png" alt="Facebook" />
-  </a>
-  <a href="#" class="social-link">
-    <img src="/images/icons/telegram.png" alt="Telegram" />
-  </a>
-  <a href="#" class="social-link">
-    <img src="/images/icons/youtube.png" alt="YouTube" />
-  </a>
-  <a href="#" class="social-link">
-    <img src="/images/icons/linkedin.png" alt="LinkedIn" />
-  </a>
-  <a href="#" class="social-link">
-    <img src="/images/icons/twiter.png" alt="Twitter" />
-  </a>
-  <a href="#" class="social-link">
-    <img src="/images/icons/tiktok.png" alt="TikTok" />
-  </a>
-</div>
+
+        <div class="social-icons">
+          <a href="https://instagram.com/enactus_kazakhstan" target="_blank" class="social-link">
+            <img src="/images/icons/instagram.png" alt="Instagram" />
+          </a>
+        </div>
       </div>
     </div>
   </footer>
@@ -93,6 +80,9 @@
 </script>
 
 <style scoped>
+
+
+
 .footer {
   background: #F0F0F0;
   padding: 60px 0 30px;
