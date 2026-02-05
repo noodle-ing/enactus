@@ -262,6 +262,51 @@ const messages = {
             },
             photoReport: 'Photo Report'
         },
+        competitions: {
+            breadcrumbs: {
+                current: 'Competitions'
+            },
+            title: 'Competitions',
+            types: {
+                worldCup: 'World Cup',
+                nationalExpo: 'National Expo',
+                schoolChampionship: 'National School Entrepreneurship Championship'
+            },
+            links: {
+                results: 'Results',
+                photos: 'Photos'
+            },
+            years: {
+                2025: {
+                    title: 'WORLD CUP 2025',
+                    announcementTitle: 'ENACTUS WORLD CUP 2025 AFTER MOVIE',
+                    description: '<p>Watch the best moments of the 2025 World Cup.</p>'
+                },
+                2024: {
+                    title: 'WORLD CUP 2024',
+                    announcementTitle: 'ENACTUS WORLD CUP 2024 ANNOUNCEMENT',
+                    description: `
+      <p>For the first time, Kazakhstan hosted the ENACTUS student entrepreneurship World Cup.</p>
+      <p>All ENACTUS student business projects are aimed at achieving the 17 UN Sustainable Development Goals.</p>
+    `
+                },
+                2023: {
+                    title: 'WORLD CUP 2023',
+                    announcementTitle: 'ENACTUS WORLD CUP 2023 AFTERMOVIE',
+                    description: '<p>Results of the World Cup in the Netherlands.</p>'
+                }
+            }
+        },
+        newsPage: {
+            breadcrumbs: {
+                current: 'News'
+            },
+            title: 'News',
+            banner: {
+                title: 'Caring business: how young entrepreneurs of the ENACTUS program change the world',
+                subtitle: 'Kazakhstan, for the first time in the history of the CIS, hosted the ENACTUS World Cup 2024 in Astana.'
+            }
+        },
         partnership: {
             title: 'Partnership',
             officialPartners: 'OFFICIAL PARTNERS',
@@ -589,6 +634,51 @@ const messages = {
             },
             photoReport: 'Фото-отчёт'
         },
+        competitions: {
+            breadcrumbs: {
+                current: 'Соревнования'
+            },
+            title: 'Соревнования',
+            types: {
+                worldCup: 'WORLD CUP',
+                nationalExpo: 'NATIONAL EXPO',
+                schoolChampionship: 'Республиканский чемпионат школьного предпринимательства'
+            },
+            links: {
+                results: 'Результаты',
+                photos: 'Фото'
+            },
+            years: {
+                2025: {
+                    title: 'WORLD CUP 2025',
+                    announcementTitle: 'ENACTUS WORLD CUP 2025 AFTER MOVIE',
+                    description: '<p>Смотрите лучшие моменты мирового кубка 2025 года.</p>'
+                },
+                2024: {
+                    title: 'WORLD CUP 2024',
+                    announcementTitle: 'ENACTUS WORLD CUP 2024 ANNOUNCEMENT',
+                    description: `
+      <p>Впервые в Казахстане состоялся мировой кубок студенческого предпринимательства ENACTUS...</p>
+      <p>Все бизнес-проекты студентов ENACTUS направлены на достижение 17 Целей устойчивого развития ООН...</p>
+    `
+                },
+                2023: {
+                    title: 'WORLD CUP 2023',
+                    announcementTitle: 'ENACTUS WORLD CUP 2023 AFTERMOVIE',
+                    description: '<p>Итоги мирового кубка в Нидерландах.</p>'
+                }
+            }
+        },
+        newsPage: {
+            breadcrumbs: {
+                current: 'Новости'
+            },
+            title: 'Новости',
+            banner: {
+                title: 'Заботливый бизнес: как молодые предприниматели программы ENACTUS меняют мир',
+                subtitle: 'Казахстан впервые в истории СНГ провел мировой чемпионат ENACTUS World Cup 2024 в Астане'
+            }
+        },
         partnership: {
             title: 'Партнёрство',
             officialPartners: 'ОФИЦИАЛЬНЫЕ ПАРТНЁРЫ',
@@ -750,6 +840,51 @@ const messages = {
                 participants: 'қатысушы'
             },
             photoReport: 'Фото-есеп'
+        },
+        competitions: {
+            breadcrumbs: {
+                current: 'Жарыстар'
+            },
+            title: 'Жарыстар',
+            types: {
+                worldCup: 'WORLD CUP',
+                nationalExpo: 'NATIONAL EXPO',
+                schoolChampionship: 'Республикалық мектеп кәсіпкерлігі чемпионаты'
+            },
+            links: {
+                results: 'Нәтижелер',
+                photos: 'Фото'
+            },
+            years: {
+                2025: {
+                    title: 'WORLD CUP 2025',
+                    announcementTitle: 'ENACTUS WORLD CUP 2025 AFTER MOVIE',
+                    description: '<p>2025 жылғы әлем кубогының ең жарқын сәттерін көріңіз.</p>'
+                },
+                2024: {
+                    title: 'WORLD CUP 2024',
+                    announcementTitle: 'ENACTUS WORLD CUP 2024 ANNOUNCEMENT',
+                    description: `
+      <p>Қазақстанда алғаш рет ENACTUS студенттік кәсіпкерлік әлемдік кубогы өтті.</p>
+      <p>ENACTUS студенттерінің барлық бизнес-жобалары БҰҰ-ның 17 Тұрақты даму мақсатын жүзеге асыруға бағытталған.</p>
+    `
+                },
+                2023: {
+                    title: 'WORLD CUP 2023',
+                    announcementTitle: 'ENACTUS WORLD CUP 2023 AFTERMOVIE',
+                    description: '<p>Нидерландтағы әлемдік кубоктың қорытындылары.</p>'
+                }
+            }
+        },
+        newsPage: {
+            breadcrumbs: {
+                current: 'Жаңалықтар'
+            },
+            title: 'Жаңалықтар',
+            banner: {
+                title: 'Қамқор бизнес: Enactus бағдарламасының жас кәсіпкерлері әлемді қалай өзгертуде',
+                subtitle: 'Қазақстан ТМД тарихында алғаш рет ENACTUS World Cup 2024 әлем чемпионатын Астанада өткізді'
+            }
         },
         news: {
             title: 'ЖАҢАЛЫҚТАР',

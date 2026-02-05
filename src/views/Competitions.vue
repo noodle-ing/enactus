@@ -3,12 +3,12 @@
     <main class="competitions-page">
       <div class="container">
         <nav class="breadcrumbs">
-          <router-link to="/">Главная</router-link>
+          <router-link to="/">{{ $t('breadcrumbs.home') }}</router-link>
           <span class="sep">›</span>
-          <span class="current">Соревнования</span>
+          <span class="current">{{ $t('competitions.breadcrumbs.current') }}</span>
         </nav>
 
-        <h1 class="page-title">Соревнования</h1>
+        <h1 class="page-title">{{ $t('competitions.title') }}</h1>
 
         <div class="competitions-layout">
           <aside class="sidebar">
@@ -57,8 +57,8 @@
                     <div class="text-content" v-html="year.description"></div>
                     
                     <div class="links">
-                      <a href="#" class="accent-link">Результаты</a>
-                      <a href="#" class="accent-link">Фото</a>
+                      <a href="#" class="accent-link">{{ $t('competitions.links.results') }}</a>
+                      <a href="#" class="accent-link">{{ $t('competitions.links.photos') }}</a>
                     </div>
                   </div>
                 </div>
@@ -74,44 +74,44 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
+import { useI18n } from 'vue-i18n';
 import Footer from '@/components/Footer.vue';
+
+const { t } = useI18n();
 
 const activeType = ref('world-cup');
 const openYear = ref('2025');
 
-const competitionTypes = [
-  { id: 'world-cup', label: 'WORLD CUP' },
-  { id: 'national-expo', label: 'NATIONAL EXPO' },
-  { id: 'school-championship', label: 'Республиканский чемпионат школьного предпринимательства' },
-];
+const competitionTypes = computed(() => [
+  { id: 'world-cup', label: t('competitions.types.worldCup') },
+  { id: 'national-expo', label: t('competitions.types.nationalExpo') },
+  { id: 'school-championship', label: t('competitions.types.schoolChampionship') },
+]);
 
-const yearsData = [
+const yearsData = computed(() => [
   { 
     id: '2025', 
-    title: 'WORLD CUP 2025', 
-    announcementTitle: 'ENACTUS WORLD CUP 2025 AFTER MOVIE', 
-    description: '<p>Смотрите лучшие моменты мирового кубка 2025 года.</p>',
+    title: t('competitions.years.2025.title'),
+    announcementTitle: t('competitions.years.2025.announcementTitle'),
+    description: t('competitions.years.2025.description'),
     videos: [{ id: '2QLHepslVVE', link: 'https://youtu.be/2QLHepslVVE' }]
   },
   { 
     id: '2024', 
-    title: 'WORLD CUP 2024', 
-    announcementTitle: 'ENACTUS WORLD CUP 2024 ANNOUNCEMENT',
-    description: `
-      <p>Впервые в Казахстане состоялся мировой кубок студенческого предпринимательства ENACTUS...</p>
-      <p>Все бизнес-проекты студентов ENACTUS направлены на достижение 17 Целей устойчивого развития ООН...</p>
-    `,
+    title: t('competitions.years.2024.title'),
+    announcementTitle: t('competitions.years.2024.announcementTitle'),
+    description: t('competitions.years.2024.description'),
     videos: [{ id: 'j8K9KNDcjYM', link: 'https://youtu.be/j8K9KNDcjYM' }]
   },
   { 
     id: '2023', 
-    title: 'WORLD CUP 2023', 
-    announcementTitle: 'ENACTUS WORLD CUP 2023 AFTERMOVIE', 
-    description: '<p>Итоги мирового кубка в Нидерландах.</p>',
+    title: t('competitions.years.2023.title'),
+    announcementTitle: t('competitions.years.2023.announcementTitle'),
+    description: t('competitions.years.2023.description'),
     videos: [{ id: 'KH4X_hWQqNA', link: 'https://youtu.be/KH4X_hWQqNA' }]
   },
-];
+]);
 
 // Функция для получения обложки YouTube
 const getThumbnail = (videoId) => {
