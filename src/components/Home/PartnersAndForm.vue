@@ -23,7 +23,7 @@
           <div class="contacts-display">
             <div class="contact-item">
               <span class="contact-label">ЭЛЕКТРОННАЯ ПОЧТА:</span>
-              <a href="mailto:enactuskaz@gnail.com" class="contact-link">enactuskaz@gnail.com</a>
+              <a href="mailto:enactuskaz@gmail.com" class="contact-link">enactuskaz@gmail.com</a>
             </div>
 
             <div class="contact-item">

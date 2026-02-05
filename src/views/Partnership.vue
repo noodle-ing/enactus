@@ -48,7 +48,7 @@
               <div class="contact-methods">
                 <div class="contact-method-item">
                   <span class="contact-label">{{ $t('partnership.callback.email') }}</span>
-                  <a href="mailto:enactuskaz@gnail.com" class="contact-link">enactuskaz@gnail.com</a>
+                  <a href="mailto:enactuskaz@gmail.com" class="contact-link">enactuskaz@gmail.com</a>
                 </div>
 
                 <div class="contact-method-item">

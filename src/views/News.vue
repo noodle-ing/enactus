@@ -110,11 +110,11 @@ const newsItems = Array(9).fill({
   align-items: center;
 }
 
-.forbes-logo { 
+.forbes-logo {
   height: 30px; /* Уменьшенный размер логотипа */
   width: auto;
   object-fit: contain;
-  filter: brightness(0); 
+  filter: brightness(0);
 }
 
 .banner-text h3 {

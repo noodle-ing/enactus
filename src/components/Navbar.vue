@@ -68,7 +68,7 @@
         <router-link to="/competitions" class="nav-link" @click="closeMenu">{{ $t('nav.competitions') }}</router-link>
         <router-link to="/news" class="nav-link" @click="closeMenu">{{ $t('nav.news') }}</router-link>
 
-        <button class="contact-btn">
+        <button class="contact-btn" @click="isContactOpen = true">
           <img src="/images/phone-icon.png" alt="" class="btn-icon">
           {{ $t('nav.contact') }}
         </button>
@@ -95,6 +95,28 @@
         <span class="bar"></span>
       </div>
     </div>
+
+    <transition name="fade">
+      <div v-if="isContactOpen" class="modal-overlay" @click.self="isContactOpen = false">
+        <div class="modal-content">
+          <button class="close-modal" @click="isContactOpen = false">&times;</button>
+
+          <h3 class="modal-title">{{ $t('nav.contact') }}</h3>
+
+          <div class="contact-info">
+            <div class="contact-item">
+              <span class="label">{{ $t('contact.emailLabel') }}</span>
+              <a href="mailto:enactuskaz@gmail.com" class="value">enactuskaz@gmail.com</a>
+            </div>
+
+            <div class="contact-item">
+              <span class="label">{{ $t('contact.phoneLabel') }}</span>
+              <a href="tel:+77057143315" class="value">+7 705 714 3315</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </transition>
   </nav>
 </template>
 
@@ -102,7 +124,6 @@
 import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 
-// Подключаем i18n
 const { locale } = useI18n()
 
 const isMenuOpen = ref(false)
@@ -110,6 +131,7 @@ const isLangOpen = ref(false)
 const isAboutOpen = ref(false)
 const isBusinessOpen = ref(false)
 const isParticipantsOpen = ref(false)
+const isContactOpen = ref(false)
 
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value
@@ -122,17 +144,14 @@ const closeMenu = () => {
   isParticipantsOpen.value = false
 }
 
-// Функция смены языка
 const changeLanguage = (lang) => {
   locale.value = lang
   isLangOpen.value = false
-  // Сохраняем в браузер, чтобы при перезагрузке язык не сбрасывался
   localStorage.setItem('lang', lang)
 }
 </script>
 
 <style scoped>
-/* Ваши стили остаются без изменений, так как структура классов сохранена */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
 .navbar {
@@ -268,8 +287,88 @@ const changeLanguage = (lang) => {
 
 .lang-item:hover { background: #f5f5f5; }
 
-.fade-enter-active, .fade-leave-active { transition: opacity 0.2s, transform 0.2s; }
-.fade-enter-from, .fade-leave-to { opacity: 0; transform: translateY(10px); }
+/* МОДАЛЬНОЕ ОКНО */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  background: white;
+  padding: 40px;
+  border-radius: 24px;
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+.close-modal {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #f0f0f0;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.close-modal:hover { background: #e0e0e0; color: #000; }
+
+.modal-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #1a1a1a;
+  text-transform: uppercase;
+}
+
+.contact-item {
+  margin-bottom: 25px;
+}
+
+.label {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: #999;
+  margin-bottom: 8px;
+}
+
+.value {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.value:hover { color: #FFC007; }
+
+/* АНИМАЦИИ */
+.fade-enter-active, .fade-leave-active { transition: opacity 0.3s, transform 0.3s; }
+.fade-enter-from, .fade-leave-to { opacity: 0; transform: translateY(-10px); }
+
+.nav-toggle { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
+.bar { width: 25px; height: 3px; background: #333; border-radius: 3px; }
 
 @media (max-width: 1024px) {
   .nav-menu { gap: 1rem; }
@@ -277,26 +376,20 @@ const changeLanguage = (lang) => {
 }
 
 @media (max-width: 768px) {
+  .nav-toggle { display: flex; }
   .nav-menu {
     position: fixed;
     left: -100%;
-    top: 70px;
+    top: 80px;
     flex-direction: column;
     background: #F0F0F0;
     width: 100%;
-    height: calc(100vh - 70px);
+    height: calc(100vh - 80px);
     transition: 0.3s;
     padding: 2rem 0;
+    overflow-y: auto;
   }
   .nav-menu.active { left: 0; }
-  .dropdown-box {
-    position: static;
-    box-shadow: none;
-    background: transparent;
-    width: 100%;
-    text-align: center;
-  }
+  .dropdown-box { position: static; box-shadow: none; width: 100%; background: #e8e8e8; margin-top: 10px; }
 }
-
-.router-link-active { background: none !important; }
 </style>

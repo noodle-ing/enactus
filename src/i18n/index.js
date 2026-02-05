@@ -91,8 +91,10 @@ const messages = {
             placeholderName: 'Enter your name',
             btnSubmit: 'I want to participate',
             btnSending: 'Sending...',
-            success: 'Application successfully sent to wondefful204@gmail.com!',
-            error: 'An error occurred while sending the application.'
+            success: 'Application successfully sent',
+            error: 'An error occurred while sending the application.',
+            emailLabel: 'EMAIL:',
+            phoneLabel: 'PHONE:'
         },
         headquarters: {
             title: 'Headquarters',
@@ -243,7 +245,6 @@ const messages = {
                 muhtar: {name: 'MURAT AKHMETOV', role: 'Member of the Board of Directors, ENACTUS Kazakhstan'}
             }
         },
-
         breadcrumbs: {
             home: 'Home',
             about: 'About Us',
@@ -446,8 +447,10 @@ const messages = {
             placeholderName: 'Введите имя',
             btnSubmit: 'Хочу участвовать',
             btnSending: 'Отправка...',
-            success: 'Заявка успешно отправлена на wondefful204@gmail.com!',
-            error: 'Произошла ошибка при отправке заявки.'
+            success: 'Заявка успешно отправлена',
+            error: 'Произошла ошибка при отправке заявки.',
+            emailLabel: 'ЭЛЕКТРОННАЯ ПОЧТА:',
+            phoneLabel: 'ТЕЛЕФОН:'
         },
         headquarters: {
             title: 'Штаб квартира',
@@ -783,8 +786,10 @@ const messages = {
             placeholderName: 'Атыңызды енгізіңіз',
             btnSubmit: 'Қатысқым келеді',
             btnSending: 'Жіберу...',
-            success: 'Өтінім wondefful204@gmail.com мекенжайына сәтті жіберілді!',
-            error: 'Өтінімді жіберу кезінде қате кетті.'
+            success: 'Өтінім  мекенжайына сәтті жіберілді!',
+            error: 'Өтінімді жіберу кезінде қате кетті.',
+            emailLabel: 'ЭЛЕКТРОНДЫҚ ПОШТА:',
+            phoneLabel: 'ТЕЛЕФОН:'
         },
         headquarters: {
             title: 'Штаб-пәтер',
