@@ -239,7 +239,8 @@ const messages = {
                 pershin: {name: 'VLADISLAV PERSHIN', role: 'General Director of the 99.99 Agency'},
                 idrissov: {name: 'RUSLAN IDRISSOV', role: 'General Director, GLOBAL FOODS'},
                 badina: {name: 'ASSEL BADINA', role: 'Head of T&D, "Kazakhmys Corporation" LLP'},
-                mukushev: {name: 'BULAT MUKUSHEV', role: 'President, TSSP Group'}
+                mukushev: {name: 'BULAT MUKUSHEV', role: 'President, TSSP Group'},
+                muhtar: {name: 'MURAT AKHMETOV', role: 'Member of the Board of Directors, ENACTUS Kazakhstan'}
             }
         },
 
@@ -501,7 +502,8 @@ const messages = {
                 pershin: { name: 'VLADISLAV PERSHIN', role: 'Генеральный директор агентства 99.99' },
                 idrissov: { name: 'RUSLAN IDRISSOV', role: 'Генеральный директор GLOBAL FOODS' },
                 badina: { name: 'ASSEL BADINA', role: 'Руководитель департамента обучения и развития персонала (T&D) ТОО «Корпорация Казахмыс»' },
-                mukushev: { name: 'BULAT MUKUSHEV', role: 'Президент TSSP Group' }
+                mukushev: { name: 'BULAT MUKUSHEV', role: 'Президент TSSP Group' },
+                muhtar: {name: 'MURAT AKHMETOV', role: 'Член совета директоров ENACTUS Kazakhstan'}
             }
         },
         camp: {
@@ -840,7 +842,8 @@ const messages = {
                 pershin: { name: 'VLADISLAV PERSHIN', role: '99.99 агенттігінің бас директоры' },
                 idrissov: { name: 'RUSLAN IDRISSOV', role: 'GLOBAL FOODS бас директоры' },
                 badina: { name: 'ASSEL BADINA', role: '«Қазақмыс корпорациясы» ЖШС персоналды оқыту және дамыту (T&D) департаментінің басшысы' },
-                mukushev: { name: 'BULAT MUKUSHEV', role: 'TSSP Group президенті' }
+                mukushev: { name: 'BULAT MUKUSHEV', role: 'TSSP Group президенті' },
+                muhtar: {name: 'MURAT AKHMETOV', role: 'ENACTUS Kazakhstan Директорлар кеңесінің мүшесі'}
             }
         },
         camp: {

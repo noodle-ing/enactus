@@ -68,7 +68,7 @@ const boardMembers = [
   { type: 'toleuov' }, { type: 'naisbecov' }, { type: 'balgozhina' },
   { type: 'gussein' }, { type: 'ilyas' }, { type: 'mukhametov' },
   { type: 'pershin' }, { type: 'idrissov' }, { type: 'badina' },
-  { type: 'mukushev' }
+  { type: 'mukushev' }, {type: 'muhtar'}
 ];
 
 const doubleMembers = computed(() => [...boardMembers, ...boardMembers]);

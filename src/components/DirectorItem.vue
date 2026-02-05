@@ -56,7 +56,8 @@ const staticData = {
   pershin: { name: 'VLADISLAV PERSHIN', image: '/images/VLADISLAV PERSHIN.jpg' },
   idrissov: { name: 'RUSLAN IDRISSOV', image: '/images/RUSLAN IDRISSOV.jpg' },
   badina: { name: 'ASSEL BADINA', image: '/images/ASSEL BADINA.jpg' },
-  mukushev: { name: 'BULAT MUKUSHEV', image: '/images/HB POSTERS.png' }
+  mukushev: { name: 'BULAT MUKUSHEV', image: '/images/HB POSTERS.png' },
+  muhtar : {name: 'MURAT AKHMETOV', image: '/images/muhtar.jpg' },
 };
 
 // 2. Полностью динамическое вычисление данных текущего директора
