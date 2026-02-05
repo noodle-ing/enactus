@@ -20,10 +20,13 @@ const props = defineProps(['type']);
 // Храним только пути к картинкам
 const images = {
   saule: '/images/saule.JPG',
-  askar: '/images/askar.png',
+  askar: '/images/askar.jpeg',
   bakirova: '/images/bakirova.JPG',
   galia: '/images/galia.JPG',
-  enlik: '/images/enlik.JPG'
+  enlik: '/images/enlik.JPG',
+  zhenis: '/images/zhenis.jpg',
+  zhannet: '/images/zhannet.jpeg',
+  danial: '/images/danial.jpeg',
 };
 
 // Получаем переведенные данные из i18n
