@@ -9,7 +9,9 @@
       <div class="hero-content">
         <h1 class="hero-title">{{ $t('home.heroTitle') }}</h1>
         <p class="hero-subtitle" v-html="$t('home.heroSubtitle')"></p>
-        <button class="hero-button">{{ $t('home.joinBtn') }}</button>
+        <button @click="scrollToJoin" class="hero-button">
+          {{ $t('home.joinBtn') }}
+        </button>
       </div>
     </section>
 
@@ -77,7 +79,7 @@
     <NewsCarousel />
     <EnactusMap />
     <EnactusWorld />
-    <PartnersAndForm />
+    <PartnersAndForm id="join-form" />
     <Footer />
   </div>
 </template>
@@ -89,6 +91,14 @@ import EnactusWorld from '@/components/Home/EnactusWorld.vue';
 import NewsCarousel from '@/components/Home/NewsCarousel.vue'
 import PartnersAndForm from '@/components/Home/PartnersAndForm.vue';
 import ProjectShowcase from '@/components/Home/ProjectShowcase.vue'
+
+// Функция для плавного скролла к форме
+const scrollToJoin = () => {
+  const element = document.getElementById('join-form');
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
+};
 </script>
 
 <style scoped>
@@ -162,6 +172,11 @@ import ProjectShowcase from '@/components/Home/ProjectShowcase.vue'
   border-radius: 50px;
   cursor: pointer;
   transition: 0.2s;
+}
+
+.hero-button:hover {
+  background: #ffcc00;
+  transform: translateY(-2px);
 }
 
 /* --- 2. Секция "О нас" --- */
@@ -254,10 +269,9 @@ import ProjectShowcase from '@/components/Home/ProjectShowcase.vue'
 
 .stats-content-wrapper { padding-top: 60px; }
 
-/* Сетка: Картинка слева, Карточки справа */
 .stats-grid {
   display: grid;
-  grid-template-columns: 1fr 1.4fr; /* Увеличили место под карточки */
+  grid-template-columns: 1fr 1.4fr;
   gap: 40px;
   align-items: center;
 }
@@ -276,7 +290,7 @@ import ProjectShowcase from '@/components/Home/ProjectShowcase.vue'
 
 .stat-card {
   background: #fff;
-  padding: 30px 25px; /* Умеренный padding, чтобы карточка была длиннее */
+  padding: 30px 25px;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -290,8 +304,8 @@ import ProjectShowcase from '@/components/Home/ProjectShowcase.vue'
   font-weight: 900;
   line-height: 1;
   margin-bottom: 8px;
-  letter-spacing: -2px; /* Плотность для больших чисел */
-  white-space: nowrap; /* ЗАПРЕТ ПЕРЕНОСА */
+  letter-spacing: -2px;
+  white-space: nowrap;
 }
 
 .stat-desc {
@@ -301,34 +315,26 @@ import ProjectShowcase from '@/components/Home/ProjectShowcase.vue'
   line-height: 1.2;
 }
 
-/* --- 4. Адаптивность (Media Queries) --- */
-
-/* Планшеты */
+/* --- 4. Адаптивность --- */
 @media (max-width: 992px) {
   .about-container, .stats-grid {
+    display: flex;
     flex-direction: column;
-    grid-template-columns: 1fr;
     text-align: center;
     gap: 40px;
   }
-
   .about-visual { order: 2; }
   .quote-text { font-size: 1.2rem; }
-
   .stat-card { align-items: center; text-align: center; }
 }
 
-/* Мобильные (горизонтальные и большие телефоны) */
 @media (max-width: 768px) {
   .about-section { padding: 60px 0; }
-
   .stats-cards-grid { grid-template-columns: 1fr; }
-
   .quote-banner {
     border-radius: 20px 20px 0 0;
     padding: 40px 1rem;
   }
-
   .hero-content {
     text-align: center;
     display: flex;
@@ -337,7 +343,6 @@ import ProjectShowcase from '@/components/Home/ProjectShowcase.vue'
   }
 }
 
-/* Маленькие телефоны */
 @media (max-width: 480px) {
   .stat-num { font-size: 2.8rem; }
   .hero-title { font-size: 2.4rem; }

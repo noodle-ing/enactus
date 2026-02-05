@@ -3,7 +3,9 @@
     <div class="content-limit">
       <div class="news-header">
         <h2 class="news-title">{{ $t('news.title') }}</h2>
-        <a href="#" class="all-news-btn">{{ $t('news.viewAll') }}</a>
+        <router-link to="/news" class="all-news-btn">
+          {{ $t('news.viewAll') }}
+        </router-link>
       </div>
 
       <div class="carousel-container">
@@ -22,15 +24,17 @@
             class="news-swiper"
         >
           <swiper-slide v-for="item in localizedNewsItems" :key="item.id" class="custom-slide">
-            <div class="news-card">
-              <div class="news-img-box">
-                <img :src="item.image" :alt="item.title" />
+            <a :href="item.link" target="_blank" rel="noopener noreferrer" class="news-card-link">
+              <div class="news-card">
+                <div class="news-img-box">
+                  <img :src="item.image" :alt="item.title" />
+                </div>
+                <div class="news-content">
+                  <h3 class="card-title">{{ item.title }}</h3>
+                  <p class="card-description">{{ item.description }}</p>
+                </div>
               </div>
-              <div class="news-content">
-                <h3 class="card-title">{{ item.title }}</h3>
-                <p class="card-description">{{ item.description }}</p>
-              </div>
-            </div>
+            </a>
           </swiper-slide>
         </swiper>
 
@@ -44,10 +48,10 @@
 import { ref, computed } from 'vue';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Navigation } from 'swiper/modules';
-import { useI18n } from 'vue-i18n'; // Импортируем i18n
+import { useI18n } from 'vue-i18n';
 import 'swiper/css';
 
-const { t } = useI18n(); // Инициализируем функцию перевода
+const { t } = useI18n();
 
 const modules = [Navigation];
 const swiperInstance = ref(null);
@@ -64,37 +68,40 @@ const goNext = () => {
   if (swiperInstance.value) swiperInstance.value.slideNext();
 };
 
-// Вычисляемый массив новостей, который реагирует на смену языка
+// Данные с вашими ссылками, но СТАРЫМИ путями к картинкам
 const localizedNewsItems = computed(() => [
   {
     id: 1,
-    title: t('news.items.expo.title'),
-    description: t('news.items.expo.desc'),
-    image: '/images/nationalexpo.jpg'
+    title: 'Победители Enactus Kazakhstan National Expo представят республику на мировой арене',
+    description: 'Официальный отчет о победителях национального кубка предпринимательства.',
+    image: '/images/nationalexpo.jpg', // Старая картинка
+    link: 'https://primeminister.kz/ru/news/pobediteli-kubka-molodezhnogo-predprinimatelstva-enactus-kazakhstan-national-predstavyat-respubliku-na-mirovoy-arene-30000'
   },
   {
     id: 2,
-    title: t('news.items.world25.title'),
-    description: t('news.items.world25.desc'),
-    image: '/images/enactusworldcup2025.png'
+    title: 'Заботливый бизнес: как молодые предприниматели меняют мир',
+    description: 'Как социальные проекты студентов Enactus превращаются в реальный бизнес.',
+    image: '/images/enactusworldcup2025.png', // Старая картинка
+    link: 'https://forbes.kz/articles/zabotlivyy-biznes-kak-molodye-predprinimateli-programmy-enactus-menyayut-mir-9ddd3a'
   },
   {
     id: 3,
-    title: t('news.items.world24.title'),
-    description: t('news.items.world24.desc'),
-    image: '/images/enactusworldcup2024.png'
+    title: 'Министерство науки и высшего образования РК: Enactus Kazakhstan',
+    description: 'Поддержка молодежных инициатив на государственном уровне.',
+    image: '/images/enactusworldcup2024.png', // Старая картинка
+    link: 'https://www.gov.kz/memleket/entities/sci/press/news/details/846381?lang=ru'
   },
   {
     id: 4,
-    title: t('news.items.world24.title'), // Пример повтора или другой новости
-    description: t('news.items.world24.desc'),
-    image: '/images/enactusworldcup2024.png'
+    title: 'Бизнес помогает развитию молодежного IT-предпринимательства',
+    description: 'Интеграция IT-решений в современные студенческие стартапы.',
+    image: '/images/news4.jpeg', // Старая картинка
+    link: 'https://tengrinews.kz/internet/biznes-pomogaet-razvitiyu-molodejnogo-it-predprinimatelstva-484767/'
   }
 ]);
 </script>
 
 <style scoped>
-/* Стили остаются без изменений */
 .news-section {
   background-color: #ffc107;
   padding: 80px 0;
@@ -132,6 +139,12 @@ const localizedNewsItems = computed(() => [
   border-radius: 50px;
   font-weight: 600;
   font-size: 14px;
+  transition: all 0.3s;
+}
+
+.all-news-btn:hover {
+  background: #333;
+  transform: scale(1.05);
 }
 
 .carousel-container {
@@ -149,6 +162,18 @@ const localizedNewsItems = computed(() => [
   height: auto;
 }
 
+.news-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.news-card-link:hover {
+  transform: translateY(-8px);
+}
+
 .news-card {
   background: white;
   border-radius: 20px;
@@ -157,6 +182,7 @@ const localizedNewsItems = computed(() => [
   flex-direction: column;
   width: 100%;
   box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  min-height: 400px;
 }
 
 .news-img-box {
@@ -203,11 +229,6 @@ const localizedNewsItems = computed(() => [
   transform: translateY(-50%);
   z-index: 10;
   padding: 15px;
-  transition: opacity 0.2s;
-}
-
-.nav-btn:hover {
-  opacity: 0.6;
 }
 
 .prev-btn { left: -60px; }
@@ -220,7 +241,6 @@ const localizedNewsItems = computed(() => [
 }
 
 @media (max-width: 768px) {
-  .news-section { border-radius: 0; }
   .nav-btn { display: none; }
   .content-limit { padding: 0 20px; }
 }
