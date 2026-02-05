@@ -20,37 +20,17 @@
             <p class="card-text">{{ $t('contact.cardText') }}</p>
           </div>
 
-          <form @submit.prevent="handleSubmit" class="card-form">
-            <div class="form-inputs">
-              <div class="input-group">
-                <label>{{ $t('contact.labelName') }}</label>
-                <input
-                    v-model="form.name"
-                    type="text"
-                    :placeholder="$t('contact.placeholderName')"
-                    required
-                    class="custom-input"
-                />
-              </div>
-
-              <div class="input-group">
-                <label>{{ $t('contact.labelPhone') }}</label>
-                <div class="phone-input-wrapper">
-                  <span class="flag">🇰🇿</span>
-                  <input
-                      v-model="form.phone"
-                      type="tel"
-                      placeholder="+7 (___) ___-__-__"
-                      required
-                  />
-                </div>
-              </div>
+          <div class="contacts-display">
+            <div class="contact-item">
+              <span class="contact-label">ЭЛЕКТРОННАЯ ПОЧТА:</span>
+              <a href="mailto:enactuskaz@gnail.com" class="contact-link">enactuskaz@gnail.com</a>
             </div>
 
-            <button type="submit" class="submit-btn" :disabled="isSending">
-              {{ isSending ? $t('contact.btnSending') : $t('contact.btnSubmit') }}
-            </button>
-          </form>
+            <div class="contact-item">
+              <span class="contact-label">ТЕЛЕФОН:</span>
+              <a href="tel:+77057143315" class="contact-link">+7 705 714 3315</a>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -59,9 +39,7 @@
 </template>
 
 <script setup>
-import { reactive, ref } from 'vue';
-import { useI18n } from 'vue-i18n'; // Подключаем i18n
-import emailjs from '@emailjs/browser';
+import { useI18n } from 'vue-i18n';
 
 const { t } = useI18n();
 
@@ -72,47 +50,10 @@ const allLogos = [
   '/images/logo-kazzinc.jpg',
   '/images/logo-ktcloud.png',
 ];
-
-const form = reactive({
-  name: '',
-  phone: ''
-});
-
-const isSending = ref(false);
-
-const SERVICE_ID = 'service_xxxxxxx';
-const TEMPLATE_ID = 'template_xxxxxxx';
-const PUBLIC_KEY = 'your_public_key';
-
-const handleSubmit = () => {
-  isSending.value = true;
-
-  const templateParams = {
-    user_name: form.name,
-    user_phone: form.phone,
-    to_email: 'wondefful204@gmail.com'
-  };
-
-  emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY)
-      .then(() => {
-        // Переведенное сообщение об успехе
-        alert(t('contact.success'));
-        form.name = '';
-        form.phone = '';
-      })
-      .catch((err) => {
-        console.error('Ошибка EmailJS:', err);
-        // Переведенное сообщение об ошибке
-        alert(t('contact.error'));
-      })
-      .finally(() => {
-        isSending.value = false;
-      });
-};
 </script>
 
 <style scoped>
-/* Основная секция */
+/* Основная секция и карусель остаются прежними */
 .partners-form-section {
   padding: 80px 0 120px;
   background-color: #ffffff;
@@ -133,7 +74,6 @@ const handleSubmit = () => {
   color: #1a1a1a;
 }
 
-/* Бесконечная карусель */
 .marquee-viewport {
   width: 100%;
   overflow: hidden;
@@ -159,7 +99,6 @@ const handleSubmit = () => {
   height: 120px;
   width: auto;
   object-fit: contain;
-  transition: transform 0.3s ease;
 }
 
 @keyframes continuous-scroll {
@@ -167,18 +106,18 @@ const handleSubmit = () => {
   100% { transform: translateX(-25%); }
 }
 
-/* --- КАРТОЧКА С ФОРМОЙ --- */
+/* --- ОБНОВЛЕННЫЕ СТИЛИ КАРТОЧКИ --- */
 .contact-card {
   background: #1a1a1a;
   border-radius: 40px;
-  padding: 60px 80px;
+  padding: 80px;
   color: white;
 }
 
 .card-grid {
   display: grid;
-  grid-template-columns: 1fr 1.3fr;
-  gap: 80px;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
   align-items: center;
 }
 
@@ -193,104 +132,53 @@ const handleSubmit = () => {
   font-size: 18px;
   line-height: 1.5;
   color: #ffffff;
+  opacity: 0.9;
 }
 
-.form-inputs {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-  margin-bottom: 40px;
-}
-
-.input-group label {
-  display: block;
-  font-size: 14px;
-  margin-bottom: 12px;
-  color: #ffffff;
-}
-
-/* --- СТИЛИ ИНПУТОВ (БЕЗ СИНЕЙ РАМКИ) --- */
-.custom-input, .phone-input-wrapper {
-  background: #f0f0f0;
-  border-radius: 12px;
-  border: 2px solid transparent; /* Чтобы не прыгало при фокусе */
-  width: 100%;
-  height: 60px;
-  transition: all 0.2s ease;
-  outline: none !important; /* Убираем синюю обводку браузера */
-}
-
-.custom-input {
-  padding: 0 20px;
-  font-size: 16px;
-  color: #333;
-}
-
-.phone-input-wrapper {
+/* Стили для контактов */
+.contacts-display {
   display: flex;
-  align-items: center;
-  padding: 0 15px;
-  cursor: text;
+  flex-direction: column;
+  gap: 30px;
 }
 
-.phone-input-wrapper input {
-  background: transparent;
-  border: none;
-  outline: none !important;
-  padding: 0 10px;
-  flex: 1;
-  height: 100%;
-  font-size: 16px;
-  color: #333;
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
-/* Фокус: подсвечиваем всё поле целиком желтым */
-.custom-input:focus,
-.phone-input-wrapper:focus-within {
-  background: #ffffff;
-  border-color: #ffc107;
-  box-shadow: 0 0 0 1px #ffc107;
+.contact-label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffc107;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-.flag {
-  font-size: 24px;
-  pointer-events: none;
-}
-
-/* Кнопка */
-.submit-btn {
-  background: #ffc107;
-  color: #1a1a1a;
-  border: none;
-  padding: 22px 50px;
-  border-radius: 50px;
+.contact-link {
+  font-size: 28px;
   font-weight: 800;
-  font-size: 16px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-.submit-btn:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-
-.submit-btn:hover:not(:disabled) {
-  background: #e6af06;
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(255, 193, 7, 0.3);
+.contact-link:hover {
+  color: #ffc107;
 }
 
 /* Адаптивность */
 @media (max-width: 1024px) {
-  .card-grid { grid-template-columns: 1fr; gap: 40px; }
-  .card-title { font-size: 32px; }
-  .contact-card { padding: 40px; }
+  .card-grid { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+  .contact-link { font-size: 24px; }
+  .contact-card { padding: 50px 40px; }
 }
 
 @media (max-width: 768px) {
-  .contact-card { padding: 40px 20px; border-radius: 20px; }
-  .form-inputs { grid-template-columns: 1fr; }
+  .contact-card { padding: 40px 20px; border-radius: 30px; }
+  .card-title { font-size: 32px; }
   .partner-logo { height: 70px; }
+  .contact-link { font-size: 20px; }
 }
 </style>

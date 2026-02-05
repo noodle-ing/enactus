@@ -283,7 +283,9 @@ const messages = {
             },
             callback: {
                 title: 'JOIN OUR PARTNERSHIP!',
-                desc: 'Join more than 550 partners worldwide who actively invest in entrepreneurship for sustainable change and societal development.'
+                desc: 'Join more than 550 partners worldwide who actively invest in entrepreneurship for sustainable change and societal development.',
+                email: 'EMAIL:',
+                phone: 'PHONE:'
             },
             form: {
                 name: 'Name',
@@ -436,7 +438,7 @@ const messages = {
         },
         headquarters: {
             title: 'Штаб квартира',
-            ceoName: 'Альбина Ержанова',
+            ceoName: 'Albina Yerzhanova',
             ceoRole: 'CEO & Президент ENACTUS KAZAKHSTAN, доктор философских наук',
             ceoGreeting: 'Дорогие друзья!',
             ceoText1: 'Позвольте от имени национального офиса Enactus Kazakhstan приветствовать Вас и поблагодарить за проявленный интерес к нашей деятельности.',
@@ -445,10 +447,10 @@ const messages = {
             signature: 'С уважением, Альбина Меирбековна Ержанова',
             members: {
                 randall: { name: 'Randall Bruins', role: 'Эдвайзер по стратегическому развитию ENACTUS KAZAKHSTAN' },
-                aizhan: { name: 'Аубакирова Айжан', role: 'Главный бухгалтер ENACTUS KAZAKHSTAN' },
-                aruzhan: { name: 'Каримова Аружан', role: 'Программный менеджер ENACTUS KAZAKHSTAN' },
-                albina: { name: 'Альбина Айсамутдинова', role: 'Региональный координатор ENACTUS KAZAKHSTAN, г. Астана' },
-                zhasulan: { name: 'Жасулан Бауржанулы', role: 'Региональный координатор ENACTUS KAZAKHSTAN, Восточно-Казахстанская область' }
+                aizhan: { name: 'Aizhan Aubakirova', role: 'Главный бухгалтер ENACTUS KAZAKHSTAN' },
+                aruzhan: { name: 'Aruzhan Karimova', role: 'Программный менеджер ENACTUS KAZAKHSTAN' },
+                albina: { name: 'Albina Aysamutdinova', role: 'Региональный координатор ENACTUS KAZAKHSTAN, г. Астана' },
+                zhasulan: { name: 'Zhasulan Baurzhanuly', role: 'Региональный координатор ENACTUS KAZAKHSTAN, Восточно-Казахстанская область' }
             }
         },
         board: {
@@ -593,7 +595,9 @@ const messages = {
             },
             callback: {
                 title: 'ПРИГЛАШАЕМ К ПАРТНЁРСТВУ!',
-                desc: 'Присоединяйтесь к более чем 550 партнерам по всему миру, которые активно вкладывают средства в предпринимательскую деятельность для устойчивых изменений и развития общества.'
+                desc: 'Присоединяйтесь к более чем 550 партнерам по всему миру, которые активно вкладывают средства в предпринимательскую деятельность для устойчивых изменений и развития общества.',
+                email: 'ЭЛЕКТРОННАЯ ПОЧТА:',
+                phone: 'ТЕЛЕФОН:'
             },
             form: {
                 name: 'Имя',
@@ -683,15 +687,15 @@ const messages = {
         },
         home: {
             heroTitle: 'WE ALL WIN',
-            heroSubtitle: 'Кәсіпкерлік арқылы Қазақстанның болашағын өзгертетін студенттік қозғалыстың бір бөлігі бол.',
+            heroSubtitle: 'Кәсіпкерлік арқылы Қазақстанның болашағын өзгертетін жастардың бір бөлігі бол.',
             joinBtn: 'Қосылу',
             aboutTitlePart1: '',
             aboutTitlePart2: 'ENACTUS ДЕГЕНІМІЗ НЕ?',
             aboutP1: 'ENACTUS — жастар кәсіпкерлігін дамыту үшін студенттердің, оқытушылардың және бизнес-көшбасшылардың басын қосатын халықаралық коммерциялық емес ұйым.',
             aboutP2: 'Біздің мақсатымыз — студенттерді маңызды әлеуметтік-экономикалық, экологиялық және гуманитарлық мәселелерді шешетін әлеуметтік бизнес-жобаларды құруға шабыттандыру.',
-            quote: 'Басқалар үшін кәсіпкерлік тәсілдерді қолданатын студенттерге инвестиция салу арқылы біз бәріміз үшін жақсы әлем құратынымызға сенеміз.',
+            quote: 'Біз басқалар үшін кәсіпкерлік тәсілдерді қолданатын студенттерге инвестиция салу арқылы бәріміз үшін жақсы әлем құратынымызға сенеміз',
             stats: {
-                regions: 'Қазақстан аймағы',
+                regions: 'Қазақстан өңірлері',
                 institutions: 'оқу орны',
                 students: 'студент жыл сайын',
                 companies: 'компания'
@@ -745,7 +749,7 @@ const messages = {
             description: 'Біз бүкіл елдегі университеттер мен студенттердің басын қосып, қалалар мен аймақтардағы өмірді жақсартатын жобалар жасаймыз. Әрбір қатысушы елдің болашағын өзгертетін біртұтас команданың мүшесіне айналады.'
         },
         contact: {
-            support: 'БІЗДІ ҚОЛДАЙТЫНДАР',
+            support: 'БІЗДІҢ ДЕМЕУШІЛЕР',
             cardTitle: 'БІЗ ӘЛЕМГЕ КЕРЕКПІЗ!',
             cardText: 'Нақты өзгерістер үшін әрекет ететін және әлемнің алға жылжуына көмектесетін команданың мүшесі бол.',
             labelName: 'Атыңыз',
@@ -758,7 +762,7 @@ const messages = {
         },
         headquarters: {
             title: 'Штаб-пәтер',
-            ceoName: 'Альбина Ержанова',
+            ceoName: 'Albina Yerzhanova',
             ceoRole: 'ENACTUS KAZAKHSTAN CEO және Президенті, философия ғылымдарының докторы',
             ceoGreeting: 'Құрметті достар!',
             ceoText1: 'Enactus Kazakhstan ұлттық кеңсесінің атынан Сіздерге қошемет білдіруге және біздің қызметімізге қызығушылық танытқандарыңыз үшін алғыс айтуға рұқсат етіңіздер.',
@@ -767,11 +771,11 @@ const messages = {
             signature: 'Құрметпен, Альбина Мейірбекқызы Ержанова',
             members: {
                 randall: {name: 'Randall Bruins', role: 'ENACTUS KAZAKHSTAN стратегиялық даму жөніндегі кеңесшісі'},
-                aizhan: {name: 'Әубәкірова Айжан', role: 'ENACTUS KAZAKHSTAN бас есепшісі'},
-                aruzhan: {name: 'Кәрімова Аружан', role: 'ENACTUS KAZAKHSTAN бағдарламалық менеджері'},
-                albina: {name: 'Альбина Айсамутдинова', role: 'ENACTUS KAZAKHSTAN өңірлік үйлестірушісі, Астана қ.'},
+                aizhan: {name: 'Aizhan Aubakirova', role: 'ENACTUS KAZAKHSTAN бас есепшісі'},
+                aruzhan: {name: 'Aruzhan Karimova', role: 'ENACTUS KAZAKHSTAN бағдарламалық менеджері'},
+                albina: {name: 'Albina Aysamutdinova', role: 'ENACTUS KAZAKHSTAN өңірлік үйлестірушісі, Астана қ.'},
                 zhasulan: {
-                    name: 'Жасұлан Бауыржанұлы',
+                    name: 'Zhasulan Baurzhanuly',
                     role: 'ENACTUS KAZAKHSTAN өңірлік үйлестірушісі, Шығыс Қазақстан облысы'
                 }
             }
@@ -906,7 +910,9 @@ const messages = {
             },
             callback: {
                 title: 'СЕРІКТЕСТІККЕ ШАҚЫРАМЫЗ!',
-                desc: 'Тұрақты өзгерістер мен қоғамның дамуы үшін кәсіпкерлік қызметке белсенді түрде қаражат салатын дүние жүзіндегі 550-ден астам серіктеске қосылыңыз.'
+                desc: 'Тұрақты өзгерістер мен қоғамның дамуы үшін кәсіпкерлік қызметке белсенді түрде қаражат салатын дүние жүзіндегі 550-ден астам серіктеске қосылыңыз.',
+                email: 'ЭЛЕКТРОНДЫҚ ПОШТА:',
+                phone: 'ТЕЛЕФОН:'
             },
             form: {
                 name: 'Есімі',

@@ -30,28 +30,12 @@
         </section>
 
         <section class="info-blocks">
-          <div class="info-item">
+          <div class="info-item" v-for="n in 3" :key="n">
             <div class="info-title">
-              <img src="/images/icons/case.png" alt="" class="info-icon" />
-              <h3>{{ $t('partnership.blocks.partnership.title') }}</h3>
+              <img :src="`/images/icons/${n === 1 ? 'case' : n === 2 ? 'hands' : 'coins'}.png`" alt="" class="info-icon" />
+              <h3>{{ $t(`partnership.blocks.${n === 1 ? 'partnership' : n === 2 ? 'benefits' : 'investments'}.title`) }}</h3>
             </div>
-            <p>{{ $t('partnership.blocks.partnership.desc') }}</p>
-          </div>
-
-          <div class="info-item">
-            <div class="info-title">
-              <img src="/images/icons/hands.png" alt="" class="info-icon" />
-              <h3>{{ $t('partnership.blocks.benefits.title') }}</h3>
-            </div>
-            <p>{{ $t('partnership.blocks.benefits.desc') }}</p>
-          </div>
-
-          <div class="info-item">
-            <div class="info-title">
-              <img src="/images/icons/coins.png" alt="" class="info-icon" />
-              <h3>{{ $t('partnership.blocks.investments.title') }}</h3>
-            </div>
-            <p>{{ $t('partnership.blocks.investments.desc') }}</p>
+            <p>{{ $t(`partnership.blocks.${n === 1 ? 'partnership' : n === 2 ? 'benefits' : 'investments'}.desc`) }}</p>
           </div>
         </section>
 
@@ -61,22 +45,17 @@
               <h2>{{ $t('partnership.callback.title') }}</h2>
               <p>{{ $t('partnership.callback.desc') }}</p>
 
-              <form @submit.prevent="handleSubmit" class="callback-form">
-                <div class="form-row">
-                  <div class="form-group">
-                    <label>{{ $t('partnership.form.name') }}</label>
-                    <input type="text" :placeholder="$t('partnership.form.placeholder')" v-model="form.name" />
-                  </div>
-                  <div class="form-group">
-                    <label>{{ $t('partnership.form.phone') }}</label>
-                    <div class="phone-input">
-                      <span class="flag">🇰🇿</span>
-                      <input type="tel" :placeholder="$t('partnership.form.placeholder')" v-model="form.phone" />
-                    </div>
-                  </div>
+              <div class="contact-methods">
+                <div class="contact-method-item">
+                  <span class="contact-label">{{ $t('partnership.callback.email') }}</span>
+                  <a href="mailto:enactuskaz@gnail.com" class="contact-link">enactuskaz@gnail.com</a>
                 </div>
-                <button type="submit" class="submit-btn">{{ $t('partnership.form.submit') }}</button>
-              </form>
+
+                <div class="contact-method-item">
+                  <span class="contact-label">{{ $t('partnership.callback.phone') }}</span>
+                  <a href="tel:+77057143315" class="contact-link">+7 705 714 3315</a>
+                </div>
+              </div>
             </div>
             <div class="callback-image">
               <img src="/images/partnership-event.jpg" alt="Enactus Event" />
@@ -90,18 +69,7 @@
 </template>
 
 <script setup>
-import { reactive } from 'vue';
 import Footer from '@/components/Footer.vue';
-
-const form = reactive({
-  name: '',
-  phone: ''
-});
-
-const handleSubmit = () => {
-  console.log('Данные формы:', form);
-  alert('Заявка отправлена!');
-};
 </script>
 
 <style scoped>
@@ -151,7 +119,7 @@ const handleSubmit = () => {
 .info-title h3 { font-size: 20px; font-weight: 800; color: #232323; }
 .info-item p { font-size: 15px; color: #444; line-height: 1.5; max-width: 950px; }
 
-/* Карточка обратной связи */
+/* СТИЛИ КОНТАКТОВ В КАРТОЧКЕ */
 .callback-card {
   background-color: #1a1a1a;
   border-radius: 20px;
@@ -160,44 +128,50 @@ const handleSubmit = () => {
   color: #fff;
   min-height: 400px;
 }
-.callback-content { flex: 1; padding: 50px; }
-.callback-image { flex: 1; position: relative; }
+.callback-content { flex: 1.2; padding: 50px; }
+.callback-image { flex: 0.8; position: relative; }
 .callback-image img { width: 100%; height: 100%; object-fit: cover; }
 
 .callback-content h2 { color: #FFCC00; font-size: 28px; font-weight: 900; margin-bottom: 20px; }
-.callback-content p { font-size: 14px; line-height: 1.6; margin-bottom: 30px; color: #ccc; }
+.callback-content p { font-size: 14px; line-height: 1.6; margin-bottom: 40px; color: #ccc; }
 
-.form-row { display: flex; gap: 20px; margin-bottom: 25px; }
-.form-group { flex: 1; }
-.form-group label { display: block; font-size: 12px; margin-bottom: 8px; color: #fff; }
-.form-group input {
-  width: 100%;
-  padding: 12px 15px;
-  border-radius: 8px;
-  border: none;
-  background: #f0f0f0;
-  color: #333;
+.contact-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
-.phone-input { display: flex; align-items: center; background: #f0f0f0; border-radius: 8px; padding-left: 10px; }
-.phone-input input { background: transparent; }
-.flag { margin-right: 5px; }
+.contact-method-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
 
-.submit-btn {
-  background-color: #FFCC00;
-  color: #232323;
-  border: none;
-  padding: 15px 40px;
-  border-radius: 25px;
+.contact-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #FFCC00;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.contact-link {
+  font-size: 22px;
   font-weight: 800;
-  cursor: pointer;
-  transition: 0.3s;
+  color: #ffffff;
+  text-decoration: none;
+  transition: 0.3s ease;
 }
-.submit-btn:hover { background-color: #e6b800; transform: translateY(-2px); }
+
+.contact-link:hover {
+  color: #FFCC00;
+  padding-left: 5px;
+}
 
 @media (max-width: 992px) {
   .callback-card { flex-direction: column; }
+  .callback-content { padding: 40px 20px; }
   .partners-grid { flex-wrap: wrap; }
-  .form-row { flex-direction: column; }
+  .contact-link { font-size: 18px; }
 }
 </style>
