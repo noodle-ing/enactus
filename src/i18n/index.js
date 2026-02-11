@@ -35,17 +35,29 @@ const messages = {
         home: {
             heroTitle: 'WE ALL WIN',
             heroSubtitle: 'Become part of a student movement changing the future of Kazakhstan through entrepreneurship.',
+            heroSubtitleKz: 'NATIONAL CUP IN ENTREPRENEURSHIP, STARTUPS <br /> AND INNOVATION AMONG SCHOOL AND UNIVERSITY STUDENTS <br /> ENACTUS KAZAKHSTAN 2026',
             joinBtn: 'Join Us',
             aboutTitlePart1: 'WHAT IS ',
             aboutTitlePart2: 'ENACTUS?',
             aboutP1: 'ENACTUS is an international non-profit organization that brings together students, academics and business leaders to develop youth entrepreneurship.',
             aboutP2: 'Our goal is to inspire students to create social business projects that solve important socio-economic, environmental and humanitarian problems.',
             quote: 'We believe that by investing in students who take entrepreneurial action for others, we create a better world for us all.',
+            timer: {
+                days: 'DAYS',
+                hours: 'HOURS',
+                minutes: 'MINS',
+                seconds: 'SECS',
+            },
+            event: {
+                date: 'April 28–29, 2026',
+                location: 'Almaty city, 42 k1 Timiryazev St.',
+            },
             stats: {
                 regions: 'regions of Kazakhstan',
                 institutions: 'educational institutions',
                 students: 'students annually',
-            }
+                companies: 'partner companies',
+            },
         },
         projects: {
             title: 'OUR STUDENT PROJECTS',
@@ -434,19 +446,30 @@ const messages = {
         },
         home: {
             heroTitle: 'WE ALL WIN',
-            heroSubtitle: 'Стань частью движения студентов, которые меняют будущее Казахстана через предпринимательство.',
+            heroSubtitle: 'Станьте частью студенческого движения, меняющего будущее Казахстана через предпринимательство.',
+            heroSubtitleKz: 'НАЦИОНАЛЬНЫЙ КУБОК ПО ПРЕДПРИНИМАТЕЛЬСТВУ, СТАРТАПАМ <br /> И ИННОВАЦИЯМ СРЕДИ ШКОЛЬНИКОВ И СТУДЕНТОВ <br /> ENACTUS KAZAKHSTAN 2026',
             joinBtn: 'Присоединиться',
             aboutTitlePart1: 'ЧТО ТАКОЕ ',
             aboutTitlePart2: 'ENACTUS?',
-            aboutP1: 'ENACTUS — это международная некоммерческая организация, которая объединяет студентов, преподавателей и бизнес-лидеров для развития молодежного предпринимательства.',
-            aboutP2: 'Наша цель — вдохновлять студентов на создание социальных бизнес-проектов, которые решают важные социально-экономические, экологические и гуманитарные проблемы.',
-            quote: 'Мы верим, что, инвестируя в студентов, использующих предпринимательские подходы для других, мы создаём лучший мир для всех нас.',
+            aboutP1: 'ENACTUS — это международная некоммерческая организация, объединяющая студентов, академических и бизнес-лидеров для развития молодежного предпринимательства.',
+            aboutP2: 'Наша цель — вдохновить студентов на создание социальных бизнес-проектов, решающих важные социально-экономические, экологические и гуманитарные проблемы.',
+            quote: 'Мы верим, что инвестируя в студентов, предпринимающих действия ради других, мы создаем лучший мир для всех нас.',
+            timer: {
+                days: 'ДНЕЙ',
+                hours: 'ЧАСОВ',
+                minutes: 'МИНУТ',
+                seconds: 'СЕКУНД',
+            },
+            event: {
+                date: '28–29 апреля 2026',
+                location: 'г. Алматы, ул. Тимирязева, 42 к1',
+            },
             stats: {
                 regions: 'регионов Казахстана',
                 institutions: 'учебных заведений',
                 students: 'студентов ежегодно',
-                companies: 'компаний'
-            }
+                companies: 'компаний-партнеров',
+            },
         },
         projects: {
             title: 'ПРИМЕРЫ ПРОЕКТОВ НАШИХ СТУДЕНТОВ',
@@ -806,19 +829,30 @@ const messages = {
         },
         home: {
             heroTitle: 'WE ALL WIN',
-            heroSubtitle: 'Кәсіпкерлік арқылы Қазақстанның болашағын өзгертетін жастардың бір бөлігі бол.',
-            joinBtn: 'Қосылу',
-            aboutTitlePart1: '',
-            aboutTitlePart2: 'ENACTUS ДЕГЕНІМІЗ НЕ?',
-            aboutP1: 'ENACTUS — жастар кәсіпкерлігін дамыту үшін студенттердің, оқытушылардың және бизнес-көшбасшылардың басын қосатын халықаралық коммерциялық емес ұйым.',
+            heroSubtitle: 'Кәсіпкерлік арқылы Қазақстанның болашағын өзгертетін студенттік қозғалыстың бір бөлігі бол.',
+            heroSubtitleKz: 'МЕКТЕП ОҚУШЫЛАРЫ МЕН СТУДЕНТТЕР АРАСЫНДА КӘСІПКЕРЛІК, <br /> СТАРТАПТАР ЖӘНЕ ИННОВАЦИЯЛАР БОЙЫНША ENACTUS KAZAKHSTAN 2026 <br /> ҰЛТТЫҚ КУБОГІ',
+            joinBtn: 'Бізге қосыл',
+            aboutTitlePart1: 'ENACTUS ',
+            aboutTitlePart2: 'ДЕГЕНІМІЗ НЕ?',
+            aboutP1: 'ENACTUS — студенттердің, академиялық және бизнес көшбасшыларының басын қосып, жастар кәсіпкерлігін дамытатын халықаралық коммерциялық емес ұйым.',
             aboutP2: 'Біздің мақсатымыз — студенттерді маңызды әлеуметтік-экономикалық, экологиялық және гуманитарлық мәселелерді шешетін әлеуметтік бизнес-жобаларды құруға шабыттандыру.',
-            quote: 'Біз басқалар үшін кәсіпкерлік тәсілдерді қолданатын студенттерге инвестиция салу арқылы бәріміз үшін жақсы әлем құратынымызға сенеміз',
+            quote: 'Біз басқалар үшін кәсіпкерлік әрекеттер жасайтын студенттерге инвестиция сала отырып, бәріміз үшін жақсы әлем құратынымызға сенеміз.',
+            timer: {
+                days: 'КҮН',
+                hours: 'САҒАТ',
+                minutes: 'МИНУТ',
+                seconds: 'СЕКУНД',
+            },
+            event: {
+                date: '28–29 сәуір 2026',
+                location: 'Алматы қаласы, Тимирязев көшесі, 42 к1',
+            },
             stats: {
-                regions: 'Қазақстан өңірлері',
-                institutions: 'оқу орны',
-                students: 'студент жыл сайын',
-                companies: 'компания'
-            }
+                regions: 'Қазақстан аймақтары',
+                institutions: 'оқу орындары',
+                students: 'жыл сайынғы студенттер',
+                companies: 'серіктес компаниялар',
+            },
         },
         projects: {
             title: 'СТУДЕНТТЕРІМІЗДІҢ ЖОБАЛАРЫНЫҢ МЫСАЛДАРЫ',

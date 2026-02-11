@@ -7,11 +7,43 @@
       </div>
 
       <div class="hero-content">
-        <h1 class="hero-title">{{ $t('home.heroTitle') }}</h1>
-        <p class="hero-subtitle" v-html="$t('home.heroSubtitle')"></p>
-        <button @click="scrollToJoin" class="hero-button">
-          {{ $t('home.joinBtn') }}
-        </button>
+        <h1 class="hero-title">
+          ENACTUS KAZAKHSTAN <br />
+          NATIONAL COMPETITION 2026
+        </h1>
+
+        <p class="hero-subtitle-kz" v-html="$t('home.heroSubtitleKz')"></p>
+
+        <div class="countdown-container">
+          <div class="timer-item">
+            <span class="timer-val">{{ timeLeft.days }}</span>
+            <span class="timer-label">{{ $t('home.timer.days') }}</span>
+          </div>
+          <div class="timer-item">
+            <span class="timer-val">{{ timeLeft.hours }}</span>
+            <span class="timer-label">{{ $t('home.timer.hours') }}</span>
+          </div>
+          <div class="timer-item">
+            <span class="timer-val">{{ timeLeft.minutes }}</span>
+            <span class="timer-label">{{ $t('home.timer.minutes') }}</span>
+          </div>
+          <div class="timer-item">
+            <span class="timer-val">{{ timeLeft.seconds }}</span>
+            <span class="timer-label">{{ $t('home.timer.seconds') }}</span>
+          </div>
+        </div>
+
+        <div class="event-info-bar">
+          <div class="info-item">
+            <i class="calendar-icon">📅</i>
+            <span>{{ $t('home.event.date') }}</span>
+          </div>
+          <div class="info-divider">|</div>
+          <div class="info-item">
+            <i class="location-icon">📍</i>
+            <span>{{ $t('home.event.location') }}</span>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -26,7 +58,6 @@
             <p>{{ $t('home.aboutP2') }}</p>
           </div>
         </div>
-
         <div class="about-visual">
           <div class="image-stack">
             <img src="/images/yellow-geometry.png" alt="decor" class="shape-img">
@@ -44,30 +75,16 @@
           <p class="quote-text">{{ $t('home.quote') }}</p>
         </div>
       </div>
-
       <div class="stats-content-wrapper">
         <div class="stats-container">
           <div class="stats-grid">
             <div class="stats-image-box">
-              <img src="/images/students-flags.jpg" alt="Students in Kazakhstan" class="stats-img">
+              <img src="/images/students-flags.jpg" alt="Students" class="stats-img">
             </div>
-
             <div class="stats-cards-grid">
-              <div class="stat-card">
-                <span class="stat-num">20</span>
-                <span class="stat-desc">{{ $t('home.stats.regions') }}</span>
-              </div>
-              <div class="stat-card">
-                <span class="stat-num">150+</span>
-                <span class="stat-desc">{{ $t('home.stats.institutions') }}</span>
-              </div>
-              <div class="stat-card">
-                <span class="stat-num">12 000+</span>
-                <span class="stat-desc">{{ $t('home.stats.students') }}</span>
-              </div>
-              <div class="stat-card">
-                <span class="stat-num">120+</span>
-                <span class="stat-desc">{{ $t('home.stats.companies') }}</span>
+              <div class="stat-card" v-for="stat in ['regions', 'institutions', 'students', 'companies']" :key="stat">
+                <span class="stat-num">{{ getStatValue(stat) }}</span>
+                <span class="stat-desc">{{ $t(`home.stats.${stat}`) }}</span>
               </div>
             </div>
           </div>
@@ -85,24 +102,47 @@
 </template>
 
 <script setup>
+import { ref, onMounted, onUnmounted } from 'vue';
 import Footer from '@/components/Footer.vue';
 import EnactusMap from '@/components/Home/EnactusMap.vue';
 import EnactusWorld from '@/components/Home/EnactusWorld.vue';
-import NewsCarousel from '@/components/Home/NewsCarousel.vue'
+import NewsCarousel from '@/components/Home/NewsCarousel.vue';
 import PartnersAndForm from '@/components/Home/PartnersAndForm.vue';
-import ProjectShowcase from '@/components/Home/ProjectShowcase.vue'
+import ProjectShowcase from '@/components/Home/ProjectShowcase.vue';
 
-// Функция для плавного скролла к форме
-const scrollToJoin = () => {
-  const element = document.getElementById('join-form');
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth' });
+// --- Timer Logic ---
+const timeLeft = ref({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+const targetDate = new Date('2026-04-28T09:00:00').getTime();
+
+const updateTimer = () => {
+  const now = new Date().getTime();
+  const diff = targetDate - now;
+  if (diff > 0) {
+    timeLeft.value = {
+      days: Math.floor(diff / (1000 * 60 * 60 * 24)),
+      hours: Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+      minutes: Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)),
+      seconds: Math.floor((diff % (1000 * 60)) / 1000)
+    };
   }
+};
+
+let timerInterval;
+onMounted(() => {
+  updateTimer();
+  timerInterval = setInterval(updateTimer, 1000);
+});
+onUnmounted(() => clearInterval(timerInterval));
+
+// Хелпер для получения цифр статистики (чтобы не дублировать код в шаблоне)
+const getStatValue = (key) => {
+  const values = { regions: '20', institutions: '150+', students: '12 000+', companies: '120+' };
+  return values[key];
 };
 </script>
 
 <style scoped>
-/* --- 1. Общие стили и Hero --- */
+/* Стили остаются прежними из предыдущего ответа */
 .home-wrapper {
   width: 100vw;
   margin-left: calc(-50vw + 50%);
@@ -114,28 +154,20 @@ const scrollToJoin = () => {
 .hero {
   position: relative;
   width: 100%;
-  height: 80vh;
+  height: 90vh;
   display: flex;
   align-items: center;
+  justify-content: center;
   overflow: hidden;
+  text-align: center;
 }
 
-.hero-image-container {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-}
-
-.bg-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
+.hero-image-container { position: absolute; inset: 0; z-index: 1; }
+.bg-img { width: 100%; height: 100%; object-fit: cover; }
 .overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+  background: radial-gradient(circle, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.85) 100%);
   z-index: 2;
 }
 
@@ -143,209 +175,86 @@ const scrollToJoin = () => {
   position: relative;
   z-index: 3;
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 1100px;
   padding: 0 2rem;
   color: white;
 }
 
 .hero-title {
-  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  font-size: clamp(2rem, 6vw, 4rem);
   font-weight: 800;
-  margin-bottom: 1rem;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
 }
 
-.hero-subtitle {
-  font-size: 1.2rem;
-  line-height: 1.5;
-  margin-bottom: 2.5rem;
-  max-width: 600px;
-}
-
-.hero-button {
-  background: #ffd700;
-  color: #000;
-  border: none;
-  padding: 1rem 2.5rem;
-  font-size: 1.1rem;
-  font-weight: bold;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.hero-button:hover {
-  background: #ffcc00;
-  transform: translateY(-2px);
-}
-
-/* --- 2. Секция "О нас" --- */
-.about-section {
-  padding: 120px 0;
-}
-
-.about-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
-  display: flex;
-  align-items: center;
-  gap: 80px;
-}
-
-.about-content { flex: 1; }
-
-.about-title {
-  font-size: 2.5rem;
-  font-weight: 900;
-  margin-bottom: 30px;
-  color: #1a1a1a;
-}
-
-.yellow-text { color: #ffd700; }
-
-.about-description p {
-  font-size: 1.1rem;
+.hero-subtitle-kz {
+  font-size: 1rem;
   line-height: 1.6;
-  color: #444;
-  margin-bottom: 20px;
+  margin-bottom: 2.5rem;
+  font-weight: 400;
+  opacity: 0.9;
 }
 
-.about-visual { flex: 1; display: flex; justify-content: center; }
+.countdown-container {
+  background-color: #ffc107;
+  display: inline-flex;
+  gap: 40px;
+  padding: 20px 50px;
+  border-radius: 12px;
+  color: #000;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
 
-.image-stack {
-  position: relative;
-  width: 100%;
-  max-width: 500px;
+.timer-item { display: flex; flex-direction: column; align-items: center; }
+.timer-val { font-size: 3rem; font-weight: 800; line-height: 1; }
+.timer-label { font-size: 0.8rem; font-weight: 700; margin-top: 4px; }
+
+.event-info-bar {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 20px;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 
-.shape-img {
-  position: absolute;
-  width: 100%;
-  z-index: 1;
-}
+.info-item { display: flex; align-items: center; gap: 10px; }
+.info-divider { opacity: 0.5; font-weight: 300; }
 
-.photo-frame {
-  position: relative;
-  z-index: 2;
-  width: 85%;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-}
-
+/* --- About & Stats --- */
+.about-section { padding: 120px 0; }
+.about-container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; gap: 80px; }
+.about-content { flex: 1; }
+.about-title { font-size: 2.5rem; font-weight: 900; margin-bottom: 30px; }
+.yellow-text { color: #ffd700; }
+.about-description p { font-size: 1.1rem; line-height: 1.6; color: #444; margin-bottom: 20px; }
+.about-visual { flex: 1; display: flex; justify-content: center; }
+.image-stack { position: relative; width: 100%; max-width: 500px; display: flex; justify-content: center; align-items: center; }
+.shape-img { position: absolute; width: 100%; z-index: 1; }
+.photo-frame { position: relative; z-index: 2; width: 85%; border-radius: 12px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
 .main-photo { width: 100%; display: block; object-fit: cover; }
 
-/* --- 3. Секция Статистика --- */
-.stats-section {
-  background-color: #f6f6f6;
-  padding-bottom: 100px;
-}
-
-.stats-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.quote-banner {
-  background-color: #1e1e1e;
-  color: white;
-  padding: 60px 0;
-  border-radius: 40px 40px 0 0;
-  text-align: center;
-}
-
-.quote-text {
-  font-size: 1.4rem;
-  font-weight: 600;
-  line-height: 1.4;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
+.stats-section { background-color: #f6f6f6; padding-bottom: 100px; }
+.stats-container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+.quote-banner { background-color: #1e1e1e; color: white; padding: 60px 0; border-radius: 40px 40px 0 0; text-align: center; }
+.quote-text { font-size: 1.4rem; font-weight: 600; line-height: 1.4; }
 .stats-content-wrapper { padding-top: 60px; }
-
-.stats-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.4fr;
-  gap: 40px;
-  align-items: center;
-}
-
-.stats-img {
-  width: 100%;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-}
-
-.stats-cards-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-.stat-card {
-  background: #fff;
-  padding: 30px 25px;
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.02);
-}
-
-.stat-num {
-  color: #ffd700;
-  font-size: 3.2rem;
-  font-weight: 900;
-  line-height: 1;
-  margin-bottom: 8px;
-  letter-spacing: -2px;
-  white-space: nowrap;
-}
-
-.stat-desc {
-  color: #666;
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 1.2;
-}
-
-/* --- 4. Адаптивность --- */
-@media (max-width: 992px) {
-  .about-container, .stats-grid {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    gap: 40px;
-  }
-  .about-visual { order: 2; }
-  .quote-text { font-size: 1.2rem; }
-  .stat-card { align-items: center; text-align: center; }
-}
+.stats-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 40px; align-items: center; }
+.stats-img { width: 100%; border-radius: 20px; }
+.stats-cards-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.stat-card { background: #fff; padding: 30px 25px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.02); }
+.stat-num { color: #ffd700; font-size: 3.2rem; font-weight: 900; line-height: 1; }
+.stat-desc { color: #666; font-size: 1rem; font-weight: 500; }
 
 @media (max-width: 768px) {
-  .about-section { padding: 60px 0; }
+  .hero { height: auto; padding: 100px 0; }
+  .countdown-container { gap: 20px; padding: 15px 25px; }
+  .timer-val { font-size: 2rem; }
+  .event-info-bar { flex-direction: column; gap: 10px; }
+  .info-divider { display: none; }
+  .about-container, .stats-grid { flex-direction: column; text-align: center; }
   .stats-cards-grid { grid-template-columns: 1fr; }
-  .quote-banner {
-    border-radius: 20px 20px 0 0;
-    padding: 40px 1rem;
-  }
-  .hero-content {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .stat-num { font-size: 2.8rem; }
-  .hero-title { font-size: 2.4rem; }
-  .about-title { font-size: 2rem; }
 }
 </style>
