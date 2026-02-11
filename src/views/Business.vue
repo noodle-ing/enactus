@@ -42,9 +42,7 @@
               <h2>{{ $t('sponsors.tiers.gold') }}</h2>
             </div>
             <div class="logos-grid">
-              <img src="/images/logo-ktcloud.png" alt="KT Cloud Lab" class="logo-md" />
               <img src="/images/white-case.png" alt="White & Case" class="logo-md" />
-              <img src="/images/mcg.png" alt="MCG" class="logo-md" />
             </div>
           </section>
 
@@ -60,6 +58,7 @@
               <img src="/images/empire.png" alt="Empire" class="logo-xs" />
               <img src="/images/atameken.jpg" alt="Atameken" class="logo-xs" />
               <img src="/images/kbstech.jpg" alt="KBSTECH" class="logo-xs" />
+              <img src="/images/logo-ktcloud.png" alt="KT Cloud Lab" class="logo-md" />
             </div>
           </section>
 
