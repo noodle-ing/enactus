@@ -60,7 +60,7 @@ const messages = {
             },
         },
         projects: {
-            title: 'OUR STUDENT PROJECTS',
+            title: 'Finalists of the ENACTUS KAZAKHSTAN 2025 National Cup - World Cup League',
             items: {
                 amu: {name: 'Astana Medical University', desc: 'ZhanCare — a new generation medical ecosystem.'},
                 kaznu: {name: 'Al-Farabi KazNU', desc: 'Innovative project in ecology and IT.'},
@@ -472,7 +472,7 @@ const messages = {
             },
         },
         projects: {
-            title: 'ПРИМЕРЫ ПРОЕКТОВ НАШИХ СТУДЕНТОВ',
+            title: 'Финалисты Лиги World Cup Национального кубка ENACTUS Kazakhstan 2025',
             items: {
                 amu: { name: 'Astana Medical University', desc: 'ZhanCare — медицинская экосистема нового поколения.' },
                 kaznu: { name: 'КазНУ им. Аль-Фараби', desc: 'Инновационный проект в области экологии и IT.' },
@@ -855,7 +855,7 @@ const messages = {
             },
         },
         projects: {
-            title: 'СТУДЕНТТЕРІМІЗДІҢ ЖОБАЛАРЫНЫҢ МЫСАЛДАРЫ',
+            title: 'ENACTUS KAZAKHSTAN 2025 Ұлттық кубогының World Cup лигасының финалисттері',
             items: {
                 amu: { name: 'Астана медицина университеті', desc: 'ZhanCare — жаңа буын медициналық экожүйесі.' },
                 kaznu: { name: 'Әл-Фараби атындағы ҚазҰУ', desc: 'Экология және IT саласындағы инновациялық жоба.' },

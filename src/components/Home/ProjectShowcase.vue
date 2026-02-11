@@ -22,9 +22,6 @@
             <div class="img-container">
               <img :src="activeProject.image" :alt="activeProject.name" class="project-img">
             </div>
-            <div class="project-info-bar">
-              <p class="project-text">{{ activeProject.description }}</p>
-            </div>
           </div>
         </div>
       </div>
