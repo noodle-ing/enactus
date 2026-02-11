@@ -69,7 +69,7 @@ const messages = {
             }
         },
         news: {
-            title: 'NEWS',
+            title: 'Press About Us',
             viewAll: 'View all news',
             items: {
                 expo: {
@@ -481,7 +481,7 @@ const messages = {
             }
         },
         news: {
-            title: 'НОВОСТИ',
+            title: 'СМИ о нас',
             viewAll: 'Посмотреть все новости',
             items: {
                 expo: {
@@ -921,7 +921,7 @@ const messages = {
             }
         },
         news: {
-            title: 'ЖАҢАЛЫҚТАР',
+            title: 'БАҚ біз туралы',
             viewAll: 'Барлық жаңалықтарды көру',
             items: {
                 expo: {
