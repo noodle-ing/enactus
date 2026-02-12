@@ -314,7 +314,7 @@ const messages = {
             breadcrumbs: {
                 current: 'News'
             },
-            title: 'News',
+            title: 'Press About Us',
             banner: {
                 title: 'Caring business: how young entrepreneurs of the ENACTUS program change the world',
                 subtitle: 'Kazakhstan, for the first time in the history of the CIS, hosted the ENACTUS World Cup 2024 in Astana.'
@@ -698,7 +698,7 @@ const messages = {
             breadcrumbs: {
                 current: 'Новости'
             },
-            title: 'Новости',
+            title: 'СМИ о нас',
             banner: {
                 title: 'Заботливый бизнес: как молодые предприниматели программы ENACTUS меняют мир',
                 subtitle: 'Казахстан впервые в истории СНГ провел мировой чемпионат ENACTUS World Cup 2024 в Астане'
@@ -916,7 +916,7 @@ const messages = {
             breadcrumbs: {
                 current: 'Жаңалықтар'
             },
-            title: 'Жаңалықтар',
+            title: 'БАҚ біз туралы',
             banner: {
                 title: 'Қамқор бизнес: Enactus бағдарламасының жас кәсіпкерлері әлемді қалай өзгертуде',
                 subtitle: 'Қазақстан ТМД тарихында алғаш рет ENACTUS World Cup 2024 әлем чемпионатын Астанада өткізді'
