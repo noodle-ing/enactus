@@ -163,7 +163,23 @@ const getStatValue = (key) => {
 }
 
 .hero-image-container { position: absolute; inset: 0; z-index: 1; }
-.bg-img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Находим этот блок в вашем <style> */
+.bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  /* Измените 1.1 на 1.25 или выше для более сильного зума */
+  transform: scale(1.6);
+
+  /* Центрируем точку увеличения */
+  transform-origin: center;
+
+  /* Добавим плавность, если планируете делать анимацию при наведении */
+  transition: transform 0.5s ease;
+}
+
 .overlay {
   position: absolute;
   inset: 0;
