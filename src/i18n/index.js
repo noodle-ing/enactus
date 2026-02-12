@@ -369,11 +369,11 @@ const messages = {
                     role: 'Professor at Abai KazNPU, Doctor of Pedagogical Sciences, Candidate of Biological Sciences. Academician of RAE, Corresponding Member of APN RK and International Academy FIDJIP - EUROTALENT (France)'
                 },
                 galia: {
-                    name: 'GALIA NURMUKHANBETOVA',
+                    name: 'GALIYA NURMUKHANBETOVA',
                     role: 'Associate Professor of the International Information Technology University (IITU)'
                 },
                 enlik: {
-                    name: 'ENLIK BAISHEVA',
+                    name: 'YENLIK BAISHEVA',
                     role: 'Candidate of Economic Sciences, Associate Professor of the Department of Finance and Accounting at UIB named after K. Sagadiyev'
                 },
                 zhenis:{
@@ -753,11 +753,11 @@ const messages = {
                     role: 'Профессор КазНПУ им. Абая, д.п.н., к.б.н. Академик РАЕ, член-корр. АПН РК и МА ФИДЖИП - ЕВРОТАЛАНТ (Франция)'
                 },
                 galia: {
-                    name: 'GALIA NURMUKHANBETOVA',
+                    name: 'GALIYA NURMUKHANBETOVA',
                     role: 'Ассоциированный профессор Международного Университета Информационных Технологий (МУИТ)'
                 },
                 enlik: {
-                    name: 'ENLIK BAISHEVA',
+                    name: 'YENLIK BAISHEVA',
                     role: 'Кандидат экономических наук, доцент кафедры "Финансы и учёт" UIB им. К. Сагадиева'
                 },
                 zhenis:{
@@ -1140,11 +1140,11 @@ const messages = {
                     role: 'Абай атындағы ҚазҰПУ профессоры, п.ғ.д., б.ғ.к. ЖҒА академигі, ҚР ПҒА корреспондент-мүшесі және ФИДЖИП - ЕВРОТАЛАНТ Халықаралық Академиясының корреспондент-мүшесі (Франция)'
                 },
                 galia: {
-                    name: 'GALIA NURMUKHANBETOVA',
+                    name: 'GALIYA NURMUKHANBETOVA',
                     role: 'Халықаралық ақпараттық технологиялар университетінің (IITU) қауымдастырылған профессоры'
                 },
                 enlik: {
-                    name: 'ENLIK BAISHEVA',
+                    name: 'YENLIK BAISHEVA',
                     role: 'Экономика ғылымдарының кандидаты, К. Сағадиев атындағы UIB "Қаржы және есеп" кафедрасының доценті'
                 },
                 zhenis:{
