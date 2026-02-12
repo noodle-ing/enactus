@@ -121,7 +121,8 @@ const messages = {
                 randall: { name: 'Randall Bruins', role: 'Strategic Development Advisor, ENACTUS KAZAKHSTAN' },
                 aizhan: { name: 'Aizhan Aubakirova', role: 'Chief Accountant, ENACTUS KAZAKHSTAN' },
                 aruzhan: { name: 'Aruzhan Karimova', role: 'Program Manager, ENACTUS KAZAKHSTAN' },
-                albina: { name: 'Albina Aysamutdinova', role: 'Regional Coordinator, ENACTUS KAZAKHSTAN, Astana' },
+                albina: { name: 'Albina Aisamutdinova', role: 'Regional Coordinator, ENACTUS KAZAKHSTAN, Astana' },
+                diana: { name: 'Diana Nurzhanova', role: 'International Relations manager' },
                 zhasulan: { name: 'Zhasulan Baurzhanuly', role: 'Regional Coordinator, ENACTUS KAZAKHSTAN, East Kazakhstan Region' }
             },
         },
@@ -356,35 +357,35 @@ const messages = {
         council: {
             members: {
                 saule: {
-                    name: 'Saule Zeinolla',
+                    name: 'SAULE ZEINOLLA',
                     role: 'Chairperson of the Academic Council of ENACTUS Kazakhstan, PhD, Independent UNESCO Expert'
                 },
                 askar: {
-                    name: 'Askar Nursha',
+                    name: 'ASKAR NURSHA',
                     role: 'Political Scientist, Advisor to the Director of the Kazakhstan Institute for Strategic Studies'
                 },
                 bakirova: {
-                    name: 'Kulzhakhan Bakirova',
+                    name: 'KULZHAKHAN BAKIROVA',
                     role: 'Professor at Abai KazNPU, Doctor of Pedagogical Sciences, Candidate of Biological Sciences. Academician of RAE, Corresponding Member of APN RK and International Academy FIDJIP - EUROTALENT (France)'
                 },
                 galia: {
-                    name: 'Galia Nurmukhanbetova',
+                    name: 'GALIA NURMUKHANBETOVA',
                     role: 'Associate Professor of the International Information Technology University (IITU)'
                 },
                 enlik: {
-                    name: 'Enlik Baisheva',
+                    name: 'ENLIK BAISHEVA',
                     role: 'Candidate of Economic Sciences, Associate Professor of the Department of Finance and Accounting at UIB named after K. Sagadiyev'
                 },
                 zhenis:{
-                    name: 'Zhenis Zharlygasov',
+                    name: 'ZHENIS ZHARLYGASOV',
                     role: 'Vice-Rector for Research, Innovation and Digitalization of the Akhmet Baitursynuly Kostanay Regional University, Candidate of Agricultural Sciences, Associate Professor'
                 },
                 zhannet:{
-                    name: 'Zhannetta Kalisheva',
+                    name: 'ZHANNETTA KALISHEVA',
                     role: 'Head of the MNU Bureau for Evaluation and Certification of Lawyers, Candidate of Legal Sciences, Professor Emeritus'
                 },
                 danial: {
-                    name: 'Danial Saari',
+                    name: 'DANIAL SAARI',
                     role: 'Director of the Center for Political Studies, AlmaU'
                 },
             }
@@ -533,7 +534,8 @@ const messages = {
                 randall: { name: 'Randall Bruins', role: 'Эдвайзер по стратегическому развитию ENACTUS KAZAKHSTAN' },
                 aizhan: { name: 'Aizhan Aubakirova', role: 'Главный бухгалтер ENACTUS KAZAKHSTAN' },
                 aruzhan: { name: 'Aruzhan Karimova', role: 'Программный менеджер ENACTUS KAZAKHSTAN' },
-                albina: { name: 'Albina Aysamutdinova', role: 'Региональный координатор ENACTUS KAZAKHSTAN, г. Астана' },
+                albina: { name: 'Albina Aisamutdinova', role: 'Региональный координатор ENACTUS KAZAKHSTAN, г. Астана' },
+                diana: { name: 'Diana Nurzhanova', role: 'Менеджер по международным отношениям' },
                 zhasulan: { name: 'Zhasulan Baurzhanuly', role: 'Региональный координатор ENACTUS KAZAKHSTAN, Восточно-Казахстанская область' }
             }
         },
@@ -739,35 +741,35 @@ const messages = {
         council: {
             members: {
                 saule: {
-                    name: 'Saule Zeinolla',
+                    name: 'SAULE ZEINOLLA',
                     role: 'Председатель Академического совета ENACTUS Kazakhstan, Доктор PhD, независимый эксперт ЮНЕСКО'
                 },
                 askar: {
-                    name: 'Askar Nursha',
+                    name: 'ASKAR NURSHA',
                     role: 'Политолог, советник директора Казахстанского института стратегических исследований'
                 },
                 bakirova: {
-                    name: 'Kulzhakhan Bakirova',
+                    name: 'KULZHAKHAN BAKIROVA',
                     role: 'Профессор КазНПУ им. Абая, д.п.н., к.б.н. Академик РАЕ, член-корр. АПН РК и МА ФИДЖИП - ЕВРОТАЛАНТ (Франция)'
                 },
                 galia: {
-                    name: 'Galia Nurmukhanbetova',
+                    name: 'GALIA NURMUKHANBETOVA',
                     role: 'Ассоциированный профессор Международного Университета Информационных Технологий (МУИТ)'
                 },
                 enlik: {
-                    name: 'Enlik Baisheva',
+                    name: 'ENLIK BAISHEVA',
                     role: 'Кандидат экономических наук, доцент кафедры "Финансы и учёт" UIB им. К. Сагадиева'
                 },
                 zhenis:{
-                    name: 'Zhenis Zharlygasov',
+                    name: 'ZHENIS ZHARLYGASOV',
                     role: 'Проректор по исследованиям, инновациям и цифровизации НАО “Костанайский региональный университет имени Ахмет Байтұрсынұлы”, кандидат сельскохозяйственных наук, ассоциированный профессор'
                 },
                 zhannet:{
-                    name: 'Zhannetta Kalisheva',
+                    name: 'ZHANNETTA KALISHEVA',
                     role: 'Руководитель Бюро по оценке и сертификации юристов MNU, кандидат юридических наук, Professor Emeritus'
                 },
                 danial: {
-                    name: 'Danial Saari',
+                    name: 'DANIAL SAARI',
                     role: 'Директор Центра политических исследований, AlmaU'
                 }
             }
@@ -973,7 +975,8 @@ const messages = {
                 randall: {name: 'Randall Bruins', role: 'ENACTUS KAZAKHSTAN стратегиялық даму жөніндегі кеңесшісі'},
                 aizhan: {name: 'Aizhan Aubakirova', role: 'ENACTUS KAZAKHSTAN бас есепшісі'},
                 aruzhan: {name: 'Aruzhan Karimova', role: 'ENACTUS KAZAKHSTAN бағдарламалық менеджері'},
-                albina: {name: 'Albina Aysamutdinova', role: 'ENACTUS KAZAKHSTAN өңірлік үйлестірушісі, Астана қ.'},
+                albina: {name: 'Albina Aisamutdinova', role: 'ENACTUS KAZAKHSTAN өңірлік үйлестірушісі, Астана қ.'},
+                diana: { name: 'Diana Nurzhanova', role: 'Халықаралық қатынастар жөніндегі менеджер' },
                 zhasulan: {
                     name: 'Zhasulan Baurzhanuly',
                     role: 'ENACTUS KAZAKHSTAN өңірлік үйлестірушісі, Шығыс Қазақстан облысы'
@@ -1125,35 +1128,35 @@ const messages = {
         council: {
             members: {
                 saule: {
-                    name: 'Saule Zeinolla',
+                    name: 'SAULE ZEINOLLA',
                     role: 'ENACTUS Kazakhstan Академиялық кеңесінің төрайымы, PhD докторы, ЮНЕСКО тәуелсіз сарапшысы'
                 },
                 askar: {
-                    name: 'Askar Nursha',
+                    name: 'ASKAR NURSHA',
                     role: 'Саясаттанушы, Қазақстан стратегиялық зерттеулер институты директорының кеңесшісі'
                 },
                 bakirova: {
-                    name: 'Kulzhakhan Bakirova',
+                    name: 'KULZHAKHAN BAKIROVA',
                     role: 'Абай атындағы ҚазҰПУ профессоры, п.ғ.д., б.ғ.к. ЖҒА академигі, ҚР ПҒА корреспондент-мүшесі және ФИДЖИП - ЕВРОТАЛАНТ Халықаралық Академиясының корреспондент-мүшесі (Франция)'
                 },
                 galia: {
-                    name: 'Galia Nurmukhanbetova',
+                    name: 'GALIA NURMUKHANBETOVA',
                     role: 'Халықаралық ақпараттық технологиялар университетінің (IITU) қауымдастырылған профессоры'
                 },
                 enlik: {
-                    name: 'Enlik Baisheva',
+                    name: 'ENLIK BAISHEVA',
                     role: 'Экономика ғылымдарының кандидаты, К. Сағадиев атындағы UIB "Қаржы және есеп" кафедрасының доценті'
                 },
                 zhenis:{
-                    name: 'Zhenis Zharlygasov',
+                    name: 'ZHENIS ZHARLYGASOV',
                     role: 'Ахмет Байтұрсынұлы атындағы Қостанай өңірлік университетінің зерттеулер, инновациялар және цифрландыру жөніндегі проректоры, ауыл шаруашылығы ғылымдарының кандидаты, қауымдастырылған профессор'
                 },
                 zhannet:{
-                    name: 'Zhannetta Kalisheva',
+                    name: 'ZHANNΕTTA KALISHEVA',
                     role: 'MNU Заңгерлерді бағалау және сертификаттау бюросының жетекшісі, заң ғылымдарының кандидаты, Professor Emeritus'
                 },
                 danial:{
-                    name: 'Danial Saari',
+                    name: 'DANIAL SAARI',
                     role: 'Саяси зерттеулер орталығының директоры, AlmaU'
                 }
             }

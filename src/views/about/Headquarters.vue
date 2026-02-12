@@ -76,6 +76,11 @@ const localizedTeam = computed(() => [
     photo: '/images/Ayzhan Aubakirova.JPG'
   },
   {
+    name: t('headquarters.members.diana.name'),
+    role: t('headquarters.members.diana.role'),
+    photo: '/images/Diana_Nurzhanova.JPG'
+  },
+  {
     name: t('headquarters.members.aruzhan.name'),
     role: t('headquarters.members.aruzhan.role'),
     photo: '/images/karimova aruzan.jpg'
