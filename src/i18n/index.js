@@ -396,6 +396,14 @@ const messages = {
                     name: 'DANIAL SAARI',
                     role: 'Director of the Center for Political Studies, AlmaU'
                 },
+                yerlan: {
+                    name: 'Yerlan Karimov',
+                    role: 'Advisor to the international company ARETERA PUBLIC AFFAIRS'
+                },
+                gulsim: {
+                    name: 'Gulsim Aitkhozhaeva',
+                    role: 'Head of the Office of International Mobility and Programs at Al-Farabi Kazakh National University, Acting Associate Professor',
+                }
             }
         },
         createTeam: {
@@ -779,6 +787,14 @@ const messages = {
                 danial: {
                     name: 'DANIAL SAARI',
                     role: 'Директор Центра политических исследований, AlmaU'
+                },
+                yerlan: {
+                    name: 'Yerlan Karimov',
+                    role: 'Советник в международной компании ARETERA PUBLIC AFFAIRS'
+                },
+                gulsim: {
+                    name: 'Gulsim Aitkhozhaeva',
+                    role: 'Руководитель Офиса международной мобильности и программ Казахского национального университета им. Aль-Фараби, ИО ассоциированного профессора',
                 }
             }
         },
@@ -1166,6 +1182,14 @@ const messages = {
                 danial:{
                     name: 'DANIAL SAARI',
                     role: 'Саяси зерттеулер орталығының директоры, AlmaU'
+                },
+                yerlan: {
+                    name: 'Yerlan Karimov',
+                    role: 'ARETERA PUBLIC AFFAIRS халықаралық компаниясының кеңесшісі'
+                },
+                gulsim: {
+                    name: 'Gulsim Aitkhozhaeva',
+                    role: 'Әл-Фараби атындағы Қазақ ұлттық университетінің Халықаралық мобильділік және бағдарламалар бөлімінің меңгерушісі, доцент міндетін атқарушы',
                 }
             }
         },

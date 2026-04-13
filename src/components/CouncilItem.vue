@@ -27,6 +27,8 @@ const images = {
   zhenis: '/images/zhenis.jpg',
   zhannet: '/images/zhannet.jpeg',
   danial: '/images/danial.jpeg',
+  yerlan: '/images/Yerlan Karimov.JPG',
+  gulsim: '/images/Gulsim Aitkhozhaeva.JPG'
 };
 
 // Получаем переведенные данные из i18n
