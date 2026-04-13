@@ -287,13 +287,17 @@ const messages = {
             },
             links: {
                 results: 'Results',
-                photos: 'Photos'
+                photos: 'Photos',
+                resultsUrl: 'https://site.com/results-2025',
+                photosUrl: 'https://flickr.com/photos-2025',
             },
             years: {
                 2025: {
                     title: 'WORLD CUP 2025',
                     announcementTitle: 'ENACTUS WORLD CUP 2025 AFTER MOVIE',
-                    description: '<p>Watch the best moments of the 2025 World Cup.</p>'
+                    description: '<p>Watch the best moments of the 2025 World Cup.</p>',
+                    resultsUrl: 'https://canva.link/n3wpy5k4hh3zwkh',
+                    photosUrl: 'https://flickr.com/photos-2025',
                 },
                 2024: {
                     title: 'WORLD CUP 2024',
@@ -301,12 +305,16 @@ const messages = {
                     description: `
       <p>For the first time, Kazakhstan hosted the ENACTUS student entrepreneurship World Cup.</p>
       <p>All ENACTUS student business projects are aimed at achieving the 17 UN Sustainable Development Goals.</p>
-    `
+    `,
+                    resultsUrl: 'https://canva.link/ylt8jj146zxdsxb',
+                    photosUrl: 'https://flickr.com/photos-2025',
                 },
                 2023: {
                     title: 'WORLD CUP 2023',
                     announcementTitle: 'ENACTUS WORLD CUP 2023 AFTERMOVIE',
-                    description: '<p>Results of the World Cup in the Netherlands.</p>'
+                    description: '<p>Results of the World Cup in the Netherlands.</p>',
+                    resultsUrl: 'https://canva.link/i3ksvkqlkdw33ur',
+                    photosUrl: 'https://flickr.com/photos-2025',
                 }
             }
         },

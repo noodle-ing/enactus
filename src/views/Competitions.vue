@@ -12,11 +12,11 @@
 
         <div class="competitions-layout">
           <aside class="sidebar">
-            <button 
-              v-for="tab in competitionTypes" 
-              :key="tab.id"
-              :class="['sidebar-btn', { active: activeType === tab.id }]"
-              @click="activeType = tab.id"
+            <button
+                v-for="tab in competitionTypes"
+                :key="tab.id"
+                :class="['sidebar-btn', { active: activeType === tab.id }]"
+                @click="activeType = tab.id"
             >
               {{ tab.label }}
               <span class="arrow">▶</span>
@@ -24,11 +24,11 @@
           </aside>
 
           <section class="content">
-            <div 
-              v-for="year in yearsData" 
-              :key="year.id"
-              class="accordion-item"
-              :class="{ open: openYear === year.id }"
+            <div
+                v-for="year in yearsData"
+                :key="year.id"
+                class="accordion-item"
+                :class="{ open: openYear === year.id }"
             >
               <div class="accordion-header" @click="toggleYear(year.id)">
                 <span>{{ year.title }}</span>
@@ -38,12 +38,12 @@
               <transition name="fade">
                 <div class="accordion-body" v-if="openYear === year.id">
                   <div class="media-grid">
-                    <a 
-                      v-for="(video, vIdx) in year.videos" 
-                      :key="vIdx"
-                      :href="video.link" 
-                      target="_blank" 
-                      class="video-card"
+                    <a
+                        v-for="(video, vIdx) in year.videos"
+                        :key="vIdx"
+                        :href="video.link"
+                        target="_blank"
+                        class="video-card"
                     >
                       <img :src="getThumbnail(video.id)" :alt="year.title" class="video-thumb">
                       <div class="play-overlay">
@@ -55,10 +55,14 @@
                   <div class="announcement">
                     <h3>{{ year.announcementTitle }}</h3>
                     <div class="text-content" v-html="year.description"></div>
-                    
+
                     <div class="links">
-                      <a href="#" class="accent-link">{{ $t('competitions.links.results') }}</a>
-                      <a href="#" class="accent-link">{{ $t('competitions.links.photos') }}</a>
+                      <a :href="year.resultsUrl" target="_blank" class="accent-link">
+                        {{ $t('competitions.links.results') }}
+                      </a>
+                      <a :href="year.photosUrl" target="_blank" class="accent-link">
+                        {{ $t('competitions.links.photos') }}
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -83,32 +87,40 @@ const { t } = useI18n();
 const activeType = ref('world-cup');
 const openYear = ref('2025');
 
+// Типы соревнований для сайдбара
 const competitionTypes = computed(() => [
   { id: 'world-cup', label: t('competitions.types.worldCup') },
   { id: 'national-expo', label: t('competitions.types.nationalExpo') },
   { id: 'school-championship', label: t('competitions.types.schoolChampionship') },
 ]);
 
+// Данные по годам (связываем с i18n)
 const yearsData = computed(() => [
-  { 
-    id: '2025', 
+  {
+    id: '2025',
     title: t('competitions.years.2025.title'),
     announcementTitle: t('competitions.years.2025.announcementTitle'),
     description: t('competitions.years.2025.description'),
+    resultsUrl: '/images/EWC2025.pdf',
+    photosUrl: t('competitions.years.2025.photosUrl'),
     videos: [{ id: '2QLHepslVVE', link: 'https://youtu.be/2QLHepslVVE' }]
   },
-  { 
-    id: '2024', 
+  {
+    id: '2024',
     title: t('competitions.years.2024.title'),
     announcementTitle: t('competitions.years.2024.announcementTitle'),
     description: t('competitions.years.2024.description'),
+    resultsUrl: t('images/EWC2024.pdf'),
+    photosUrl: t('competitions.years.2024.photosUrl'),
     videos: [{ id: 'j8K9KNDcjYM', link: 'https://youtu.be/j8K9KNDcjYM' }]
   },
-  { 
-    id: '2023', 
+  {
+    id: '2023',
     title: t('competitions.years.2023.title'),
     announcementTitle: t('competitions.years.2023.announcementTitle'),
     description: t('competitions.years.2023.description'),
+    resultsUrl: t('images/EWC2023.pdf'),
+    photosUrl: t('competitions.years.2023.photosUrl'),
     videos: [{ id: 'KH4X_hWQqNA', link: 'https://youtu.be/KH4X_hWQqNA' }]
   },
 ]);
@@ -118,6 +130,7 @@ const getThumbnail = (videoId) => {
   return `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
 };
 
+// Логика открытия/закрытия аккордеона
 const toggleYear = (id) => {
   openYear.value = openYear.value === id ? null : id;
 };
@@ -195,7 +208,6 @@ const toggleYear = (id) => {
   padding: 10px 25px 30px;
 }
 
-/* Сетка видео */
 .media-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;

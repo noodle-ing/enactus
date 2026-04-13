@@ -69,19 +69,19 @@
           <a href="https://www.instagram.com/enactus_kazakhstan/" target="_blank" class="social-link">
             <img src="/images/icons/instagram.png" alt="Instagram" />
           </a>
-          <a href="https://www.facebook.com/enactus.kazakhstan/" target="_blank" class="social-link">
+          <a href="https://www.facebook.com/share/1BQ3LZCVGR/?mibextid=wwXIfr" target="_blank" class="social-link">
             <img src="/images/icons/facebook.png" alt="Facebook" />
           </a>
-          <a href="https://t.me/enactuskaz" target="_blank" class="social-link">
+          <a href="https://t.me/+stytDf_EJKcwMWFi" target="_blank" class="social-link">
             <img src="/images/icons/telegram.png" alt="Telegram" />
           </a>
-          <a href="https://www.youtube.com/@enactuskazakhstan6553" target="_blank" class="social-link">
+          <a href="https://youtube.com/@enactuskazakhstan1987?si=NvyrJwcV4JO14eE8" target="_blank" class="social-link">
             <img src="/images/icons/youtube.png" alt="YouTube" />
           </a>
           <a href="https://www.linkedin.com/company/enactus-kazakhstan/" target="_blank" class="social-link">
             <img src="/images/icons/linkedin.png" alt="LinkedIn" />
           </a>
-          <a href="https://www.tiktok.com/@enactuskazakhstan" target="_blank" class="social-link">
+          <a href="https://www.tiktok.com/@enactus.kz?_r=1&_t=ZS-95Kky5LsvLQ" target="_blank" class="social-link">
             <img src="/images/icons/tiktok.png" alt="TikTok" />
           </a>
         </div>

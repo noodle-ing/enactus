@@ -19,11 +19,11 @@
           <div class="partners-grid">
             <img src="/images/logo-atameken.png" alt="Atameken" class="partner-logo" />
             <div class="partner-item">
-              <img src="/images/logo-almaty.png" alt="Almaty Akimat" class="partner-logo" />
+              <img src="/images/pngegg.png" alt="Almaty Akimat" class="partner-logo" />
               <p>{{ $t('partnership.list.akimat') }}</p>
             </div>
             <div class="partner-item">
-              <img src="/images/logo-min.png" alt="Ministry" class="partner-logo" />
+              <img src="/images/gerb_01.png" alt="Ministry" class="partner-logo" />
               <p>{{ $t('partnership.list.ministry') }}</p>
             </div>
           </div>
