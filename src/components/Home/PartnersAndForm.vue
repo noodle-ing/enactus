@@ -29,6 +29,7 @@
             <div class="contact-item">
               <span class="contact-label">ТЕЛЕФОН:</span>
               <a href="tel:+77057143315" class="contact-link">+7 705 714 3315</a>
+              <a href="tel:+77273911264" class="contact-link">+7 727 391 1264</a>
             </div>
           </div>
         </div>
@@ -44,7 +45,6 @@ import { useI18n } from 'vue-i18n';
 const { t } = useI18n();
 
 const allLogos = [
-  '/images/logo-grand.png',
   '/images/logo-turan.png',
   '/images/logo-kmf.png',
   '/images/logo-kazzinc.jpg',

@@ -860,7 +860,7 @@ const messages = {
             stats: {
                 regions: 'Қазақстан аймақтары',
                 institutions: 'оқу орындары',
-                students: 'жыл сайынғы студенттер',
+                students: 'жыл сайынғы қатысушылар',
                 companies: 'серіктес компаниялар',
             },
         },
