@@ -54,7 +54,7 @@
               <img src="/images/tssp.png" alt="TSSP" class="logo-xs" />
               <img src="/images/abs.png" alt="ABS" class="logo-xs" />
               <img src="/images/most.png" alt="MOST" class="logo-xs" />
-              <img src="/images/leader.png" alt="Leagder" class="logo-xs" />
+<!--              <img src="/images/leader.png" alt="Leagder" class="logo-xs" />-->
               <img src="/images/empire.png" alt="Empire" class="logo-xs" />
               <img src="/images/atameken.jpg" alt="Atameken" class="logo-xs" />
               <img src="/images/kbstech.jpg" alt="KBSTECH" class="logo-xs" />
