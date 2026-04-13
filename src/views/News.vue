@@ -12,7 +12,7 @@
 
         <section
             class="top-banner"
-            @click="openLink('https://forbes.kz/articles/zabotlivyy-biznes-kak-molodye-predprinimateli-programmy-enactus-menyayut-mir-9ddd3a')"
+            @click="openLink('https://forbes.kz/articles/kak-enactus-kazakhstan-obedinyaet-studentov-i-biznes-dlya-resheniya-problem-obshestva-78a62b?ysclid=mno94zh1o970340751')"
         >
           <div class="banner-content">
             <div class="banner-brand">
