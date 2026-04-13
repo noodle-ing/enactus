@@ -14,15 +14,15 @@
 
         <div class="sponsors-container">
 
-          <section class="sponsor-tier">
-            <div class="tier-header general-bg">
-              <img src="/images/icons/diamond.png" alt="" class="tier-icon" />
-              <h2>{{ $t('sponsors.tiers.general') }}</h2>
-            </div>
-            <div class="logos-grid central">
-              <img src="/images/logo-grand.png" alt="Grand Mobile" class="logo-large" />
-            </div>
-          </section>
+<!--          <section class="sponsor-tier">-->
+<!--            <div class="tier-header general-bg">-->
+<!--              <img src="/images/icons/diamond.png" alt="" class="tier-icon" />-->
+<!--              <h2>{{ $t('sponsors.tiers.general') }}</h2>-->
+<!--            </div>-->
+<!--            <div class="logos-grid central">-->
+<!--              <img src="/images/logo-grand.png" alt="Grand Mobile" class="logo-large" />-->
+<!--            </div>-->
+<!--          </section>-->
 
           <section class="sponsor-tier">
             <div class="tier-header platinum-bg">

@@ -67,7 +67,7 @@ const boardMembers = [
   { type: 'mukhamadiyeva' }, { type: 'bitemirov' }, { type: 'lineitsev' },
   { type: 'toleuov' }, { type: 'naisbecov' }, { type: 'balgozhina' },
   { type: 'gussein' }, { type: 'ilyas' }, { type: 'mukhametov' },
-  { type: 'pershin' }, { type: 'idrissov' }, { type: 'badina' },
+  { type: 'pershin' }, { type: 'idrissov' },
   { type: 'mukushev' }, {type: 'muhtar'}
 ];
 
