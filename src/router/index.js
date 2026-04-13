@@ -14,6 +14,7 @@ import TeamsPage from '../views/TeamsPage.vue'
 import CreateTeam from '../views/CreateTeam.vue'
 import EnactusCamp from '../views/Enactus-cup.vue'
 import RoadShow from '../views/Road-show.vue'
+import Alumni from "@/views/about/Alumni.vue";
 
 
 
@@ -88,6 +89,11 @@ const router = createRouter({
       path: '/teampage',
       name: 'teampage',
       component: TeamsPage
+    },
+    {
+      path: '/about/alumni',
+      name: 'alumni',
+      component: Alumni
     }
   ]
 })
