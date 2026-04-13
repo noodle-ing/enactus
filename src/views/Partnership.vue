@@ -54,6 +54,7 @@
                 <div class="contact-method-item">
                   <span class="contact-label">{{ $t('partnership.callback.phone') }}</span>
                   <a href="tel:+77057143315" class="contact-link">+7 705 714 3315</a>
+                  <a href="tel:+77273911264" class="contact-link">+7 727 391 1264</a>
                 </div>
               </div>
             </div>
