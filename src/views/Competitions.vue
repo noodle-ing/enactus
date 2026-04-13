@@ -101,7 +101,7 @@ const yearsData = computed(() => [
     title: t('competitions.years.2025.title'),
     announcementTitle: t('competitions.years.2025.announcementTitle'),
     description: t('competitions.years.2025.description'),
-    resultsUrl: '/images/EWC2025.pdf',
+    resultsUrl: t('https://canva.link/n3wpy5k4hh3zwkh'),
     photosUrl: t('competitions.years.2025.photosUrl'),
     videos: [{ id: '2QLHepslVVE', link: 'https://youtu.be/2QLHepslVVE' }]
   },
@@ -110,7 +110,7 @@ const yearsData = computed(() => [
     title: t('competitions.years.2024.title'),
     announcementTitle: t('competitions.years.2024.announcementTitle'),
     description: t('competitions.years.2024.description'),
-    resultsUrl: t('images/EWC2024.pdf'),
+    resultsUrl: t('https://canva.link/ylt8jj146zxdsxb'),
     photosUrl: t('competitions.years.2024.photosUrl'),
     videos: [{ id: 'j8K9KNDcjYM', link: 'https://youtu.be/j8K9KNDcjYM' }]
   },
@@ -119,7 +119,7 @@ const yearsData = computed(() => [
     title: t('competitions.years.2023.title'),
     announcementTitle: t('competitions.years.2023.announcementTitle'),
     description: t('competitions.years.2023.description'),
-    resultsUrl: t('images/EWC2023.pdf'),
+    resultsUrl: t('https://canva.link/i3ksvkqlkdw33ur'),
     photosUrl: t('competitions.years.2023.photosUrl'),
     videos: [{ id: 'KH4X_hWQqNA', link: 'https://youtu.be/KH4X_hWQqNA' }]
   },
