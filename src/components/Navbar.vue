@@ -109,9 +109,12 @@
               <a href="mailto:enactuskaz@gmail.com" class="value">enactuskaz@gmail.com</a>
             </div>
 
-            <div class="contact-item">
-              <span class="label">{{ $t('contact.phoneLabel') }}</span>
+            <div class="contact-item" style="display: flex; flex-direction: column; gap: 5px;">
+              <span class="label" style="font-weight: bold; margin-bottom: 5px;">
+                {{ $t('contact.phoneLabel') }}
+              </span>
               <a href="tel:+77057143315" class="value">+7 705 714 3315</a>
+              <a href="tel:+77273911264" class="value">+7 727 391 1264</a>
             </div>
           </div>
         </div>
