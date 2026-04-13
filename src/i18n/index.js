@@ -157,39 +157,313 @@ const messages = {
         },
         teams: {
             title: 'Teams',
-            howToCreate: 'How to create a team?',
+            howToCreate: 'How to create a team',
             tabs: {
-                vuz: 'Active Universities',
-                colleges: 'Active Colleges',
-                schools: 'Active Schools'
+                vuz: 'Universities',
+                colleges: 'Colleges',
+                schools: 'Schools',
             },
             cities: {
                 astana: {
                     name: 'Astana',
-                    universities: ['Astana University', 'L.N. Gumilyov Eurasian National University']
+                    universities: [
+                        'Astana Medical University',
+                        'Astana International University',
+                        'Astana IT University',
+                        'L.N. Gumilyov Eurasian National University',
+                        'Turan-Astana University',
+                        'Coventry University Kazakhstan',
+                        'S. Seifullin Kazakh Agrotechnical Research University',
+                        'Maqsut Narikbayev University',
+                        'Esil University',
+                        'Kazakh National University of Sports',
+                        'Kazakhstan International Linguistic College',
+                        'Urban College',
+                        'Higher College of Transport and Communications',
+                        'Astana IT College',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Astana, team №1',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Astana, team №2',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Astana, team №3',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Astana, team №4',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Astana, team №5',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Astana, team №6',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Astana, team №7',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Astana, team №8',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Astana, team №9',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Astana, team №10',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Astana, team №11',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Astana, team №12',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Astana, team №13',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Astana, team №14',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Astana, team №15',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Astana, team №16',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Astana, team №17',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Astana, team №18',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Astana, team №19',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Astana, team №20',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Astana, team №21',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Astana, team №22',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Astana, team №23',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Astana, team №24',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Astana, team №25',
+                        'Astana International School, team №1',
+                        'Astana International School, team №2',
+                        'National School of Business and Engineering, Astana, team №1',
+                        'National School of Business and Engineering, Astana, team №2',
+                        'National School of Business and Engineering, Astana, team №3',
+                        'Rivera International School by Quantum',
+                        'Lyceum School №10, Astana',
+                        'Lyceum School №89, Astana, team №1',
+                        'Lyceum School №89, Astana, team №2',
+                        'Bilim International School',
+                        'Space School',
+                        'Gymnasium School №17, Astana',
+                    ],
                 },
+
                 almaty: {
                     name: 'Almaty',
                     universities: [
-                        'Narxoz University', 'Turan University', 'Satbayev University',
-                        'Kenzhegali Sagadiyev University of International Business (UIB)',
+                        'Narxoz University',
+                        'Turan University',
+                        'Almaty University of Technology',
                         'Kazakh National Women\'s Teacher Training University',
-                        'International IT University (IITU)',
-                        'Kazakh-British Technical University (KBTU)',
+                        'De Montfort University',
+                        'International University of Information Technologies',
+                        'Almaty Management University',
+                        'Kazakh National Medical University named after S. Asfendiyarov',
                         'Al-Farabi Kazakh National University',
-                        'Almaty Management University (AlmaU)',
-                        'Almaty University of Power Engineering and Telecommunications',
-                        'SDU University', 'T.K. Zhurgenov Kazakh National Academy of Arts',
-                        'Asfendiyarov Kazakh National Medical University', 'Caspian University'
-                    ]
+                        'Kazakh-British Technical University',
+                        'Satbayev University',
+                        'Almaty University of Power Engineering and Telecommunications named after G. Daukeev',
+                        'Caspian University',
+                        'UIB',
+                        'Printmedia Technologies College',
+                        'International Engineering and Technology University',
+                        'Kazakh-German University',
+                        'Abai Kazakh University',
+                        'Caspian University College, Almaty',
+                        'Almaty State Business College',
+                        'College of Tourism and Hospitality Industry',
+                        'Almaty Construction and Technology College',
+                        'International Academy of Business',
+                        'Almaty Economic, Legal and Pedagogical College',
+                        'Adilet College',
+                        'Almaty Electromechanical College',
+                        'Almaty State Polytechnic College',
+                        'Almaty State College of Service and Technology',
+                        'Almaty State Humanitarian and Pedagogical College',
+                        'Innovative Technical College',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Almaty, team №1',
+                        'Republican Physics and Mathematics School, Almaty',
+                    ],
                 },
-                shymkent: { name: 'Shymkent', universities: ['M. Auezov South Kazakhstan University'] },
-                abay: { name: 'Abai Region', universities: ['Shakarim University'] },
-                akmola: { name: 'Akmola Region', universities: ['Sh. Ualikhanov Kokshetau University'] },
-                aktobe: { name: 'Aktobe Region', universities: ['K. Zhubanov Aktobe Regional University'] },
-                almatyRegion: { name: 'Almaty Region', universities: ['Zhetysu University'] },
-                atyrau: { name: 'Atyrau Region', universities: ['Atyrau Oil and Gas University'] }
-            }
+
+                shymkent: {
+                    name: 'Shymkent',
+                    universities: [
+                        'South Kazakhstan Pedagogical University named after U. Zhanibek',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Shymkent, team №1',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Shymkent, team №2',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Shymkent, team №3',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Shymkent, team №4',
+                    ],
+                },
+
+                abay: {
+                    name: 'Abay Region',
+                    universities: [
+                        'Shakarim University, Semey',
+                        'Semey Medical University',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Semey, team №1',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Semey, team №2',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Semey, team №3',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Semey, team №4',
+                    ],
+                },
+
+                akmola: {
+                    name: 'Akmola Region',
+                    universities: [
+                        'Kokshetau University named after A. Myrzakhmetov',
+                        'IQanat High School of Burabay, team №1',
+                        'IQanat High School of Burabay, team №2',
+                        'IQanat High School of Burabay, team №3',
+                        'IQanat High School of Burabay, team №4',
+                        'IQanat High School of Burabay, team №5',
+                        'IQanat High School of Burabay, team №6',
+                        'IQanat High School of Burabay, team №7',
+                        'IQanat High School of Burabay, team №8',
+                        'IQanat High School of Burabay, team №9',
+                        'IQanat High School of Burabay, team №10',
+                        'IQanat High School of Burabay, team №11',
+                    ],
+                },
+
+                aktobe: {
+                    name: 'Aktobe Region',
+                    universities: [
+                        'West Kazakhstan Medical University named after M. Ospanov, Aktobe',
+                        'Aktobe Regional University named after K. Zhubanov',
+                        'QAZGUU School Aqtobe, team №1',
+                        'QAZGUU School Aqtobe, team №2',
+                    ],
+                },
+
+                atyrau: {
+                    name: 'Atyrau Region',
+                    universities: [
+                        'Atyrau University named after Kh. Dosmukhamedov',
+                        'Bilim International Study Centre, Atyrau, team №1',
+                        'Bilim International Study Centre, Atyrau, team №2',
+                        'Bilim International Study Centre, Atyrau, team №3',
+                    ],
+                },
+
+                eastKazakhstan: {
+                    name: 'East Kazakhstan Region',
+                    universities: [
+                        'Kazakhstan-American Free University, Ust-Kamenogorsk',
+                        'Higher College of Kazakhstan-American Free University, Ust-Kamenogorsk',
+                        'Higher Polytechnic College, Ust-Kamenogorsk',
+                        'Ridder College, Ridder',
+                    ],
+                },
+
+                zhambyl: {
+                    name: 'Zhambyl Region',
+                    universities: [
+                        'Taraz University named after M.Kh. Dulati',
+                        'International Taraz Innovation Institute named after Sherkhan Murtaza',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Taraz, team №1',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Taraz, team №2',
+                    ],
+                },
+
+                zhetysu: {
+                    name: 'Zhetysu Region',
+                    universities: [
+                        'Zhetysu University named after Ilyas Zhansugurov, Taldykorgan',
+                        'Zhansugurov College, Taldykorgan',
+                    ],
+                },
+
+                westKazakhstan: {
+                    name: 'West Kazakhstan Region',
+                    universities: [
+                        'West Kazakhstan Innovation and Technology University',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Uralsk, team №1',
+                    ],
+                },
+
+                karaganda: {
+                    name: 'Karaganda Region',
+                    universities: [
+                        'Karaganda University named after Academician E.A. Buketov',
+                        'Karaganda Medical University',
+                        'Karaganda University of Kazpotrebsoyuz',
+                        'Karaganda Technical University named after A. Saginov',
+                        'Karaganda Higher Polytechnic College',
+                        'Saran Humanitarian and Technical College named after Abai Kunanbayev',
+                        'College of Innovative Technologies of Karaganda Technical University named after A. Saginov',
+                        'Karaganda Regional Higher Nursing College',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Karaganda, team №1',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Karaganda, team №2',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Karaganda, team №3',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Karaganda, team №4',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Karaganda, team №5',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Karaganda, team №6',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Karaganda, team №7',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Karaganda, team №8',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Karaganda, team №9',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Karaganda, team №10',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Karaganda, team №11',
+                        'Gymnasium named after Kanysh Satpayev, Karaganda',
+                        'Specialized IT Boarding Lyceum School, Karaganda',
+                        'QSchool Qaraganda, team №1',
+                        'QSchool Qaraganda, team №2',
+                        'QSchool Qaraganda, team №3',
+                        'QSchool Qaraganda, team №4',
+                        'QSchool Qaraganda, team №5',
+                        'QSchool Qaraganda, team №6',
+                    ],
+                },
+
+                kostanay: {
+                    name: 'Kostanay Region',
+                    universities: [
+                        'Kostanay Regional University named after A. Baitursynov',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Kostanay, team №1',
+                        'QAZGUU School Kostanay, team №1',
+                    ],
+                },
+
+                kyzylorda: {
+                    name: 'Kyzylorda Region',
+                    universities: [
+                        'Kyzylorda University named after Korkyt Ata',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Kyzylorda, team №1',
+                    ],
+                },
+
+                mangystau: {
+                    name: 'Mangystau Region',
+                    universities: [
+                        'Yessenov University, Aktau',
+                        'Mangystau Higher Polytechnic College named after Kh. Uzbekgaliyev',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Aktau, team №1',
+                    ],
+                },
+
+                pavlodar: {
+                    name: 'Pavlodar Region',
+                    universities: [
+                        'Toraighyrov University',
+                        'Pavlodar Pedagogical University named after Ä. Märgulan',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Pavlodar, team №1',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Pavlodar, team №2',
+                        'Secondary School №2, Pavlodar, team №1',
+                    ],
+                },
+
+                northKazakhstan: {
+                    name: 'North Kazakhstan Region',
+                    universities: [
+                        'North Kazakhstan University named after M. Kozybaev',
+                        'North Kazakhstan Higher Medical College',
+                        'Higher College named after Magzhan Zhumabayev',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Petropavlovsk, team №1',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Petropavlovsk, team №2',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Petropavlovsk, team №4',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Petropavlovsk, team №5',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Petropavlovsk, team №6',
+                        'Nazarbayev Intellectual School of Physics and Mathematics, Petropavlovsk, team №7',
+                        'Buketov Gymnasium School, Sergeyevka',
+                    ],
+                },
+
+                turkestan: {
+                    name: 'Turkestan Region',
+                    universities: [
+                        'International University of Tourism and Hospitality',
+                        'International Kazakh-Turkish University named after Khoja Ahmed Yasawi',
+                    ],
+                },
+
+                ulytau: {
+                    name: 'Ulytau Region',
+                    universities: [
+                        'Specialized Boarding School named after Abai, Zhezkazgan, team №1',
+                    ],
+                },
+
+                almatyRegion: {
+                    name: 'Almaty Region',
+                    universities: [
+                        'SDU University, Kaskelen',
+                    ],
+                },
+            },
         },
         board: {
             title: 'Board of Directors',
@@ -632,36 +906,313 @@ const messages = {
         },
         teams: {
             title: 'Команды',
-            howToCreate: 'Как создать команду?',
+            howToCreate: 'Как создать команду',
             tabs: {
-                vuz: 'Активные ВУЗы',
-                colleges: 'Активные колледжи',
-                schools: 'Активные школы'
+                vuz: 'ВУЗы',
+                colleges: 'Колледжи',
+                schools: 'Школы',
             },
             cities: {
-                astana: { name: 'Астана', universities: ['Университет Астана', 'ЕНУ им. Гумилева'] },
+                astana: {
+                    name: 'Астана',
+                    universities: [
+                        'Медицинский университет Астана',
+                        'Международный университет Астана',
+                        'Астана IT университет',
+                        'Евразийский национальный университет имени Л. Н. Гумилёва',
+                        'Университет Туран – Астана',
+                        'Coventry University Kazakhstan',
+                        'Казахский агротехнический исследовательский университет имени С.Сейфуллина',
+                        'Maqsut Narikbayev University',
+                        'Esil University',
+                        'Казахский Национальный университет спорта',
+                        'Казахстанский Международный Лингвистический колледж',
+                        'Urban College',
+                        'Высший колледж транспорта и коммуникаций',
+                        'Колледж Astana IT',
+                        'Назарбаев интеллектуальная школа г.Астана, команда №1',
+                        'Назарбаев интеллектуальная школа г.Астана, команда №2',
+                        'Назарбаев интеллектуальная школа г.Астана, команда №3',
+                        'Назарбаев интеллектуальная школа г.Астана, команда №4',
+                        'Назарбаев интеллектуальная школа г.Астана, команда №5',
+                        'Назарбаев интеллектуальная школа г.Астана, команда №6',
+                        'Назарбаев интеллектуальная школа г.Астана, команда №7',
+                        'Назарбаев интеллектуальная школа г.Астана, команда №8',
+                        'Назарбаев интеллектуальная школа г.Астана, команда №9',
+                        'Назарбаев интеллектуальная школа г.Астана, команда №10',
+                        'Назарбаев интеллектуальная школа г.Астана, команда №11',
+                        'Назарбаев интеллектуальная школа г.Астана, команда №12',
+                        'Назарбаев интеллектуальная школа г.Астана, команда №13',
+                        'Назарбаев интеллектуальная школа г.Астана, команда №14',
+                        'Назарбаев интеллектуальная школа г.Астана, команда №15',
+                        'Назарбаев интеллектуальная школа г.Астана, команда №16',
+                        'Назарбаев интеллектуальная школа г.Астана, команда №17',
+                        'Назарбаев интеллектуальная школа г.Астана, команда №18',
+                        'Назарбаев интеллектуальная школа г.Астана, команда №19',
+                        'Назарбаев интеллектуальная школа г.Астана, команда №20',
+                        'Назарбаев интеллектуальная школа г.Астана, команда №21',
+                        'Назарбаев интеллектуальная школа г.Астана, команда №22',
+                        'Назарбаев интеллектуальная школа г.Астана, команда №23',
+                        'Назарбаев интеллектуальная школа г.Астана, команда №24',
+                        'Назарбаев интеллектуальная школа г.Астана, команда №25',
+                        'Международная школа Астана, команда №1',
+                        'Международная школа Астана, команда №2',
+                        'Национальная школа бизнеса и инжиниринга г.Астана, команда №1',
+                        'Национальная школа бизнеса и инжиниринга г.Астана, команда №2',
+                        'Национальная школа бизнеса и инжиниринга г.Астана, команда №3',
+                        'Rivera International School by Quantum',
+                        'Школа-лицей №10, г.Астана',
+                        'Школа-лицей №89, г.Астана, команда №1',
+                        'Школа-лицей №89, г.Астана, команда №2',
+                        'Bilim International School',
+                        'Space School',
+                        'Школа-гимназия №17, г.Астана',
+                    ],
+                },
+
                 almaty: {
                     name: 'Алматы',
                     universities: [
-                        'Университет Нархоз', 'Университет Туран', 'Satbayev University',
-                        'Университет Международного Бизнеса имени Кенжегали Сагадиева (UIB)',
-                        'Казахский Национальный Женский Педагогический Университет',
+                        'Университет Нархоз',
+                        'Университет Туран',
+                        'Алматинский технический университет',
+                        'Казахский национальный женский педагогический университет',
+                        'De Monfort University',
                         'Международный университет информационных технологий',
-                        'Казахстанско-Британский Технический университет',
-                        'Казахский Национальный университет им. Аль-Фараби',
                         'Almaty Management University',
-                        'Алматинский университет энергетики и связи им. Г. Даукеева',
-                        'SDU', 'Казахская Национальная академия искусств им. Т. Жургенова',
-                        'Казахский Национальный Медицинский университет', 'Caspian University'
-                    ]
+                        'Казахский национальный медицинский университет имени С.Асфендиярова',
+                        'Казахский национальный университет имени Аль-Фараби',
+                        'Казахско-британский технический университет',
+                        'Satbayev University',
+                        'Алматинский университет энергетики и связи имени Г.Даукеева',
+                        'Caspian University',
+                        'UIB',
+                        'Принтмедиа технологиялар колледжі',
+                        'Международный инженерно-технологический университет',
+                        'Казахско-немецкий университет',
+                        'Казахский университет имени Абая',
+                        'Колледж Каспийского университета, г.Алматы',
+                        'Алматинский государственный бизнес колледж',
+                        'Колледж индустрии туризма и гостеприимства',
+                        'Алматинский строительно-технический колледж',
+                        'Международная академия бизнеса',
+                        'Алматинский экономическо-правовой и педагогический колледж',
+                        'Колледж Әділет',
+                        'Алматинский электромеханический колледж',
+                        'Алматинский государственный политехнический колледж',
+                        'Алматинский государственный колледж сервиса и технологий',
+                        'Алматинский государственный гуманитарно-педагогический колледж',
+                        'Инновационный технический колледж',
+                        'Назарбаев интеллектуальная школа г.Алматы, команда №1',
+                        'Республиканская физико-математическая школа г.Алматы',
+                    ],
                 },
-                shymkent: { name: 'Шымкент', universities: ['ЮКУ им. Ауэзова'] },
-                abay: { name: 'Абайская область', universities: ['университет им. Шакарима'] },
-                akmola: { name: 'Акмолинская область', universities: ['КРУ им. Валиханова'] },
-                aktobe: { name: 'Актюбинская область', universities: ['Жубанов университет'] },
-                almatyRegion: { name: 'Алматинская область', universities: ['Жетысуский университет'] },
-                atyrau: { name: 'Атырауская область', universities: ['Атырауский университет нефти и газа'] }
-            }
+
+                shymkent: {
+                    name: 'Шымкент',
+                    universities: [
+                        'Южно-казахстанский педагогический университет имени У.Жанибекова',
+                        'Назарбаев интеллектуальная школа г.Шымкент, команда №1',
+                        'Назарбаев интеллектуальная школа г.Шымкент, команда №2',
+                        'Назарбаев интеллектуальная школа г.Шымкент, команда №3',
+                        'Назарбаев интеллектуальная школа г.Шымкент, команда №4',
+                    ],
+                },
+
+                abay: {
+                    name: 'Абайская область',
+                    universities: [
+                        'Shakarim University, г.Семей',
+                        'Медицинский университет города Семей',
+                        'Назарбаев интеллектуальная школа г.Семей, команда №1',
+                        'Назарбаев интеллектуальная школа г.Семей, команда №2',
+                        'Назарбаев интеллектуальная школа г.Семей, команда №3',
+                        'Назарбаев интеллектуальная школа г.Семей, команда №4',
+                    ],
+                },
+
+                akmola: {
+                    name: 'Акмолинская область',
+                    universities: [
+                        'Кокшетауский университет имени А.Мырзахметова',
+                        'IQanat High School of Burabay, команда №1',
+                        'IQanat High School of Burabay, команда №2',
+                        'IQanat High School of Burabay, команда №3',
+                        'IQanat High School of Burabay, команда №4',
+                        'IQanat High School of Burabay, команда №5',
+                        'IQanat High School of Burabay, команда №6',
+                        'IQanat High School of Burabay, команда №7',
+                        'IQanat High School of Burabay, команда №8',
+                        'IQanat High School of Burabay, команда №9',
+                        'IQanat High School of Burabay, команда №10',
+                        'IQanat High School of Burabay, команда №11',
+                    ],
+                },
+
+                aktobe: {
+                    name: 'Актюбинская область',
+                    universities: [
+                        'Западно-казахстанский медицинский университет имени М.Оспанова, г.Актобе',
+                        'Актюбинский региональный университет имени К.Жубанова',
+                        'QAZGUU School Aqtobe, команда №1',
+                        'QAZGUU School Aqtobe, команда №2',
+                    ],
+                },
+
+                atyrau: {
+                    name: 'Атырауская область',
+                    universities: [
+                        'Атырауский университет имени Х.Досмухамедова',
+                        'Bilim International Study Centre г.Атырау, команда №1',
+                        'Bilim International Study Centre г.Атырау, команда №2',
+                        'Bilim International Study Centre г.Атырау, команда №3',
+                    ],
+                },
+
+                eastKazakhstan: {
+                    name: 'Восточно-Казахстанская область',
+                    universities: [
+                        'Казахстанско-американский свободный университет, г.Усть-Каменогорск',
+                        'Высший колледж Казахстанско-Американского свободного университета, г.Усть-Каменогорск',
+                        'Высший Политехнический колледж, г.Усть-Каменогорск',
+                        'Риддерский колледж, г.Риддер',
+                    ],
+                },
+
+                zhambyl: {
+                    name: 'Жамбылская область',
+                    universities: [
+                        'Таразский университет имени М.Х.Дулати',
+                        'Международный Таразский инновационный институт им.Шерхана Муртазы',
+                        'Назарбаев интеллектуальная школа г.Тараз, команда №1',
+                        'Назарбаев интеллектуальная школа г.Тараз, команда №2',
+                    ],
+                },
+
+                zhetysu: {
+                    name: 'Жетысуская область',
+                    universities: [
+                        'Жетысуский университет имени Ильяса Жансугурова, г.Талдыкорган',
+                        'Zhansugurov College, г.Талдыкорган',
+                    ],
+                },
+
+                westKazakhstan: {
+                    name: 'Западно-Казахстанская область',
+                    universities: [
+                        'Западно-Казахстанский инновационно-технологический университет',
+                        'Назарбаев интеллектуальная школа г.Уральск, команда №1',
+                    ],
+                },
+
+                karaganda: {
+                    name: 'Карагандинская область',
+                    universities: [
+                        'Карагандинский университет имени академика Е.А.Букетова',
+                        'Карагандинский медицинский университет',
+                        'Карагандинский университет Казпотребсоюза',
+                        'Карагандинский технический университет имени А.Сагинова',
+                        'Карагандинский высший политехнический колледж',
+                        'Саранский гуманитарно-технический колледж имени Абая Кунанбаева',
+                        'Колледж инновационных технологий Карагандинского технического университета имени А.Сагинова',
+                        'Карагандинский областной высший сестринский колледж',
+                        'Назарбаев интеллектуальная школа г.Караганда, команда №1',
+                        'Назарбаев интеллектуальная школа г.Караганда, команда №2',
+                        'Назарбаев интеллектуальная школа г.Караганда, команда №3',
+                        'Назарбаев интеллектуальная школа г.Караганда, команда №4',
+                        'Назарбаев интеллектуальная школа г.Караганда, команда №5',
+                        'Назарбаев интеллектуальная школа г.Караганда, команда №6',
+                        'Назарбаев интеллектуальная школа г.Караганда, команда №7',
+                        'Назарбаев интеллектуальная школа г.Караганда, команда №8',
+                        'Назарбаев интеллектуальная школа г.Караганда, команда №9',
+                        'Назарбаев интеллектуальная школа г.Караганда, команда №10',
+                        'Назарбаев интеллектуальная школа г.Караганда, команда №11',
+                        'Гимназия имени Каныша Сатпаева, г.Караганда',
+                        'Специализированная Школа-Лицей-Интернат Информационных Технологий, г.Караганда',
+                        'QSchool Qaraganda, команда №1',
+                        'QSchool Qaraganda, команда №2',
+                        'QSchool Qaraganda, команда №3',
+                        'QSchool Qaraganda, команда №4',
+                        'QSchool Qaraganda, команда №5',
+                        'QSchool Qaraganda, команда №6',
+                    ],
+                },
+
+                kostanay: {
+                    name: 'Костанайская область',
+                    universities: [
+                        'Костанайский региональный университет имени А.Байтурсынова',
+                        'Назарбаев интеллектуальная школа г.Костанай, команда №1',
+                        'QAZGUU School Kostanay, команда №1',
+                    ],
+                },
+
+                kyzylorda: {
+                    name: 'Кызылординская область',
+                    universities: [
+                        'Кызылординский университет имени Коркыт Ата',
+                        'Назарбаев интеллектуальная школа г.Кызылорда, команда №1',
+                    ],
+                },
+
+                mangystau: {
+                    name: 'Мангистауская область',
+                    universities: [
+                        'Yessenov University, г.Актау',
+                        'Мангистауский высший политехнический колледж имени Х.Узбекгалиева',
+                        'Назарбаев интеллектуальная школа г.Актау, команда №1',
+                    ],
+                },
+
+                pavlodar: {
+                    name: 'Павлодарская область',
+                    universities: [
+                        'Toraighyrov University',
+                        'Павлодарский педагогический университет имени Ә.Марғұлан',
+                        'Назарбаев интеллектуальная школа г.Павлодар, команда №1',
+                        'Назарбаев интеллектуальная школа г.Павлодар, команда №2',
+                        'Средняя образовательная школа №2, г.Павлодар, команда №1',
+                    ],
+                },
+
+                northKazakhstan: {
+                    name: 'Северо-Казахстанская область',
+                    universities: [
+                        'Северо-Казахстанский университет имени М.Козыбаева',
+                        'Северо-Казахстанский высший медицинский колледж',
+                        'Высший колледж имени Магжана Жумабаева',
+                        'Назарбаев интеллектуальная школа г.Петропавловск, команда №1',
+                        'Назарбаев интеллектуальная школа г.Петропавловск, команда №2',
+                        'Назарбаев интеллектуальная школа г.Петропавловск, команда №4',
+                        'Назарбаев интеллектуальная школа г.Петропавловск, команда №5',
+                        'Назарбаев интеллектуальная школа г.Петропавловск, команда №6',
+                        'Назарбаев интеллектуальная школа г.Петропавловск, команда №7',
+                        'Школа-гимназия имени Букетова, с.Сергеевка',
+                    ],
+                },
+
+                turkestan: {
+                    name: 'Туркестанская область',
+                    universities: [
+                        'Международный университет туризма и гостеприимства',
+                        'Международный Казахско-Турецкий университет им.Ходжа Ахмет Ясауи',
+                    ],
+                },
+
+                ulytau: {
+                    name: 'Улытауская область',
+                    universities: [
+                        'Специализированная школа-интернат имени Абая, г.Жезказган, команда №1',
+                    ],
+                },
+
+                almatyRegion: {
+                    name: 'Алматинская область',
+                    universities: [
+                        'SDU University, г.Каскелен',
+                    ],
+                },
+            },
         },
         roadshow: {
             whatIs: {
@@ -1084,36 +1635,313 @@ const messages = {
         },
         teams: {
             title: 'Командалар',
-            howToCreate: 'Команданы қалай құруға болады?',
+            howToCreate: 'Команда қалай құруға болады',
             tabs: {
-                vuz: 'Белсенді ЖОО',
-                colleges: 'Белсенді колледждер',
-                schools: 'Белсенді мектептер'
+                vuz: 'Университеттер',
+                colleges: 'Колледждер',
+                schools: 'Мектептер',
             },
             cities: {
-                astana: { name: 'Астана', universities: ['Астана университеті', 'Л.Н. Гумилев атындағы ЕҰУ'] },
+                astana: {
+                    name: 'Астана',
+                    universities: [
+                        'Астана медицина университеті',
+                        'Астана халықаралық университеті',
+                        'Астана IT университеті',
+                        'Л.Н. Гумилев атындағы Еуразия ұлттық университеті',
+                        'Туран-Астана университеті',
+                        'Coventry University Kazakhstan',
+                        'С. Сейфуллин атындағы Қазақ агротехникалық зерттеу университеті',
+                        'Мақсұт Нәрікбаев университеті',
+                        'Есіл университеті',
+                        'Қазақ ұлттық спорт университеті',
+                        'Қазақстан халықаралық лингвистикалық колледжі',
+                        'Urban College',
+                        'Көлік және коммуникация жоғары колледжі',
+                        'Astana IT колледжі',
+                        'Астана қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №1 команда',
+                        'Астана қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №2 команда',
+                        'Астана қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №3 команда',
+                        'Астана қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №4 команда',
+                        'Астана қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №5 команда',
+                        'Астана қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №6 команда',
+                        'Астана қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №7 команда',
+                        'Астана қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №8 команда',
+                        'Астана қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №9 команда',
+                        'Астана қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №10 команда',
+                        'Астана қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №11 команда',
+                        'Астана қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №12 команда',
+                        'Астана қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №13 команда',
+                        'Астана қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №14 команда',
+                        'Астана қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №15 команда',
+                        'Астана қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №16 команда',
+                        'Астана қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №17 команда',
+                        'Астана қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №18 команда',
+                        'Астана қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №19 команда',
+                        'Астана қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №20 команда',
+                        'Астана қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №21 команда',
+                        'Астана қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №22 команда',
+                        'Астана қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №23 команда',
+                        'Астана қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №24 команда',
+                        'Астана қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №25 команда',
+                        'Астана халықаралық мектебі, №1 команда',
+                        'Астана халықаралық мектебі, №2 команда',
+                        'Астана қаласының бизнес және инжиниринг ұлттық мектебі, №1 команда',
+                        'Астана қаласының бизнес және инжиниринг ұлттық мектебі, №2 команда',
+                        'Астана қаласының бизнес және инжиниринг ұлттық мектебі, №3 команда',
+                        'Rivera International School by Quantum',
+                        'Астана қаласы №10 мектеп-лицейі',
+                        'Астана қаласы №89 мектеп-лицейі, №1 команда',
+                        'Астана қаласы №89 мектеп-лицейі, №2 команда',
+                        'Bilim International School',
+                        'Space School',
+                        'Астана қаласы №17 мектеп-гимназиясы',
+                    ],
+                },
+
                 almaty: {
                     name: 'Алматы',
                     universities: [
-                        'Нархоз университеті', 'Тұран университеті', 'Satbayev University',
-                        'Кенжеғали Сағадиев атындағы Халықаралық Бизнес Университеті (UIB)',
+                        'Нархоз университеті',
+                        'Туран университеті',
+                        'Алматы технологиялық университеті',
                         'Қазақ ұлттық қыздар педагогикалық университеті',
+                        'De Montfort University',
                         'Халықаралық ақпараттық технологиялар университеті',
-                        'Қазақстан-Британ техникалық университеті',
-                        'Әл-Фараби атындағы Қазақ ұлттық университеті',
                         'Almaty Management University',
-                        'Ғ. Дәукеев атындағы Алматы энергетика және байланыс университеті',
-                        'SDU', 'Т. Жүргенов атындағы Қазақ ұлттық өнер академиясы',
-                        'Қазақ ұлттық медицина университеті', 'Caspian University'
-                    ]
+                        'С. Асфендияров атындағы Қазақ ұлттық медицина университеті',
+                        'Әл-Фараби атындағы Қазақ ұлттық университеті',
+                        'Қазақ-британ техникалық университеті',
+                        'Satbayev University',
+                        'Г. Дәукеев атындағы Алматы энергетика және байланыс университеті',
+                        'Каспий университеті',
+                        'UIB',
+                        'Принтмедиа технологиялар колледжі',
+                        'Халықаралық инженерлік-технологиялық университет',
+                        'Қазақ-неміс университеті',
+                        'Абай атындағы Қазақ университеті',
+                        'Каспий университетінің колледжі, Алматы',
+                        'Алматы мемлекеттік бизнес колледжі',
+                        'Туризм және қонақжайлылық индустриясы колледжі',
+                        'Алматы құрылыс-техникалық колледжі',
+                        'Халықаралық бизнес академиясы',
+                        'Алматы экономикалық-құқықтық және педагогикалық колледжі',
+                        'Әділет колледжі',
+                        'Алматы электромеханикалық колледжі',
+                        'Алматы мемлекеттік политехникалық колледжі',
+                        'Алматы мемлекеттік сервис және технологиялар колледжі',
+                        'Алматы мемлекеттік гуманитарлық-педагогикалық колледжі',
+                        'Инновациялық техникалық колледж',
+                        'Алматы қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №1 команда',
+                        'Алматы қаласының республикалық физика-математика мектебі',
+                    ],
                 },
-                shymkent: { name: 'Шымкент', universities: ['М. Әуезов атындағы ОҚУ'] },
-                abay: { name: 'Абай облысы', universities: ['Шәкәрім атындағы университет'] },
-                akmola: { name: 'Ақмола облысы', universities: ['Ш. Уәлиханов атындағы КРУ'] },
-                aktobe: { name: 'Ақтөбе облысы', universities: ['Жұбанов университеті'] },
-                almatyRegion: { name: 'Алматы облысы', universities: ['Жетісу университеті'] },
-                atyrau: { name: 'Атырау облысы', universities: ['Атырау мұнай және газ университеті'] }
-            }
+
+                shymkent: {
+                    name: 'Шымкент',
+                    universities: [
+                        'Ұ. Жәнібеков атындағы Оңтүстік Қазақстан педагогикалық университеті',
+                        'Шымкент қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №1 команда',
+                        'Шымкент қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №2 команда',
+                        'Шымкент қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №3 команда',
+                        'Шымкент қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №4 команда',
+                    ],
+                },
+
+                abay: {
+                    name: 'Абай облысы',
+                    universities: [
+                        'Shakarim University, Семей',
+                        'Семей қаласының медицина университеті',
+                        'Семей қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №1 команда',
+                        'Семей қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №2 команда',
+                        'Семей қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №3 команда',
+                        'Семей қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №4 команда',
+                    ],
+                },
+
+                akmola: {
+                    name: 'Ақмола облысы',
+                    universities: [
+                        'А. Мырзахметов атындағы Көкшетау университеті',
+                        'IQanat High School of Burabay, №1 команда',
+                        'IQanat High School of Burabay, №2 команда',
+                        'IQanat High School of Burabay, №3 команда',
+                        'IQanat High School of Burabay, №4 команда',
+                        'IQanat High School of Burabay, №5 команда',
+                        'IQanat High School of Burabay, №6 команда',
+                        'IQanat High School of Burabay, №7 команда',
+                        'IQanat High School of Burabay, №8 команда',
+                        'IQanat High School of Burabay, №9 команда',
+                        'IQanat High School of Burabay, №10 команда',
+                        'IQanat High School of Burabay, №11 команда',
+                    ],
+                },
+
+                aktobe: {
+                    name: 'Ақтөбе облысы',
+                    universities: [
+                        'М. Оспанов атындағы Батыс Қазақстан медицина университеті, Ақтөбе',
+                        'Қ. Жұбанов атындағы Ақтөбе өңірлік университеті',
+                        'QAZGUU School Aqtobe, №1 команда',
+                        'QAZGUU School Aqtobe, №2 команда',
+                    ],
+                },
+
+                atyrau: {
+                    name: 'Атырау облысы',
+                    universities: [
+                        'Х. Досмұхамедов атындағы Атырау университеті',
+                        'Bilim International Study Centre, Атырау, №1 команда',
+                        'Bilim International Study Centre, Атырау, №2 команда',
+                        'Bilim International Study Centre, Атырау, №3 команда',
+                    ],
+                },
+
+                eastKazakhstan: {
+                    name: 'Шығыс Қазақстан облысы',
+                    universities: [
+                        'Қазақстан-Америка еркін университеті, Өскемен',
+                        'Қазақстан-Америка еркін университетінің жоғары колледжі, Өскемен',
+                        'Жоғары политехникалық колледж, Өскемен',
+                        'Риддер колледжі, Риддер',
+                    ],
+                },
+
+                zhambyl: {
+                    name: 'Жамбыл облысы',
+                    universities: [
+                        'М.Х. Дулати атындағы Тараз университеті',
+                        'Шерхан Мұртаза атындағы Халықаралық Тараз инновациялық институты',
+                        'Тараз қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №1 команда',
+                        'Тараз қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №2 команда',
+                    ],
+                },
+
+                zhetysu: {
+                    name: 'Жетісу облысы',
+                    universities: [
+                        'Ілияс Жансүгіров атындағы Жетісу университеті, Талдықорған',
+                        'Жансүгіров колледжі, Талдықорған',
+                    ],
+                },
+
+                westKazakhstan: {
+                    name: 'Батыс Қазақстан облысы',
+                    universities: [
+                        'Батыс Қазақстан инновациялық-технологиялық университеті',
+                        'Орал қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №1 команда',
+                    ],
+                },
+
+                karaganda: {
+                    name: 'Қарағанды облысы',
+                    universities: [
+                        'Академик Е.А. Бөкетов атындағы Қарағанды университеті',
+                        'Қарағанды медицина университеті',
+                        'Қарағанды Қазтұтынуодағы университеті',
+                        'А. Сағынов атындағы Қарағанды техникалық университеті',
+                        'Қарағанды жоғары политехникалық колледжі',
+                        'Абай Құнанбаев атындағы Саран гуманитарлық-техникалық колледжі',
+                        'А. Сағынов атындағы Қарағанды техникалық университетінің инновациялық технологиялар колледжі',
+                        'Қарағанды облыстық жоғары мейірбике колледжі',
+                        'Қарағанды қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №1 команда',
+                        'Қарағанды қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №2 команда',
+                        'Қарағанды қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №3 команда',
+                        'Қарағанды қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №4 команда',
+                        'Қарағанды қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №5 команда',
+                        'Қарағанды қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №6 команда',
+                        'Қарағанды қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №7 команда',
+                        'Қарағанды қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №8 команда',
+                        'Қарағанды қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №9 команда',
+                        'Қарағанды қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №10 команда',
+                        'Қарағанды қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №11 команда',
+                        'Қаныш Сәтпаев атындағы гимназия, Қарағанды',
+                        'Ақпараттық технологиялар мамандандырылған мектеп-лицей-интернаты, Қарағанды',
+                        'QSchool Qaraganda, №1 команда',
+                        'QSchool Qaraganda, №2 команда',
+                        'QSchool Qaraganda, №3 команда',
+                        'QSchool Qaraganda, №4 команда',
+                        'QSchool Qaraganda, №5 команда',
+                        'QSchool Qaraganda, №6 команда',
+                    ],
+                },
+
+                kostanay: {
+                    name: 'Қостанай облысы',
+                    universities: [
+                        'А. Байтұрсынов атындағы Қостанай өңірлік университеті',
+                        'Қостанай қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №1 команда',
+                        'QAZGUU School Kostanay, №1 команда',
+                    ],
+                },
+
+                kyzylorda: {
+                    name: 'Қызылорда облысы',
+                    universities: [
+                        'Қорқыт Ата атындағы Қызылорда университеті',
+                        'Қызылорда қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №1 команда',
+                    ],
+                },
+
+                mangystau: {
+                    name: 'Маңғыстау облысы',
+                    universities: [
+                        'Есенов университеті, Ақтау',
+                        'Х. Өзбекғалиев атындағы Маңғыстау жоғары политехникалық колледжі',
+                        'Ақтау қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №1 команда',
+                    ],
+                },
+
+                pavlodar: {
+                    name: 'Павлодар облысы',
+                    universities: [
+                        'Торайғыров университеті',
+                        'Ә. Марғұлан атындағы Павлодар педагогикалық университеті',
+                        'Павлодар қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №1 команда',
+                        'Павлодар қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №2 команда',
+                        'Павлодар қаласы №2 жалпы білім беретін мектебі, №1 команда',
+                    ],
+                },
+
+                northKazakhstan: {
+                    name: 'Солтүстік Қазақстан облысы',
+                    universities: [
+                        'М. Қозыбаев атындағы Солтүстік Қазақстан университеті',
+                        'Солтүстік Қазақстан жоғары медициналық колледжі',
+                        'Мағжан Жұмабаев атындағы жоғары колледж',
+                        'Петропавл қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №1 команда',
+                        'Петропавл қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №2 команда',
+                        'Петропавл қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №4 команда',
+                        'Петропавл қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №5 команда',
+                        'Петропавл қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №6 команда',
+                        'Петропавл қаласының физика-математика бағытындағы Назарбаев зияткерлік мектебі, №7 команда',
+                        'Бөкетов атындағы мектеп-гимназиясы, Сергеевка ауылы',
+                    ],
+                },
+
+                turkestan: {
+                    name: 'Түркістан облысы',
+                    universities: [
+                        'Халықаралық туризм және қонақжайлылық университеті',
+                        'Қожа Ахмет Ясауи атындағы Халықаралық қазақ-түрік университеті',
+                    ],
+                },
+
+                ulytau: {
+                    name: 'Ұлытау облысы',
+                    universities: [
+                        'Абай атындағы мамандандырылған мектеп-интернат, Жезқазған, №1 команда',
+                    ],
+                },
+
+                almatyRegion: {
+                    name: 'Алматы облысы',
+                    universities: [
+                        'SDU University, Қаскелен',
+                    ],
+                },
+            },
         },
         partnership: {
             title: 'Серіктестік',

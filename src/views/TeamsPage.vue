@@ -71,8 +71,6 @@ const openCity = ref('almaty'); // Используем ключ 'almaty' вме
 
 const tabs = [
   { id: 'vuz' },
-  { id: 'colleges' },
-  { id: 'schools' },
 ];
 
 // Список ключей городов. Сами данные (названия и вузы) выносим в i18n.js
