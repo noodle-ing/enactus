@@ -26,6 +26,7 @@
               <router-link to="/about/headquarters" class="dropdown-item" @click="closeMenu">{{ $t('nav.headquarters') }}</router-link>
               <router-link to="/about/board" class="dropdown-item" @click="closeMenu">{{ $t('nav.board') }}</router-link>
               <router-link to="/about/council" class="dropdown-item" @click="closeMenu">{{ $t('nav.council') }}</router-link>
+              <router-link to="/about/alumni" class="dropdown-item" @click="closeMenu">{{ $t('nav.alumi') }}</router-link>
             </div>
           </transition>
         </div>
