@@ -48,14 +48,14 @@
 <script setup>
 import { ref } from 'vue';
 import { useI18n } from 'vue-i18n';
-import Footer from '@/components/Footer.vue'; // Убедитесь, что путь верный
+import Footer from '@/components/Footer.vue';
 
 const { tm, rt } = useI18n();
 
-// По умолчанию открыт город Алматы
+// По умолчанию можно оставить Алматы или закрыть все (null)
 const openCity = ref('almaty');
 
-// Данные городов для связи с i18n
+// Полный список ключей для всех 20 регионов
 const citiesData = [
   { key: 'astana' },
   { key: 'almaty' },
@@ -65,6 +65,18 @@ const citiesData = [
   { key: 'aktobe' },
   { key: 'almatyRegion' },
   { key: 'atyrau' },
+  { key: 'vko' },
+  { key: 'zhambyl' },
+  { key: 'jetysu' },
+  { key: 'zko' },
+  { key: 'karaganda' },
+  { key: 'kostanay' },
+  { key: 'kyzylorda' },
+  { key: 'mangistau' },
+  { key: 'pavlodar' },
+  { key: 'sko' },
+  { key: 'turkestan' },
+  { key: 'ulytau' }
 ];
 
 const toggleAccordion = (cityKey) => {
@@ -73,7 +85,7 @@ const toggleAccordion = (cityKey) => {
 </script>
 
 <style scoped>
-/* Основные стили страницы */
+/* Стили остаются прежними, они отлично работают с желтым фоном */
 .page-wrapper { background-color: #fff; }
 .teams-page { padding: 40px 0 100px; }
 
@@ -83,7 +95,6 @@ const toggleAccordion = (cityKey) => {
   padding: 0 20px;
 }
 
-/* Хлебные крошки */
 .breadcrumbs {
   font-size: 14px;
   color: #999;
@@ -101,7 +112,6 @@ const toggleAccordion = (cityKey) => {
 .no-link { cursor: default; }
 .current { color: #333; font-weight: 500; }
 
-/* Заголовок страницы */
 .header-flex {
   display: flex;
   justify-content: space-between;
@@ -111,7 +121,6 @@ const toggleAccordion = (cityKey) => {
 
 .page-title { font-size: 32px; font-weight: 800; color: #333; }
 
-/* Кнопка "Как создать команду" */
 .create-team-btn {
   background-color: #232323;
   color: #fff;
@@ -128,7 +137,6 @@ const toggleAccordion = (cityKey) => {
 
 .create-team-btn:hover { background-color: #333; }
 
-/* Секция контента с аккордеонами */
 .teams-content {
   display: flex;
   flex-direction: column;
@@ -136,15 +144,12 @@ const toggleAccordion = (cityKey) => {
   width: 100%;
 }
 
-/* Элемент аккордеона */
 .accordion-item {
   border-radius: 10px;
   overflow: hidden;
   transition: all 0.3s ease;
-  /* Убрали общий фон здесь, чтобы задать его отдельно для header и body */
 }
 
-/* Заголовок аккордеона - ТЕПЕРЬ ЖЕЛТЫЙ */
 .accordion-header {
   padding: 20px 25px;
   display: flex;
@@ -153,29 +158,26 @@ const toggleAccordion = (cityKey) => {
   font-weight: 700;
   cursor: pointer;
   font-size: 16px;
-  background-color: #FFCC00; /* Яркий желтый фон */
-  color: #232323; /* Темный текст для контраста */
+  background-color: #FFCC00;
+  color: #232323;
   transition: background-color 0.3s;
 }
 
 .accordion-header:hover {
-  background-color: #e6b800; /* Чуть темнее при наведении */
+  background-color: #e6b800;
 }
 
-/* Стили шеврона (стрелочки) */
 .chevron {
   font-size: 12px;
-  color: #232323; /* Темный цвет шеврона */
+  color: #232323;
 }
 
-/* Тело аккордеона - ТЕПЕРЬ ЖЕЛТОЕ */
 .accordion-body {
   padding: 0 25px 25px 50px;
-  background-color: #FFCC00; /* Такой же желтый фон */
-  color: #232323; /* Темный текст */
+  background-color: #FFCC00;
+  color: #232323;
 }
 
-/* Список ВУЗов */
 .university-list {
   padding-left: 0;
   margin: 0;
@@ -185,28 +187,14 @@ const toggleAccordion = (cityKey) => {
 
 .university-list li {
   margin-bottom: 5px;
-  color: #232323; /* Темный текст элементов списка */
+  color: #232323;
 }
 
-/* Адаптивность для мобильных */
 @media (max-width: 768px) {
   .header-flex {
     flex-direction: column;
     align-items: flex-start;
     gap: 15px;
-  }
-
-  .page-title {
-    font-size: 28px;
-  }
-
-  .accordion-header {
-    font-size: 15px;
-    padding: 15px 20px;
-  }
-
-  .accordion-body {
-    padding: 0 20px 20px 40px;
   }
 }
 </style>
