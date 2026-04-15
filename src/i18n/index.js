@@ -154,7 +154,7 @@ const messages = {
                 rest: { title: 'Rest & Wellness', desc: 'Natural healing factors: pine forest, fresh air, and a lake with mineral water.' },
                 mem: { title: 'Memories', desc: 'Everything in ENACTUS is heartfelt. Themed evenings brighten the educational process, and connections last long after the camp.' }
             },
-            reportBtn: 'Winter Camp Report 2025'
+            reportBtn: 'Winter Camp Report 2026'
         },
         teams: {
             title: 'Teams',
@@ -884,7 +884,7 @@ const messages = {
                 rest: { title: 'Отдых и оздоровление', desc: 'Природные лечебно-оздоровительные факторы: сосновый лес, свежий воздух и озеро с минеральной водой.' },
                 mem: { title: 'Воспоминания', desc: 'В ENACTUS все очень душевно. Тематические вечера скрасят образовательный процесс, а общение продолжится и после лагеря.' }
             },
-            reportBtn: 'Отчет с зимнего лагеря 2025'
+            reportBtn: 'Отчет с зимнего лагеря 2026'
         },
         breadcrumbs: {
             home: 'Главная',
@@ -1599,7 +1599,7 @@ const messages = {
                 rest: { title: 'Демалыс және сауықтыру', desc: 'Табиғи емдік-сауықтыру факторлары: қарағайлы орман, таза ауа және минералды суы бар көл.' },
                 mem: { title: 'Естеліктер', desc: 'ENACTUS-та бәрі өте жылы әрі шынайы. Тақырыптық кештер оқу процесін қызықты етеді, ал қарым-қатынас лагерьден кейін де жалғасады.' }
             },
-            reportBtn: 'Қысқы лагерь есебі 2025'
+            reportBtn: 'Қысқы лагерь есебі 2026'
         },
         breadcrumbs: {
             home: 'Басты бет',

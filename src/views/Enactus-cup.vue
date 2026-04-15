@@ -66,7 +66,7 @@
         </div>
 
         <a
-            href="https://drive.google.com/file/d/1Iq9d8s_FCxce2Z2v5rgkP1vQTcSTfBNJ/view?usp=sharing"
+            href="https://canva.link/qla5mx9enplw8ue"
             target="_blank"
             class="report-btn">
           <span class="link-icon">🔗</span> {{ $t('camp.reportBtn') }}
