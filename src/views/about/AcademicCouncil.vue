@@ -42,9 +42,9 @@ import Footer from '@/components/Footer.vue';
 import CouncilItem from '@/components/CouncilItem.vue';
 
 // Формируем разные наборы для визуального разнообразия
-const row1 = ['saule', 'askar', 'bakirova', 'galia', 'enlik', 'zhenis', 'zhannet', 'danial', 'yerlan','gulsim'];
-const row2 = ['enlik', 'galia', 'bakirova', 'askar', 'saule', 'zhenis', 'zhannet', 'danial', 'yerlan', 'gulsim'];
-const row3 = ['bakirova', 'saule', 'enlik', 'askar', 'galia', 'zhenis', 'zhannet', 'danial', 'yerlan', 'gulsim'];
+const row1 = ['saule', 'askar', 'bakirova', 'galia', 'enlik', 'zhenis', 'zhannet', 'danial', 'yerlan','gulsim','galiya'];
+const row2 = ['enlik', 'galia', 'bakirova', 'askar', 'saule', 'zhenis', 'zhannet', 'danial', 'yerlan', 'gulsim','galiya'];
+const row3 = ['bakirova', 'saule', 'enlik', 'askar', 'galia', 'zhenis', 'zhannet', 'danial', 'yerlan', 'gulsim','galiya'];
 </script>
 
 <style scoped>

@@ -672,13 +672,18 @@ const messages = {
                     role: 'Director of the Center for Political Studies, AlmaU'
                 },
                 yerlan: {
-                    name: 'Yerlan Karimov',
+                    name: 'YERLAN KARIMOV',
                     role: 'Advisor to the international company ARETERA PUBLIC AFFAIRS'
                 },
                 gulsim: {
-                    name: 'Gulsim Aitkhozhaeva',
+                    name: 'GULSIM AITKHOZHAEVA',
                     role: 'Head of the Office of International Mobility and Programs at Al-Farabi Kazakh National University, Acting Associate Professor',
+                },
+                galiya: {
+                    name: 'GALIYA MYAMESHEVA',
+                    role: "Associate Professor of the Faculty of World Politics of KNU"
                 }
+
             }
         },
         createTeam: {
@@ -1342,12 +1347,16 @@ const messages = {
                     role: 'Директор Центра политических исследований, AlmaU'
                 },
                 yerlan: {
-                    name: 'Yerlan Karimov',
+                    name: 'GALIYA MYAMESHEVA',
                     role: 'Советник в международной компании ARETERA PUBLIC AFFAIRS'
                 },
                 gulsim: {
-                    name: 'Gulsim Aitkhozhaeva',
+                    name: 'GULSIM AITKHOZHAEVA',
                     role: 'Руководитель Офиса международной мобильности и программ Казахского национального университета им. Aль-Фараби, ИО ассоциированного профессора',
+                },
+                galiya: {
+                    name: 'GALIYA MYAMESHEVA',
+                    role: "Aссоциированный профессор Факультета Мировой Политики КНУ"
                 }
             }
         },
@@ -2015,12 +2024,16 @@ const messages = {
                     role: 'Саяси зерттеулер орталығының директоры, AlmaU'
                 },
                 yerlan: {
-                    name: 'Yerlan Karimov',
+                    name: 'YERLAN KARIMOV',
                     role: 'ARETERA PUBLIC AFFAIRS халықаралық компаниясының кеңесшісі'
                 },
                 gulsim: {
-                    name: 'Gulsim Aitkhozhaeva',
+                    name: 'GULSIM AITKHOZHAEVA',
                     role: 'Әл-Фараби атындағы Қазақ ұлттық университетінің Халықаралық мобильділік және бағдарламалар бөлімінің меңгерушісі, доцент міндетін атқарушы',
+                },
+                galiya: {
+                    name: 'GALIYA MYAMESHEVA',
+                    role: "ҚазҰУ әлемдік саясат факультетінің доценті"
                 }
             }
         },
