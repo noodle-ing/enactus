@@ -78,7 +78,7 @@
           <a href="https://youtube.com/@enactuskazakhstan1987?si=NvyrJwcV4JO14eE8" target="_blank" class="social-link">
             <img src="/images/icons/youtube.png" alt="YouTube" />
           </a>
-          <a href="https://www.linkedin.com/company/enactus-kazakhstan/" target="_blank" class="social-link">
+          <a href="https://www.linkedin.com/in/enactuskaz?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" class="social-link">
             <img src="/images/icons/linkedin.png" alt="LinkedIn" />
           </a>
           <a href="https://www.tiktok.com/@enactus.kz?_r=1&_t=ZS-95Kky5LsvLQ" target="_blank" class="social-link">
