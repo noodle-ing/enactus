@@ -17,41 +17,27 @@
           </router-link>
         </div>
 
-        <div class="teams-layout">
-          <aside class="teams-sidebar">
-            <button
-                v-for="tab in tabs"
-                :key="tab.id"
-                :class="['tab-button', { active: activeTab === tab.id }]"
-                @click="activeTab = tab.id"
-            >
-              {{ $t(`teams.tabs.${tab.id}`) }}
-              <span class="arrow">▶</span>
-            </button>
-          </aside>
-
-          <section class="teams-content">
-            <div
-                v-for="(city, index) in citiesData"
-                :key="index"
-                class="accordion-item"
-                :class="{ open: openCity === city.key }"
-            >
-              <div class="accordion-header" @click="toggleAccordion(city.key)">
-                <span>{{ $t(`teams.cities.${city.key}.name`) }}</span>
-                <span class="chevron">{{ openCity === city.key ? '▲' : '▼' }}</span>
-              </div>
-
-              <div class="accordion-body" v-if="openCity === city.key">
-                <ol class="university-list">
-                  <li v-for="(uni, uIdx) in $tm(`teams.cities.${city.key}.universities`)" :key="uIdx">
-                    {{ rt(uni) }}
-                  </li>
-                </ol>
-              </div>
+        <section class="teams-content">
+          <div
+              v-for="(city, index) in citiesData"
+              :key="index"
+              class="accordion-item"
+              :class="{ open: openCity === city.key }"
+          >
+            <div class="accordion-header" @click="toggleAccordion(city.key)">
+              <span>{{ $t(`teams.cities.${city.key}.name`) }}</span>
+              <span class="chevron">{{ openCity === city.key ? '▲' : '▼' }}</span>
             </div>
-          </section>
-        </div>
+
+            <div class="accordion-body" v-if="openCity === city.key">
+              <ol class="university-list">
+                <li v-for="(uni, uIdx) in $tm(`teams.cities.${city.key}.universities`)" :key="uIdx">
+                  {{ rt(uni) }}
+                </li>
+              </ol>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
 
@@ -62,18 +48,14 @@
 <script setup>
 import { ref } from 'vue';
 import { useI18n } from 'vue-i18n';
-import Footer from '@/components/Footer.vue';
+import Footer from '@/components/Footer.vue'; // Убедитесь, что путь верный
 
-const { t, tm, rt } = useI18n();
+const { tm, rt } = useI18n();
 
-const activeTab = ref('vuz');
-const openCity = ref('almaty'); // Используем ключ 'almaty' вместо строки 'Алматы'
+// По умолчанию открыт город Алматы
+const openCity = ref('almaty');
 
-const tabs = [
-  { id: 'vuz' },
-];
-
-// Список ключей городов. Сами данные (названия и вузы) выносим в i18n.js
+// Данные городов для связи с i18n
 const citiesData = [
   { key: 'astana' },
   { key: 'almaty' },
@@ -91,6 +73,7 @@ const toggleAccordion = (cityKey) => {
 </script>
 
 <style scoped>
+/* Основные стили страницы */
 .page-wrapper { background-color: #fff; }
 .teams-page { padding: 40px 0 100px; }
 
@@ -100,36 +83,25 @@ const toggleAccordion = (cityKey) => {
   padding: 0 20px;
 }
 
-.breadcrumbs { 
-  font-size: 14px; 
-  color: #999; 
-  margin-bottom: 20px; 
+/* Хлебные крошки */
+.breadcrumbs {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 20px;
 }
 
 .breadcrumbs a {
   text-decoration: none;
-  color: inherit; /* Ссылка берет серый цвет родителя */
+  color: inherit;
   transition: color 0.2s;
 }
 
-.breadcrumbs a:hover {
-  color: #333; /* При наведении на главную она чуть темнеет */
-}
+.breadcrumbs a:hover { color: #333; }
+.breadcrumbs .sep { margin: 0 8px; }
+.no-link { cursor: default; }
+.current { color: #333; font-weight: 500; }
 
-.breadcrumbs .sep { 
-  margin: 0 8px; 
-}
-
-/* Стили для некликабельных сегментов */
-.no-link {
-  cursor: default;
-}
-
-.current { 
-  color: #333; /* Текущая страница выделена темным цветом */
-  font-weight: 500;
-}
-
+/* Заголовок страницы */
 .header-flex {
   display: flex;
   justify-content: space-between;
@@ -137,18 +109,16 @@ const toggleAccordion = (cityKey) => {
   margin-bottom: 40px;
 }
 
-.page-title { font-size: 32px; font-weight: 800; }
+.page-title { font-size: 32px; font-weight: 800; color: #333; }
 
+/* Кнопка "Как создать команду" */
 .create-team-btn {
   background-color: #232323;
   color: #fff;
-  border: none;
   padding: 12px 25px;
   border-radius: 20px;
   font-weight: 700;
-  cursor: pointer;
   font-size: 14px;
-  /* Добавляем эти свойства для корректного отображения ссылки как кнопки */
   text-decoration: none;
   display: inline-flex;
   align-items: center;
@@ -156,61 +126,25 @@ const toggleAccordion = (cityKey) => {
   transition: background-color 0.3s;
 }
 
-.create-team-btn:hover {
-  background-color: #333; /* Небольшой эффект при наведении */
-}
+.create-team-btn:hover { background-color: #333; }
 
-/* Сетка страницы */
-.teams-layout {
-  display: grid;
-  grid-template-columns: 300px 1fr;
-  gap: 40px;
-}
-
-/* Сайдбар */
-.teams-sidebar {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.tab-button {
-  height: 90px;
-  border-radius: 10px;
-  border: none;
-  background-color: #939598; /* Серый как на макете */
-  color: #fff;
-  font-size: 18px;
-  font-weight: 800;
-  padding: 0 25px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.tab-button.active {
-  background-color: #FFCC00;
-  color: #232323;
-  box-shadow: 0 4px 15px rgba(255, 204, 0, 0.3);
-}
-
-.arrow { font-size: 12px; }
-
-/* Аккордеон */
+/* Секция контента с аккордеонами */
 .teams-content {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  width: 100%;
 }
 
+/* Элемент аккордеона */
 .accordion-item {
-  background-color: #F2F2F2;
   border-radius: 10px;
   overflow: hidden;
+  transition: all 0.3s ease;
+  /* Убрали общий фон здесь, чтобы задать его отдельно для header и body */
 }
 
+/* Заголовок аккордеона - ТЕПЕРЬ ЖЕЛТЫЙ */
 .accordion-header {
   padding: 20px 25px;
   display: flex;
@@ -218,28 +152,61 @@ const toggleAccordion = (cityKey) => {
   align-items: center;
   font-weight: 700;
   cursor: pointer;
+  font-size: 16px;
+  background-color: #FFCC00; /* Яркий желтый фон */
+  color: #232323; /* Темный текст для контраста */
+  transition: background-color 0.3s;
 }
 
+.accordion-header:hover {
+  background-color: #e6b800; /* Чуть темнее при наведении */
+}
+
+/* Стили шеврона (стрелочки) */
+.chevron {
+  font-size: 12px;
+  color: #232323; /* Темный цвет шеврона */
+}
+
+/* Тело аккордеона - ТЕПЕРЬ ЖЕЛТОЕ */
 .accordion-body {
   padding: 0 25px 25px 50px;
-  background-color: #F2F2F2;
+  background-color: #FFCC00; /* Такой же желтый фон */
+  color: #232323; /* Темный текст */
 }
 
+/* Список ВУЗов */
 .university-list {
   padding-left: 0;
   margin: 0;
   line-height: 1.8;
   font-size: 14px;
-  color: #333;
 }
 
 .university-list li {
   margin-bottom: 5px;
+  color: #232323; /* Темный текст элементов списка */
 }
 
-@media (max-width: 850px) {
-  .teams-layout { grid-template-columns: 1fr; }
-  .teams-sidebar { flex-direction: row; overflow-x: auto; padding-bottom: 10px; }
-  .tab-button { min-width: 200px; height: 60px; font-size: 14px; }
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+  .header-flex {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .page-title {
+    font-size: 28px;
+  }
+
+  .accordion-header {
+    font-size: 15px;
+    padding: 15px 20px;
+  }
+
+  .accordion-body {
+    padding: 0 20px 20px 40px;
+  }
 }
 </style>
