@@ -76,7 +76,12 @@
       </div>
 
       <div class="nav-actions">
-        <div class="language-dropdown" @mouseenter="isLangOpen = true" @mouseleave="isLangOpen = false">
+        <div
+            class="language-dropdown"
+            @click="toggleLang"
+            @mouseenter="isLangOpen = true"
+            @mouseleave="isLangOpen = false"
+        >
           <span class="lang-current">
             {{ locale.toUpperCase() }} <span class="arrow">▼</span>
           </span>
@@ -101,15 +106,12 @@
       <div v-if="isContactOpen" class="modal-overlay" @click.self="isContactOpen = false">
         <div class="modal-content">
           <button class="close-modal" @click="isContactOpen = false">&times;</button>
-
           <h3 class="modal-title">{{ $t('nav.contact') }}</h3>
-
           <div class="contact-info">
             <div class="contact-item">
               <span class="label">{{ $t('contact.emailLabel') }}</span>
               <a href="mailto:enactuskaz@gmail.com" class="value">enactuskaz@gmail.com</a>
             </div>
-
             <div class="contact-item" style="display: flex; flex-direction: column; gap: 5px;">
               <span class="label" style="font-weight: bold; margin-bottom: 5px;">
                 {{ $t('contact.phoneLabel') }}
@@ -141,6 +143,11 @@ const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value
 }
 
+const toggleLang = () => {
+  // Для мобильных устройств переключаем состояние
+  isLangOpen.value = !isLangOpen.value
+}
+
 const closeMenu = () => {
   isMenuOpen.value = false
   isAboutOpen.value = false
@@ -150,7 +157,7 @@ const closeMenu = () => {
 
 const changeLanguage = (lang) => {
   locale.value = lang
-  isLangOpen.value = false
+  isLangOpen.value = false // Обязательно закрываем после выбора
   localStorage.setItem('lang', lang)
 }
 </script>
@@ -266,9 +273,27 @@ const changeLanguage = (lang) => {
   padding-left: 25px;
 }
 
-.nav-actions { display: flex; align-items: center; margin-left: 1rem; }
-.language-dropdown { position: relative; cursor: pointer; }
-.lang-current { font-weight: 600; display: flex; align-items: center; gap: 4px; }
+.nav-actions {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+/* Настройки выпадающего списка языков для мобилок */
+.language-dropdown {
+  position: relative;
+  cursor: pointer;
+  padding: 10px;
+  -webkit-tap-highlight-color: transparent; /* Убираем блик в Safari */
+}
+
+.lang-current {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  user-select: none;
+}
 
 .dropdown-content {
   position: absolute;
@@ -277,16 +302,18 @@ const changeLanguage = (lang) => {
   background: white;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  min-width: 70px;
+  min-width: 80px;
   overflow: hidden;
+  z-index: 2000;
 }
 
 .lang-item {
-  padding: 8px 15px;
+  padding: 12px 15px; /* Большая область нажатия для пальцев */
   display: block;
   text-decoration: none;
   color: #333;
   font-weight: 600;
+  transition: background 0.2s;
 }
 
 .lang-item:hover { background: #f5f5f5; }
@@ -344,9 +371,7 @@ const changeLanguage = (lang) => {
   text-transform: uppercase;
 }
 
-.contact-item {
-  margin-bottom: 25px;
-}
+.contact-item { margin-bottom: 25px; }
 
 .label {
   display: block;
@@ -373,11 +398,6 @@ const changeLanguage = (lang) => {
 
 .nav-toggle { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
 .bar { width: 25px; height: 3px; background: #333; border-radius: 3px; }
-
-@media (max-width: 1024px) {
-  .nav-menu { gap: 1rem; }
-  .nav-link { font-size: 0.9rem; }
-}
 
 @media (max-width: 768px) {
   .nav-toggle { display: flex; }
