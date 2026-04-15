@@ -56,7 +56,7 @@ const messages = {
             stats: {
                 regions: 'regions of Kazakhstan',
                 institutions: 'educational institutions',
-                students: 'students annually',
+                students: 'participants annually',
                 companies: 'partner companies',
             },
         },
@@ -760,7 +760,7 @@ const messages = {
             stats: {
                 regions: 'регионов Казахстана',
                 institutions: 'учебных заведений',
-                students: 'студентов ежегодно',
+                students: 'участников ежегодно',
                 companies: 'компаний-партнеров',
             },
         },
