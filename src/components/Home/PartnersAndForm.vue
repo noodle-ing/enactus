@@ -49,6 +49,8 @@ const allLogos = [
   '/images/logo-kmf.png',
   '/images/logo-kazzinc.jpg',
   '/images/logo-ktcloud.png',
+  '/images/ab_capital.jpg',
+  '/images/mcg.png',
 ];
 </script>
 

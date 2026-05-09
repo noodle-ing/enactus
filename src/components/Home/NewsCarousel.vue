@@ -72,27 +72,34 @@ const goNext = () => {
 const localizedNewsItems = computed(() => [
   {
     id: 1,
+    title: 'Enactus Kazakhstan: в Алматы определили лучших молодых предпринимателей',
+    description: 'Команда Astana IT University победила в World Cup League и представит Казахстан на Enactus World Cup 2026.',
+    image: '/images/aitu-medical-ai.jpg',
+    link: 'https://total.kz/ru/news/biznes/enactus_kazakhstan_v_almati_opredelili_luchshih_molodih_predprinimatelei_date_2026_05_06'
+  },
+  {
+    id: 2,
     title: 'Победители Enactus Kazakhstan National Expo представят республику на мировой арене',
     description: 'Официальный отчет о победителях национального кубка предпринимательства.',
     image: '/images/nationalexpo.jpg', // Старая картинка
     link: 'https://primeminister.kz/ru/news/pobediteli-kubka-molodezhnogo-predprinimatelstva-enactus-kazakhstan-national-predstavyat-respubliku-na-mirovoy-arene-30000'
   },
   {
-    id: 2,
+    id: 3,
     title: 'Заботливый бизнес: как молодые предприниматели меняют мир',
     description: 'Как социальные проекты студентов Enactus превращаются в реальный бизнес.',
     image: '/images/enactusworldcup2025.png', // Старая картинка
     link: 'https://forbes.kz/articles/zabotlivyy-biznes-kak-molodye-predprinimateli-programmy-enactus-menyayut-mir-9ddd3a'
   },
   {
-    id: 3,
+    id: 4,
     title: 'Министерство науки и высшего образования РК: Enactus Kazakhstan',
     description: 'Поддержка молодежных инициатив на государственном уровне.',
     image: '/images/enactusworldcup2024.png', // Старая картинка
     link: 'https://www.gov.kz/memleket/entities/sci/press/news/details/846381?lang=ru'
   },
   {
-    id: 4,
+    id: 5,
     title: 'Бизнес помогает развитию молодежного IT-предпринимательства',
     description: 'Интеграция IT-решений в современные студенческие стартапы.',
     image: '/images/news4.jpeg', // Старая картинка

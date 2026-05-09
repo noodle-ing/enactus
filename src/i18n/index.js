@@ -13,11 +13,12 @@ const messages = {
             partnership: 'Partnership',
             participants: 'For Participants',
             teams: 'Teams',
-            alumi: 'Alumnus',
+            alumi: 'Alumni Association',
             camp: 'Enactus Camp',
             roadshow: 'Road Show',
+            createTeamNav: 'How to Create a Team',
             competitions: 'Competitions',
-            news: 'News',
+            news: 'Media',
             contact: 'Contact',
             howToCreate: 'How to create a team?',
             schoolCup: 'National School Entrepreneurship Championship',
@@ -36,7 +37,7 @@ const messages = {
         home: {
             heroTitle: 'WE ALL WIN',
             heroSubtitle: 'Become part of a student movement changing the future of Kazakhstan through entrepreneurship.',
-            heroSubtitleKz: 'NATIONAL CUP IN ENTREPRENEURSHIP, STARTUPS <br /> AND INNOVATION AMONG SCHOOL AND UNIVERSITY STUDENTS <br /> ENACTUS KAZAKHSTAN 2026',
+            heroSubtitleKz: 'THE WORLD CUP OF ENTREPRENEURSHIP, STARTUPS <br /> AND INNOVATION AMONG STUDENTS',
             joinBtn: 'Join Us',
             aboutTitlePart1: 'WHAT IS ',
             aboutTitlePart2: 'ENACTUS?',
@@ -50,8 +51,8 @@ const messages = {
                 seconds: 'SECS',
             },
             event: {
-                date: 'April 28–29, 2026',
-                location: 'Almaty city, 42 k1 Timiryazev St.',
+                date: 'November 16, 2026',
+                location: 'Location: São Paulo, Brazil.',
             },
             stats: {
                 regions: 'regions of Kazakhstan',
@@ -61,12 +62,176 @@ const messages = {
             },
         },
         projects: {
-            title: 'Finalists of the ENACTUS KAZAKHSTAN 2025 National Cup - World Cup League',
+            title: 'Finalists of the ENACTUS KAZAKHSTAN 2026 National Cup - World Cup League',
             items: {
-                amu: {name: 'Astana Medical University', desc: 'ZhanCare — a new generation medical ecosystem.'},
-                kaznu: {name: 'Al-Farabi KazNU', desc: 'Innovative project in ecology and IT.'},
-                narxoz: {name: 'Narxoz University', desc: 'Social entrepreneurship and youth support.'},
-                coll: {name: 'College of Foreign Languages', desc: 'Educational platform for language learning.'}
+                amu: {
+                    name: 'ASTANA IT UNIVERSITY',
+                    summary: 'The ENACTUS team from Astana IT University developed innovative medical AI projects aimed at supporting doctors and improving the accuracy of diagnosis and treatment.',
+                    projectOneTitle: 'CortexAI',
+                    projectOneDesc: 'An AI system that helps doctors predict surgical outcomes in transplant cases by analyzing large volumes of clinical data.',
+                    projectTwoTitle: 'Omnimammo',
+                    projectTwoDesc: 'An AI-powered platform for early breast cancer detection based on multimodal medical data.'
+                },
+                kaznu: {
+                    name: 'ASTANA MEDICAL UNIVERSITY',
+                    summary: 'The ENACTUS team from Astana Medical University developed innovative medical AI solutions aimed at improving quality of life and enabling early diagnosis of complex diseases.',
+                    projectOneTitle: 'Visual Mind',
+                    projectOneDesc: 'An AI platform for people with hearing and speech impairments, featuring sign language interpretation, job support, learning tools, and communication with specialists.',
+                    projectTwoTitle: 'ReMind',
+                    projectTwoDesc: 'An AI medical system for early detection of Alzheimer’s, dementia, and other neurodegenerative diseases using MRI analysis, with support for prevention and rehabilitation.'
+                },
+                narxoz: {
+                    name: 'AL-FARABI KAZAKH NATIONAL UNIVERSITY',
+                    summary: 'The ENACTUS team from Al-Farabi Kazakh National University developed an innovative sustainable agriculture project called Asyl Zher, aimed at restoring degraded and saline soils.',
+                    projectOneTitle: 'Asyl Zher',
+                    projectOneDesc: 'A soil restoration technology that improves degraded and saline lands using a bioactive humate-phosphate. It increases crop yields, retains moisture, and supports sustainable agriculture.'
+                },
+                coll: {
+                    name: 'ZHETYSU UNIVERSITY, TALDYKORGAN',
+                    summary: 'The ENACTUS team from Zhetysu University developed three agri-biotechnology projects aimed at advancing agriculture and improving product quality.',
+                    projectOneTitle: 'Sweet Rainbow',
+                    projectOneDesc: 'A multicolored sweet corn variety with enhanced taste and higher nutritional value, designed to attract attention through its unique appearance and health benefits.',
+                    projectTwoTitle: 'Gallus',
+                    projectTwoDesc: 'A poultry project focused on breeding black chickens that lay multicolored eggs, improving immunity, productivity, and resistance to diseases while increasing nutritional value.',
+                    projectThreeTitle: 'Obsidian',
+                    projectThreeDesc: 'A selective high-nutrition corn variety for poultry feed, improving immunity, productivity, digestibility, and resistance, with added antioxidant and vitamin C benefits.'
+                }
+            },
+            earlyStage: {
+                title: 'FINALISTS OF THE EARLY STAGE LEAGUE OF THE ENACTUS KAZAKHSTAN 2026 NATIONAL CUP',
+                items: {
+                    zhans: {
+                        name: 'ZHANSUGUROV COLLEGE, TALDYKORGAN',
+                        summary: 'The ENACTUS team from Zhansugurov College presented environmentally and technologically oriented projects aimed at sustainable agriculture and environmental protection.',
+                        projectOneTitle: 'ASYL JEM',
+                        projectOneDesc: 'A natural and balanced livestock feed made from eco-friendly local ingredients, improving digestion, increasing productivity, and reducing methane emissions.',
+                        projectTwoTitle: 'BasQAN',
+                        projectTwoDesc: 'An autonomous AI-powered system that cleans rivers and reservoirs by detecting and collecting waste, while improving water quality through aeration and solar-powered operation.'
+                    },
+                    aituCollege: {
+                        name: 'ASTANA IT UNIVERSITY COLLEGE',
+                        summary: 'The ENACTUS team from Astana IT University College developed innovative digital solutions aimed at supporting people and addressing environmental challenges.',
+                        projectOneTitle: 'Janarym',
+                        projectOneDesc: 'An AI-powered mobile assistant for people with visual impairments. It describes surroundings in real time, reads text, and supports navigation, with SOS alerts and safety features for independent living.',
+                        projectTwoTitle: 'FoodSave',
+                        projectTwoDesc: 'A platform that reduces food waste by connecting businesses with surplus food to users who can purchase it at a lower price, making food more affordable while minimizing environmental impact.'
+                    },
+                    coventry: {
+                        name: 'COVENTRY UNIVERSITY KAZAKHSTAN',
+                        summary: 'The ENACTUS student team developed Nomad Onim, an agro-entrepreneurial project aimed at developing agriculture and supporting local farmers.',
+                        projectOneTitle: 'Nomad Onim',
+                        projectOneDesc: 'An agro-entrepreneurial ecosystem that combines farmer training with an online platform for selling natural products. It connects learners, farmers, and customers into one system, providing skills, hands-on experience, and direct market access.'
+                    },
+                    myrzakhmetov: {
+                        name: 'KOKSHETAU UNIVERSITY NAMED AFTER ABAY MYRZAKHMETOV',
+                        summary: 'The ENACTUS team from Kokshetau University named after Abay Myrzakhmetov developed a series of innovative projects focused on inclusion, environmental sustainability, and modern education.',
+                        projectOneTitle: 'SLUH (Sound-based Local Urban Help)',
+                        projectOneDesc: 'An assistive tech solution for visually impaired individuals, featuring voice navigation, real-time hazard detection, and emergency support to ensure safe urban mobility.',
+                        projectTwoTitle: 'EcoSound',
+                        projectTwoDesc: 'A circular economy project transforming aluminum waste into musical instruments, combining sustainability with education and creativity.',
+                        projectThreeTitle: 'BilimTime',
+                        projectThreeDesc: 'An inclusive EdTech platform using VR and AI to provide personalized learning for children with special educational needs.'
+                    }
+                }
+            },
+            collegeCup: {
+                title: 'FINALISTS OF THE III ENTREPRENEURSHIP CUP AMONG COLLEGE STUDENTS OF THE ENACTUS KAZAKHSTAN 2026 NATIONAL CUP',
+                items: {
+                    acst: {
+                        name: 'ALMATY COLLEGE OF SERVICE AND TECHNOLOGY',
+                        summary: 'The ENACTUS team from Almaty College of Service and Technology developed innovative projects focused on environmental sustainability and inclusive education in Kazakhstan.',
+                        projectOneTitle: 'BioCraft',
+                        projectOneDesc: 'An environmental project that transforms agricultural waste into biodegradable mycelium-based products such as cups. It helps reduce plastic pollution and turns waste into a useful, sustainable resource.',
+                        projectTwoTitle: 'Smart AI',
+                        projectTwoDesc: 'An AI-powered educational platform that creates personalized learning paths, especially for students with special educational needs. The system improves access to education and enhances learning outcomes.'
+                    },
+                    acep: {
+                        name: 'ALMATY COLLEGE OF ECONOMICS, LAW AND PEDAGOGY',
+                        summary: 'The ENACTUS team from Almaty College of Economics, Law and Pedagogy developed a project aimed at advancing modern agrotechnologies and preparing qualified specialists.',
+                        projectOneTitle: 'AgroDrone Education & Service Center',
+                        projectOneDesc: 'An educational and technical center that trains agricultural drone pilots and provides maintenance services for agri-drones. The project is focused on advancing agri-drone technologies and preparing specialists for modern agriculture.'
+                    },
+                    caspian: {
+                        name: 'COLLEGE OF CASPIAN UNIVERSITY',
+                        summary: 'The ENACTUS team from College of Caspian University developed projects aimed at smart city development and improving urban safety.',
+                        projectOneTitle: 'AQYL CITY',
+                        projectOneDesc: 'A smart city platform that unifies Almaty’s urban data into one system. It supports city planning, helps businesses choose optimal locations, and provides environmental monitoring, while an AI assistant simplifies complex data into clear insights.',
+                        projectTwoTitle: 'SAFE CITY WOMEN',
+                        projectTwoDesc: 'A comprehensive urban safety system for women. It includes SOS features, an AI risk map with safe routes, and a network of Safe Points.'
+                    },
+                    tourism: {
+                        name: 'COLLEGE OF TOURISM AND HOSPITALITY',
+                        summary: 'The team from College of Tourism and Hospitality Industry developed a project aimed at advancing sustainable tourism and preserving natural heritage.',
+                        projectOneTitle: 'Almaty Aport: Natural Heritage and Sustainable Tourism Brand',
+                        projectOneDesc: 'An initiative that combines an environmental mission, educational value, and a sustainable business approach. The project contributes to regional development, preservation of natural heritage, and the formation of a new generation of environmentally conscious and responsible citizens.'
+                    }
+                }
+            },
+            schoolCup: {
+                title: 'FINALISTS OF THE VII REPUBLICAN SCHOOL ENTREPRENEURSHIP CHAMPIONSHIP ENACTUS KAZAKHSTAN 2026',
+                items: {
+                    nis20: {
+                        name: 'NIS ASTANA 20',
+                        summary: 'The ENACTUS team from Nazarbayev Intellectual School, Astana city, Team №20 developed an innovative assistive device for people with speech impairments.',
+                        projectOneTitle: 'Project: VoiceX',
+                        projectOneDesc: 'VoiceX is a wearable assistive device designed to restore speech for people with voice impairments. It captures micro-vibrations and muscle signals from the throat, processes them using AI, and converts them into natural, personalized speech in real time.'
+                    },
+                    nis5: {
+                        name: 'NIS ASTANA 5',
+                        summary: 'The ENACTUS team from Nazarbayev Intellectual School, Astana city, Team №5 developed an innovative medical device to support people with motor impairments.',
+                        projectOneTitle: 'VibraFix',
+                        projectOneDesc: 'A wearable vibrotactile neurostimulation device designed to reduce hand tremors in patients with essential tremor, Parkinson’s disease, and post-stroke motor impairments. It helps detect tremor patterns in real time and reduce their impact.'
+                    },
+                    nisSemey1: {
+                        name: 'NIS SEMEY 1',
+                        summary: 'The ENACTUS team from Nazarbayev Intellectual School, Semey city, Team №1 developed digital educational solutions aimed at supporting inclusion and strengthening language skills.',
+                        projectOneTitle: 'Qyran',
+                        projectOneDesc: 'A platform for translating sign language. It helps people with hearing and speech impairments communicate more freely and supports accessible, inclusive communication.',
+                        projectTwoTitle: 'Qabylan',
+                        projectTwoDesc: 'An educational platform for learning the Kazakh language. It is designed to simplify the learning process and strengthen command of the state language through modern digital tools.'
+                    },
+                    nisShymkent: {
+                        name: 'NIS SHYMKENT KARATAU',
+                        summary: 'The team from Nazarbayev Intellectual School, Shymkent city, Team №2 developed an innovative solution to improve aviation safety.',
+                        projectOneTitle: 'Project: Clear Flight',
+                        projectOneDesc: 'An AI-based bird strike prevention system for airports. It uses a drone with camera, Raspberry Pi, and Arduino to detect birds in real time and safely deter them with bioacoustic or ultrasonic signals.'
+                    }
+                }
+            },
+            juniorLeague: {
+                title: 'JUNIOR LEAGUE: PROJECT PITCHING FOR SCHOOLCHILDREN AGED 9-14',
+                items: {
+                    aquashield: {
+                        name: 'I PLACE - NATIONAL SCHOOL OF BUSINESS AND ENGINEERING, ASTANA',
+                        summary: 'Junior League finalist from National School of Business and Engineering, Astana.',
+                        projectOneTitle: 'Project: AQUASHEILD',
+                        projectOneDesc: 'A project presented in the Junior League pitching competition for schoolchildren aged 9-14.'
+                    },
+                    airlight: {
+                        name: 'II PLACE - NATIONAL SCHOOL OF BUSINESS AND ENGINEERING, ASTANA',
+                        summary: 'Junior League finalist from National School of Business and Engineering, Astana.',
+                        projectOneTitle: 'Project: AIRLIGHT',
+                        projectOneDesc: 'A project presented in the Junior League pitching competition for schoolchildren aged 9-14.'
+                    },
+                    ecobus: {
+                        name: 'III PLACE - DINEL MUKHAMETOVA, GYMNASIUM №36 NAMED AFTER B. ATYKHANULY, ALMATY',
+                        summary: 'Junior League finalist from Almaty.',
+                        projectOneTitle: 'Project: ECO BUS STOP ALMATY',
+                        projectOneDesc: 'A project presented in the Junior League pitching competition for schoolchildren aged 9-14.'
+                    },
+                    amanat: {
+                        name: 'IV PLACE - SPECIALIZED MATHEMATICAL LYCEUM №90, ALMATY EDUCATION DEPARTMENT',
+                        summary: 'Junior League finalist from Almaty.',
+                        projectOneTitle: 'Project: AMANAT',
+                        projectOneDesc: 'A project presented in the Junior League pitching competition for schoolchildren aged 9-14.'
+                    },
+                    rainbow: {
+                        name: 'V PLACE - KAZGASA SCHOOL, GYMNASIUM №56 NAMED AFTER K. SATPAYEV, ALMATY',
+                        summary: 'Junior League finalist from Almaty.',
+                        projectOneTitle: 'Project: RAINBOW',
+                        projectOneDesc: 'A project presented in the Junior League pitching competition for schoolchildren aged 9-14.'
+                    }
+                }
             }
         },
         news: {
@@ -587,6 +752,7 @@ const messages = {
         partnership: {
             title: 'Partnership',
             officialPartners: 'OFFICIAL PARTNERS',
+            academicPartners: 'ACADEMIC PARTNERS',
             list: {
                 akimat: 'AKIMAT OF ALMATY CITY',
                 ministry: 'MINISTRY OF SCIENCE AND HIGHER EDUCATION OF THE REPUBLIC OF KAZAKHSTAN'
@@ -703,11 +869,12 @@ const messages = {
             partnership: 'Партнерство',
             participants: 'Участникам',
             teams: 'Команды',
-            alumi: 'Выпускники',
+            alumi: 'Ассоциация выпускников',
             camp: 'Enactus Camp',
             roadshow: 'Road Show',
+            createTeamNav: 'Как создать команду',
             competitions: 'Соревнования',
-            news: 'Новости',
+            news: 'СМИ',
             contact: 'Связаться',
             howToCreate: 'Как создать команду?',
             schoolCup: 'Республиканский чемпионат школьного предпринимательства',
@@ -726,7 +893,7 @@ const messages = {
         home: {
             heroTitle: 'WE ALL WIN',
             heroSubtitle: 'Станьте частью студенческого движения, меняющего будущее Казахстана через предпринимательство.',
-            heroSubtitleKz: 'НАЦИОНАЛЬНЫЙ КУБОК ПО ПРЕДПРИНИМАТЕЛЬСТВУ, СТАРТАПАМ <br /> И ИННОВАЦИЯМ СРЕДИ ШКОЛЬНИКОВ И СТУДЕНТОВ <br /> ENACTUS KAZAKHSTAN 2026',
+            heroSubtitleKz: 'МИРОВОЙ КУБОК ПО ПРЕДПРИНИМАТЕЛЬСТВУ, СТАРТАПАМ <br /> И ИННОВАЦИЯМ СРЕДИ СТУДЕНТОВ',
             joinBtn: 'Присоединиться',
             aboutTitlePart1: 'ЧТО ТАКОЕ ',
             aboutTitlePart2: 'ENACTUS?',
@@ -740,8 +907,8 @@ const messages = {
                 seconds: 'СЕКУНД',
             },
             event: {
-                date: '28–29 апреля 2026',
-                location: 'г. Алматы, ул. Тимирязева, 42 к1',
+                date: '16 ноября 2026',
+                location: 'Локация: São Paulo, Brazil.',
             },
             stats: {
                 regions: 'регионов Казахстана',
@@ -751,12 +918,176 @@ const messages = {
             },
         },
         projects: {
-            title: 'Финалисты Лиги World Cup Национального кубка ENACTUS Kazakhstan 2025',
+            title: 'Финалисты Лиги World Cup Национального кубка ENACTUS Kazakhstan 2026',
             items: {
-                amu: { name: 'Astana Medical University', desc: 'ZhanCare — медицинская экосистема нового поколения.' },
-                kaznu: { name: 'КазНУ им. Аль-Фараби', desc: 'Инновационный проект в области экологии и IT.' },
-                narxoz: { name: 'Narxoz University', desc: 'Социальное предпринимательство и поддержка молодежи.' },
-                coll: { name: 'Колледж иностранных языков', desc: 'Образовательная платформа для изучения языков.' }
+                amu: {
+                    name: 'ASTANA IT UNIVERSITY',
+                    summary: 'Команда ENACTUS из Astana IT University разработала инновационные проекты в области медицинского искусственного интеллекта, направленные на поддержку врачей и повышение точности диагностики и лечения.',
+                    projectOneTitle: 'CortexAI',
+                    projectOneDesc: 'Интеллектуальная система, которая помогает медицинским специалистам прогнозировать исходы хирургических операций при трансплантациях, анализируя большие объёмы клинических данных и повышая точность принятия решений.',
+                    projectTwoTitle: 'Omnimammo',
+                    projectTwoDesc: 'ИИ-платформа для раннего выявления рака молочной железы, использующая мультимодальные медицинские данные для обнаружения признаков заболевания на ранних стадиях.'
+                },
+                kaznu: {
+                    name: 'ASTANA MEDICAL UNIVERSITY',
+                    summary: 'Команда ENACTUS из Astana Medical University разработала ряд инновационных решений в области медицинского искусственного интеллекта, направленных на повышение качества жизни людей и раннюю диагностику сложных заболеваний.',
+                    projectOneTitle: 'Visual Mind',
+                    projectOneDesc: 'Интеллектуальная AI-платформа для людей с нарушениями слуха и речи, которая предоставляет перевод жестового языка, помогает в трудоустройстве, обучении и коммуникации со специалистами.',
+                    projectTwoTitle: 'ReMind',
+                    projectTwoDesc: 'Медицинская AI-система для раннего выявления болезни Альцгеймера, деменции и других нейродегенеративных заболеваний с использованием анализа МРТ, а также поддержкой профилактики и реабилитации.'
+                },
+                narxoz: {
+                    name: 'AL-FARABI KAZAKH NATIONAL UNIVERSITY',
+                    summary: 'Команда ENACTUS Al-Farabi Kazakh National University разработала инновационный проект в области устойчивого сельского хозяйства под названием Asyl Zher, направленный на восстановление деградированных и засолённых почв.',
+                    projectOneTitle: 'Asyl Zher',
+                    projectOneDesc: 'Asyl Zher — это технология восстановления почвы, основанная на использовании биоактивного гумат-фосфатного комплекса.'
+                },
+                coll: {
+                    name: 'ZHETYSU UNIVERSITY, TALDYKORGAN',
+                    summary: 'Команда Zhetysu University (Талдыкорган) разработала три агробиотехнологических проекта, направленных на развитие сельского хозяйства и повышение качества продукции.',
+                    projectOneTitle: 'Sweet Rainbow',
+                    projectOneDesc: 'Разноцветная сладкая кукуруза с улучшенным вкусом и повышенной питательной ценностью.',
+                    projectTwoTitle: 'Gallus',
+                    projectTwoDesc: 'Проект по разведению чёрных кур, несущих разноцветные яйца, с улучшенными показателями здоровья, иммунитета и продуктивности.',
+                    projectThreeTitle: 'Obsidian',
+                    projectThreeDesc: 'Высокопитательный сорт кукурузы для кормления птицы, повышающий иммунитет, продуктивность и усвояемость кормов.'
+                }
+            },
+            earlyStage: {
+                title: 'ФИНАЛИСТЫ ЛИГИ EARLY STAGE НАЦИОНАЛЬНОГО КУБКА ENACTUS KAZAKHSTAN 2026',
+                items: {
+                    zhans: {
+                        name: 'ZHANSUGUROV COLLEGE, TALDYKORGAN',
+                        summary: 'Команда Zhansugurov College (Талдыкорган) представила экологически и технологически ориентированные проекты, направленные на устойчивое развитие сельского хозяйства и охрану окружающей среды.',
+                        projectOneTitle: 'ASYL JEM',
+                        projectOneDesc: 'Натуральный и сбалансированный корм для скота, созданный из экологически чистых местных ингредиентов. Он улучшает пищеварение животных, повышает их продуктивность и способствует снижению выбросов метана.',
+                        projectTwoTitle: 'BasQAN',
+                        projectTwoDesc: 'Автономная система на основе искусственного интеллекта, предназначенная для очистки рек и водоёмов. Она обнаруживает и собирает мусор, улучшает качество воды с помощью аэрации и работает на солнечной энергии.'
+                    },
+                    aituCollege: {
+                        name: 'ASTANA IT UNIVERSITY COLLEGE',
+                        summary: 'Команда ENACTUS Astana IT University College разработала инновационные цифровые решения, направленные на поддержку людей и решение экологических проблем.',
+                        projectOneTitle: 'Janarym',
+                        projectOneDesc: 'Мобильный AI-ассистент для людей с нарушениями зрения. Он в реальном времени описывает окружающую среду, читает текст, помогает с навигацией, а также включает функции SOS-оповещения для повышения безопасности и самостоятельной жизни.',
+                        projectTwoTitle: 'FoodSave',
+                        projectTwoDesc: 'Платформа, направленная на сокращение пищевых отходов. Она соединяет бизнесы, у которых остаются излишки еды, с пользователями, которые могут купить её по сниженной цене, делая продукты доступнее и одновременно снижая негативное воздействие на экологию.'
+                    },
+                    coventry: {
+                        name: 'COVENTRY UNIVERSITY KAZAKHSTAN',
+                        summary: 'Команда студентов ENACTUS разработала агропредпринимательский проект Nomad Onim, направленный на развитие сельского хозяйства и поддержку местных фермеров.',
+                        projectOneTitle: 'Nomad Onim',
+                        projectOneDesc: 'Nomad Onim — это экосистема, которая объединяет обучение фермеров и онлайн-платформу для продажи натуральной продукции. Проект связывает студентов, фермеров и покупателей в единую систему, предоставляя обучение, практический опыт и прямой доступ к рынку.'
+                    },
+                    myrzakhmetov: {
+                        name: 'KOKSHETAU UNIVERSITY NAMED AFTER ABAY MYRZAKHMETOV',
+                        summary: 'Команда ENACTUS Kokshetau University имени Абая Мырзахметова разработала ряд инновационных проектов, направленных на поддержку инклюзии, экологической устойчивости и современного образования.',
+                        projectOneTitle: 'SLUH (Sound-based Local Urban Help)',
+                        projectOneDesc: 'Ассистивное технологическое решение для людей с нарушением зрения. Система обеспечивает голосовую навигацию, обнаружение опасностей в реальном времени и экстренную поддержку, помогая безопасно передвигаться в городской среде.',
+                        projectTwoTitle: 'EcoSound',
+                        projectTwoDesc: 'Проект циркулярной экономики, который превращает алюминиевые отходы в музыкальные инструменты. Инициатива объединяет экологичность, образование и творческий подход.',
+                        projectThreeTitle: 'BilimTime',
+                        projectThreeDesc: 'Инклюзивная EdTech-платформа, использующая VR и AI для персонализированного обучения и повышения доступности образования.'
+                    }
+                }
+            },
+            collegeCup: {
+                title: 'ФИНАЛИСТЫ III КУБКА ПРЕДПРИНИМАТЕЛЬСТВА СРЕДИ СТУДЕНТОВ КОЛЛЕДЖЕЙ НАЦИОНАЛЬНОГО КУБКА ENACTUS KAZAKHSTAN 2026',
+                items: {
+                    acst: {
+                        name: 'ALMATY COLLEGE OF SERVICE AND TECHNOLOGY',
+                        summary: 'Команда ENACTUS Almaty College of Service and Technology разработала инновационные проекты, направленные на экологическую устойчивость и развитие инклюзивного образования в Казахстане.',
+                        projectOneTitle: 'BioCraft',
+                        projectOneDesc: 'Экологический проект, который перерабатывает сельскохозяйственные отходы в биоразлагаемые изделия на основе мицелия, такие как чашки. Это помогает снизить загрязнение пластиком и превращает отходы в полезный и устойчивый ресурс.',
+                        projectTwoTitle: 'Smart AI',
+                        projectTwoDesc: 'Образовательная AI-платформа, создающая персонализированные траектории обучения, особенно для студентов с особыми образовательными потребностями. Система повышает доступность образования и улучшает результаты обучения.'
+                    },
+                    acep: {
+                        name: 'ALMATY COLLEGE OF ECONOMICS, LAW AND PEDAGOGY',
+                        summary: 'Команда ENACTUS Almaty College of Economics, Law and Pedagogy разработала проект, направленный на развитие современных агротехнологий и подготовку квалифицированных специалистов.',
+                        projectOneTitle: 'AgroDrone Education & Service Center',
+                        projectOneDesc: 'Это образовательный и технический центр, который обучает операторов сельскохозяйственных дронов и предоставляет услуги по их обслуживанию. Проект направлен на развитие агродрон-технологий и подготовку специалистов для современного сельского хозяйства.'
+                    },
+                    caspian: {
+                        name: 'COLLEGE OF CASPIAN UNIVERSITY',
+                        summary: 'Команда ENACTUS College of Caspian University разработала проекты, направленные на развитие «умного города» и повышение безопасности городской среды.',
+                        projectOneTitle: 'AQYL CITY',
+                        projectOneDesc: 'Платформа «умного города», объединяющая городские данные Алматы в единую систему. Она помогает в городском планировании, выборе оптимальных локаций для бизнеса и экологическом мониторинге, а также упрощает сложную информацию с помощью AI-ассистента, превращая её в понятные аналитические выводы.',
+                        projectTwoTitle: 'SAFE CITY WOMEN',
+                        projectTwoDesc: 'Комплексная система безопасности для женщин в городской среде. Она включает SOS-функции, AI-карту рисков с безопасными маршрутами и сеть безопасных точек.'
+                    },
+                    tourism: {
+                        name: 'COLLEGE OF TOURISM AND HOSPITALITY',
+                        summary: 'Команда College of Tourism and Hospitality Industry разработала проект, направленный на развитие устойчивого туризма и сохранение природного наследия.',
+                        projectOneTitle: 'Almaty Aport: Natural Heritage and Sustainable Tourism Brand',
+                        projectOneDesc: 'Инициатива, которая объединяет экологическую миссию, образовательную ценность и устойчивый бизнес-подход. Проект способствует развитию региона, сохранению природного наследия и формированию нового поколения экологически осознанных и ответственных граждан.'
+                    }
+                }
+            },
+            schoolCup: {
+                title: 'ФИНАЛИСТЫ VII РЕСПУБЛИКАНСКОГО ЧЕМПИОНАТА ШКОЛЬНОГО ПРЕДПРИНИМАТЕЛЬСТВА ENACTUS KAZAKHSTAN 2026',
+                items: {
+                    nis20: {
+                        name: 'NIS ASTANA 20',
+                        summary: 'Команда ENACTUS Nazarbayev Intellectual School (г. Астана), Team №20, разработала инновационное ассистивное устройство для людей с нарушениями речи.',
+                        projectOneTitle: 'Project: VoiceX',
+                        projectOneDesc: 'VoiceX — носимое устройство, предназначенное для восстановления способности говорить. Оно улавливает микровибрации и мышечные сигналы горла, обрабатывает их с помощью искусственного интеллекта и преобразует в естественную, персонализированную речь в режиме реального времени.'
+                    },
+                    nis5: {
+                        name: 'NIS ASTANA 5',
+                        summary: 'Команда ENACTUS Nazarbayev Intellectual School (г. Астана), Team №5, разработала инновационное медицинское устройство для поддержки людей с двигательными нарушениями.',
+                        projectOneTitle: 'VibraFix',
+                        projectOneDesc: 'Носимое устройство вибротактильной нейростимуляции, предназначенное для уменьшения тремора рук у пациентов с эссенциальным тремором, болезнью Паркинсона и постинсультными двигательными нарушениями.'
+                    },
+                    nisSemey1: {
+                        name: 'NIS SEMEY 1',
+                        summary: 'Команда ENACTUS Nazarbayev Intellectual School (г. Семей), Team №1, разработала цифровые образовательные решения, направленные на поддержку инклюзии и развитие языковых навыков.',
+                        projectOneTitle: 'Qyran',
+                        projectOneDesc: 'Платформа для перевода жестового языка. Она помогает людям с нарушениями слуха и речи свободно общаться, обеспечивая более доступную и инклюзивную коммуникацию.',
+                        projectTwoTitle: 'Qabylan',
+                        projectTwoDesc: 'Образовательная платформа для изучения казахского языка. Она направлена на упрощение процесса обучения и повышение уровня владения государственным языком через современные цифровые инструменты.'
+                    },
+                    nisShymkent: {
+                        name: 'NIS SHYMKENT KARATAU',
+                        summary: 'Команда Nazarbayev Intellectual School (г. Шымкент), Team №2, разработала инновационное решение для повышения авиационной безопасности.',
+                        projectOneTitle: 'Project: Clear Flight',
+                        projectOneDesc: 'Это система предотвращения столкновений птиц с самолётами на базе искусственного интеллекта. Она использует дрон с камерой, а также платформы Raspberry Pi и Arduino для обнаружения птиц в реальном времени. После выявления угрозы система безопасно отпугивает птиц с помощью биоакустических или ультразвуковых сигналов.'
+                    }
+                }
+            },
+            juniorLeague: {
+                title: 'JUNIOR LEAGUE: ПИТЧИНГ ПРОЕКТОВ ШКОЛЬНИКОВ 9-14 ЛЕТ',
+                items: {
+                    aquashield: {
+                        name: 'I МЕСТО - NATIONAL SCHOOL OF BUSINESS AND ENGINEERING, ASTANA',
+                        summary: 'Финалист Junior League от National School of Business and Engineering, Астана.',
+                        projectOneTitle: 'Проект: AQUASHEILD',
+                        projectOneDesc: 'Проект, представленный в рамках Junior League среди школьников 9-14 лет.'
+                    },
+                    airlight: {
+                        name: 'II МЕСТО - NATIONAL SCHOOL OF BUSINESS AND ENGINEERING, ASTANA',
+                        summary: 'Финалист Junior League от National School of Business and Engineering, Астана.',
+                        projectOneTitle: 'Проект: AIRLIGHT',
+                        projectOneDesc: 'Проект, представленный в рамках Junior League среди школьников 9-14 лет.'
+                    },
+                    ecobus: {
+                        name: 'III МЕСТО - ДИНЕЛЬ МУХАМЕТОВА, ГИМНАЗИЯ №36 ИМЕНИ Б. АТЫХАНУЛЫ, Г. АЛМАТЫ',
+                        summary: 'Финалист Junior League из Алматы.',
+                        projectOneTitle: 'Проект: ECO BUS STOP ALMATY',
+                        projectOneDesc: 'Проект, представленный в рамках Junior League среди школьников 9-14 лет.'
+                    },
+                    amanat: {
+                        name: 'IV МЕСТО - СПЕЦИАЛИЗИРОВАННЫЙ МАТЕМАТИЧЕСКИЙ ЛИЦЕЙ №90 УПРАВЛЕНИЯ ОБРАЗОВАНИЯ ГОРОДА АЛМАТЫ',
+                        summary: 'Финалист Junior League из Алматы.',
+                        projectOneTitle: 'Проект: AMANAT',
+                        projectOneDesc: 'Проект, представленный в рамках Junior League среди школьников 9-14 лет.'
+                    },
+                    rainbow: {
+                        name: 'V МЕСТО - KAZGASA SCHOOL, ГИМНАЗИЯ №56 ИМЕНИ К. САТПАЕВА, Г. АЛМАТЫ',
+                        summary: 'Финалист Junior League из Алматы.',
+                        projectOneTitle: 'Проект: RAINBOW',
+                        projectOneDesc: 'Проект, представленный в рамках Junior League среди школьников 9-14 лет.'
+                    }
+                }
             }
         },
         news: {
@@ -1243,6 +1574,7 @@ const messages = {
         partnership: {
             title: 'Партнёрство',
             officialPartners: 'ОФИЦИАЛЬНЫЕ ПАРТНЁРЫ',
+            academicPartners: 'АКАДЕМИЧЕСКИЕ ПАРТНЁРЫ',
             list: {
                 akimat: 'АКИМАТ ГОРОДА АЛМАТЫ',
                 ministry: 'МИНИСТЕРСТВО НАУКИ И ВЫСШЕГО ОБРАЗОВАНИЯ РЕСПУБЛИКИ КАЗАХСТАН'
@@ -1309,7 +1641,7 @@ const messages = {
                     role: 'Директор Центра политических исследований, AlmaU'
                 },
                 yerlan: {
-                    name: 'GALIYA MYAMESHEVA',
+                    name: 'YERLAN KARIMOV',
                     role: 'Советник в международной компании ARETERA PUBLIC AFFAIRS'
                 },
                 gulsim: {
@@ -1361,8 +1693,9 @@ const messages = {
             alumi: 'Түлектер',
             camp: 'Enactus Camp',
             roadshow: 'Road Show',
+            createTeamNav: 'Команда қалай құрылады',
             competitions: 'Жарыстар',
-            news: 'Жаңалықтар',
+            news: 'БАҚ',
             contact: 'Байланысу',
             howToCreate: 'Команданы қалай құруға болады?',
             schoolCup: 'Республикалық мектеп кәсіпкерлігі чемпионаты',
@@ -1381,7 +1714,7 @@ const messages = {
         home: {
             heroTitle: 'WE ALL WIN',
             heroSubtitle: 'Кәсіпкерлік арқылы Қазақстанның болашағын өзгертетін студенттік қозғалыстың бір бөлігі бол.',
-            heroSubtitleKz: 'МЕКТЕП ОҚУШЫЛАРЫ МЕН СТУДЕНТТЕР АРАСЫНДА КӘСІПКЕРЛІК, <br /> СТАРТАПТАР ЖӘНЕ ИННОВАЦИЯЛАР БОЙЫНША ENACTUS KAZAKHSTAN 2026 <br /> ҰЛТТЫҚ КУБОГІ',
+            heroSubtitleKz: 'СТУДЕНТТЕР АРАСЫНДАҒЫ КӘСІПКЕРЛІК, СТАРТАПТАР <br /> ЖӘНЕ ИННОВАЦИЯЛАР БОЙЫНША ӘЛЕМ КУБОГІ',
             joinBtn: 'Бізге қосыл',
             aboutTitlePart1: 'ENACTUS ',
             aboutTitlePart2: 'ДЕГЕНІМІЗ НЕ?',
@@ -1395,8 +1728,8 @@ const messages = {
                 seconds: 'СЕКУНД',
             },
             event: {
-                date: '28–29 сәуір 2026',
-                location: 'Алматы қаласы, Тимирязев көшесі, 42 к1',
+                date: '2026 жылғы 16 қараша',
+                location: 'Локация: São Paulo, Brazil.',
             },
             stats: {
                 regions: 'Қазақстан аймақтары',
@@ -1406,12 +1739,176 @@ const messages = {
             },
         },
         projects: {
-            title: 'ENACTUS KAZAKHSTAN 2025 Ұлттық кубогының World Cup лигасының финалисттері',
+            title: 'ENACTUS KAZAKHSTAN 2026 Ұлттық кубогының World Cup лигасының финалисттері',
             items: {
-                amu: { name: 'Астана медицина университеті', desc: 'ZhanCare — жаңа буын медициналық экожүйесі.' },
-                kaznu: { name: 'Әл-Фараби атындағы ҚазҰУ', desc: 'Экология және IT саласындағы инновациялық жоба.' },
-                narxoz: { name: 'Нархоз Университеті', desc: 'Әлеуметтік кәсіпкерлік және жастарды қолдау.' },
-                coll: { name: 'Шет тілдер колледжі', desc: 'Тілдерді үйренуге арналған білім беру платформасы.' }
+                amu: {
+                    name: 'ASTANA IT UNIVERSITY',
+                    summary: 'Astana IT University-дің ENACTUS командасы медицина саласындағы жасанды интеллектке негізделген инновациялық жобаларды әзірледі. Бұл жобалар дәрігерлерге қолдау көрсетуге және диагностика мен емдеу дәлдігін арттыруға бағытталған.',
+                    projectOneTitle: 'CortexAI',
+                    projectOneDesc: 'Трансплантация жағдайларындағы хирургиялық операциялардың нәтижесін клиникалық деректердің үлкен көлемін талдау арқылы болжауға көмектесетін интеллектуалды жүйе.',
+                    projectTwoTitle: 'Omnimammo',
+                    projectTwoDesc: 'Сүт безі обырын ерте анықтауға арналған, мультимодальды медициналық деректерді пайдаланып ауру белгілерін бастапқы кезеңде байқауға мүмкіндік беретін жасанды интеллект платформасы.'
+                },
+                kaznu: {
+                    name: 'ASTANA MEDICAL UNIVERSITY',
+                    summary: 'ENACTUS Astana Medical University командасы адам өмір сапасын жақсартуға және күрделі ауруларды ерте анықтауға бағытталған жасанды интеллект саласындағы бірқатар инновациялық шешімдерді әзірледі.',
+                    projectOneTitle: 'Visual Mind',
+                    projectOneDesc: 'Есту және сөйлеу қабілеті бұзылған адамдарға арналған интеллектуалды AI-платформа. Жүйе ым-ишара тілін аудару мүмкіндігін ұсынып, жұмысқа орналасуға, білім алуға және мамандармен байланыс орнатуға көмектеседі.',
+                    projectTwoTitle: 'ReMind',
+                    projectTwoDesc: 'Альцгеймер ауруы, деменция және басқа да нейродегенеративті ауруларды МРТ талдауы арқылы ерте кезеңде анықтауға, сондай-ақ профилактика мен оңалтуға қолдау көрсетуге арналған медициналық AI-жүйе.'
+                },
+                narxoz: {
+                    name: 'AL-FARABI KAZAKH NATIONAL UNIVERSITY',
+                    summary: 'Al-Farabi атындағы Қазақ ұлттық университетінің командасы тұрақты ауыл шаруашылығын дамытуға бағытталған Asyl Zher атты инновациялық жобаны әзірледі. Бұл жоба деградацияға ұшыраған және тұзданған топырақтарды қалпына келтіруге арналған.',
+                    projectOneTitle: 'Asyl Zher',
+                    projectOneDesc: 'Asyl Zher — биоактивті гумат-фосфат негізіндегі топырақты қалпына келтіру технологиясы. Ол тозған жерлердің сапасын жақсартып, ауыл шаруашылығы дақылдарының өнімділігін арттырады, топырақта ылғалды сақтауға көмектеседі.'
+                },
+                coll: {
+                    name: 'ZHETYSU UNIVERSITY, TALDYKORGAN',
+                    summary: 'Zhetysu University (Талдықорған) командасы ауыл шаруашылығын дамытуға және өнім сапасын арттыруға бағытталған үш агробиотехнологиялық жобаны әзірледі.',
+                    projectOneTitle: 'Sweet Rainbow',
+                    projectOneDesc: 'Дәмі жақсартылған және тағамдық құндылығы жоғары түрлі-түсті тәтті жүгері сорты.',
+                    projectTwoTitle: 'Gallus',
+                    projectTwoDesc: 'Қара тауықтарды өсіруге негізделген жоба, олар түрлі-түсті жұмыртқа береді және иммунитеті мен өнімділігі жоғары.',
+                    projectThreeTitle: 'Obsidian',
+                    projectThreeDesc: 'Құс жеміне арналған жоғары қоректік жүгері сорты, ол иммунитетті күшейтіп, өнімділікті арттырады және қоректің жақсы сіңуін қамтамасыз етеді.'
+                }
+            },
+            earlyStage: {
+                title: 'ENACTUS KAZAKHSTAN 2026 ҰЛТТЫҚ КУБОГЫНЫҢ EARLY STAGE ЛИГАСЫНЫҢ ФИНАЛИСТТЕРІ',
+                items: {
+                    zhans: {
+                        name: 'ZHANSUGUROV COLLEGE, TALDYKORGAN',
+                        summary: 'Zhansugurov College (Талдықорған) командасы ауыл шаруашылығы мен экологияны дамытуға бағытталған инновациялық жобаларды ұсынды.',
+                        projectOneTitle: 'ASYL JEM',
+                        projectOneDesc: 'Жергілікті экологиялық таза ингредиенттерден жасалған табиғи және теңгерімді мал азығы. Ол жануарлардың ас қорытуын жақсартып, өнімділікті арттырады және метан шығарындыларын азайтуға көмектеседі.',
+                        projectTwoTitle: 'BasQAN',
+                        projectTwoDesc: 'Жасанды интеллектке негізделген автономды жүйе. Ол өзендер мен су қоймаларын қоқыстан тазартып, ластануды анықтап жинайды, судың сапасын аэрация арқылы жақсартады және күн энергиясымен жұмыс істейді.'
+                    },
+                    aituCollege: {
+                        name: 'ASTANA IT UNIVERSITY COLLEGE',
+                        summary: 'ENACTUS Astana IT University College командасы адамдарды қолдауға және экологиялық мәселелерді шешуге бағытталған инновациялық цифрлық шешімдерді дайындады.',
+                        projectOneTitle: 'Janarym',
+                        projectOneDesc: 'Көру қабілеті бұзылған адамдарға арналған мобильді AI-ассистент. Ол қоршаған ортаны нақты уақытта сипаттайды, мәтінді оқиды, навигацияға көмектеседі, сондай-ақ қауіпсіздікті арттыру үшін SOS хабарлау функцияларын қамтиды, бұл адамның өз бетінше өмір сүруін жеңілдетеді.',
+                        projectTwoTitle: 'FoodSave',
+                        projectTwoDesc: 'Тағам қалдықтарын азайтуға арналған платформа. Ол артық азық-түлігі бар бизнес пен оны төмен бағамен сатып ала алатын пайдаланушыларды байланыстырады, осылайша азық-түлікті қолжетімді етіп, қоршаған ортаға түсетін зиянды азайтады.'
+                    },
+                    coventry: {
+                        name: 'COVENTRY UNIVERSITY KAZAKHSTAN',
+                        summary: 'ENACTUS Coventry University Kazakhstan командасы ауыл шаруашылығын дамытуға және жергілікті фермерлерді қолдауға бағытталған Nomad Onim агропредпринимательдік жобасын әзірледі.',
+                        projectOneTitle: 'Nomad Onim',
+                        projectOneDesc: 'Nomad Onim — фермерлерді оқытуды және табиғи өнімдерді сатуға арналған онлайн платформаны біріктіретін экожүйе. Жоба білім алушыларды, фермерлерді және тұтынушыларды бір жүйеге біріктіріп, білім беру, практикалық тәжірибе және нарыққа тікелей шығу мүмкіндігін ұсынады.'
+                    },
+                    myrzakhmetov: {
+                        name: 'KOKSHETAU UNIVERSITY NAMED AFTER ABAY MYRZAKHMETOV',
+                        summary: 'ENACTUS командасы Kokshetau University имени Абая Мырзахметова инклюзивтілік, экологиялық тұрақтылық және заманауи білім беруді дамытуға бағытталған бірқатар инновациялық жобаларды әзірледі.',
+                        projectOneTitle: 'SLUH (Sound-based Local Urban Help)',
+                        projectOneDesc: 'Көру қабілеті бұзылған адамдарға арналған көмекші технология. Жүйе дауыстық навигацияны, нақты уақыттағы қауіптерді анықтауды және шұғыл көмек функцияларын қамтып, қалалық ортада қауіпсіз қозғалысты қамтамасыз етеді.',
+                        projectTwoTitle: 'EcoSound',
+                        projectTwoDesc: 'Айналмалы экономикаға негізделген жоба. Ол алюминий қалдықтарын музыкалық аспаптарға айналдырып, экологияны, білім беруді және шығармашылықты біріктіреді.',
+                        projectThreeTitle: 'BilimTime',
+                        projectThreeDesc: 'VR және AI технологияларын қолданатын инклюзивті EdTech-платформа. Ол оқытуды жекелендіріп, білімнің қолжетімділігін арттыруға бағытталған.'
+                    }
+                }
+            },
+            collegeCup: {
+                title: 'ENACTUS KAZAKHSTAN 2026 ҰЛТТЫҚ КУБОГЫ АЯСЫНДАҒЫ КОЛЛЕДЖ СТУДЕНТТЕРІ АРАСЫНДАҒЫ III КӘСІПКЕРЛІК КУБОГЫНЫҢ ФИНАЛИСТТЕРІ',
+                items: {
+                    acst: {
+                        name: 'ALMATY COLLEGE OF SERVICE AND TECHNOLOGY',
+                        summary: 'Almaty College of Service and Technology ENACTUS командасы экологияны қорғау және инклюзивті білім беруді дамытуға бағытталған инновациялық жобаларды әзірледі.',
+                        projectOneTitle: 'BioCraft',
+                        projectOneDesc: 'Ауыл шаруашылығы қалдықтарын мицелий негізіндегі биоыдырайтын өнімдерге, мысалы, стақандарға айналдыратын экологиялық жоба. Бұл пластик қалдықтарын азайтып, қалдықтарды пайдалы ресурсқа айналдырады.',
+                        projectTwoTitle: 'Smart AI',
+                        projectTwoDesc: 'Жасанды интеллектке негізделген білім беру платформасы. Ол әр студентке жеке оқу жолын ұсынып, ерекше білім беру қажеттіліктері бар оқушыларға қолдау көрсетеді, білімнің қолжетімділігін арттырады.'
+                    },
+                    acep: {
+                        name: 'ALMATY COLLEGE OF ECONOMICS, LAW AND PEDAGOGY',
+                        summary: 'ENACTUS Almaty College of Economics, Law and Pedagogy командасы заманауи агротехнологияларды дамытуға және білікті мамандар даярлауға бағытталған жобаны әзірледі.',
+                        projectOneTitle: 'AgroDrone Education & Service Center',
+                        projectOneDesc: 'Ауыл шаруашылығына арналған дрон операторларын оқытатын және агродрондарға техникалық қызмет көрсететін білім беру және техникалық орталық. Жобаның мақсаты — агротехнологияларды дамыту және заманауи ауыл шаруашылығы үшін білікті мамандар даярлау.'
+                    },
+                    caspian: {
+                        name: 'COLLEGE OF CASPIAN UNIVERSITY',
+                        summary: 'ENACTUS College of Caspian University командасы «ақылды қала» дамыту және қала қауіпсіздігін арттыруға бағытталған жобаларды әзірледі.',
+                        projectOneTitle: 'AQYL CITY',
+                        projectOneDesc: 'Алматы қаласының деректерін бір жүйеге біріктіретін ақылды қала платформасы. Ол қала жоспарлауына, бизнес үшін тиімді орындарды таңдауға және экологиялық мониторингке көмектеседі, ал AI-ассистент күрделі деректерді қарапайым әрі түсінікті ақпаратқа айналдырады.',
+                        projectTwoTitle: 'SAFE CITY WOMEN',
+                        projectTwoDesc: 'Әйелдердің қаладағы қауіпсіздігін қамтамасыз ететін кешенді жүйе. Ол SOS функцияларын, қауіпсіз маршруттарды көрсететін AI-қауіп картасын және Safe Point желісін қамтиды.'
+                    },
+                    tourism: {
+                        name: 'COLLEGE OF TOURISM AND HOSPITALITY',
+                        summary: 'College of Tourism and Hospitality Industry командасы тұрақты туризмді дамыту және табиғи мұраны сақтау мақсатында жоба әзірледі.',
+                        projectOneTitle: 'Almaty Aport: Natural Heritage and Sustainable Tourism Brand',
+                        projectOneDesc: 'Экологиялық миссияны, білім беру құндылығын және тұрақты бизнес тәсілін біріктіретін жоба. Ол өңірдің дамуына, табиғи мұраны сақтауға және экологиялық жауапты жаңа ұрпақ қалыптастыруға ықпал етеді.'
+                    }
+                }
+            },
+            schoolCup: {
+                title: 'ENACTUS KAZAKHSTAN 2026 VII РЕСПУБЛИКАЛЫҚ МЕКТЕП КӘСІПКЕРЛІГІ ЧЕМПИОНАТЫНЫҢ ФИНАЛИСТТЕРІ',
+                items: {
+                    nis20: {
+                        name: 'NIS ASTANA 20',
+                        summary: 'Астана қаласындағы Nazarbayev Intellectual School, Team №20 ENACTUS командасы сөйлеу қабілеті бұзылған адамдарға арналған инновациялық көмекші құрылғыны әзірледі.',
+                        projectOneTitle: 'Project: VoiceX',
+                        projectOneDesc: 'VoiceX — сөйлеу қабілетін қалпына келтіруге арналған киілетін көмекші құрылғы. Ол тамақ аймағындағы микродірілдер мен бұлшықет сигналдарын қабылдап, жасанды интеллект көмегімен өңдейді де, оларды нақты уақытта табиғи әрі жекелендірілген сөйлеуге айналдырады.'
+                    },
+                    nis5: {
+                        name: 'NIS ASTANA 5',
+                        summary: 'ENACTUS Nazarbayev Intellectual School (Астана қаласы), Team №5 командасы қозғалыс бұзылыстары бар адамдарға арналған инновациялық медициналық құрылғыны әзірледі.',
+                        projectOneTitle: 'VibraFix',
+                        projectOneDesc: 'Қол дірілін азайтуға арналған киілетін вибротактильді нейростимуляция құрылғысы. Ол эссенциалды тремор, Паркинсон ауруы және инсульттан кейінгі қозғалыс бұзылыстары бар науқастарға көмектеседі.'
+                    },
+                    nisSemey1: {
+                        name: 'NIS SEMEY 1',
+                        summary: 'ENACTUS Nazarbayev Intellectual School (Семей қаласы), Team №1 командасы инклюзияны қолдау және тіл үйренуді дамытуға бағытталған цифрлық білім беру шешімдерін әзірледі.',
+                        projectOneTitle: 'Qyran',
+                        projectOneDesc: 'Ым-ишара тілін аударуға арналған платформа. Ол есту және сөйлеу қабілеті бұзылған адамдарға еркін қарым-қатынас жасауға көмектесіп, қолжетімді коммуникацияны қамтамасыз етеді.',
+                        projectTwoTitle: 'Qabylan',
+                        projectTwoDesc: 'Қазақ тілін үйренуге арналған білім беру платформасы. Ол заманауи цифрлық құралдар арқылы тілді меңгеру процесін жеңілдетуге және мемлекеттік тілді дамытуға бағытталған.'
+                    },
+                    nisShymkent: {
+                        name: 'NIS SHYMKENT KARATAU',
+                        summary: 'Nazarbayev Intellectual School (Шымкент қаласы), Team №2 командасы авиациялық қауіпсіздікті арттыруға бағытталған инновациялық шешім әзірледі.',
+                        projectOneTitle: 'Project: Clear Flight',
+                        projectOneDesc: 'Әуежайларда құстардың ұшақпен соқтығысуын болдырмайтын жасанды интеллектке негізделген жүйе. Ол камерасы бар дронды, Raspberry Pi және Arduino платформаларын қолданып, құстарды нақты уақытта анықтайды. Қауіп анықталған жағдайда жүйе биоакустикалық немесе ультрадыбыстық сигналдар арқылы құстарды қауіпсіз түрде үркітеді.'
+                    }
+                }
+            },
+            juniorLeague: {
+                title: 'JUNIOR LEAGUE: 9-14 ЖАС АРАЛЫҒЫНДАҒЫ ОҚУШЫЛАРДЫҢ ЖОБА ПИТЧИНГІ',
+                items: {
+                    aquashield: {
+                        name: 'I ОРЫН - NATIONAL SCHOOL OF BUSINESS AND ENGINEERING, ASTANA',
+                        summary: 'National School of Business and Engineering, Астана қаласынан Junior League финалисі.',
+                        projectOneTitle: 'Жоба: AQUASHEILD',
+                        projectOneDesc: '9-14 жас аралығындағы оқушыларға арналған Junior League аясында ұсынылған жоба.'
+                    },
+                    airlight: {
+                        name: 'II ОРЫН - NATIONAL SCHOOL OF BUSINESS AND ENGINEERING, ASTANA',
+                        summary: 'National School of Business and Engineering, Астана қаласынан Junior League финалисі.',
+                        projectOneTitle: 'Жоба: AIRLIGHT',
+                        projectOneDesc: '9-14 жас аралығындағы оқушыларға арналған Junior League аясында ұсынылған жоба.'
+                    },
+                    ecobus: {
+                        name: 'III ОРЫН - ДИНЕЛЬ МУХАМЕТОВА, Б. АТЫХАНҰЛЫ АТЫНДАҒЫ №36 ГИМНАЗИЯ, АЛМАТЫ',
+                        summary: 'Алматы қаласынан Junior League финалисі.',
+                        projectOneTitle: 'Жоба: ECO BUS STOP ALMATY',
+                        projectOneDesc: '9-14 жас аралығындағы оқушыларға арналған Junior League аясында ұсынылған жоба.'
+                    },
+                    amanat: {
+                        name: 'IV ОРЫН - АЛМАТЫ ҚАЛАСЫ БІЛІМ БАСҚАРМАСЫНЫҢ №90 МАМАНДАНДЫРЫЛҒАН МАТЕМАТИКАЛЫҚ ЛИЦЕЙІ',
+                        summary: 'Алматы қаласынан Junior League финалисі.',
+                        projectOneTitle: 'Жоба: AMANAT',
+                        projectOneDesc: '9-14 жас аралығындағы оқушыларға арналған Junior League аясында ұсынылған жоба.'
+                    },
+                    rainbow: {
+                        name: 'V ОРЫН - KAZGASA SCHOOL, К. СӘТПАЕВ АТЫНДАҒЫ №56 ГИМНАЗИЯ, АЛМАТЫ',
+                        summary: 'Алматы қаласынан Junior League финалисі.',
+                        projectOneTitle: 'Жоба: RAINBOW',
+                        projectOneDesc: '9-14 жас аралығындағы оқушыларға арналған Junior League аясында ұсынылған жоба.'
+                    }
+                }
             }
         },
         roadshow: {
@@ -1901,6 +2398,7 @@ const messages = {
         partnership: {
             title: 'Серіктестік',
             officialPartners: 'РЕСМИ СЕРІКТЕСТЕР',
+            academicPartners: 'АКАДЕМИЯЛЫҚ СЕРІКТЕСТЕР',
             list: {
                 akimat: 'АЛМАТЫ ҚАЛАСЫНЫҢ ӘКІМДІГІ',
                 ministry: 'ҚАЗАҚСТАН РЕСПУБЛИКАСЫНЫҢ ҒЫЛЫМ ЖӘНЕ ЖОҒАРҒЫ БІЛІМ МИНИСТРЛІГІ'

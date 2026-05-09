@@ -29,6 +29,14 @@
           </div>
         </section>
 
+        <section class="partners-hero">
+          <div class="tier-header partners-bg">
+            <h2>{{ $t('partnership.academicPartners') }}</h2>
+          </div>
+          <div class="partners-grid">
+          </div>
+        </section>
+
         <section class="info-blocks">
           <div class="info-item" v-for="n in 3" :key="n">
             <div class="info-title">

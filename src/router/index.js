@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import Business from '../views/Business.vue'
@@ -21,7 +21,10 @@ import Alumni from "@/views/about/Alumni.vue";
 
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
+  scrollBehavior() {
+    return { top: 0 }
+  },
   routes: [
     {
       path: '/',

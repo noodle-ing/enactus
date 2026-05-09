@@ -87,6 +87,13 @@ const handleImageError = (e) => {
 // Полный список новостей на основе ваших 40 ссылок
 const allNews = [
   {
+    title: 'Enactus Kazakhstan: в Алматы определили лучших молодых предпринимателей',
+    excerpt: 'Победителем World Cup League стала команда Astana IT University, которая представит Казахстан на Enactus World Cup 2026 в Сан-Паулу.',
+    image: '/images/aitu-medical-ai.jpg',
+    url: 'https://total.kz/ru/news/biznes/enactus_kazakhstan_v_almati_opredelili_luchshih_molodih_predprinimatelei_date_2026_05_06',
+    source: 'Total.kz'
+  },
+  {
     title: 'Финал Enactus Kazakhstan National Expo 2021 состоится 18 июня',
     excerpt: 'Студенты и школьники со всего Казахстана соревнуются за титул национального чемпиона Enactus Kazakhstan National Expo 2021.',
     image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800',

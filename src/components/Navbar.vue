@@ -60,6 +60,7 @@
           <transition name="fade">
             <div v-if="isParticipantsOpen" class="dropdown-box">
               <router-link to="/teampage" class="dropdown-item" @click="closeMenu">{{ $t('nav.teams') }}</router-link>
+              <router-link to="/createteam" class="dropdown-item" @click="closeMenu">{{ $t('nav.createTeamNav') }}</router-link>
               <router-link to="/enactus-cup" class="dropdown-item" @click="closeMenu">{{ $t('nav.camp') }}</router-link>
               <router-link to="/road-show" class="dropdown-item" @click="closeMenu">{{ $t('nav.roadshow') }}</router-link>
             </div>

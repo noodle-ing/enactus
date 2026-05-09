@@ -2,14 +2,13 @@
   <div class="home-wrapper">
     <section class="hero">
       <div class="hero-image-container">
-        <img src="/images/mainpage-picture.jpg" alt="Enactus students" class="bg-img" />
+        <img src="/images/mainpage-picture.png" alt="Enactus students" class="bg-img" />
         <div class="overlay"></div>
       </div>
 
       <div class="hero-content">
         <h1 class="hero-title">
-          ENACTUS KAZAKHSTAN <br />
-          NATIONAL COMPETITION 2026
+          ENACTUS WORLD CUP 2026
         </h1>
 
         <p class="hero-subtitle-kz" v-html="$t('home.heroSubtitleKz')"></p>
@@ -38,9 +37,8 @@
             <i class="calendar-icon">📅</i>
             <span>{{ $t('home.event.date') }}</span>
           </div>
-          <div class="info-divider">|</div>
           <div class="info-item">
-            <i class="location-icon">📍</i>
+            <i class="calendar-icon">📍</i>
             <span>{{ $t('home.event.location') }}</span>
           </div>
         </div>
@@ -112,7 +110,7 @@ import ProjectShowcase from '@/components/Home/ProjectShowcase.vue';
 
 // --- Timer Logic ---
 const timeLeft = ref({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-const targetDate = new Date('2026-04-28T09:00:00').getTime();
+const targetDate = new Date('2026-11-16T00:00:00').getTime();
 
 const updateTimer = () => {
   const now = new Date().getTime();

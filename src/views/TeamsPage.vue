@@ -12,9 +12,6 @@
 
         <div class="header-flex">
           <h1 class="page-title">{{ $t('teams.title') }}</h1>
-          <router-link to="/createteam" class="create-team-btn">
-            {{ $t('teams.howToCreate') }}
-          </router-link>
         </div>
 
         <section class="teams-content">

@@ -32,6 +32,7 @@
               <img src="/images/logo-turan.png" alt="Turan" class="logo-md" />
               <div class="logo-group">
                 <img src="/images/logo-kmf.png" alt="KMF" class="logo-sm" />
+                <img src="/images/ab_capital.jpg" alt="KMF" class="logo-sm" />
               </div>
               <img src="/images/logo-kazzinc.jpg" alt="Kazzinc" class="logo-md" />
             </div>
@@ -43,6 +44,7 @@
             </div>
             <div class="logos-grid">
               <img src="/images/white-case.png" alt="White & Case" class="logo-md" />
+              <img src="/images/MCG.png" alt="mcg" class="logo-md" />
             </div>
           </section>
 
