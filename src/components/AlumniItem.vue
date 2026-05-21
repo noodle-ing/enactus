@@ -44,6 +44,7 @@ const images = {
   AMINA:        '/images/alumin/AMINA KENES.png',
   DANIYAL:      '/images/alumin/Daniyal KAKABAYEV.png',
   AIKENZHE:     '/images/alumin/Aikenzhe Zhassulanova.png',
+  ZHANBOTA:     '/images/alumin/IMG_7165.JPG',
 };
 
 const alumniData = {
@@ -76,6 +77,7 @@ const alumniData = {
   AMINA: "AMINA KENES",
   DANIYAL: "DANIYAL KAKABAYEV",
   AIKENZHE: "AIKENZHE ZHASSULANOVA",
+  ZHANBOTA: "ZHANBOTA ANUAR",
 };
 
 const displayName = computed(() => {

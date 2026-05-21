@@ -43,7 +43,7 @@ import AlumniItem from '@/components/AlumniItem.vue';
 
 const row1 = ['yerzhight', 'marina', 'adar', 'maya', 'almas', 'dauren', 'nurbakhyt', 'assel', 'karimzhan', 'aruzhan'];
 const row2 = ['ALIZHAN', 'VLADISLAV', 'ALIYA', 'MUKAGALI', 'TEMIRLAN', 'DIANA', 'ALINA', 'BEKZHAN', 'BENAZIR', 'SULTAN'];
-const row3 = ['ANEL', 'SULEIMEN', 'NAZERKE', 'DAURZHAN', 'TEMIRLAN2', 'ULYKZHAN', 'AMINA', 'DANIYAL', 'AIKENZHE', 'yerzhight'];
+const row3 = ['ANEL', 'SULEIMEN', 'NAZERKE', 'DAURZHAN', 'TEMIRLAN2', 'ULYKZHAN', 'AMINA', 'DANIYAL', 'AIKENZHE', 'ZHANBOTA'];
 </script>
 
 <style scoped>

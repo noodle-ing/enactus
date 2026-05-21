@@ -34,6 +34,8 @@
             <h2>{{ $t('partnership.academicPartners') }}</h2>
           </div>
           <div class="partners-grid">
+            <img src="/images/Ресурс 5.png" alt="Academic Partner" class="partner-logo" />
+            <img src="/images/Ресурс 19.png" alt="Academic Partner" class="partner-logo" />
           </div>
         </section>
 
