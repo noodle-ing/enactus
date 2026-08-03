@@ -79,23 +79,6 @@ const buildDetails = (basePath, projectKeys) => projectKeys.map((projectKey) => 
 
 const localizedProjects = computed(() => [
   {
-    id: 1,
-    name: t('projects.items.amu.name'),
-    summary: t('projects.items.amu.summary'),
-    details: [
-      {
-        title: t('projects.items.amu.projectOneTitle'),
-        desc: t('projects.items.amu.projectOneDesc')
-      },
-      {
-        title: t('projects.items.amu.projectTwoTitle'),
-        desc: t('projects.items.amu.projectTwoDesc')
-      }
-    ],
-    image: '/images/aitu-medical-ai.jpg',
-    fallbackImage: '/images/astanameduni.png'
-  },
-  {
     id: 2,
     name: t('projects.items.kaznu.name'),
     summary: t('projects.items.kaznu.summary'),
