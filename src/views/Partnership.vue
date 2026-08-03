@@ -16,8 +16,10 @@
           <div class="tier-header partners-bg">
             <h2>{{ $t('partnership.officialPartners') }}</h2>
           </div>
-          <div class="partners-grid">
-            <img src="/images/logo-atameken.png" alt="Atameken" class="partner-logo" />
+          <div class="partners-grid partners-grid--right">
+            <div class="partner-item">
+              <img src="/images/logo-atameken.png" alt="Atameken" class="partner-logo" />
+            </div>
             <div class="partner-item">
               <img src="/images/pngegg.png" alt="Almaty Akimat" class="partner-logo" />
               <p>{{ $t('partnership.list.akimat') }}</p>
@@ -33,9 +35,9 @@
           <div class="tier-header partners-bg">
             <h2>{{ $t('partnership.academicPartners') }}</h2>
           </div>
-          <div class="partners-grid">
-            <img src="/images/Ресурс 5.png" alt="Academic Partner" class="partner-logo" />
-            <img src="/images/Ресурс 19.png" alt="Academic Partner" class="partner-logo" />
+          <div class="partners-grid partners-grid--academic">
+            <img src="/images/Ресурс 5.png" alt="Academic Partner" class="partner-logo partner-logo--sm" />
+            <img src="/images/Ресурс 19.png" alt="Academic Partner" class="partner-logo partner-logo--sm" />
           </div>
         </section>
 
@@ -119,6 +121,9 @@ import Footer from '@/components/Footer.vue';
   text-align: center;
 }
 .partner-logo { height: 100px; object-fit: contain; margin-bottom: 10px; }
+.partner-logo--sm { height: 65px; }
+.partners-grid--academic { justify-content: center; gap: 100px; padding-left: calc(10% - 70px); }
+.partners-grid--right { justify-content: space-around; padding-left: 15%; }
 .partner-item { max-width: 300px; }
 .partner-item p { font-size: 12px; font-weight: 700; color: #232323; line-height: 1.2; }
 

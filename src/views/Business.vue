@@ -31,7 +31,7 @@
             <div class="logos-grid platinum-grid">
               <img src="/images/logo-turan.png" alt="Turan" class="logo-md" />
               <div class="logo-group">
-                <img src="/images/logo-kmf.png" alt="KMF" class="logo-sm" />
+                <img src="/images/logo-kmf.png" alt="KMF" class="logo-md" />
                 <img src="/images/ab_capital.jpg" alt="KMF" class="logo-sm" />
               </div>
               <img src="/images/logo-kazzinc.jpg" alt="Kazzinc" class="logo-md" />
@@ -59,7 +59,6 @@
 <!--              <img src="/images/leader.png" alt="Leagder" class="logo-xs" />-->
               <img src="/images/empire.png" alt="Empire" class="logo-xs" />
               <img src="/images/atameken.jpg" alt="Atameken" class="logo-xs" />
-              <img src="/images/kbstech.jpg" alt="KBSTECH" class="logo-xs" />
               <img src="/images/logo-ktcloud.png" alt="KT Cloud Lab" class="logo-md" />
             </div>
           </section>

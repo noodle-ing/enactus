@@ -421,6 +421,7 @@ const messages = {
                         'Innovative Technical College',
                         'Nazarbayev Intellectual School of Physics and Mathematics, Almaty, team №1',
                         'Republican Physics and Mathematics School, Almaty',
+                        'META University',
                     ],
                 },
                 shymkent: {
@@ -1323,6 +1324,7 @@ const messages = {
                         'Инновационный технический колледж',
                         'Назарбаев интеллектуальная школа физико-математического направления г.Алматы, команда №1',
                         'Республиканская физико-математическая школа г.Алматы',
+                        'META University',
                     ],
                 },
                 shymkent: {
@@ -2204,6 +2206,7 @@ const messages = {
                         'Инновациялық техникалық колледж',
                         'Алматы қ. физика-математика бағытындағы Назарбаев Зияткерлік мектебі, №1 команда',
                         'Алматы қ. Республикалық физика-математика мектебі',
+                        'META University',
                     ],
                 },
                 shymkent: {
