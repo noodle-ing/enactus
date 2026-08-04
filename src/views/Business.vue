@@ -44,7 +44,7 @@
             </div>
             <div class="logos-grid">
               <img src="/images/white-case.png" alt="White & Case" class="logo-md" />
-              <img src="/images/MCG.png" alt="mcg" class="logo-md" />
+              <img src="/images/MCG.png" alt="mcg" class="logo-xs" />
             </div>
           </section>
 
