@@ -13,6 +13,9 @@
         <h1 class="page-title">{{ $t('camp.title') }}</h1>
 
         <div class="photo-grid-top">
+          <div class="photo-main photo-first">
+            <img src="/images/IMG_9602.PNG" alt="Enactus Camp Group" class="content-img">
+          </div>
           <div class="photo-main">
             <img src="/images/camp-1.jpg" alt="Enactus Camp Group" class="content-img">
           </div>
@@ -101,8 +104,13 @@ const getYouTubeThumbnail = (url) => {
 </script>
 
 <style scoped>
-.page-wrapper { background-color: #fff; }
-.camp-page { padding: 40px 0 100px; }
+.page-wrapper {
+  background-color: #fff;
+}
+
+.camp-page {
+  padding: 40px 0 100px;
+}
 
 .container {
   max-width: 1100px;
@@ -110,53 +118,164 @@ const getYouTubeThumbnail = (url) => {
   padding: 0 20px;
 }
 
-/* Хлебные крошки */
-.breadcrumbs { font-size: 14px; color: #999; margin-bottom: 20px; display: flex; align-items: center; }
-.breadcrumbs a { text-decoration: none; color: #999; }
-.breadcrumbs .sep { margin: 0 8px; }
-.current { color: #333; pointer-events: none; }
-
-.page-title { font-size: 28px; font-weight: 800; margin-bottom: 40px; }
-
-/* Фотографии */
-.photo-grid-top { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 50px; }
-.content-img { width: 100%; border-radius: 15px; display: block; height: 350px; object-fit: cover; }
-
-/* Секция описания */
-.info-section { margin-bottom: 50px; }
-.info-header { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; }
-.info-icon { width: 24px; height: 24px; object-fit: contain; flex-shrink: 0; }
-.info-body p { font-size: 14px; line-height: 1.6; color: #333; margin-bottom: 20px; }
-.program-list ul { list-style: none; padding: 0; }
-.program-list li { font-size: 14px; line-height: 1.5; padding-left: 20px; position: relative; margin-bottom: 5px; }
-.program-list li::before { content: "—"; position: absolute; left: 0; }
-
-/* Карточки */
-.features-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 50px; }
-.feature-card.dark { background: #232323; color: #fff; padding: 30px; border-radius: 15px; }
-.card-header { display: flex; align-items: center; gap: 12px; margin-bottom: 15px; }
-.check-icon { color: #FFCC00; font-weight: 800; font-size: 18px; }
-.card-header h3 { color: #FFCC00; font-size: 18px; font-weight: 800; margin: 0; }
-.feature-card p { font-size: 13px; line-height: 1.5; opacity: 0.9; }
-
-/* ВИДЕО (по шаблону) */
-.media-grid-bottom { 
-  display: grid; 
-  grid-template-columns: repeat(3, 1fr); 
-  gap: 20px; 
-  margin-bottom: 40px; 
+/* Breadcrumbs */
+.breadcrumbs {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
 }
 
-.video-item { 
-  background-color: #D9D9D9; 
+.breadcrumbs a {
+  text-decoration: none;
+  color: #999;
+}
+
+.breadcrumbs .sep {
+  margin: 0 8px;
+}
+
+.current {
+  color: #333;
+  pointer-events: none;
+}
+
+.page-title {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 40px;
+}
+
+/* Photos Layout */
+.photo-grid-top {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.content-img {
+  width: 100%;
+  border-radius: 15px;
+  display: block;
+  height: 350px;
+  object-fit: cover;
+}
+
+/* Main featured photo spans across full row */
+.photo-first {
+  grid-column: 1 / -1;
+}
+
+.photo-first .content-img {
+  height: 450px;
+}
+
+/* Info Section */
+.info-section {
+  margin-bottom: 50px;
+}
+
+.info-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.info-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.info-body p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.program-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.program-list li {
+  font-size: 14px;
+  line-height: 1.5;
+  padding-left: 20px;
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.program-list li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+}
+
+/* Feature Cards */
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.feature-card.dark {
+  background: #232323;
+  color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.check-icon {
+  color: #FFCC00;
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.card-header h3 {
+  color: #FFCC00;
+  font-size: 18px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.feature-card p {
+  font-size: 13px;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+/* Videos */
+.media-grid-bottom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.video-item {
+  background-color: #D9D9D9;
   background-size: cover;
   background-position: center;
-  aspect-ratio: 16/10; 
-  border-radius: 4px; 
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-  cursor: pointer; 
+  aspect-ratio: 16/10;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
   text-decoration: none;
   position: relative;
   overflow: hidden;
@@ -164,41 +283,60 @@ const getYouTubeThumbnail = (url) => {
 
 .play-overlay {
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0, 0, 0, 0.1); /* Легкое затемнение */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
   transition: 0.3s;
 }
 
-.video-item:hover .play-overlay { background: rgba(0, 0, 0, 0.3); }
+.video-item:hover .play-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
 
-.play-btn { 
-  font-size: 40px; 
-  color: rgba(0,0,0,0.2); /* Цвет как на макете */
+.play-btn {
+  font-size: 40px;
+  color: rgba(0, 0, 0, 0.2);
   transition: 0.3s;
 }
 
-.video-item:hover .play-btn { color: #fff; transform: scale(1.1); }
+.video-item:hover .play-btn {
+  color: #fff;
+  transform: scale(1.1);
+}
 
-/* Кнопка отчета */
-.report-btn { 
-  display: inline-flex; 
-  align-items: center; 
-  background: #FFCC00; 
-  color: #232323; 
-  padding: 12px 25px; 
-  border-radius: 25px; 
-  text-decoration: none; 
-  font-weight: 700; 
+/* Report Button */
+.report-btn {
+  display: inline-flex;
+  align-items: center;
+  background: #FFCC00;
+  color: #232323;
+  padding: 12px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 700;
   font-size: 14px;
 }
-.link-icon { margin-right: 10px; }
 
-/* Адаптивность */
+.link-icon {
+  margin-right: 10px;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
-  .photo-grid-top, .features-grid, .media-grid-bottom { grid-template-columns: 1fr; }
-  .content-img { height: 250px; }
+  .photo-grid-top,
+  .features-grid,
+  .media-grid-bottom {
+    grid-template-columns: 1fr;
+  }
+
+  .content-img,
+  .photo-first .content-img {
+    height: 250px;
+  }
 }
 </style>

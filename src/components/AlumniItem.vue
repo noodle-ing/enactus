@@ -45,6 +45,7 @@ const images = {
   DANIYAL:      '/images/alumin/Daniyal KAKABAYEV.png',
   AIKENZHE:     '/images/alumin/Aikenzhe Zhassulanova.png',
   ZHANBOTA:     '/images/alumin/IMG_7165.JPG',
+  DIDAR:        '/images/alumin/Didar.png',
 };
 
 const alumniData = {
@@ -78,6 +79,7 @@ const alumniData = {
   DANIYAL: "DANIYAL KAKABAYEV",
   AIKENZHE: "AIKENZHE ZHASSULANOVA",
   ZHANBOTA: "ZHANBOTA ANUAR",
+  DIDAR: "DIDAR MUKHAMADIYEV"
 };
 
 const displayName = computed(() => {
